@@ -1,0 +1,28 @@
+.contact-footer-list p {
+  color: #2d317f;
+}
+.contact-footer-list .con-download {
+  float: left;
+  clear: both;
+}
+.contact-footer-list .con-download h4 {
+  color: #2d317f;
+}
+
+.contact-footer-list .con-download img {
+  min-width: 90px;
+  max-width: 140px;
+  width: 100px;
+}
+.contact-footer-list .line-con {
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .contact-footer-list .footer-copyrighter .cp-righter {
+    order: 1;
+  }
+  .contact-footer-list .footer-copyrighter .social-link {
+    order: 2;
+  }
+}
