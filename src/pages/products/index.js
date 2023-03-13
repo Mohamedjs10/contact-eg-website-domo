@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Box from "@mui/material/Box";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
@@ -15,7 +16,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <>Home</>
+        <Box sx={{}}>Products</Box>
       </main>
     </>
   );
