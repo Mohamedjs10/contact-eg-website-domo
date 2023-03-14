@@ -9,8 +9,6 @@ import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import TwitterIcon from "@mui/icons-material/Twitter";
 
-console.log(styles);
-
 export default function Main_Navbar() {
   return (
     <div className="contact-footer-list">
@@ -36,12 +34,26 @@ export default function Main_Navbar() {
                   خدمات تمويلية
                 </h6>
                 <div className="d-flex flex-column">
-                  <p>تمويل السيارات</p>
-                  <p>تمويل النقل</p>
-                  <p>تمويل تسويق</p>
-                  <p>تمويل التعليم</p>
-                  <p>تمويل اشتراكات الأندية</p>
-                  <p>تمويل تصميم وتشطيب</p>
+                  <ul className="list-unstyled">
+                    <li className="mt-4" style={styles.listTitle}>
+                      تمويل السيارات
+                    </li>
+                    <li className="mt-4" style={styles.listTitle}>
+                      تمويل النقل
+                    </li>
+                    <li className="mt-4" style={styles.listTitle}>
+                      تمويل تسويق
+                    </li>
+                    <li className="mt-4" style={styles.listTitle}>
+                      تمويل التعليم
+                    </li>
+                    <li className="mt-4" style={styles.listTitle}>
+                      تمويل اشتراكات الأندية
+                    </li>
+                    <li className="mt-4" style={styles.listTitle}>
+                      تمويل تصميم وتشطيب
+                    </li>
+                  </ul>
                 </div>
               </div>
               <div className="col-lg-2 col-md-4 col-sm-6">
@@ -52,11 +64,23 @@ export default function Main_Navbar() {
                   خدمات تمويلية
                 </h6>
                 <div className="d-flex flex-column">
-                  <p>تمويل افراح و مناسبات</p>
-                  <p>تمويل عقاري</p>
-                  <p>وساطه تأمينية</p>
-                  <p> تخصيم</p>
-                  <p>تأجير تمويلي</p>
+                  <ul className="list-unstyled">
+                    <li className="mt-4" style={styles.listTitle}>
+                      تمويل افراح و مناسبات
+                    </li>
+                    <li className="mt-4" style={styles.listTitle}>
+                      تمويل عقاري
+                    </li>
+                    <li className="mt-4" style={styles.listTitle}>
+                      وساطة تأمينية
+                    </li>
+                    <li className="mt-4" style={styles.listTitle}>
+                      تخصيم
+                    </li>
+                    <li className="mt-4" style={styles.listTitle}>
+                      تأجير تمويلي
+                    </li>
+                  </ul>
                 </div>
               </div>
               <div className="col-lg-2 col-md-4 col-sm-6">
@@ -67,10 +91,20 @@ export default function Main_Navbar() {
                   خدمات اخري
                 </h6>
                 <div className="d-flex flex-column">
-                  <p>خدمات تأمينية</p>
-                  <p>مدفوعات الكترونية</p>
-                  <p>برنامج العملاء</p>
-                  <p> استثمار و ادخار</p>
+                  <ul className="list-unstyled">
+                    <li className="mt-4" style={styles.listTitle}>
+                      خدمات تأمينية
+                    </li>
+                    <li className="mt-4" style={styles.listTitle}>
+                      مدفوعات الكترونية
+                    </li>
+                    <li className="mt-4" style={styles.listTitle}>
+                      برنامج العملاء
+                    </li>
+                    <li className="mt-4" style={styles.listTitle}>
+                      استثمار و ادخار
+                    </li>
+                  </ul>
                 </div>
               </div>
               <div className="col-lg-2 col-md-4 col-sm-6">
@@ -81,12 +115,26 @@ export default function Main_Navbar() {
                   كونتكت
                 </h6>
                 <div className="d-flex flex-column">
-                  <p>عن كونتكت</p>
-                  <p>شركتنا</p>
-                  <p>أخبار كونتكت</p>
-                  <p>عروض كونتكت</p>
-                  <p>المدونة</p>
-                  <p> الأستدامة</p>
+                  <ul className="list-unstyled">
+                    <li className="mt-4" style={styles.listTitle}>
+                      عن كونتكت
+                    </li>
+                    <li className="mt-4" style={styles.listTitle}>
+                      شركتنا
+                    </li>
+                    <li className="mt-4" style={styles.listTitle}>
+                      أخبار كونتكت
+                    </li>
+                    <li className="mt-4" style={styles.listTitle}>
+                      عروض كونتكت
+                    </li>
+                    <li className="mt-4" style={styles.listTitle}>
+                      المدونة
+                    </li>
+                    <li className="mt-4" style={styles.listTitle}>
+                      الأستدامة
+                    </li>
+                  </ul>
                 </div>
               </div>
               <div className="col-lg-2 col-md-4 col-sm-6">
@@ -97,9 +145,17 @@ export default function Main_Navbar() {
                   كونتكت
                 </h6>
                 <div className="d-flex flex-column">
-                  <p>وظائفنا</p>
-                  <p>كتالوج منتجات كونتكت</p>
-                  <p>تواصل معنا</p>
+                  <ul className="list-unstyled">
+                    <li className="mt-4" style={styles.listTitle}>
+                      وظائفنا
+                    </li>
+                    <li className="mt-4" style={styles.listTitle}>
+                      كتالوج منتجات كونتكت
+                    </li>
+                    <li className="mt-4" style={styles.listTitle}>
+                      تواصل معنا
+                    </li>
+                  </ul>
                 </div>
               </div>
               <div className="col-lg-2 col-md-4 col-sm-6">
@@ -110,44 +166,38 @@ export default function Main_Navbar() {
                   السياسيات
                 </h6>
                 <div className="d-flex flex-column">
-                  <p>سياسة الخصوصية</p>
-                  <p>دليل حماية العملاء</p>
+                  <ul className="list-unstyled">
+                    <li className="mt-4" style={styles.listTitle}>
+                      سياسة الخصوصية
+                    </li>
+                    <li className="mt-4" style={styles.listTitle}>
+                      دليل حماية العملاء
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="con-download mt-4 mb-3">
-          {/* <div className="d-flex justify-content-end align-items-end flex-column">  */}
+        <div style={styles.conDownload} className="con-download mt-4 mb-3">
           <div className="">
-            <h4>حمل تطبيق كونتك</h4>
+            <h4 style={styles.downloadCo} className="mb-3">
+              حمل تطبيق كونتك
+            </h4>
             <div className="image-container">
               <img
+                style={styles.coDownloadImg}
                 src="/images/google-play.png"
                 alt="حمل تطبيق كونتطت من المتجر"
               />
               <img
-                className="mx-2"
+                style={styles.coDownloadImg}
+                className="mx-4"
                 src="/images/app-store.png"
                 alt="حمل تطبيق كونتطت من المتجر"
               />
             </div>
           </div>
-          {/* <h4 className="m-left">حمل تطبيق كونتك</h4>
-          <div className="image-container">
-            <img
-              width="150px"
-              //   className="w-25"
-              src="/images/app-store.png"
-              alt="حمل تطبيق كونتطت من المتجر"
-            />
-            <img
-              width="150px"
-              className="mx-3"
-              src="/images/google-play.png"
-              alt="حمل تطبيق كونتطت من المتجر"
-            />
-          </div> */}
         </div>
         <img
           className="w-100 line-con"
@@ -155,39 +205,45 @@ export default function Main_Navbar() {
           alt="contact-line"
         />
         <div className="footer-copyrighter mt-3">
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: {
-                sm: "space-between",
-                xs: "end",
-              },
-
-              flexDirection: {
-                sm: "row",
-                xs: "column",
-              },
-            }}
-          >
-            <Box className="social-link">
-              <LinkedInIcon className="mx-2" />
-              <TwitterIcon className="mx-2" />
-              <YouTubeIcon className="mx-2" />
-              <InstagramIcon className="mx-2" />
-              <FacebookOutlinedIcon className="mx-2" />
+          <Box sx={styles.footerBox}>
+            <Box
+              className="social-link"
+              style={
+                {
+                  // display: window.innerWidth <= 600 ? "flex" : "",
+                  // margin: window.innerWidth <= 600 ? "auto" : "",
+                  // order: window.innerWidth <= 600 ? 2 : "",
+                }
+              }
+            >
+              <LinkedInIcon style={{ color: colors.blue }} className="mx-1" />
+              <TwitterIcon style={{ color: colors.blue }} className="mx-1" />
+              <YouTubeIcon style={{ color: colors.blue }} className="mx-1" />
+              <InstagramIcon style={{ color: colors.blue }} className="mx-1" />
+              <FacebookOutlinedIcon
+                style={{ color: colors.blue }}
+                className="mx-1"
+              />
             </Box>
-            <Box className="cp-righter">
+            <div className="cp-righter">
               <Box>
+                <span className="text-center">
+                  جميع الحقوق محفوظة 2021 لكونتكت
+                </span>
                 <img
                   width="100px"
-                  className="d-inline-block"
-                  style={{ marginTop: "-30px" }}
+                  style={{
+                    position: "relative",
+                    top: {
+                      sm: "60px",
+                    },
+                  }}
+                  // style={styles.imageQ}
                   src="/images/Award-Logo.png"
                   alt="جائزة"
                 />
-                <p>جميع الحقوق محفوظة 2021 لكونتكت</p>
               </Box>
-            </Box>
+            </div>
           </Box>
         </div>
       </div>
