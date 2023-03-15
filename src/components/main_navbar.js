@@ -1,23 +1,29 @@
 import { colors } from "../utils/const";
 
 export const styles = {
-  container: (theme) => ({
+  container: {
     display: "flex",
     justifyContent: "flex-start",
     alignItems: "center",
     gap: 3,
     color: colors.blue,
-    bgcolor: colors.light_light,
-    fontSize: 30,
-    "&:hover": {},
-  }),
-  tab: (theme) => ({
+    pt: 1,
+    pb: 1,
+    bgcolor: colors.light_grey,
+  },
+  tab: {
+    display: "flex",
+    justifyContent: "center",
+    width: "80px",
     color: colors.blue,
-    fontSize: 30,
-    borderBottom: "2px solid white",
+    fontSize: 20,
+    borderBottom: `2px solid ${colors.light_grey}`,
     textDecoration: "none",
     "&:hover": {
-      borderBottom: "2px solid red",
+      fontWeight: "bold",
+      color: colors.blue,
+
+      borderBottom: `2px solid ${colors.blue}`,
     },
-  }),
+  },
 };
