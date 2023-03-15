@@ -9,11 +9,7 @@ import { styles } from "./secondary_navbar";
 import { useSelector, useDispatch } from "react-redux";
 import { secTabActions } from "../Redux/store";
 import Button from "@mui/material/Button";
-import Accordion from "@mui/material/Accordion";
-import AccordionSummary from "@mui/material/AccordionSummary";
-import AccordionDetails from "@mui/material/AccordionDetails";
-import Typography from "@mui/material/Typography";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+
 export default function Secondary_Navbar({ setIsOPen }) {
   const secTab = useSelector((state) => state.secTab.secTab);
 
@@ -88,26 +84,6 @@ export default function Secondary_Navbar({ setIsOPen }) {
             </Button>
           </Box>
         </Box>
-      </Box>
-      {/* Mobile */}
-      <Box
-        sx={{ display: { xs: "block", md: "none" } }}
-        className="horizontal-safe-padding vertical-safe-padding"
-      >
-        <Accordion>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel1a-content"
-            id="panel1a-header"
-          >
-            <Box sx={styles.accrodion_title}>خدمات تمويلية</Box>
-          </AccordionSummary>
-          <AccordionDetails sx={styles.sub_container}>
-            <Box component={Link} href="/" sx={styles.link}>
-              تمويل السيارات
-            </Box>
-          </AccordionDetails>
-        </Accordion>
       </Box>
     </>
   );

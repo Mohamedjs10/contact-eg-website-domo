@@ -126,6 +126,121 @@ export const services = {
         "لو عايز تفرش وتجهز بيتك على مزاجك ومن أي مكان نفسك فيه، كونتكت هتسهلك المشوار",
     },
   ],
+  All: [
+    {
+      id: "1",
+      color: colors.blue,
+      img: "services/car.png",
+      title: "تمويل السيارات",
+      description:
+        "لو عايز تشتري عربية جديدة أو مستعملة، كونتكت بتوفرلك حلول تمويلية متميزة لجميع الماركات ",
+    },
+    {
+      color: colors.dark_red,
+      img: "services/lorry.png",
+      title: "تمويل النقل",
+      description:
+        "سواء محتاج نقل تقيل أو خفيف كونتكت هتقسطلك جميع أنواع الشاحنات الجديدة والمستعملة والاستيراد",
+    },
+    {
+      color: colors.dark_violet,
+      img: "services/cart.png",
+      title: "تمويل تسوق",
+      description: "لو نفسك تشتري في أي وقت براحتك، كونتكت هتسهل حياتك",
+    },
+    {
+      color: colors.green,
+      img: "services/education.png",
+      title: "تمويل التعليم",
+      description:
+        "نفسك في مستقبل أفضل ليك ولأولادك، كونتكت هتساعدك وهتكون معاك طول مشوار التعليم",
+    },
+    {
+      color: colors.dark_petroli,
+      img: "services/clubs.png",
+      title: "تمويل إشتراكات الاندية",
+      description:
+        "نفسك تُنمى مهارات أولادك وتساعدهم يمارسوا الرياضة اللي بيحبوها، كونتكت هتقسطلك اشتراك ",
+    },
+    {
+      color: colors.dark_brown,
+      img: "services/design.png",
+      title: "تمويل تصميم و تشطيب",
+      description:
+        "لو عايز تصمم وتشطب بيتك على مزاجك من خلال أفضل شركات التصميم الداخلي والديكور في مصر، ",
+    },
+    {
+      color: colors.dark_brown,
+      img: "services/maintainance.png",
+      title: "تمويل الصيانة",
+      description:
+        "لو بيتك، عربيتك أو ممتلكاتك محتاجة صيانة، كونتكت سهلتها عليك وهتقسطها على فترات سداد مريحة.",
+    },
+    {
+      color: colors.dark_green,
+      img: "services/ring.png",
+      title: "تمويل أفراح و مناسبات",
+      description:
+        "افرح وريح بالك، كونتكت حلتهالك وهتغطي تكاليف فرحك بأكبر قيمة تمويل وبتقسيط سهل ومريح",
+    },
+    {
+      color: colors.dark_petroli,
+      img: "services/house.png",
+      title: "تمويل عقاري",
+      description:
+        'احصل على تمويل بيت أحلامك بأسهل وأسرع الإجراءات من خلال نظام "تمويل بيتك"',
+    },
+    {
+      color: colors.ratty,
+      img: "services/mediation.png",
+      title: "وساطة تأمينية",
+      description:
+        "محتاج مكان واحد تقدر تأمن فيه على عيلتك، بيتك، عربيتك، مشروعك أو شركتك",
+    },
+    {
+      color: colors.dark_brown,
+      img: "services/discount.png",
+      title: "تخصيم",
+      description:
+        "لو محتاج سيولة نقدية، كونتكت هتدعمك وهتضمنلك تعزيز رأس المال الخاص بشركتك ",
+    },
+    {
+      color: colors.light_petroli,
+      img: "services/rent.png",
+      title: "تأجير تمويلي",
+      description:
+        "لو عايز تجهز عيادتك الطبية أو تطور أسطول النقل الخاص بشركتك",
+    },
+    {
+      color: colors.light_green,
+      img: "services/green-finance.png",
+      title: "التمويل الاخضر",
+      description:
+        "لو محتاج تُنمي استثمارك الزراعي، كونتكت بتقدملك التمويل اللازم اللي هيساعدك في تحقيق التنمية ",
+    },
+    {
+      color: colors.light_green,
+      img: "services/green-finance.png",
+      title: "تمويل فرش البيت",
+      description:
+        "لو عايز تفرش وتجهز بيتك على مزاجك ومن أي مكان نفسك فيه، كونتكت هتسهلك المشوار",
+    },
+  ],
+  C: [
+    {
+      color: colors.blue,
+      img: "services/homes.png",
+      title: "كونتكت هومز",
+      description:
+        "الان من خلال الشراكة بين شركة كونتكت, شركة التمويل الأولى في مصر، و شركة كولدويل بانكر",
+    },
+    {
+      color: colors.blue,
+      img: "services/clients.png",
+      title: "برنامج ترشيح العملاء",
+      description: "يمكنك ترشيح أصدقاءك والحصول على نقاط مجانية وخصومات حصرية",
+    },
+  ],
 };
 
 export const news = [

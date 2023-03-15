@@ -26,17 +26,20 @@ export const styles = {
   }),
   app_section: (theme) => ({
     display: "flex",
-    justifyContent: "flex-end",
+    justifyContent: { xs: "center", md: "flex-end" },
     alignItems: "center",
     gap: 2,
   }),
   app_container: (theme) => ({
     display: "flex",
     flexDirection: "column",
+    alignItems: { xs: "center", md: "flex-start" },
     gap: 2,
   }),
   app_icons: (theme) => ({
     display: "flex",
+    justifyContent: "center",
+
     flexWrap: "wrap",
     gap: 2,
   }),

@@ -288,24 +288,34 @@ export default function Secondary_Navbar({ setIsOPen }) {
         className="section-safe-margin-top section-safe-margin-bottom"
         sx={styles.copyright_section}
       >
-        <a href="/">
-          <img src="l.png" />
-        </a>
-        <a href="/">
-          <img src="t.png" />
-        </a>
-        <a href="/">
-          <img src="y.png" />
-        </a>
-        <a href="/">
-          <img src="i.png" />
-        </a>
-        <a href="/">
-          <img src="f.png" />
-        </a>
         <Box
           sx={{
-            mr: "auto",
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: 1,
+          }}
+        >
+          <a href="/">
+            <img src="l.png" />
+          </a>
+          <a href="/">
+            <img src="t.png" />
+          </a>
+          <a href="/">
+            <img src="y.png" />
+          </a>
+          <a href="/">
+            <img src="i.png" />
+          </a>
+          <a href="/">
+            <img src="f.png" />
+          </a>
+        </Box>
+        <Box
+          sx={{
+            mr: { xs: 0, md: "auto" },
             gap: { xs: 1, md: 0 },
             display: "flex",
             justifyContent: "center",

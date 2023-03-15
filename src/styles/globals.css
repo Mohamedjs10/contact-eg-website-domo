@@ -16,7 +16,8 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: GE_SS_Light !important;
+  /* font-family: GE_SS_Light !important; */
+  font-family: Almarai !important;
 }
 
 html,
@@ -70,4 +71,41 @@ body {
 ::-webkit-scrollbar-thumb {
   background-color: #2d317f;
   border: 1px solid #2d317f;
+}
+
+/* xs, extra-small: 0px
+sm, small: 600px
+md, medium: 900px
+lg, large: 1200px
+xl, extra-large: 1536px */
+
+@media only screen and (max-width: 600px) {
+  .horizontal-safe-margin {
+    margin-right: 25px;
+    margin-left: 25px;
+  }
+  .horizontal-safe-padding {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+  .vertical-safe-margin {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .vertical-safe-padding {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .section-safe-padding-top {
+    padding-top: 5px;
+  }
+  .section-safe-padding-bottom {
+    padding-bottom: 5px;
+  }
+  .section-safe-margin-top {
+    margin-top: 5px;
+  }
+  .section-safe-margin-bottom {
+    margin-bottom: 5px;
+  }
 }

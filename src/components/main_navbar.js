@@ -16,7 +16,7 @@ export const styles = {
     justifyContent: "center",
     width: "80px",
     color: colors.blue,
-    fontSize: 20,
+    fontSize: 17,
     borderBottom: `2px solid ${colors.light_grey}`,
     textDecoration: "none",
     "&:hover": {

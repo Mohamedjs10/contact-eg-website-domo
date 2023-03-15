@@ -2,6 +2,7 @@ import React from "react";
 import { Box } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import Link from "next/link";
+import Button from "@mui/material/Button";
 
 import { colors } from "../utils/const";
 import { styles } from "./main_navbar.js";
@@ -13,18 +14,18 @@ export default function Main_Navbar({ setRight }) {
 
   return (
     <Box sx={styles.container} style={{}} className="horizontal-safe-padding">
-      <MenuIcon
-        sx={{
-          fontSize: 40,
-          cursor: "pointer",
-          "&:hover": {
-            filter: "drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.5))",
-          },
-        }}
-        onClick={() => {
-          setRight((prev) => (prev == 0 ? -500 : 0));
-        }}
-      />
+      <Button>
+        <MenuIcon
+          sx={{
+            fontSize: 40,
+            color: colors.blue,
+          }}
+          onClick={() => {
+            setRight((prev) => (prev == 0 ? -500 : 0));
+          }}
+        />
+      </Button>
+
       <Box
         component={Link}
         sx={styles.tab}
