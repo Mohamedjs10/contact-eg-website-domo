@@ -26,6 +26,7 @@ export default function Calcuation() {
         id="car-price"
         size="small"
       />
+      <Box></Box>
     </Box>
   );
 }

@@ -2,7 +2,6 @@ import "@/styles/globals.css";
 import Script from "next/script";
 import Head from "next/head";
 import Main_Navbar from "../components/Main_Navbar.jsx";
-import Footer from "../components/footer/footer";
 
 export default function App({ Component, pageProps }) {
   return (
@@ -22,7 +21,6 @@ export default function App({ Component, pageProps }) {
       <div dir="rtl">
         <Main_Navbar></Main_Navbar>
         <Component {...pageProps} />
-        {/* <Footer /> */}
       </div>
     </>
   );
