@@ -5,7 +5,7 @@ import Image from "next/image";
 import { colors } from "../utils/const";
 import { styles } from "./service";
 
-export default function Secondary_Navbar({ img, title, description, color }) {
+export default function Service({ img, title, description, color }) {
   return (
     <Box>
       <Box sx={styles.container}>

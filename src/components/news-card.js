@@ -6,7 +6,8 @@ export const styles = {
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
-    width: { xs: "200px", lg: "350px" },
+    maxWidth: { xs: "200px", md: "250px", lg: "350px" },
+
     fontSize: "13px",
   }),
   link: (theme) => ({

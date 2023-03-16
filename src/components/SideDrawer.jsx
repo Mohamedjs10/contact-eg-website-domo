@@ -35,7 +35,10 @@ export default function SideDrawer({ state, setState }) {
       {/* <Button onClick={toggleDrawer()}>right</Button> */}
       <Drawer anchor="right" open={state} onClose={toggleDrawer()}>
         <Box
-          sx={{ width: 300, "& span": { textAlign: "right" } }}
+          sx={{
+            width: { xs: 220, sm: 300 },
+            "& span": { textAlign: "right" },
+          }}
           role="presentation"
           // onClick={toggleDrawer()}
         >
@@ -52,14 +55,17 @@ export default function SideDrawer({ state, setState }) {
             </ListItem>
             <Collapse in={open1} timeout="auto" unmountOnExit>
               <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1, m: "7px" }}>
-                {services.All.map(({ color, title, description, img }) => (
-                  <Service
-                    color={color}
-                    title={title}
-                    description={description}
-                    img={img}
-                  />
-                ))}
+                {services.All.map(
+                  ({ color, title, description, img }, index) => (
+                    <Service
+                      key={index}
+                      color={color}
+                      title={title}
+                      description={description}
+                      img={img}
+                    />
+                  )
+                )}
               </Box>
             </Collapse>
             {/* B ---------------------------------------------------------*/}
@@ -74,8 +80,9 @@ export default function SideDrawer({ state, setState }) {
             </ListItem>
             <Collapse in={open2} timeout="auto" unmountOnExit>
               <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1, m: "7px" }}>
-                {services.C.map(({ color, title, description, img }) => (
+                {services.C.map(({ color, title, description, img }, index) => (
                   <Service
+                    key={index}
                     color={color}
                     title={title}
                     description={description}

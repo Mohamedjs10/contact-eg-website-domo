@@ -294,24 +294,69 @@ export default function Secondary_Navbar({ setIsOPen }) {
             flexDirection: "row",
             justifyContent: "center",
             alignItems: "center",
-            gap: 1,
+            gap: 2,
           }}
         >
-          <a href="/">
+          <Box
+            component="a"
+            href="/"
+            sx={{
+              transition: ".5s",
+              "&:hover": {
+                transform: "scale(1.2)",
+              },
+            }}
+          >
             <img src="l.png" />
-          </a>
-          <a href="/">
+          </Box>
+          <Box
+            component="a"
+            href="/"
+            sx={{
+              transition: ".5s",
+              "&:hover": {
+                transform: "scale(1.2)",
+              },
+            }}
+          >
             <img src="t.png" />
-          </a>
-          <a href="/">
+          </Box>
+          <Box
+            component="a"
+            href="/"
+            sx={{
+              transition: ".5s",
+              "&:hover": {
+                transform: "scale(1.2)",
+              },
+            }}
+          >
             <img src="y.png" />
-          </a>
-          <a href="/">
+          </Box>
+          <Box
+            component="a"
+            href="/"
+            sx={{
+              transition: ".5s",
+              "&:hover": {
+                transform: "scale(1.2)",
+              },
+            }}
+          >
             <img src="i.png" />
-          </a>
-          <a href="/">
+          </Box>
+          <Box
+            component="a"
+            href="/"
+            sx={{
+              transition: ".5s",
+              "&:hover": {
+                transform: "scale(1.2)",
+              },
+            }}
+          >
             <img src="f.png" />
-          </a>
+          </Box>
         </Box>
         <Box
           sx={{
