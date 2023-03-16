@@ -1,19 +1,28 @@
 import React from "react";
-
+import { Box, Typography } from "@mui/material";
 import { colors } from "../../utils/const";
 
 export default function Card({ icon, heading, textArr }) {
   return (
-    <div className="card-box text-center p-5">
+    <Box sx={{ flex: "1 1 0", p: 4, textAlign: "center" }}>
       <img width="32px" src={icon} alt={heading} />
-      <h6 className="mt-3" style={{ color: colors.orange }}>
+      <Typography
+        sx={{ color: colors.orange, mt: 2 }}
+        variant="h5"
+        gutterBottom
+      >
         {heading}
-      </h6>
+      </Typography>
       {textArr?.map((item, idx) => (
-        <p className="mt-2" key={idx} style={{ color: colors.blue }}>
+        <Typography
+          key={idx}
+          variant="subtitle1"
+          sx={{ color: colors.blue }}
+          gutterBottom
+        >
           {item}
-        </p>
+        </Typography>
       ))}
-    </div>
+    </Box>
   );
 }
