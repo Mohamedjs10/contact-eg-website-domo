@@ -69,6 +69,12 @@ export default function Main_Navbar({ setRight }) {
       >
         مستثمرين
       </Box>
+      <Box
+        component={Button}
+        sx={{ color: colors.blue, fontWeight: "bold", mr: "auto" }}
+      >
+        En
+      </Box>
     </Box>
   );
 }

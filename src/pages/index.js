@@ -2,11 +2,31 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
-import Statistics from "../components/statistics/statistics";
-import Card from "../components/aboutCard/aboutCard";
-import Calcuation from "../components/calculation/calculation";
+import { useRouter } from "next/router";
+import en from "../../locales/en";
+import ar from "../../locales/ar";
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  // ------------------------------
+  const router = useRouter();
+  console.log(router);
+  const { locale } = router;
+  const t = locale === "en" ? en : ar;
+  // ------------------------------
+  // const changeLanguage = (e) => {
+  //   const locale = e.target.value;
+  //   router.push(router.pathname, router.asPath, { locale });
+  // };
+  const toAr = () => {
+    const locale = "ar";
+    router.push(router.pathname, router.asPath, { locale });
+  };
+  const toEn = () => {
+    const locale = "en";
+    router.push(router.pathname, router.asPath, { locale });
+  };
+  // -------------------------------
   return (
     <>
       <Head>
@@ -17,48 +37,9 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <>Home</>
-        <div className="container">
-          <Calcuation />
-          {/* <div
-            style={{ backgroundColor: "#f9fafb" }}
-            className="d-flex justify-content-around"
-          >
-            <Statistics num={360} word="الف" text="عميل" />
-            <Statistics num={150} word="الف" text="عملية" />
-            <Statistics num={2400} word="" text="موظف" />
-          </div> */}
-        </div>
-        {/* <div style={{ backgroundColor: "#f9fafb" }} className="row mt-5">
-          <div className="col-md-4 col-sm-12">
-            <Card
-              icon="/images/eye.png"
-              heading="رؤيتنا"
-              textArr={[
-                "رؤيتنا هي ان نكون الإختيار الأول في تقديم الخدمات المالية المبتكرة لعملائنا .",
-              ]}
-            />
-          </div>
-          <div className="col-md-4 col-sm-12">
-            <Card
-              icon="/images/mission.png"
-              heading="مهمتنا"
-              textArr={[
-                "نقوم بتقديم خدمات تمويلية رقمية مبتكرة تتمركز حول متطلبات العميل واحتياجاته، من خلال علاقتنا القوية والتزامنا تجاه عملائنا. حيث يقوم خبرائنا بتقديم تجربة فريدة عن طريق نافذة تمويلية متكاملة بإستخدام أحدث التقنيات المتطورة وتقديم خدمة عملاء إستثنائية. كما تتعدد برامجنا التمويلية لتشمل خدمة الأفراد و الشركات بهدف تحقيق جميع أهدافهم المالية.",
-              ]}
-            />
-          </div>
-          <div className="col-md-4 col-sm-12">
-            <Card
-              icon="/images/value.png"
-              heading="قيمنا"
-              textArr={[
-                "هو منهجنا وهدفنا الأول في تقديم خدمات تمويلية سلسة واستثنائية . وإدراكنا لقيمة العميل هو الدعامة الرئيسية لعلاقة طويلة الأمد مع عملائنا.",
-                "النزاهة والمصداقية هي مبادئنا التي لا نحيد عنها، سواء على مستوى الأفراد او كفريق عمل. نطمح إلى ترسيخ الثقة التي نؤمن انها الأساس في علاقاتنا الشخصية والعملية الممتدة.",
-                "نقوم بتوظيف التكنولوجيا المتقدمة لضمان سهولة و وضوح الخدمات المقدمة لعملائنا .",
-              ]}
-            />
-          </div>
-        </div> */}
+        <button onClick={toAr}>AR</button>
+        <button onClick={toEn}>EN</button>
+        <p className="my-8">{t.test.demo}</p>
       </main>
     </>
   );
