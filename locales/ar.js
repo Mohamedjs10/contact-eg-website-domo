@@ -1,3 +1,8 @@
 export default {
-  main_nav: { demo: "عربي" },
+  main_nav: {
+    individuals: "أفراد",
+    companies: "شركات",
+    investors: "مستثمرين",
+    lang: "عربي",
+  },
 };
