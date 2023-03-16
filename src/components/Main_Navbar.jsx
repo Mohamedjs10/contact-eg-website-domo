@@ -3,14 +3,29 @@ import { Box } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import Link from "next/link";
 import Button from "@mui/material/Button";
-
 import { colors } from "../utils/const";
 import { styles } from "./main_navbar.js";
 import { useSelector, useDispatch } from "react-redux";
 import { mainTabActions } from "../Redux/store";
+import { useRouter } from "next/router";
+import en from "../../locales/en";
+import ar from "../../locales/ar";
 export default function Main_Navbar({ setRight }) {
   const mainTab = useSelector((state) => state.mainTab.mainTab);
   const dispatch = useDispatch();
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === "en" ? en : ar;
+  // ------------------------------
+
+  const toAr = () => {
+    const locale = "ar";
+    router.push(router.pathname, router.asPath, { locale });
+  };
+  const toEn = () => {
+    const locale = "en";
+    router.push(router.pathname, router.asPath, { locale });
+  };
 
   return (
     <Box sx={styles.container} style={{}} className="horizontal-safe-padding">
@@ -38,7 +53,7 @@ export default function Main_Navbar({ setRight }) {
           dispatch(mainTabActions.update("افراد"));
         }}
       >
-        أفراد
+        {t.main_nav.individuals}
       </Box>
       <Box
         component={Link}
@@ -52,7 +67,7 @@ export default function Main_Navbar({ setRight }) {
           dispatch(mainTabActions.update("شركات"));
         }}
       >
-        شركات
+        {t.main_nav.companies}
       </Box>
       <Box
         component={Link}
@@ -67,13 +82,19 @@ export default function Main_Navbar({ setRight }) {
           dispatch(mainTabActions.update("مستثمرين"));
         }}
       >
-        مستثمرين
+        {t.main_nav.investors}
       </Box>
       <Box
+        onClick={locale === "en" ? toAr : toEn}
         component={Button}
-        sx={{ color: colors.blue, fontWeight: "bold", mr: "auto" }}
+        sx={{
+          color: colors.blue,
+          fontWeight: "bold",
+          mr: locale === "en" ? 0 : "auto",
+          ml: locale === "en" ? "auto" : 0,
+        }}
       >
-        En
+        {t.main_nav.lang}
       </Box>
     </Box>
   );

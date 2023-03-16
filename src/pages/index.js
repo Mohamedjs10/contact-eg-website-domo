@@ -5,12 +5,12 @@ import styles from "@/styles/Home.module.css";
 import { useRouter } from "next/router";
 import en from "../../locales/en";
 import ar from "../../locales/ar";
+import BottomCard from "../components/BottomCard.jsx";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   // ------------------------------
   const router = useRouter();
-  console.log(router);
   const { locale } = router;
   const t = locale === "en" ? en : ar;
   // ------------------------------
@@ -37,9 +37,17 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <>Home</>
+        {/* <Paragraph
+          img="/test.png"
+          title="title title"
+          body="body body body body body body body body"
+          orientation={1}
+          textStyle={{ textAlign: "center" }}
+        /> */}
+        <BottomCard></BottomCard>
         <button onClick={toAr}>AR</button>
         <button onClick={toEn}>EN</button>
-        <p className="my-8">{t.test.demo}</p>
+        <p className="my-8"> {}</p>
       </main>
     </>
   );

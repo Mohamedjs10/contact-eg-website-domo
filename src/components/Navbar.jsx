@@ -46,9 +46,10 @@ export default function Navbar({ setRight, setIsOPen, state, setState }) {
             <img src="logo.png" width="50px" height="20px" />
             <Box
               component={Button}
+              onClick={() => {}}
               sx={{ color: colors.blue, fontWeight: "bold" }}
             >
-              En
+              <p className="my-8">{}</p>
             </Box>
           </Box>
           <SideDrawer state={state} setState={setState} />

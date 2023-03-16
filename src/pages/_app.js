@@ -8,7 +8,7 @@ import "@/styles/globals.css";
 import { Box, Drawer } from "@mui/material";
 import { colors } from "../utils/const";
 import Footer from "../components/Footer.jsx";
-
+import { useRouter } from "next/router";
 import Cover from "../components/Cover.jsx";
 import HomeDropdown from "../components/HomeDropdown.jsx";
 import SideDrawer from "../components/SideDrawer.jsx";
@@ -23,7 +23,8 @@ import { appWithTranslation } from "next-i18next";
 import { useTranslation } from "next-i18next";
 import FlyingCard from "@/components/mini-components/FlyingCard";
 const App = ({ Component, pageProps }) => {
-  const { t } = useTranslation();
+  const router = useRouter();
+  const { locale } = router;
 
   const [isOpen, setIsOPen] = useState(false);
   const [state, setState] = React.useState(false);
@@ -42,7 +43,7 @@ const App = ({ Component, pageProps }) => {
   return (
     <Provider store={store}>
       {/* <h1>{t("test")}</h1> */}
-      <Box dir="rtl" sx={{}}>
+      <Box dir={locale === "en" ? "ltr" : "rtl"} sx={{}}>
         {/* large screens ---------------------------------------------------------------------- */}
         <Navbar
           setRight={setRight}
