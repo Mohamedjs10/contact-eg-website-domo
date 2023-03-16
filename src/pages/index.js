@@ -2,10 +2,31 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
-
+import { useRouter } from "next/router";
+import en from "../../locales/en";
+import ar from "../../locales/ar";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  // ------------------------------
+  const router = useRouter();
+  console.log(router);
+  const { locale } = router;
+  const t = locale === "en" ? en : ar;
+  // ------------------------------
+  // const changeLanguage = (e) => {
+  //   const locale = e.target.value;
+  //   router.push(router.pathname, router.asPath, { locale });
+  // };
+  const toAr = () => {
+    const locale = "ar";
+    router.push(router.pathname, router.asPath, { locale });
+  };
+  const toEn = () => {
+    const locale = "en";
+    router.push(router.pathname, router.asPath, { locale });
+  };
+  // -------------------------------
   return (
     <>
       <Head>
@@ -16,6 +37,9 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <>Home</>
+        <button onClick={toAr}>AR</button>
+        <button onClick={toEn}>EN</button>
+        <p className="my-8">{t.test.demo}</p>
       </main>
     </>
   );
