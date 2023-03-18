@@ -9,7 +9,7 @@ import { Box, Drawer } from "@mui/material";
 import { colors } from "../utils/const";
 import Footer from "../components/Footer.jsx";
 import { useRouter } from "next/router";
-import Cover from "../components/Cover.jsx";
+import Cover from "../sections/home/CoverSection.jsx";
 import HomeDropdown from "../components/HomeDropdown.jsx";
 import SideDrawer from "../components/SideDrawer.jsx";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
@@ -29,7 +29,7 @@ const App = ({ Component, pageProps }) => {
   const [isOpen, setIsOPen] = useState(false);
   const [state, setState] = React.useState(false);
 
-  const [right, setRight] = useState(-500);
+  const [leftOrRightValue, setLeftOrRightValue] = useState(-500);
   const matches = useMediaQuery("(max-width:900px)");
 
   const theme = createTheme(
@@ -46,7 +46,8 @@ const App = ({ Component, pageProps }) => {
       <Box dir={locale === "en" ? "ltr" : "rtl"} sx={{}}>
         {/* large screens ---------------------------------------------------------------------- */}
         <Navbar
-          setRight={setRight}
+          leftOrRightValue={leftOrRightValue}
+          setLeftOrRightValue={setLeftOrRightValue}
           setIsOPen={setIsOPen}
           state={state}
           setState={setState}
@@ -55,7 +56,11 @@ const App = ({ Component, pageProps }) => {
 
         {!matches && (
           <>
-            <FlyingCard setState={setState} right={right} />
+            <FlyingCard
+              setState={setState}
+              leftOrRightValue={leftOrRightValue}
+              setLeftOrRightValue={setLeftOrRightValue}
+            />
             <HomeDropdown isOpen={isOpen} />
           </>
         )}

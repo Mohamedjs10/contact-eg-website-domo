@@ -20,4 +20,6 @@ export const colors = {
   dark_brown: "#B87F5B",
   light_brown: "#D07E5A",
   ratty: "#6B6B6B",
+  manhattan_blue: "#404456",
+  white_smoke: "#F5F5F6",
 };

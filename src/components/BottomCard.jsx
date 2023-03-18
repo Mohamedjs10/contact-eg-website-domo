@@ -5,13 +5,21 @@ import Link from "next/link";
 import Button from "@mui/material/Button";
 import InputLabel from "@mui/material/InputLabel";
 import TextField from "@mui/material/TextField";
-
+import { useRouter } from "next/router";
+import en from "../../locales/en";
+import ar from "../../locales/ar";
 export default function BottomCard({}) {
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === "en" ? en : ar;
   return (
     <Box
       sx={{
+        position: "relative",
         bgcolor: colors.blue,
-        p: 4,
+        p: { xs: 2, sm: 4, md: 6 },
+        // pl: 9,
+        // pr: 9,
         borderRadius: 2,
         display: "flex",
         flexWrap: "wrap",
@@ -34,7 +42,7 @@ export default function BottomCard({}) {
         }}
       >
         <TextField
-          placeholder="SX"
+          placeholder={t.bottom_card.placeholder}
           inputProps={{ style: { fontSize: 20 } }}
           sx={{
             bgcolor: "white",
@@ -64,9 +72,20 @@ export default function BottomCard({}) {
           size="small"
         />
         <Button variant="outlined" sx={styles.btn}>
-          ارسل
+          {t.bottom_card.send}
         </Button>
       </Box>
+
+      <Box
+        component="img"
+        src="/bottom-decorator.png"
+        sx={{
+          position: "absolute",
+          left: "0",
+          bottom: "0",
+          width: { xs: "150px", sm: "200px", md: "300px", lg: "400px" },
+        }}
+      ></Box>
     </Box>
   );
 }

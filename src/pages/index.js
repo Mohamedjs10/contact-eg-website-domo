@@ -5,7 +5,11 @@ import styles from "@/styles/Home.module.css";
 import { useRouter } from "next/router";
 import en from "../../locales/en";
 import ar from "../../locales/ar";
-import BottomCard from "../components/BottomCard.jsx";
+import Form from "../components/Form.jsx";
+import ImageSection from "../sections/home/ImageSection.jsx";
+import IconsSection from "../sections/home/IconsSection.jsx";
+import ContactPaySection from "../sections/home/ContactPaySection.jsx";
+import PageCover from "@/components/PageCover";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -19,12 +23,14 @@ export default function Home() {
   //   router.push(router.pathname, router.asPath, { locale });
   // };
   const toAr = () => {
-    const locale = "ar";
-    router.push(router.pathname, router.asPath, { locale });
+    // const locale = "ar";
+    // router.push(router.pathname, router.asPath, { locale });
+    router.push(router.pathname, router.asPath, "ar");
   };
   const toEn = () => {
-    const locale = "en";
-    router.push(router.pathname, router.asPath, { locale });
+    // const locale = "en";
+    // router.push(router.pathname, router.asPath, { locale });
+    router.push(router.pathname, router.asPath, "en");
   };
   // -------------------------------
   return (
@@ -36,7 +42,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <>Home</>
+        {/* <>Home</> */}
         {/* <Paragraph
           img="/test.png"
           title="title title"
@@ -44,10 +50,21 @@ export default function Home() {
           orientation={1}
           textStyle={{ textAlign: "center" }}
         /> */}
-        <BottomCard></BottomCard>
-        <button onClick={toAr}>AR</button>
+        {/* <Form type="c"></Form> */}
+        <PageCover
+          color="#74357D"
+          img="/cart.png"
+          title1={t.products_shopiing_page.cover.title1}
+          title2={t.products_shopiing_page.cover.title2}
+          description={t.products_shopiing_page.cover.description}
+          formType="a"
+        ></PageCover>
+        <ImageSection></ImageSection>
+        <IconsSection></IconsSection>
+        <ContactPaySection></ContactPaySection>
+        {/* <button onClick={toAr}>AR</button>
         <button onClick={toEn}>EN</button>
-        <p className="my-8"> {}</p>
+        <p className="my-8"> {}</p> */}
       </main>
     </>
   );

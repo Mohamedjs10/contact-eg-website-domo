@@ -10,7 +10,7 @@ import { mainTabActions } from "../Redux/store";
 import { useRouter } from "next/router";
 import en from "../../locales/en";
 import ar from "../../locales/ar";
-export default function Main_Navbar({ setRight }) {
+export default function Main_Navbar({ leftOrRightValue, setLeftOrRightValue }) {
   const mainTab = useSelector((state) => state.mainTab.mainTab);
   const dispatch = useDispatch();
   const router = useRouter();
@@ -36,7 +36,18 @@ export default function Main_Navbar({ setRight }) {
             color: colors.blue,
           }}
           onClick={() => {
-            setRight((prev) => (prev == 0 ? -500 : 0));
+            console.log(leftOrRightValue);
+            if (leftOrRightValue == -500) {
+              // setLeftOrRightValue(0);
+            }
+            // setLeftOrRightValue((prev) => (prev == 0 ? -500 : 0));
+            // setLeftOrRightValue((prev) => {
+            //   if (prev == -500) {
+            //     return 0;
+            //   } else {
+            //     return -500;
+            //   }
+            // });
           }}
         />
       </Button>

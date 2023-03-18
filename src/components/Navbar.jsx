@@ -9,7 +9,13 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Button from "@mui/material/Button";
 import SideDrawer from "../components/SideDrawer.jsx";
 
-export default function Navbar({ setRight, setIsOPen, state, setState }) {
+export default function Navbar({
+  leftOrRightValue,
+  setLeftOrRightValue,
+  setIsOPen,
+  state,
+  setState,
+}) {
   const matches = useMediaQuery("(max-width:900px)");
 
   return (
@@ -18,7 +24,10 @@ export default function Navbar({ setRight, setIsOPen, state, setState }) {
 
       {!matches && (
         <>
-          <Main_Navbar setRight={setRight}></Main_Navbar>
+          <Main_Navbar
+            setLeftOrRightValue={setLeftOrRightValue}
+            leftOrRightValue={leftOrRightValue}
+          ></Main_Navbar>
           <Secondary_Navbar setIsOPen={setIsOPen}></Secondary_Navbar>
         </>
       )}
