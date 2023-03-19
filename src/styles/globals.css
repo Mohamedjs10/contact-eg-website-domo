@@ -109,3 +109,31 @@ xl, extra-large: 1536px */
     margin-bottom: 5px;
   }
 }
+
+.MuiSvgIcon-root {
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  /* clip-path: polygon(50% 0%, 50% 0%, 100% 50%, 100% 50%, 50% 100%, 0% 50%);
+   */
+  /* clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); */
+  /* clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); */
+  /* clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); */
+  /* clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); */
+  /* clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); */
+  clip-path: circle(50% at 50% 50%);
+}
+
+.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root {
+  color: #afb0b8 !important;
+  font-size: 25px;
+  font-size: 42px;
+}
+.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.MuiStepIcon-root.Mui-active.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root {
+  color: #f18222 !important;
+}
+.MuiStepConnector-root.MuiStepConnector-vertical.Mui-active.css-1pe7n21-MuiStepConnector-root
+  .MuiStepConnector-line.MuiStepConnector-lineVertical.css-8t49rw-MuiStepConnector-line {
+  border-color: #f18222;
+}
+.css-1pe7n21-MuiStepConnector-root {
+  margin-left: 20px !important;
+}

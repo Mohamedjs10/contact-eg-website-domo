@@ -6,6 +6,8 @@ import { useRouter } from "next/router";
 import en from "../../locales/en";
 import ar from "../../locales/ar";
 import Card from "../components/aboutCard/aboutCard";
+import StepsCom from "../components/steps/stepsComp";
+
 import ProductCard from "../components/productCard/card";
 import Statistics from "../components/statistics/statistics";
 
@@ -119,6 +121,7 @@ export default function Home() {
           bgcolor="#1169a8"
         />
       </Box>
+      <StepsCom />
       <Calcuation />
     </>
   );
