@@ -45,6 +45,11 @@ export const styles = {
       // },
     },
   }),
+  helperText: (theme) => ({
+    color: "#d32f2f",
+    fontSize: "0.75rem",
+    m: 1,
+  }),
   btn: (theme) => ({
     width: "100%",
     height: "45px",

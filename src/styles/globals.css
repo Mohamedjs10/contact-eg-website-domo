@@ -109,3 +109,26 @@ xl, extra-large: 1536px */
     margin-bottom: 5px;
   }
 }
+.swiper-button-next {
+  background-image: url("/forward-arrow.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+}
+.swiper-button-prev {
+  background-image: url("/back-arrow.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  left: 300px !important;
+  top: 300px !important;
+  width: 100px !important;
+  height: 100px !important;
+}
+
+.swiper-button-next::after {
+  display: none;
+}
+.swiper-button-prev::after {
+  display: none;
+}

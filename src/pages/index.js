@@ -10,6 +10,8 @@ import ImageSection from "../sections/home/ImageSection.jsx";
 import IconsSection from "../sections/home/IconsSection.jsx";
 import ContactPaySection from "../sections/home/ContactPaySection.jsx";
 import PageCover from "@/components/PageCover";
+import MemberCard from "@/components/MemberCard";
+import VerticalCarousel from "../components/VerticalCarousel.jsx";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -51,17 +53,18 @@ export default function Home() {
           textStyle={{ textAlign: "center" }}
         /> */}
         {/* <Form type="c"></Form> */}
-        <PageCover
+        <VerticalCarousel></VerticalCarousel>
+        {/* <PageCover
           color="#74357D"
           img="/cart.png"
           title1={t.products_shopiing_page.cover.title1}
           title2={t.products_shopiing_page.cover.title2}
           description={t.products_shopiing_page.cover.description}
           formType="a"
-        ></PageCover>
-        <ImageSection></ImageSection>
+        ></PageCover> */}
+        {/* <ImageSection></ImageSection>
         <IconsSection></IconsSection>
-        <ContactPaySection></ContactPaySection>
+        <ContactPaySection></ContactPaySection> */}
         {/* <button onClick={toAr}>AR</button>
         <button onClick={toEn}>EN</button>
         <p className="my-8"> {}</p> */}

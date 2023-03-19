@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useLayoutEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import { styles } from "./flying_card";
 import { Box } from "@mui/material";
 import { colors } from "../../utils/const";
@@ -6,36 +6,18 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import en from "../../../locales/en";
 import ar from "../../../locales/ar";
-
-function useOutsideAlerter(ref, leftOrRightValue, setLeftOrRightValue) {
-  useLayoutEffect(() => {
-    function handleClickOutside(event) {
-      if (ref.current && !ref.current.contains(event.target)) {
-        setLeftOrRightValue(-500);
-      }
-    }
-    // Bind the event listener
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      // Unbind the event listener on clean up
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [ref]);
-}
-
 export default function FlyingCard({
   setLeftOrRightValue,
   leftOrRightValue,
   children,
+  wrapperRef,
 }) {
+  console.log(wrapperRef);
+
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : ar;
   let leftOrRight = locale === "en" ? "left" : "right";
-  // console.log(leftOrRightValue);
-  const wrapperRef = useRef(null);
-  useOutsideAlerter(wrapperRef, leftOrRightValue, setLeftOrRightValue);
-
   return (
     <>
       <Box

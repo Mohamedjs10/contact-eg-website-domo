@@ -15,8 +15,10 @@ export default function Navbar({
   setIsOPen,
   state,
   setState,
+  wrapperRef,
 }) {
   const matches = useMediaQuery("(max-width:900px)");
+  console.log("Navbar", wrapperRef);
 
   return (
     <>
@@ -27,6 +29,7 @@ export default function Navbar({
           <Main_Navbar
             setLeftOrRightValue={setLeftOrRightValue}
             leftOrRightValue={leftOrRightValue}
+            wrapperRef={wrapperRef}
           ></Main_Navbar>
           <Secondary_Navbar setIsOPen={setIsOPen}></Secondary_Navbar>
         </>

@@ -10,7 +10,13 @@ import { mainTabActions } from "../Redux/store";
 import { useRouter } from "next/router";
 import en from "../../locales/en";
 import ar from "../../locales/ar";
-export default function Main_Navbar({ leftOrRightValue, setLeftOrRightValue }) {
+export default function Main_Navbar({
+  leftOrRightValue,
+  setLeftOrRightValue,
+  wrapperRef,
+}) {
+  console.log("MainNavbar", wrapperRef);
+
   const mainTab = useSelector((state) => state.mainTab.mainTab);
   const dispatch = useDispatch();
   const router = useRouter();
@@ -29,18 +35,18 @@ export default function Main_Navbar({ leftOrRightValue, setLeftOrRightValue }) {
 
   return (
     <Box sx={styles.container} style={{}} className="horizontal-safe-padding">
-      <Button>
+      <Button ref={wrapperRef}>
         <MenuIcon
           sx={{
             fontSize: 40,
             color: colors.blue,
           }}
           onClick={() => {
-            console.log(leftOrRightValue);
-            if (leftOrRightValue == -500) {
-              // setLeftOrRightValue(0);
-            }
-            // setLeftOrRightValue((prev) => (prev == 0 ? -500 : 0));
+            console.log("btn touched", leftOrRightValue);
+            // if (leftOrRightValue == -500) {
+            //   setLeftOrRightValue(0);
+            // }
+            setLeftOrRightValue((prev) => (prev == 0 ? -500 : 0));
             // setLeftOrRightValue((prev) => {
             //   if (prev == -500) {
             //     return 0;

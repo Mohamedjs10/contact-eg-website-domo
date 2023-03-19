@@ -65,9 +65,7 @@ export default function Form({ type, color }) {
           InputProps={{ sx: { height: "45px" } }}
           variant="outlined"
         />
-        <Box sx={{ color: "#d32f2f", fontSize: "0.75rem" }}>
-          {touched.username && errors.username}
-        </Box>
+        <Box sx={styles.helperText}>{touched.username && errors.username}</Box>
       </Box>
       {/* Last Name ---------------------------------------------------------------------------------------------------------- */}
       <Box sx={styles.inputWrapper} style={{ width: "200px" }}>
@@ -89,9 +87,7 @@ export default function Form({ type, color }) {
           }}
           variant="outlined"
         />
-        <Box sx={{ color: "#d32f2f", fontSize: "0.75rem" }}>
-          {touched.lastname && errors.lastname}
-        </Box>
+        <Box sx={styles.helperText}>{touched.lastname && errors.lastname}</Box>
       </Box>
       {/* Email Adress ---------------------------------------------------------------------------------------------------------- */}
       <Box sx={styles.inputWrapper} style={{ width: "200px" }}>
@@ -107,9 +103,7 @@ export default function Form({ type, color }) {
           InputProps={{ sx: { height: "45px" } }}
           variant="outlined"
         />
-        <Box sx={{ color: "#d32f2f", fontSize: "0.75rem" }}>
-          {touched.email && errors.email}
-        </Box>
+        <Box sx={styles.helperText}>{touched.email && errors.email}</Box>
       </Box>
       {/* Phone Number ---------------------------------------------------------------------------------------------------------- */}
       <Box sx={styles.inputWrapper} style={{ width: "200px" }}>
@@ -125,7 +119,7 @@ export default function Form({ type, color }) {
           InputProps={{ sx: { height: "45px" } }}
           variant="outlined"
         />
-        <Box sx={{ color: "#d32f2f", fontSize: "0.75rem" }}>
+        <Box sx={styles.helperText}>
           {touched.phoneNumber && errors.phoneNumber}
         </Box>
       </Box>
@@ -162,7 +156,7 @@ export default function Form({ type, color }) {
           ))}
           {/* </Box> */}
         </TextField>
-        <Box sx={{ color: "#d32f2f", fontSize: "0.75rem" }}>
+        <Box sx={styles.helperText}>
           {touched.governorate && errors.governorate}
         </Box>
       </Box>
@@ -197,9 +191,7 @@ export default function Form({ type, color }) {
             </MenuItem>
           ))}
         </TextField>
-        <Box sx={{ color: "#d32f2f", fontSize: "0.75rem" }}>
-          {touched.area && errors.area}
-        </Box>
+        <Box sx={styles.helperText}>{touched.area && errors.area}</Box>
       </Box>
       {/* Car Type & Price ---------------------------------------------------------------------------------------------------------- */}
       {type === "a" && (
@@ -234,7 +226,7 @@ export default function Form({ type, color }) {
                 </MenuItem>
               ))}
             </TextField>
-            <Box sx={{ color: "#d32f2f", fontSize: "0.75rem" }}>
+            <Box sx={styles.helperText}>
               {touched.car_type && errors.car_type}
             </Box>
           </Box>
@@ -252,7 +244,7 @@ export default function Form({ type, color }) {
               InputProps={{ sx: { height: "45px" } }}
               variant="outlined"
             />
-            <Box sx={{ color: "#d32f2f", fontSize: "0.75rem" }}>
+            <Box sx={styles.helperText}>
               {touched.car_price && errors.car_price}
             </Box>
           </Box>
