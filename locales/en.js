@@ -352,6 +352,9 @@ export default {
     products: "Products",
     products_placeholder: "Choose A Product",
     submit: "Order Service",
+    // =======
+    subject: "Subject",
+    message: "Message",
   },
   governorates: [
     {
@@ -834,5 +837,42 @@ export default {
       title2: "We Make Your Life Easier",
       description: `Contact make your life easier anytime you want to buy anything via financial solutions without any troubles. Contact make your life easier anytime you want to buy anything via financial solutions without any troubles`,
     },
+  },
+
+  our_brand_page: {
+    title: "Our Company",
+    body: [
+      {
+        id: 1,
+        img: "/our-brands/contact.png",
+        content:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      },
+      {
+        id: 2,
+        img: "/our-brands/contact.png",
+        content:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      },
+      {
+        id: 3,
+        img: "/our-brands/contact.png",
+        content:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      },
+      {
+        id: 4,
+        img: "/our-brands/contact.png",
+        content:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      },
+      {
+        id: 5,
+        img: "/our-brands/contact.png",
+        content:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      },
+    ],
+    link: "visit website",
   },
 };
