@@ -1,11 +1,13 @@
 export const colors = {
   white: "#FFFFFF",
+  black: "#000",
   blue: "#2D317F",
   navy_blue: "#040921",
   light_grey: "#ebebed",
   dark_grey: "#EBEBED",
   v_dark_grey: "#4D4D4D",
   orange: "#F18222",
+  yellow: "#FCB62E",
   violet: "#47184E",
   petroli: "#18374E",
   dark_red: "#AF3F3E",
@@ -18,4 +20,6 @@ export const colors = {
   dark_brown: "#B87F5B",
   light_brown: "#D07E5A",
   ratty: "#6B6B6B",
+  manhattan_blue: "#404456",
+  white_smoke: "#F5F5F6",
 };

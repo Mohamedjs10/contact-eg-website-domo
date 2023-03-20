@@ -9,8 +9,15 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-
+import { useRouter } from "next/router";
+import en from "../../locales/en";
+import ar from "../../locales/ar";
 export default function Secondary_Navbar({ setIsOPen }) {
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === "en" ? en : ar;
+  // let leftOrRight = locale === "en" ? { right: "0px" } : { left: "0px" };
+  let margin = locale === "en" ? "ml" : "mr";
   return (
     <Box className="horizontal-safe-margin">
       {/* section A ------------------------------------------------------------------------------------ */}
@@ -360,7 +367,7 @@ export default function Secondary_Navbar({ setIsOPen }) {
         </Box>
         <Box
           sx={{
-            mr: { xs: 0, md: "auto" },
+            [margin]: { xs: 0, md: "auto" },
             gap: { xs: 1, md: 0 },
             display: "flex",
             justifyContent: "center",

@@ -13,13 +13,16 @@ import InboxIcon from "@mui/icons-material/MoveToInbox";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import StarBorder from "@mui/icons-material/StarBorder";
-import { services } from "../utils/data";
 import Service from "./Service.jsx";
-
+import { useRouter } from "next/router";
+import en from "../../locales/en";
+import ar from "../../locales/ar";
 export default function SideDrawer({ state, setState }) {
   const [open1, setOpen1] = React.useState(false);
   const [open2, setOpen2] = React.useState(false);
-
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === "en" ? en : ar;
   const toggleDrawer = () => () => {
     setState((prev) => !prev);
   };
@@ -33,16 +36,21 @@ export default function SideDrawer({ state, setState }) {
   return (
     <div>
       {/* <Button onClick={toggleDrawer()}>right</Button> */}
-      <Drawer anchor="right" open={state} onClose={toggleDrawer()}>
+      <Drawer
+        anchor={locale === "en" ? "left" : "right"}
+        open={state}
+        onClose={toggleDrawer()}
+        dir={locale === "en" ? "ltr" : "rtl"}
+      >
         <Box
           sx={{
             width: { xs: 220, sm: 300 },
-            "& span": { textAlign: "right" },
+            "& span": { textAlign: locale === "en" ? "left" : "right" },
           }}
           role="presentation"
           // onClick={toggleDrawer()}
         >
-          <List dir="rtl">
+          <List>
             {/* A ---------------------------------------------------------*/}
             <ListItem disablePadding>
               <ListItemButton onClick={handleClick1}>
@@ -55,7 +63,7 @@ export default function SideDrawer({ state, setState }) {
             </ListItem>
             <Collapse in={open1} timeout="auto" unmountOnExit>
               <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1, m: "7px" }}>
-                {services.All.map(
+                {t.home_page.services.All.map(
                   ({ color, title, description, img }, index) => (
                     <Service
                       key={index}
@@ -75,20 +83,24 @@ export default function SideDrawer({ state, setState }) {
                   <InboxIcon />
                 </ListItemIcon>
                 <ListItemText primary="برنامج العملاء" />
+                {/* <ListItemText primary={t.secondary_nav.insurance_services} /> */}
+
                 {open2 ? <ExpandLess /> : <ExpandMore />}
               </ListItemButton>
             </ListItem>
             <Collapse in={open2} timeout="auto" unmountOnExit>
               <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1, m: "7px" }}>
-                {services.C.map(({ color, title, description, img }, index) => (
-                  <Service
-                    key={index}
-                    color={color}
-                    title={title}
-                    description={description}
-                    img={img}
-                  />
-                ))}
+                {t.home_page.services.C.map(
+                  ({ color, title, description, img }, index) => (
+                    <Service
+                      key={index}
+                      color={color}
+                      title={title}
+                      description={description}
+                      img={img}
+                    />
+                  )
+                )}
               </Box>
             </Collapse>
             {/* C ---------------------------------------------------------*/}

@@ -1,12 +1,27 @@
+import React, { useRef, useEffect } from "react";
 import { styles } from "./flying_card";
 import { Box } from "@mui/material";
 import { colors } from "../../utils/const";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import en from "../../../locales/en";
+import ar from "../../../locales/ar";
+export default function FlyingCard({
+  setLeftOrRightValue,
+  leftOrRightValue,
+  children,
+  wrapperRef,
+}) {
+  console.log(wrapperRef);
 
-export default function FlyingCard({ setRight, right }) {
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === "en" ? en : ar;
+  let leftOrRight = locale === "en" ? "left" : "right";
   return (
     <>
       <Box
+        ref={wrapperRef}
         className="horizontal-safe-margin"
         sx={{
           boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
@@ -21,8 +36,8 @@ export default function FlyingCard({ setRight, right }) {
         style={{
           position: "absolute",
           top: "55px",
-          right: right,
-          width: right == -500 ? 0 : "250px",
+          [leftOrRight]: leftOrRightValue,
+          width: leftOrRightValue == -500 ? 0 : "250px",
           height: "250px",
           overflow: "hidden",
         }}
@@ -41,7 +56,7 @@ export default function FlyingCard({ setRight, right }) {
             component={Link}
             href="/"
             onClick={() => {
-              setRight((prev) => (prev == 0 ? -500 : 0));
+              setLeftOrRightValue((prev) => (prev == 0 ? -500 : 0));
             }}
             sx={styles.tab}
             style={{}}
@@ -53,7 +68,7 @@ export default function FlyingCard({ setRight, right }) {
             component={Link}
             href="/"
             onClick={() => {
-              setRight((prev) => (prev == 0 ? -500 : 0));
+              setLeftOrRightValue((prev) => (prev == 0 ? -500 : 0));
             }}
             sx={styles.tab}
             style={{}}
@@ -65,7 +80,7 @@ export default function FlyingCard({ setRight, right }) {
             component={Link}
             href="/"
             onClick={() => {
-              setRight((prev) => (prev == 0 ? -500 : 0));
+              setLeftOrRightValue((prev) => (prev == 0 ? -500 : 0));
             }}
             sx={styles.tab}
             style={{}}
@@ -77,7 +92,7 @@ export default function FlyingCard({ setRight, right }) {
             component={Link}
             href="/"
             onClick={() => {
-              setRight((prev) => (prev == 0 ? -500 : 0));
+              setLeftOrRightValue((prev) => (prev == 0 ? -500 : 0));
             }}
             sx={styles.tab}
             style={{}}
@@ -89,7 +104,7 @@ export default function FlyingCard({ setRight, right }) {
             component={Link}
             href="/"
             onClick={() => {
-              setRight((prev) => (prev == 0 ? -500 : 0));
+              setLeftOrRightValue((prev) => (prev == 0 ? -500 : 0));
             }}
             sx={styles.tab}
             style={{}}

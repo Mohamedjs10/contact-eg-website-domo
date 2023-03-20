@@ -5,15 +5,17 @@ import styles from "@/styles/Home.module.css";
 import { useRouter } from "next/router";
 import en from "../../locales/en";
 import ar from "../../locales/ar";
-import Card from "../components/aboutCard/aboutCard";
-import StepsCom from "../components/steps/stepsComp";
-
-import ProductCard from "../components/productCard/card";
-import Statistics from "../components/statistics/statistics";
-
+import Form from "../components/Form.jsx";
+import ImageSection from "../sections/home/ImageSection.jsx";
+import IconsSection from "../sections/home/IconsSection.jsx";
+import ContactPaySection from "../sections/home/ContactPaySection.jsx";
+import PageCover from "@/components/PageCover";
+import VerticalCarousel from "../components/VerticalCarousel.jsx";
 import { Box } from "@mui/material";
-import Calcuation from "@/components/calculation/calculation";
-
+import MemberCard from "@/components/MemberCard";
+import PlaceCard from "@/components/PlaceCard";
+import ReviewCard from "@/components/ReviewCard";
+import IconTitle from "../components/mini-components/IconTile.jsx";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -27,12 +29,14 @@ export default function Home() {
   //   router.push(router.pathname, router.asPath, { locale });
   // };
   const toAr = () => {
-    const locale = "ar";
-    router.push(router.pathname, router.asPath, { locale });
+    // const locale = "ar";
+    // router.push(router.pathname, router.asPath, { locale });
+    router.push(router.pathname, router.asPath, "ar");
   };
   const toEn = () => {
-    const locale = "en";
-    router.push(router.pathname, router.asPath, { locale });
+    // const locale = "en";
+    // router.push(router.pathname, router.asPath, { locale });
+    router.push(router.pathname, router.asPath, "en");
   };
   // -------------------------------
   return (
@@ -43,86 +47,46 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Box
-        sx={{
-          display: "flex",
-          my: 5,
-          flexDirection: {
-            xs: "column",
-            md: "row",
-          },
-        }}
-      >
-        <Card
-          icon="/images/eye.png"
-          heading={t.about.card.visionTitle}
-          textArr={t.about.card.visionText}
-        />
-        <Card
-          icon="/images/mission.png"
-          heading={t.about.card.missionTitle}
-          textArr={t.about.card.missionText}
-        />
-        <Card
-          icon="/images/value.png"
-          heading={t.about.card.valueTitle}
-          textArr={t.about.card.valueText}
-        />
-      </Box>
-      <Box
-        sx={{
-          display: "flex",
-          my: 5,
-          flexDirection: {
-            xs: "column",
-            md: "row",
-          },
-        }}
-      >
-        <Statistics
-          num={360}
-          suffix={t.about.statistic.sufTheous}
-          text={t.about.statistic.process}
-        />
-        <Statistics
-          num={150}
-          suffix={t.about.statistic.sufTheous}
-          text={t.about.statistic.client}
-        />
-        <Statistics num={2200} suffix="" text={t.about.statistic.emp} />
-      </Box>
-      <Box
-        className="horizontal-safe-padding  vertical-safe-margin "
-        sx={{
-          display: "flex",
-          my: 5,
-          flexDirection: {
-            xs: "column",
-            sm: "row",
-          },
-        }}
-      >
-        <ProductCard
-          title={"الاقتصادي"}
-          textArr={[
-            "مقدم يبدأ من 20%",
-            "التأمين اجباري",
-            "فترات سداد تصل الي 3 سنوات",
-          ]}
-          bgcolor="#1169a8"
-        />
-        <ProductCard
-          title={"الاقتصادي"}
-          textArr={[
-            "مقدم يبدأ من 20%",
-            "التأمين اجباري",
-            "فترات سداد تصل الي 3 سنوات",
-          ]}
-          bgcolor="#1169a8"
-        />
-      </Box>
-      <StepsCom />
-      <Calcuation />
+      <main className={styles.main}>
+        {/* <>Home</> */}
+        {/* <Paragraph
+          img="/test.png"
+          title="title title"
+          body="body body body body body body body body"
+          orientation={1}
+          textStyle={{ textAlign: "center" }}
+        /> */}
+        {/* <Form type="c"></Form> */}
+
+        <Box sx={{ display: "flex", justifyContent: "flex-end", my: 5 }}>
+          <VerticalCarousel
+            // itemsArray={t.general.reviews}
+            // Component={ReviewCard}
+            // slidesPerView={4.3}
+            // itemsArray={t.general.directors}
+            // Component={MemberCard}
+            // slidesPerView={5.3}
+            itemsArray={t.general.reviews}
+            Component={ReviewCard}
+            slidesPerView={5.3}
+          ></VerticalCarousel>
+        </Box>
+        <IconTitle></IconTitle>
+        {/* <PageCover
+          color="#74357D"
+          img="/cart.png"
+          title1={t.products_shopiing_page.cover.title1}
+          title2={t.products_shopiing_page.cover.title2}
+          description={t.products_shopiing_page.cover.description}
+          formType="a"
+        ></PageCover> */}
+        {/* <ImageSection></ImageSection>
+        <IconsSection></IconsSection>
+        <ContactPaySection></ContactPaySection> */}
+        {/* <button onClick={toAr}>AR</button>
+        <button onClick={toEn}>EN</button>
+        <p className="my-8"> {}</p> */}
+      </main>
     </>
   );
 }

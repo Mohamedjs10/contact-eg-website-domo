@@ -3,15 +3,19 @@ import { Box } from "@mui/material";
 import Link from "next/link";
 import Image from "next/image";
 import { colors } from "../utils/const";
-import { services } from "../utils/data";
-import { news } from "../utils/data";
 import { styles } from "./home_dropdown";
 import Service from "./Service.jsx";
 import NewsCard from "./NewsCard.jsx";
 import Button from "@mui/material/Button";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+import { useRouter } from "next/router";
+import en from "../../locales/en";
+import ar from "../../locales/ar";
 export default function HomeDropdown({ isOpen }) {
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === "en" ? en : ar;
   return (
     <Box
       className="horizontal-safe-padding"
@@ -32,26 +36,30 @@ export default function HomeDropdown({ isOpen }) {
     >
       <Box sx={{ display: "flex", justifyContent: "space-between" }}>
         <Box sx={{ overflow: "auto", height: "600px" }}>
-          {services.A.map(({ color, title, description, img }, index) => (
-            <Service
-              key={index}
-              color={color}
-              title={title}
-              description={description}
-              img={img}
-            />
-          ))}
+          {t.home_page.services.A.map(
+            ({ color, title, description, img }, index) => (
+              <Service
+                key={index}
+                color={color}
+                title={title}
+                description={description}
+                img={img}
+              />
+            )
+          )}
         </Box>
         <Box sx={{ overflow: "auto", height: "600px" }}>
-          {services.B.map(({ color, title, description, img }, index) => (
-            <Service
-              key={index}
-              color={color}
-              title={title}
-              description={description}
-              img={img}
-            />
-          ))}
+          {t.home_page.services.B.map(
+            ({ color, title, description, img }, index) => (
+              <Service
+                key={index}
+                color={color}
+                title={title}
+                description={description}
+                img={img}
+              />
+            )
+          )}
         </Box>
         <Box sx={{ bgcolor: colors.light_grey, p: 3 }}>
           <Box
@@ -62,9 +70,9 @@ export default function HomeDropdown({ isOpen }) {
               mb: 3,
             }}
           >
-            أخبارنا
+            {t.home_page.news_title}
           </Box>
-          {news.map(({ title, description, img }, index) => (
+          {t.home_page.news.map(({ title, description, img }, index) => (
             <NewsCard
               key={index}
               title={title}
@@ -82,8 +90,12 @@ export default function HomeDropdown({ isOpen }) {
               mt: 3,
             }}
           >
-            المزيد
-            <KeyboardArrowLeftIcon />
+            {t.home_page.news_button2}
+            {locale === "en" ? (
+              <KeyboardArrowRightIcon />
+            ) : (
+              <KeyboardArrowLeftIcon />
+            )}
           </Box>
         </Box>
       </Box>

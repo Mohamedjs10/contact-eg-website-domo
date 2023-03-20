@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: "GE_SS_Light";
   src: url("../../public/fonts/GE_SS_Two_Light.otf");
   font-weight: normal;
@@ -10,7 +10,7 @@
   src: url("../../public/fonts/GE-SS-Two-Bold.otf");
   font-weight: bold;
   font-style: normal;
-}
+} */
 
 * {
   box-sizing: border-box;

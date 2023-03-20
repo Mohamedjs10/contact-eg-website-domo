@@ -9,13 +9,18 @@ import { styles } from "./secondary_navbar";
 import { useSelector, useDispatch } from "react-redux";
 import { secTabActions } from "../Redux/store";
 import Button from "@mui/material/Button";
-
+import { useRouter } from "next/router";
+import en from "../../locales/en";
+import ar from "../../locales/ar";
 export default function Secondary_Navbar({ setIsOPen }) {
   const secTab = useSelector((state) => state.secTab.secTab);
 
   const dispatch = useDispatch();
 
   const [arrDir, setArrDir] = useState("down");
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === "en" ? en : ar;
   return (
     <>
       {/* Desktop */}
@@ -24,10 +29,10 @@ export default function Secondary_Navbar({ setIsOPen }) {
         <Box sx={styles.container} className="horizontal-safe-padding">
           <Link href="/">
             <Image
-              src="/logo.png"
+              src={t.logo}
               alt="Picture of the author"
-              width={70}
-              height={20}
+              width={80}
+              height={30}
             />
           </Link>
 
@@ -54,33 +59,41 @@ export default function Secondary_Navbar({ setIsOPen }) {
               transition: "1s",
             }}
           >
-            خدمات تمويلية
+            {t.secondary_nav.financial_services}
             <KeyboardArrowDownIcon />
           </Box>
           <Box component={Link} href="/" onClick={() => {}} sx={styles.tab}>
-            خدمات تأمينية
+            {t.secondary_nav.insurance_services}
           </Box>
           <Box component={Link} href="/" onClick={() => {}} sx={styles.tab}>
-            مدفوعات الكترونية
+            {t.secondary_nav.e_payments}
           </Box>
           <Box component={Link} href="/" onClick={() => {}} sx={styles.tab}>
-            استثمار وادخار
+            {t.secondary_nav.investment_and_savings}
           </Box>
           <Box component={Link} href="/" onClick={() => {}} sx={styles.tab}>
-            اماكن الفروع
+            {t.secondary_nav.branches_location}
           </Box>
           <Box
             sx={{
               display: "flex",
               justifyContent: "center",
-              mr: { xs: 0, md: "auto" },
+              mr: { xs: 0, md: locale === "en" ? 0 : "auto" },
+              ml: { xs: 0, md: locale === "en" ? "auto" : 0 },
             }}
           >
-            <Button variant="outlined" sx={styles.loginBtn}>
-              تسجيل الدخول
+            <Button
+              variant="outlined"
+              sx={styles.loginBtn}
+              style={{
+                marginRight: locale === "en" ? 20 : 0,
+                marginLeft: locale === "en" ? 0 : 20,
+              }}
+            >
+              {t.secondary_nav.login}
             </Button>
             <Button variant="contained" sx={styles.downloadBtn}>
-              حمل التطبيق
+              {t.secondary_nav.download_app}
             </Button>
           </Box>
         </Box>

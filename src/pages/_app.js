@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, forwardRef, useEffect, useState } from "react";
 import store from "../Redux/store";
 import { Provider } from "react-redux";
 import { styles } from "./app";
@@ -8,8 +8,8 @@ import "@/styles/globals.css";
 import { Box, Drawer } from "@mui/material";
 import { colors } from "../utils/const";
 import Footer from "../components/Footer.jsx";
-
-import Cover from "../components/Cover.jsx";
+import { useRouter } from "next/router";
+import Cover from "../sections/home/CoverSection.jsx";
 import HomeDropdown from "../components/HomeDropdown.jsx";
 import SideDrawer from "../components/SideDrawer.jsx";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
@@ -22,45 +22,61 @@ import Button from "@mui/material/Button";
 import { appWithTranslation } from "next-i18next";
 import { useTranslation } from "next-i18next";
 import FlyingCard from "@/components/mini-components/FlyingCard";
-import { useRouter } from "next/router";
-import en from "../../locales/en";
-import ar from "../../locales/ar";
-
+// =================================================================
+function useOutsideAlerter(ref, leftOrRightValue, setLeftOrRightValue) {
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (ref.current && !ref.current.contains(event.target)) {
+        // if (leftOrRightValue == 0) {
+        console.log("outside touched", leftOrRightValue);
+        setLeftOrRightValue(-500);
+        // }
+      }
+    }
+    // Bind the event listener
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      // Unbind the event listener on clean up
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [ref]);
+}
+// =================================================================
 const App = ({ Component, pageProps }) => {
   const router = useRouter();
   const { locale } = router;
-  const t = locale === "en" ? en : ar;
 
   const [isOpen, setIsOPen] = useState(false);
   const [state, setState] = React.useState(false);
 
-  const [right, setRight] = useState(-500);
+  const [leftOrRightValue, setLeftOrRightValue] = useState(-500);
   const matches = useMediaQuery("(max-width:900px)");
-
-  const theme = createTheme(
-    {
-      palette: {
-        primary: { main: "#1976d2" },
-      },
-    },
-    arEG
-  );
+  // =================================================================
+  const wrapperRef = useRef(null);
+  useOutsideAlerter(wrapperRef, leftOrRightValue, setLeftOrRightValue);
+  // =================================================================
   return (
     <Provider store={store}>
-      {/* <h1>{t("test")}</h1> */}
-      <Box dir={t.direction} sx={{}}>
+      <Box dir={locale === "en" ? "ltr" : "rtl"} sx={{}}>
         {/* large screens ---------------------------------------------------------------------- */}
         <Navbar
-          setRight={setRight}
+          leftOrRightValue={leftOrRightValue}
+          setLeftOrRightValue={setLeftOrRightValue}
           setIsOPen={setIsOPen}
           state={state}
           setState={setState}
+          wrapperRef={wrapperRef}
         />
         {/* small screens ---------------------------------------------------------------------- */}
 
         {!matches && (
           <>
-            <FlyingCard setState={setState} right={right} />
+            <FlyingCard
+              setState={setState}
+              leftOrRightValue={leftOrRightValue}
+              setLeftOrRightValue={setLeftOrRightValue}
+              wrapperRef={wrapperRef}
+            />
             <HomeDropdown isOpen={isOpen} />
           </>
         )}

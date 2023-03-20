@@ -35,10 +35,10 @@ export const styles = {
 
     "&:hover": {
       border: `1px solid ${colors.blue}`,
-      boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+      // boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
     },
     "&:active": {
-      boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+      // boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
     },
     // "&:focus": {
     //   boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
@@ -51,10 +51,10 @@ export const styles = {
     borderRadius: "8px",
     "&:hover": {
       backgroundColor: colors.blue,
-      boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+      // boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
     },
     "&:active": {
-      boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+      // boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
     },
     // "&:focus": {
 
