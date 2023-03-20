@@ -16,7 +16,7 @@ export default function Statistics() {
         <Typography variant="h5" sx={{ fontWeight: "700" }}>
           {heading}
         </Typography>
-        <Typography sx={{ mt: 1, lineHeight: 1.7 }} variant="subtitle2">
+        <Typography sx={{ mt: 1, lineHeight: 2.2 }} variant="subtitle2">
           {text}
         </Typography>
       </Box>
@@ -65,7 +65,7 @@ export default function Statistics() {
             md: "65%",
             xs: "100%",
           },
-          lineHeight: 1.6,
+          lineHeight: 2,
         }}
       >
         {t.about.aboutText}
@@ -99,7 +99,7 @@ export default function Statistics() {
           src="/images/about-member.png"
           sx={{
             width: {
-              lg: "715px",
+              lg: "700px",
               md: "500px",
               sm: "500px",
             },
