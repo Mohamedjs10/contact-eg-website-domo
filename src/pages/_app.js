@@ -28,7 +28,6 @@ function useOutsideAlerter(ref, leftOrRightValue, setLeftOrRightValue) {
     function handleClickOutside(event) {
       if (ref.current && !ref.current.contains(event.target)) {
         // if (leftOrRightValue == 0) {
-        console.log("outside touched", leftOrRightValue);
         setLeftOrRightValue(-500);
         // }
       }

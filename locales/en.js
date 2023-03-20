@@ -4,6 +4,20 @@ export default {
   direction: "ltr",
   test: { demo: "english" },
   about: {
+    aboutTitle: "About",
+    aboutText:
+      "Contact Financial Holding is a leading company characterized by providing a variety of financing solutions and services, including auto financing, consumer financing, real estate financing, insurance and other services to a wide customer base, in addition to being the main player in emerging debt instruments markets in Egypt, as it structures, organizes and covers subscription in Debt issuance operations for companies wishing to finance growth plans, manage risks, improve their financial conditions and increase liquidity levels.",
+    aboutCard: {
+      heading1: "Our expertise",
+      text1:
+        "We always seek to employ our extensive experience in the field of managing financial investments and providing financing in developing advanced financial solutions that suit the needs of our customers. We are also working on adapting the available opportunities in the promising financial sectors, which contributes to increasing the rates of financial inclusion in the market.",
+      heading2: "Financing solutions",
+      text2:
+        "The financing solutions provided vary to include a wide range of services and products to our individual and corporate clients, whether they are provided under one of the brands of Contact Financial Holding or within specialized branding programs through which we offer a range of products and financing solutions that are specially designed to suit the needs of major companies from business partners.",
+      heading3: "work team",
+      text3:
+        "The cornerstone of Contact Financial Holding's success is the team of more than 2,200 industry-leading professionals. Believing in the role played by the work team in preserving the company's leadership and distinction, the company is always keen to invest in its employees and spares no effort in supporting them as it is confident that the company's success is only born with the success of its employees.",
+    },
     card: {
       visionTitle: "Our vision",
       visionText: [

@@ -16,6 +16,8 @@ import MemberCard from "@/components/MemberCard";
 import PlaceCard from "@/components/PlaceCard";
 import ReviewCard from "@/components/ReviewCard";
 import IconTitle from "../components/mini-components/IconTile.jsx";
+import StepsComp from "../components/steps/stepsComp";
+import AboutSec from "../components/aboutSec/about";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -57,7 +59,6 @@ export default function Home() {
           textStyle={{ textAlign: "center" }}
         /> */}
         {/* <Form type="c"></Form> */}
-
         <Box sx={{ display: "flex", justifyContent: "flex-end", my: 5 }}>
           <VerticalCarousel
             // itemsArray={t.general.reviews}
@@ -68,10 +69,13 @@ export default function Home() {
             // slidesPerView={5.3}
             itemsArray={t.general.reviews}
             Component={ReviewCard}
-            slidesPerView={5.3}
+            slidesPerView={4.3}
           ></VerticalCarousel>
         </Box>
         <IconTitle></IconTitle>
+        {/* <StepsComp /> */}
+        <AboutSec />
+
         {/* <PageCover
           color="#74357D"
           img="/cart.png"
