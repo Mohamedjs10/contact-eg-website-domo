@@ -8,7 +8,8 @@ import { useRouter } from "next/router";
 import en from "../../locales/en";
 import ar from "../../locales/ar";
 import { Swiper, SwiperSlide } from "swiper/react";
-import MemberCard from "./MemberCard";
+import MemberCard from "@/components/MemberCard";
+import PlaceCard from "@/components/PlaceCard";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -18,6 +19,7 @@ import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
+
   return (
     <div
       className={className}
@@ -55,82 +57,108 @@ function SamplePrevArrow(props) {
 }
 
 // ======================
-export default function VerticalCarousel() {
-  // const router = useRouter();
-  // const { locale } = router;
-  // const t = locale === "en" ? en : ar;
+export default function VerticalCarousel({ item, slidesPerView }) {
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === "en" ? en : ar;
+  let dir = locale === "en" ? "left" : "right";
 
   return (
-    // <Box
-    //   sx={{
-    //     width: "1400px",
-    //     zIndex: "9999",
-    //     mb: 3,
-    //     "& .slick-prev:before": {
-    //       display: "none",
-    //     },
-    //     "& .slick-next:before": {
-    //       display: "none",
-    //     },
+    <Box
+      sx={{
+        width: "90%", // change me
+        "& .swiper-pagination": {
+          bottom: "22px !important",
+          textAlign: dir,
+        },
+        "& .swiper-pagination-bullet": {
+          bgcolor: "#000",
+        },
+        "& .swiper-button-next": {
+          zIndex: "100",
+          backgroundImage:
+            locale === "en"
+              ? "url('/forward1-arrow.png')"
+              : "url('back1-arrow.png')",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "100% auto",
+          backgroundPosition: "center",
+          [dir]: {
+            xs: "280px !important",
+            sm: "500px !important",
+            md: "700px !important",
+            lg: "1300px !important",
+          },
+          top: "90%",
+          width: "40px !important",
+          height: "40px !important",
+        },
 
-    //     "& .slick-prev": {
-    //       top: "500px",
-    //       left: "900px !important",
-    //       zIndex: 1,
-    //     },
-    //     "& .slick-next": {
-    //       top: "500px",
+        "& .swiper-button-prev": {
+          zIndex: "100",
+          backgroundImage:
+            locale === "en"
+              ? "url('back1-arrow.png')"
+              : "url('/forward1-arrow.png')",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "100% auto",
+          backgroundPosition: "center",
+          [dir]: {
+            xs: "230px !important",
+            sm: "450px !important",
+            md: "650px !important",
+            lg: "1250px !important",
+          },
+          top: "90%",
+          width: "40px !important",
+          height: "40px !important",
+        },
 
-    //       left: "1000px!important",
-    //       zIndex: 1,
-    //     },
-    //   }}
-    // >
-    //   <Slider {...settings} class="carousel-rtl" dir="rtl">
-    //     <MemberCard></MemberCard>
-    //     <MemberCard></MemberCard>
-    //     <MemberCard></MemberCard>
-    //     <MemberCard></MemberCard>
-    //     <MemberCard></MemberCard>
-    //     <MemberCard></MemberCard>
-    //     <MemberCard></MemberCard>
-    //     <MemberCard></MemberCard>
-    //     <MemberCard></MemberCard>
-    //     <MemberCard></MemberCard>
-    //     <MemberCard></MemberCard>
-    //     <MemberCard></MemberCard>
-    //     <MemberCard></MemberCard>
-    //     <MemberCard></MemberCard>
-    //     {/* <Box>11111111111</Box> */}
-    //   </Slider>
-    // </Box>
-    <>
+        "& .swiper-button-next::after": {
+          display: "none",
+        },
+        "& .swiper-button-prev::after": {
+          display: "none",
+        },
+      }}
+    >
       <Swiper
-        slidesPerView={3}
-        spaceBetween={30}
+        style={{ paddingBottom: "80px" }}
         pagination={{
-          type: "progressbar",
+          clickable: true,
         }}
+        slidesPerView={1.3}
+        spaceBetween={10}
         navigation={true}
         modules={[Pagination, Navigation]}
         className="mySwiper"
+        breakpoints={{
+          600: {
+            slidesPerView: slidesPerView - 3,
+            // spaceBetween: 20,
+          },
+          900: {
+            slidesPerView: slidesPerView - 2,
+            // spaceBetween: 25,
+          },
+          1200: {
+            slidesPerView: slidesPerView,
+            // spaceBetween: 30,
+          },
+        }}
       >
-        <SwiperSlide>
-          <MemberCard></MemberCard>
-        </SwiperSlide>
-        <SwiperSlide>
-          <MemberCard></MemberCard>
-        </SwiperSlide>
-        <SwiperSlide>
-          <MemberCard></MemberCard>
-        </SwiperSlide>
-        <SwiperSlide>
-          <MemberCard></MemberCard>
-        </SwiperSlide>
-        <SwiperSlide>
-          <MemberCard></MemberCard>
-        </SwiperSlide>
+        <SwiperSlide>{item}</SwiperSlide>
+        <SwiperSlide>{item}</SwiperSlide>
+        <SwiperSlide>{item}</SwiperSlide>
+        <SwiperSlide>{item}</SwiperSlide>
+        <SwiperSlide>{item}</SwiperSlide>
+        <SwiperSlide>{item}</SwiperSlide>
+        <SwiperSlide>{item}</SwiperSlide>
+        <SwiperSlide>{item}</SwiperSlide>
+        <SwiperSlide>{item}</SwiperSlide>
+        <SwiperSlide>{item}</SwiperSlide>
+        <SwiperSlide>{item}</SwiperSlide>
       </Swiper>
-    </>
+    </Box>
   );
 }

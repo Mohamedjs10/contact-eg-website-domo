@@ -12,12 +12,21 @@ export default function MemberCard({ img, title, description, color }) {
   const { locale } = router;
   const t = locale === "en" ? en : ar;
   return (
-    <Box sx={{ position: "relative", color: colors.white, width: "350px" }}>
+    <Box
+      sx={{
+        "&:hover": { cursor: "grab" },
+        "&:active": { cursor: "grabbing" },
+        position: "relative",
+        color: colors.white,
+        width: "230px", // change me
+        height: "300px", //change me
+      }}
+    >
       <Box
         component="img"
         src="member.png"
         sx={{
-          height: "450px",
+          height: "100%",
           width: "100%",
         }}
       ></Box>
@@ -26,7 +35,7 @@ export default function MemberCard({ img, title, description, color }) {
           position: "absolute",
           background: "rgba(255, 255, 255, 0.3)",
           backdropFilter: "blur(12px)",
-          height: "30%",
+          height: "35%",
           width: "100%",
           bottom: 0,
           display: "flex",
@@ -34,8 +43,8 @@ export default function MemberCard({ img, title, description, color }) {
           justifyContent: "center",
         }}
       >
-        <Box sx={{ m: 1, fontSize: "30px" }}>سعيد زعتر</Box>
-        <Box sx={{ m: 1, fontSize: "20px" }}>
+        <Box sx={{ m: 1, fontSize: "20px" }}>سعيد زعتر</Box>
+        <Box sx={{ m: 1, fontSize: "12px" }}>
           العضو المنتدب للشركة القابضة والرئيس التنفيذي
         </Box>
       </Box>

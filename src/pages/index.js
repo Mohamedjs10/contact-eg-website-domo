@@ -10,8 +10,12 @@ import ImageSection from "../sections/home/ImageSection.jsx";
 import IconsSection from "../sections/home/IconsSection.jsx";
 import ContactPaySection from "../sections/home/ContactPaySection.jsx";
 import PageCover from "@/components/PageCover";
-import MemberCard from "@/components/MemberCard";
 import VerticalCarousel from "../components/VerticalCarousel.jsx";
+import { Box } from "@mui/material";
+import MemberCard from "@/components/MemberCard";
+import PlaceCard from "@/components/PlaceCard";
+import ReviewCard from "@/components/ReviewCard";
+import IconTitle from "../components/mini-components/IconTile.jsx";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -53,7 +57,14 @@ export default function Home() {
           textStyle={{ textAlign: "center" }}
         /> */}
         {/* <Form type="c"></Form> */}
-        <VerticalCarousel></VerticalCarousel>
+
+        <Box sx={{ display: "flex", justifyContent: "flex-end", my: 5 }}>
+          <VerticalCarousel
+            item={<ReviewCard></ReviewCard>}
+            slidesPerView={4.3}
+          ></VerticalCarousel>
+        </Box>
+        <IconTitle></IconTitle>
         {/* <PageCover
           color="#74357D"
           img="/cart.png"
