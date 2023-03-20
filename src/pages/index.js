@@ -18,6 +18,9 @@ import ReviewCard from "@/components/ReviewCard";
 import IconTitle from "../components/mini-components/IconTile.jsx";
 import StepsComp from "../components/steps/stepsComp";
 import AboutSec from "../components/aboutSec/about";
+//
+import Statistic from "../components/statistics/statistics";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -75,6 +78,10 @@ export default function Home() {
         <IconTitle></IconTitle>
         {/* <StepsComp /> */}
         <AboutSec />
+
+        <Statistic num={400000} text="كونتكت تمويل عقاري" type="rewards" />
+        <Statistic num={300000} text="كونتكت تمويل التشطيب" type="rewards" />
+        <Statistic num={200000} text="كونتكت تمويل النقل" type="rewards" />
 
         {/* <PageCover
           color="#74357D"
