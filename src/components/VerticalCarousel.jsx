@@ -57,7 +57,11 @@ function SamplePrevArrow(props) {
 }
 
 // ======================
-export default function VerticalCarousel({ item, slidesPerView }) {
+export default function VerticalCarousel({
+  itemsArray,
+  Component,
+  slidesPerView,
+}) {
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : ar;
@@ -147,17 +151,20 @@ export default function VerticalCarousel({ item, slidesPerView }) {
           },
         }}
       >
-        <SwiperSlide>{item}</SwiperSlide>
-        <SwiperSlide>{item}</SwiperSlide>
-        <SwiperSlide>{item}</SwiperSlide>
-        <SwiperSlide>{item}</SwiperSlide>
-        <SwiperSlide>{item}</SwiperSlide>
-        <SwiperSlide>{item}</SwiperSlide>
-        <SwiperSlide>{item}</SwiperSlide>
-        <SwiperSlide>{item}</SwiperSlide>
-        <SwiperSlide>{item}</SwiperSlide>
-        <SwiperSlide>{item}</SwiperSlide>
-        <SwiperSlide>{item}</SwiperSlide>
+        {itemsArray.map(({ avatar, name, role, rating, review, img }) => (
+          <SwiperSlide>
+            <Component
+              // ReviewCard
+              avatar={avatar}
+              name={name}
+              role={role}
+              rating={rating}
+              review={review}
+              // MemberCard
+              img={img}
+            ></Component>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </Box>
   );

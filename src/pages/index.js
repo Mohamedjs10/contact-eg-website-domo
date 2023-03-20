@@ -60,7 +60,14 @@ export default function Home() {
 
         <Box sx={{ display: "flex", justifyContent: "flex-end", my: 5 }}>
           <VerticalCarousel
-            item={<ReviewCard></ReviewCard>}
+            // itemsArray={t.general.reviews}
+            // Component={ReviewCard}
+            // slidesPerView={4.3}
+            // itemsArray={t.general.directors}
+            // Component={MemberCard}
+            // slidesPerView={5.3}
+            itemsArray={t.general.reviews}
+            Component={ReviewCard}
             slidesPerView={4.3}
           ></VerticalCarousel>
         </Box>

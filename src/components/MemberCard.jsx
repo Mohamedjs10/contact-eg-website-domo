@@ -7,7 +7,7 @@ import { styles } from "./service";
 import { useRouter } from "next/router";
 import en from "../../locales/en";
 import ar from "../../locales/ar";
-export default function MemberCard({ img, title, description, color }) {
+export default function MemberCard({ img, name, role }) {
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : ar;
@@ -24,7 +24,7 @@ export default function MemberCard({ img, title, description, color }) {
     >
       <Box
         component="img"
-        src="member.png"
+        src={img}
         sx={{
           height: "100%",
           width: "100%",
@@ -43,10 +43,8 @@ export default function MemberCard({ img, title, description, color }) {
           justifyContent: "center",
         }}
       >
-        <Box sx={{ m: 1, fontSize: "20px" }}>سعيد زعتر</Box>
-        <Box sx={{ m: 1, fontSize: "12px" }}>
-          العضو المنتدب للشركة القابضة والرئيس التنفيذي
-        </Box>
+        <Box sx={{ m: 1, fontSize: "20px" }}>{name}</Box>
+        <Box sx={{ m: 1, fontSize: "12px" }}>{role}</Box>
       </Box>
     </Box>
   );

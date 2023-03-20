@@ -7,7 +7,7 @@ import { styles } from "./place_card";
 import { useRouter } from "next/router";
 import en from "../../locales/en";
 import ar from "../../locales/ar";
-export default function MemberCard({ img, title, description, color }) {
+export default function MemberCard({ img, name }) {
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : ar;
@@ -30,7 +30,7 @@ export default function MemberCard({ img, title, description, color }) {
     >
       <Box
         component="img"
-        src="member.png"
+        src={img}
         sx={{
           my: 1,
           height: "200px",
@@ -38,9 +38,7 @@ export default function MemberCard({ img, title, description, color }) {
         }}
       />
 
-      <Box sx={{ m: 1, fontSize: "18px", alignSelf: "flex-start" }}>
-        اسم المكان
-      </Box>
+      <Box sx={{ m: 1, fontSize: "18px", alignSelf: "flex-start" }}>{name}</Box>
     </Box>
   );
 }

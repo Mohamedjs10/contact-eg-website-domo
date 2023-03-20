@@ -10,7 +10,7 @@ import Avatar from "@mui/material/Avatar";
 import { useRouter } from "next/router";
 import en from "../../locales/en";
 import ar from "../../locales/ar";
-export default function MemberCard({ img, title, description, color }) {
+export default function MemberCard({ avatar, name, role, rating, review }) {
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : ar;
@@ -31,16 +31,15 @@ export default function MemberCard({ img, title, description, color }) {
         p: 1,
       }}
     >
-      <Rating name="read-only" value={2} readOnly />
+      <Rating name="read-only" value={rating} readOnly />
       <Box sx={{ m: 1, fontSize: "15px", alignSelf: "flex-start" }}>
-        لقد كنت متأكدا من أن هذا المنتج لن يعمل كما هو متوقع، ولكن بعد التجربة
-        كان هو يعمل بشكل جيد جدا
+        {review}
       </Box>
       <Box sx={{ m: 1, fontSize: "18px", display: "flex", gap: 1 }}>
-        <Avatar alt="Remy Sharp" src="member.png" />
+        <Avatar alt="Remy Sharp" src={avatar} />
         <Box sx={{ fontSize: "15px" }}>
-          <Box sx={{ fontWeight: "bold" }}>ماهر فياض</Box>
-          <Box sx={{}}>مش رئيس مجلس إدارة, كونتكت</Box>
+          <Box sx={{ fontWeight: "bold" }}>{name}</Box>
+          <Box sx={{}}>{role}</Box>
         </Box>
       </Box>
     </Box>
