@@ -36,7 +36,7 @@ export default function PageCover({
           transform: locale === "en" ? "scaleX(-1)" : "scaleX(1)",
         }}
       >
-        <img src="decorator.png" width="100%" />
+        <img src="/decorator.png" width="100%" />
       </Box>
       {/* container ================================================================================ */}
       <Box
@@ -93,7 +93,7 @@ export default function PageCover({
         <Box
           sx={{
             width: { xs: "300px" },
-            display: { xs: "none", md: "block" },
+            display: { xs: "none", lg: "block" },
             m: 5,
             transform: locale === "en" ? "scaleX(-1)" : "scaleX(1)",
           }}

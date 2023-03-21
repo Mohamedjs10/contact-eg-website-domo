@@ -16,11 +16,12 @@ export default function MemberCard({ img, name }) {
       sx={{
         "&:hover": { cursor: "grab" },
         "&:active": { cursor: "grabbing" },
-        width: "220px", // change me
-        height: "258px", //change me
+        width: "280px", // change me
+        height: "320px", //change me
         color: colors.black,
+        bgcolor: colors.white,
         boxShadow:
-          "rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px",
+          "0px 2px 10px rgba(4, 9, 33, 0.05), 0px 2px 0px rgba(4, 9, 33, 0.05), 0px 0px 5px rgba(4, 9, 33, 0.03)",
         borderRadius: 1,
         display: "flex",
         flexDirection: "column",
@@ -32,13 +33,23 @@ export default function MemberCard({ img, name }) {
         component="img"
         src={img}
         sx={{
-          my: 1,
-          height: "200px",
-          width: "200px",
+          mt: 2,
+          height: "240px",
+          width: "240px",
         }}
       />
 
-      <Box sx={{ m: 1, fontSize: "18px", alignSelf: "flex-start" }}>{name}</Box>
+      <Box
+        sx={{
+          mb: 2,
+          ml: 3,
+          fontSize: "20px",
+          fontWeight: "bold",
+          alignSelf: "flex-start",
+        }}
+      >
+        {name}
+      </Box>
     </Box>
   );
 }
