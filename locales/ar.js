@@ -8,7 +8,7 @@ export default {
         id: "1",
         name: "ماهر فياض",
         role: "موظف في شركة كونتكت",
-        avatar: "member.png",
+        avatar: "/member.png",
         rating: 2,
         review:
           "لقد كان الخدمة التي قدمتها الشركة ممتازة، كان كل شيء كما هو متوقع وأعجبني الخدمة المقدمة",
@@ -17,7 +17,8 @@ export default {
         id: "2",
         name: "ماهر فياض",
         role: "موظف في شركة كونتكت",
-        avatar: "member.png",
+        avatar: "/member.png",
+
         rating: 2,
         review:
           "لقد كان الخدمة التي قدمتها الشركة ممتازة، كان كل شيء كما هو متوقع وأعجبني الخدمة المقدمة",
@@ -26,7 +27,8 @@ export default {
         id: "3",
         name: "ماهر فياض",
         role: "موظف في شركة كونتكت",
-        avatar: "member.png",
+        avatar: "/member.png",
+
         rating: 2,
         review:
           "لقد كان الخدمة التي قدمتها الشركة ممتازة، كان كل شيء كما هو متوقع وأعجبني الخدمة المقدمة",
@@ -35,7 +37,8 @@ export default {
         id: "4",
         name: "ماهر فياض",
         role: "موظف في شركة كونتكت",
-        avatar: "member.png",
+        avatar: "/member.png",
+
         rating: 2,
         review:
           "لقد كان الخدمة التي قدمتها الشركة ممتازة، كان كل شيء كما هو متوقع وأعجبني الخدمة المقدمة",
@@ -44,7 +47,8 @@ export default {
         id: "5",
         name: "ماهر فياض",
         role: "موظف في شركة كونتكت",
-        avatar: "member.png",
+        avatar: "/member.png",
+
         rating: 2,
         review:
           "لقد كان الخدمة التي قدمتها الشركة ممتازة، كان كل شيء كما هو متوقع وأعجبني الخدمة المقدمة",
@@ -53,7 +57,8 @@ export default {
         id: "6",
         name: "ماهر فياض",
         role: "موظف في شركة كونتكت",
-        avatar: "member.png",
+        avatar: "/member.png",
+
         rating: 2,
         review:
           "لقد كان الخدمة التي قدمتها الشركة ممتازة، كان كل شيء كما هو متوقع وأعجبني الخدمة المقدمة",
@@ -62,7 +67,8 @@ export default {
         id: "7",
         name: "ماهر فياض",
         role: "موظف في شركة كونتكت",
-        avatar: "member.png",
+        avatar: "/member.png",
+
         rating: 2,
         review:
           "لقد كان الخدمة التي قدمتها الشركة ممتازة، كان كل شيء كما هو متوقع وأعجبني الخدمة المقدمة",
@@ -71,7 +77,8 @@ export default {
         id: "8",
         name: "ماهر فياض",
         role: "موظف في شركة كونتكت",
-        avatar: "member.png",
+        avatar: "/member.png",
+
         rating: 2,
         review:
           "لقد كان الخدمة التي قدمتها الشركة ممتازة، كان كل شيء كما هو متوقع وأعجبني الخدمة المقدمة",
@@ -80,7 +87,8 @@ export default {
         id: "9",
         name: "ماهر فياض",
         role: "موظف في شركة كونتكت",
-        avatar: "member.png",
+        avatar: "/member.png",
+
         rating: 2,
         review:
           "لقد كان الخدمة التي قدمتها الشركة ممتازة، كان كل شيء كما هو متوقع وأعجبني الخدمة المقدمة",
@@ -89,7 +97,8 @@ export default {
         id: "10",
         name: "ماهر فياض",
         role: "موظف في شركة كونتكت",
-        avatar: "member.png",
+        avatar: "/member.png",
+
         rating: 2,
         review:
           "لقد كان الخدمة التي قدمتها الشركة ممتازة، كان كل شيء كما هو متوقع وأعجبني الخدمة المقدمة",
@@ -98,67 +107,67 @@ export default {
     directors: [
       {
         id: 1,
-        img: "member.png",
+        img: "/member.png",
         name: "حازم موسى",
         role: "رئيس مجلس إدارة الشركة القابضة",
       },
       {
         id: 2,
-        img: "member.png",
+        img: "/member.png",
         name: "سعيد زعتر",
         role: "العضو المنتدب للشركة القابضة والرئيس التنفيذي",
       },
       {
         id: 3,
-        img: "member.png",
+        img: "/member.png",
         name: "عمرو لمعي",
         role: "نائب رئيس مجلس الإدارة",
       },
       {
         id: 4,
-        img: "member.png",
+        img: "/member.png",
         name: "أشرف زكي",
         role: "عضو مجلس الإدارة",
       },
       {
         id: 5,
-        img: "member.png",
+        img: "/member.png",
         name: "محمد عبد الحليم",
         role: "عضو مجلس الإدارة",
       },
       {
         id: 6,
-        img: "member.png",
+        img: "/member.png",
         name: "محمد صادق",
         role: "عضو مجلس الإدارة",
       },
       {
         id: 7,
-        img: "member.png",
+        img: "/member.png",
         name: "أنور باحبيش",
         role: "عضو مجلس الإدارة",
       },
       {
         id: 8,
-        img: "member.png",
+        img: "/member.png",
         name: "حسن عبده",
         role: "عضو مجلس الإدارة",
       },
       {
         id: 9,
-        img: "member.png",
+        img: "/member.png",
         name: "كريم حسين",
         role: "عضو مجلس إدارة مستقل",
       },
       {
         id: 10,
-        img: "member.png",
+        img: "/member.png",
         name: "كريم زين",
         role: "عضو مجلس إدارة مستقل",
       },
       {
         id: 11,
-        img: "member.png",
+        img: "/member.png",
         name: "صفية برهان",
         role: "عضو مجلس الإدارة",
       },
@@ -166,154 +175,191 @@ export default {
     mangers: [
       {
         id: 1,
-        img: "member.png",
+        img: "/member.png",
         name: "حازم موسى",
         role: "رئيس مجلس إدارة الشركة القابضة",
       },
       {
         id: 2,
-        img: "member.png",
+        img: "/member.png",
         name: "سعيد زعتر",
         role: "العضو المنتدب للشركة القابضة والرئيس التنفيذي",
       },
       {
         id: 3,
-        img: "member.png",
+        img: "/member.png",
         name: "أيمن الصاوي",
         role: "رئيس القطاعات المالية",
       },
       {
         id: 4,
-        img: "member.png",
+        img: "/member.png",
         name: "عمرو رفعت",
         role: "نائب رئيس مجلس الإدارة لكونتكت للتمويل",
       },
       {
         id: 5,
-        img: "member.png",
+        img: "/member.png",
         name: "علاء عوض",
         role: "رئيس قطاع الموارد البشرية والتطوير المؤسسي",
       },
       {
         id: 6,
-        img: "member.png",
+        img: "/member.png",
         name: "محمد سلامة",
         role: "رئيس القطاع القانوني",
       },
       {
         id: 7,
-        img: "member.png",
+        img: "/member.png",
         name: "إسماعيل سمير",
         role: "العضو المنتدب لشركة كونتكت للتأجير التمويلي",
       },
       {
         id: 8,
-        img: "member.png",
+        img: "/member.png",
         name: "أحمد خليفة",
         role: "العضو المنتدب لشركة ثروة للتأمين",
       },
       {
         id: 9,
-        img: "member.png",
+        img: "/member.png",
         name: "رماح أسعد",
         role: "العضو المنتدب لشركة ثروة لتأمينات الحياة",
       },
       {
         id: 10,
-        img: "member.png",
+        img: "/member.png",
         name: "سعيد سمير",
         role: "رئيس قطاع الائتمان وإدارة المخاطر",
       },
       {
         id: 11,
-        img: "member.png",
+        img: "/member.png",
         name: "شريف جلال",
         role: "رئيس قطاع التفتيش والمتابعة",
       },
       {
         id: 12,
-        img: "member.png",
+        img: "/member.png",
         name: "تامر سمير",
         role: "العضو المنتدب لكونتكت للتمويل",
       },
       {
         id: 13,
-        img: "member.png",
+        img: "/member.png",
         name: "صفية برهان",
         role: "مدير عام شئون الشركات والحوكمة",
       },
       {
         id: 14,
-        img: "member.png",
+        img: "/member.png",
         name: "نيهال بريك",
         role: "العضو المنتدب لشركة كونتكت للوساطة التأمينية",
       },
       {
         id: 15,
-        img: "member.png",
+        img: "/member.png",
         name: "عثمان عبد المنعم",
         role: "العضو المنتدب لشركة كونتكت كارز دوت كوم",
       },
       {
         id: 16,
-        img: "member.png",
+        img: "/member.png",
         name: "أحمد عبد الحكيم",
         role: "مدير عام تكنولوجيا المعلومات",
       },
       {
         id: 17,
-        img: "member.png",
+        img: "/member.png",
         name: "أحمد سمير كامل",
         role: "العضو المنتدب لكونتكت كريدي تك",
       },
       {
         id: 18,
-        img: "member.png",
+        img: "/member.png",
         name: "هاني عمر",
         role: "المدير التنفيذي لشركة كونتكت للتخصيم",
       },
       {
         id: 19,
-        img: "member.png",
+        img: "/member.png",
         name: "أيمن حليم",
         role: "المدير التنفيذي لشركة كونتكت للتمويل العقاري",
       },
       {
         id: 20,
-        img: "member.png",
+        img: "/member.png",
         name: "مروان عادل",
         role: "مدير عام التسويق",
       },
       {
         id: 21,
-        img: "member.png",
+        img: "/member.png",
         name: "محمد سمير",
         role: "رئيس قطاع الشؤون الإدارية",
       },
       {
         id: 22,
-        img: "member.png",
+        img: "/member.png",
         name: "سارة محمود",
         role: "مدير بحوث السوق",
       },
       {
         id: 23,
-        img: "member.png",
+        img: "/member.png",
         name: "مرسي منصور",
         role: "المراجع الداخلي للمجموعة",
       },
     ],
     places: [
-      { id: 1, img: "member.png", name: "اسم المكان" },
-      { id: 2, img: "member.png", name: "اسم المكان" },
-      { id: 3, img: "member.png", name: "اسم المكان" },
-      { id: 4, img: "member.png", name: "اسم المكان" },
-      { id: 5, img: "member.png", name: "اسم المكان" },
-      { id: 6, img: "member.png", name: "اسم المكان" },
-      { id: 7, img: "member.png", name: "اسم المكان" },
-      { id: 8, img: "member.png", name: "اسم المكان" },
-      { id: 9, img: "member.png", name: "اسم المكان" },
-      { id: 10, img: "member.png", name: "اسم المكان" },
+      { id: 1, img: "/member.png", name: "اسم المكان" },
+      { id: 2, img: "/member.png", name: "اسم المكان" },
+      { id: 3, img: "/member.png", name: "اسم المكان" },
+      { id: 4, img: "/member.png", name: "اسم المكان" },
+      { id: 5, img: "/member.png", name: "اسم المكان" },
+      { id: 6, img: "/member.png", name: "اسم المكان" },
+      { id: 7, img: "/member.png", name: "اسم المكان" },
+      { id: 8, img: "/member.png", name: "اسم المكان" },
+      { id: 9, img: "/member.png", name: "اسم المكان" },
+      { id: 10, img: "/member.png", name: "اسم المكان" },
+    ],
+    icon_title: [
+      {
+        id: 1,
+        img: "/hands.png",
+        title: "أكبر عدد من المحلات والمعارض ومنافذ البيع والتحصيل",
+      },
+      {
+        id: 2,
+        img: "/hands.png",
+        title: "أكبر عدد من المحلات والمعارض ومنافذ البيع والتحصيل",
+      },
+      {
+        id: 3,
+        img: "/hands.png",
+        title: "أكبر عدد من المحلات والمعارض ومنافذ البيع والتحصيل",
+      },
+      {
+        id: 4,
+        img: "/hands.png",
+        title: "أكبر عدد من المحلات والمعارض ومنافذ البيع والتحصيل",
+      },
+      {
+        id: 5,
+        img: "/hands.png",
+        title: "أكبر عدد من المحلات والمعارض ومنافذ البيع والتحصيل",
+      },
+      {
+        id: 6,
+        img: "/hands.png",
+        title: "أكبر عدد من المحلات والمعارض ومنافذ البيع والتحصيل",
+      },
+      {
+        id: 7,
+        img: "/hands.png",
+        title: "أكبر عدد من المحلات والمعارض ومنافذ البيع والتحصيل",
+      },
     ],
   },
   logo: "/logo-ar.png",
@@ -353,6 +399,9 @@ export default {
     products: "المنتجات",
     products_placeholder: "اختر منتج",
     submit: "اطلب الخدمة",
+    // =======
+    subject: "الموضوع",
+    message: "الرسالة",
   },
   governorates: [
     {
@@ -837,5 +886,41 @@ export default {
     title: "كيفية احتساب النقاط",
     note: "ملحوظة: ",
     noteText: "الحد الأدنى لسعر الوثيقة لاحتساب النقاط 5,000 جم",
+  },
+  our_brand_page: {
+    title: "شركتنا",
+    body: [
+      {
+        id: 1,
+        img: "/our-brands/contact.png",
+        content:
+          "بدأت كونتكت في عام 2001 كأول شركة مصرية متخصصة في خدمات التمويل الاستهلاكي. وقد تأسست الشركة باعتبارها كيان مستقل بقيادة إدارة وفريق عمل على أعلى مستوى من الخبرة، ونجحت في جذب الاستثمارات من مصادر متنوعة تشمل البنوك والمؤسسات المالية وشركات الاستثمار المباشر والمستثمرين الأفراد",
+      },
+      {
+        id: 2,
+        img: "/our-brands/contact.png",
+        content:
+          "بدأت كونتكت في عام 2001 كأول شركة مصرية متخصصة في خدمات التمويل الاستهلاكي. وقد تأسست الشركة باعتبارها كيان مستقل بقيادة إدارة وفريق عمل على أعلى مستوى من الخبرة، ونجحت في جذب الاستثمارات من مصادر متنوعة تشمل البنوك والمؤسسات المالية وشركات الاستثمار المباشر والمستثمرين الأفراد",
+      },
+      {
+        id: 3,
+        img: "/our-brands/contact.png",
+        content:
+          "بدأت كونتكت في عام 2001 كأول شركة مصرية متخصصة في خدمات التمويل الاستهلاكي. وقد تأسست الشركة باعتبارها كيان مستقل بقيادة إدارة وفريق عمل على أعلى مستوى من الخبرة، ونجحت في جذب الاستثمارات من مصادر متنوعة تشمل البنوك والمؤسسات المالية وشركات الاستثمار المباشر والمستثمرين الأفراد",
+      },
+      {
+        id: 4,
+        img: "/our-brands/contact.png",
+        content:
+          "بدأت كونتكت في عام 2001 كأول شركة مصرية متخصصة في خدمات التمويل الاستهلاكي. وقد تأسست الشركة باعتبارها كيان مستقل بقيادة إدارة وفريق عمل على أعلى مستوى من الخبرة، ونجحت في جذب الاستثمارات من مصادر متنوعة تشمل البنوك والمؤسسات المالية وشركات الاستثمار المباشر والمستثمرين الأفراد",
+      },
+      {
+        id: 5,
+        img: "/our-brands/contact.png",
+        content:
+          "بدأت كونتكت في عام 2001 كأول شركة مصرية متخصصة في خدمات التمويل الاستهلاكي. وقد تأسست الشركة باعتبارها كيان مستقل بقيادة إدارة وفريق عمل على أعلى مستوى من الخبرة، ونجحت في جذب الاستثمارات من مصادر متنوعة تشمل البنوك والمؤسسات المالية وشركات الاستثمار المباشر والمستثمرين الأفراد",
+      },
+    ],
+    link: "لزيارة الموقع",
   },
 };

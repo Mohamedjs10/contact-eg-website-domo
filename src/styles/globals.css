@@ -39,14 +39,24 @@ body {
   margin-bottom: 20px;
 }
 .vertical-safe-padding {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+/* .vertical-safe-padding {
   padding-top: 20px;
   padding-bottom: 20px;
-}
+} */
 .section-safe-padding-top {
   padding-top: 20px;
 }
 .section-safe-padding-bottom {
   padding-bottom: 20px;
+}
+.section-safe-padding-left {
+  padding-left: 100px;
+}
+.section-safe-padding-right {
+  padding-left: 100px;
 }
 .section-safe-margin-top {
   margin-top: 20px;
@@ -101,6 +111,12 @@ xl, extra-large: 1536px */
   }
   .section-safe-padding-bottom {
     padding-bottom: 5px;
+  }
+  .section-safe-padding-left {
+    padding-left: 20px;
+  }
+  .section-safe-padding-right {
+    padding-left: 20px;
   }
   .section-safe-margin-top {
     margin-top: 5px;

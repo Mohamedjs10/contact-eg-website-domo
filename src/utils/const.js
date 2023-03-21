@@ -22,4 +22,5 @@ export const colors = {
   ratty: "#6B6B6B",
   manhattan_blue: "#404456",
   white_smoke: "#F5F5F6",
+  bg_grey: "#f8f8f8",
 };

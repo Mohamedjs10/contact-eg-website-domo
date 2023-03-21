@@ -82,7 +82,7 @@ export default {
         id: "1",
         name: "Maher Fayad",
         role: "employee at Contact",
-        avatar: "member.png",
+        avatar: "/member.png",
         rating: 2,
         review:
           "This products is working properly. I really didn't expect that at the beginning",
@@ -91,7 +91,8 @@ export default {
         id: "2",
         name: "Maher Fayad",
         role: "employee at Contact",
-        avatar: "member.png",
+        avatar: "/member.png",
+
         rating: 2,
         review:
           "This products is working properly. I really didn't expect that at the beginning",
@@ -100,7 +101,8 @@ export default {
         id: "3",
         name: "Maher Fayad",
         role: "employee at Contact",
-        avatar: "member.png",
+        avatar: "/member.png",
+
         rating: 2,
         review:
           "This products is working properly. I really didn't expect that at the beginning",
@@ -109,7 +111,8 @@ export default {
         id: "4",
         name: "Maher Fayad",
         role: "employee at Contact",
-        avatar: "member.png",
+        avatar: "/member.png",
+
         rating: 2,
         review:
           "This products is working properly. I really didn't expect that at the beginning",
@@ -118,7 +121,8 @@ export default {
         id: "5",
         name: "Maher Fayad",
         role: "employee at Contact",
-        avatar: "member.png",
+        avatar: "/member.png",
+
         rating: 2,
         review:
           "This products is working properly. I really didn't expect that at the beginning",
@@ -127,7 +131,8 @@ export default {
         id: "6",
         name: "Maher Fayad",
         role: "employee at Contact",
-        avatar: "member.png",
+        avatar: "/member.png",
+
         rating: 2,
         review:
           "This products is working properly. I really didn't expect that at the beginning",
@@ -136,7 +141,8 @@ export default {
         id: "7",
         name: "Maher Fayad",
         role: "employee at Contact",
-        avatar: "member.png",
+        avatar: "/member.png",
+
         rating: 2,
         review:
           "This products is working properly. I really didn't expect that at the beginning",
@@ -145,7 +151,8 @@ export default {
         id: "8",
         name: "Maher Fayad",
         role: "employee at Contact",
-        avatar: "member.png",
+        avatar: "/member.png",
+
         rating: 2,
         review:
           "This products is working properly. I really didn't expect that at the beginning",
@@ -154,7 +161,8 @@ export default {
         id: "9",
         name: "Maher Fayad",
         role: "employee at Contact",
-        avatar: "member.png",
+        avatar: "/member.png",
+
         rating: 2,
         review:
           "This products is working properly. I really didn't expect that at the beginning",
@@ -163,7 +171,8 @@ export default {
         id: "10",
         name: "Maher Fayad",
         role: "employee at Contact",
-        avatar: "member.png",
+        avatar: "/member.png",
+
         rating: 2,
         review:
           "This products is working properly. I really didn't expect that at the beginning",
@@ -172,67 +181,67 @@ export default {
     directors: [
       {
         id: 1,
-        img: "member.png",
+        img: "/member.png",
         name: "Hazem Moussa",
         role: "Chairman of Contact Financial Holding",
       },
       {
         id: 2,
-        img: "member.png",
+        img: "/member.png",
         name: "Said Zater",
         role: "MD of Contact Financial Holding & Group CEO",
       },
       {
         id: 3,
-        img: "member.png",
+        img: "/member.png",
         name: "Amr Lamei",
         role: "Deputy Chairman",
       },
       {
         id: 4,
-        img: "member.png",
+        img: "/member.png",
         name: "Ashraf Zaki",
         role: "Board Member",
       },
       {
         id: 5,
-        img: "member.png",
+        img: "/member.png",
         name: "Mohamed Abdel Halim",
         role: "Board Member",
       },
       {
         id: 6,
-        img: "member.png",
+        img: "/member.png",
         name: "Mohamed Sadek",
         role: "Board Member",
       },
       {
         id: 7,
-        img: "member.png",
+        img: "/member.png",
         name: "Anwar Bahubaish",
         role: "Board Member",
       },
       {
         id: 8,
-        img: "member.png",
+        img: "/member.png",
         name: "Hassan Abdou",
         role: "Board Member",
       },
       {
         id: 9,
-        img: "member.png",
+        img: "/member.png",
         name: "Karim Hussein",
         role: "Independent Board Member",
       },
       {
         id: 10,
-        img: "member.png",
+        img: "/member.png",
         name: "Karim Zein",
         role: "Independent Board Member",
       },
       {
         id: 11,
-        img: "member.png",
+        img: "/member.png",
         name: "Safaya Borhan",
         role: "Board Member",
       },
@@ -240,154 +249,191 @@ export default {
     mangers: [
       {
         id: 1,
-        img: "member.png",
+        img: "/member.png",
         name: "Hazem Moussa",
         role: "Chairman of Contact Financial Holding",
       },
       {
         id: 2,
-        img: "member.png",
+        img: "/member.png",
         name: "Said Zater",
         role: "MD of Contact Financial Holding & Group CEO",
       },
       {
         id: 3,
-        img: "member.png",
+        img: "/member.png",
         name: "Ayman El-Sawy",
         role: "Group Chief Financial Officer",
       },
       {
         id: 4,
-        img: "member.png",
+        img: "/member.png",
         name: "Amr Refaat",
         role: "Vice Chairman of Contact Credit",
       },
       {
         id: 5,
-        img: "member.png",
+        img: "/member.png",
         name: "Alaa Awad",
         role: "Group GM for HR & Institutional Development",
       },
       {
         id: 6,
-        img: "member.png",
+        img: "/member.png",
         name: "Mohamed Salama",
         role: "Group GM for Legal Affairs",
       },
       {
         id: 7,
-        img: "member.png",
+        img: "/member.png",
         name: "Ismail Samir",
         role: "MD of Contact Leasing",
       },
       {
         id: 8,
-        img: "member.png",
+        img: "/member.png",
         name: "Ahmed Khalifa",
         role: "MD of Sarwa Insurance",
       },
       {
         id: 9,
-        img: "member.png",
+        img: "/member.png",
         name: "Rimah Asaad",
         role: "MD of Sarwa Life",
       },
       {
         id: 10,
-        img: "member.png",
+        img: "/member.png",
         name: "Said Samir",
         role: "Credit & Risk Director",
       },
       {
         id: 11,
-        img: "member.png",
+        img: "/member.png",
         name: "Sherif Galal",
         role: "Group GM for Managerial Control",
       },
       {
         id: 12,
-        img: "member.png",
+        img: "/member.png",
         name: "Tamer Samir",
         role: "MD of Contact Credit",
       },
       {
         id: 13,
-        img: "member.png",
+        img: "/member.png",
         name: "Safeya Borhan",
         role: "Director of Corporate Affairs & Governance",
       },
       {
         id: 14,
-        img: "member.png",
+        img: "/member.png",
         name: "Nehal Break",
         role: "MD of Contact Insurance Brokerage",
       },
       {
         id: 15,
-        img: "member.png",
+        img: "/member.png",
         name: "Osman A. Moneim",
         role: "MD of Contactcars.com",
       },
       {
         id: 16,
-        img: "member.png",
+        img: "/member.png",
         name: "Ahmed A. Hakim",
         role: "Group IT Director",
       },
       {
         id: 17,
-        img: "member.png",
+        img: "/member.png",
         name: "Ahmed Samir Kamel",
         role: "MD of Contact CrediTech",
       },
       {
         id: 18,
-        img: "member.png",
+        img: "/member.png",
         name: "Hany Omar",
         role: "Executive Director of Contact Factoring",
       },
       {
         id: 19,
-        img: "member.png",
+        img: "/member.png",
         name: "Marwan Adel",
         role: "Group Marketing Director",
       },
       {
         id: 20,
-        img: "member.png",
+        img: "/member.png",
         name: "Ayman Halim",
         role: "Executive Director of Contact Mortgage Finance",
       },
       {
         id: 21,
-        img: "member.png",
+        img: "/member.png",
         name: "Mohamed Samir",
         role: "Group GM for Administration",
       },
       {
         id: 22,
-        img: "member.png",
+        img: "/member.png",
         name: "Sarah Mahmoud",
         role: "Group Market Research Manager",
       },
       {
         id: 23,
-        img: "member.png",
+        img: "/member.png",
         name: "Moursy Mansour",
         role: "Group Internal Auditor",
       },
     ],
     places: [
-      { id: 1, img: "member.png", name: "Location Name" },
-      { id: 2, img: "member.png", name: "Location Name" },
-      { id: 3, img: "member.png", name: "Location Name" },
-      { id: 4, img: "member.png", name: "Location Name" },
-      { id: 5, img: "member.png", name: "Location Name" },
-      { id: 6, img: "member.png", name: "Location Name" },
-      { id: 7, img: "member.png", name: "Location Name" },
-      { id: 8, img: "member.png", name: "Location Name" },
-      { id: 9, img: "member.png", name: "Location Name" },
-      { id: 10, img: "member.png", name: "Location Name" },
+      { id: 1, img: "/member.png", name: "Location Name" },
+      { id: 2, img: "/member.png", name: "Location Name" },
+      { id: 3, img: "/member.png", name: "Location Name" },
+      { id: 4, img: "/member.png", name: "Location Name" },
+      { id: 5, img: "/member.png", name: "Location Name" },
+      { id: 6, img: "/member.png", name: "Location Name" },
+      { id: 7, img: "/member.png", name: "Location Name" },
+      { id: 8, img: "/member.png", name: "Location Name" },
+      { id: 9, img: "/member.png", name: "Location Name" },
+      { id: 10, img: "/member.png", name: "Location Name" },
+    ],
+    icon_title: [
+      {
+        id: 1,
+        img: "/hands.png",
+        title: "lorem ipsum dolor sit amet, con lorem ipsum dolor sit amet",
+      },
+      {
+        id: 2,
+        img: "/hands.png",
+        title: "lorem ipsum dolor sit amet, con lorem ipsum dolor sit amet",
+      },
+      {
+        id: 3,
+        img: "/hands.png",
+        title: "lorem ipsum dolor sit amet, con lorem ipsum dolor sit amet",
+      },
+      {
+        id: 4,
+        img: "/hands.png",
+        title: "lorem ipsum dolor sit amet, con lorem ipsum dolor sit amet",
+      },
+      {
+        id: 5,
+        img: "/hands.png",
+        title: "lorem ipsum dolor sit amet, con lorem ipsum dolor sit amet",
+      },
+      {
+        id: 6,
+        img: "/hands.png",
+        title: "lorem ipsum dolor sit amet, con lorem ipsum dolor sit amet",
+      },
+      {
+        id: 7,
+        img: "/hands.png",
+        title: "lorem ipsum dolor sit amet, con lorem ipsum dolor sit amet",
+      },
     ],
   },
   logo: "/logo-en.png",
@@ -427,6 +473,9 @@ export default {
     products: "Products",
     products_placeholder: "Choose A Product",
     submit: "Order Service",
+    // =======
+    subject: "Subject",
+    message: "Message",
   },
   governorates: [
     {
@@ -909,5 +958,42 @@ export default {
       title2: "We Make Your Life Easier",
       description: `Contact make your life easier anytime you want to buy anything via financial solutions without any troubles. Contact make your life easier anytime you want to buy anything via financial solutions without any troubles`,
     },
+  },
+
+  our_brand_page: {
+    title: "Our Company",
+    body: [
+      {
+        id: 1,
+        img: "/our-brands/contact.png",
+        content:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      },
+      {
+        id: 2,
+        img: "/our-brands/contact.png",
+        content:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      },
+      {
+        id: 3,
+        img: "/our-brands/contact.png",
+        content:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      },
+      {
+        id: 4,
+        img: "/our-brands/contact.png",
+        content:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      },
+      {
+        id: 5,
+        img: "/our-brands/contact.png",
+        content:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      },
+    ],
+    link: "visit website",
   },
 };

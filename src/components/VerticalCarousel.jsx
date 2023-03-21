@@ -69,103 +69,112 @@ export default function VerticalCarousel({
 
   return (
     <Box
+      className="vertical-safe-padding section-safe-padding-left"
       sx={{
-        width: "90%", // change me
-        "& .swiper-pagination": {
-          bottom: "22px !important",
-          textAlign: dir,
-        },
-        "& .swiper-pagination-bullet": {
-          bgcolor: "#000",
-        },
-        "& .swiper-button-next": {
-          zIndex: "100",
-          backgroundImage:
-            locale === "en"
-              ? "url('/forward1-arrow.png')"
-              : "url('back1-arrow.png')",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "100% auto",
-          backgroundPosition: "center",
-          [dir]: {
-            xs: "280px !important",
-            sm: "500px !important",
-            md: "700px !important",
-            lg: "1300px !important",
-          },
-          top: "90%",
-          width: "40px !important",
-          height: "40px !important",
-        },
-
-        "& .swiper-button-prev": {
-          zIndex: "100",
-          backgroundImage:
-            locale === "en"
-              ? "url('back1-arrow.png')"
-              : "url('/forward1-arrow.png')",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "100% auto",
-          backgroundPosition: "center",
-          [dir]: {
-            xs: "230px !important",
-            sm: "450px !important",
-            md: "650px !important",
-            lg: "1250px !important",
-          },
-          top: "90%",
-          width: "40px !important",
-          height: "40px !important",
-        },
-
-        "& .swiper-button-next::after": {
-          display: "none",
-        },
-        "& .swiper-button-prev::after": {
-          display: "none",
-        },
+        display: "flex",
+        justifyContent: "flex-end",
+        bgcolor: colors.bg_grey,
       }}
     >
-      <Swiper
-        style={{ paddingBottom: "80px" }}
-        pagination={{
-          clickable: true,
-        }}
-        slidesPerView={1.3}
-        spaceBetween={10}
-        navigation={true}
-        modules={[Pagination, Navigation]}
-        className="mySwiper"
-        breakpoints={{
-          600: {
-            slidesPerView: slidesPerView - 3,
-            // spaceBetween: 20,
+      <Box
+        sx={{
+          width: "100%", // change me
+          "& .swiper-pagination": {
+            bottom: "22px !important",
+            textAlign: dir,
           },
-          900: {
-            slidesPerView: slidesPerView - 2,
-            // spaceBetween: 25,
+          "& .swiper-pagination-bullet": {
+            bgcolor: "#000",
           },
-          1200: {
-            slidesPerView: slidesPerView,
-            // spaceBetween: 30,
+          "& .swiper-button-next": {
+            zIndex: "100",
+            backgroundImage:
+              locale === "en"
+                ? "url('/forward1-arrow.png')"
+                : "url('/back1-arrow.png')",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "100% auto",
+            backgroundPosition: "center",
+            [dir]: {
+              xs: "280px !important",
+              sm: "500px !important",
+              md: "700px !important",
+              lg: "1300px !important",
+            },
+            top: "90%",
+            width: "40px !important",
+            height: "40px !important",
+          },
+
+          "& .swiper-button-prev": {
+            zIndex: "100",
+            backgroundImage:
+              locale === "en"
+                ? "url('/back1-arrow.png')"
+                : "url('/forward1-arrow.png')",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "100% auto",
+            backgroundPosition: "center",
+            [dir]: {
+              xs: "230px !important",
+              sm: "450px !important",
+              md: "650px !important",
+              lg: "1250px !important",
+            },
+            top: "90%",
+            width: "40px !important",
+            height: "40px !important",
+          },
+
+          "& .swiper-button-next::after": {
+            display: "none",
+          },
+          "& .swiper-button-prev::after": {
+            display: "none",
           },
         }}
       >
-        {itemsArray.map(({ avatar, name, role, rating, review, img }) => (
-          <SwiperSlide>
-            <Component
-              // ReviewCard
-              avatar={avatar}
-              name={name}
-              role={role}
-              rating={rating}
-              review={review}
-              // MemberCard
-              img={img}
-            ></Component>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+        <Swiper
+          style={{ paddingBottom: "80px" }}
+          pagination={{
+            clickable: true,
+          }}
+          slidesPerView={1.3}
+          spaceBetween={10}
+          navigation={true}
+          modules={[Pagination, Navigation]}
+          className="mySwiper"
+          breakpoints={{
+            600: {
+              slidesPerView: slidesPerView - 3,
+              // spaceBetween: 20,
+            },
+            900: {
+              slidesPerView: slidesPerView - 2,
+              // spaceBetween: 25,
+            },
+            1200: {
+              slidesPerView: slidesPerView,
+              // spaceBetween: 30,
+            },
+          }}
+        >
+          {itemsArray.map(({ avatar, name, role, rating, review, img }) => (
+            <SwiperSlide>
+              <Component
+                // ReviewCard
+                avatar={avatar}
+                name={name}
+                role={role}
+                rating={rating}
+                review={review}
+                // MemberCard
+                img={img}
+              ></Component>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </Box>
     </Box>
   );
 }

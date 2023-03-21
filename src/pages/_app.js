@@ -79,7 +79,7 @@ const App = ({ Component, pageProps }) => {
             <HomeDropdown isOpen={isOpen} />
           </>
         )}
-        <Cover />
+        {/* <Cover /> */}
         <Component {...pageProps} />
         <Footer />
       </Box>
