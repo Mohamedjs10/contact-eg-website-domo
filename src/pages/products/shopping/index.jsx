@@ -31,14 +31,46 @@ export default function index() {
         description={t.products_shopiing_page.cover.description}
         formType="a"
       />
-
+      <Box
+        sx={{ textAlign: "center" }}
+        className="horizontal-safe-padding vertical-safe-padding"
+      >
+        <Box
+          sx={{
+            color: colors.orange,
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: 1,
+          }}
+        >
+          <Box sx={{ fontSize: "56px" }}>
+            36 شهر
+            {/* 36 months */}
+          </Box>
+          <Box sx={{ fontSize: "30px" }}>
+            فترة سداد
+            {/* payment period */}
+          </Box>
+        </Box>
+        <Box sx={{ maxWidth: "1000px", m: "auto" }}>
+          إشتري كل إحتياجاتك بدون عمليات معقدة فقط برقم البطاقة و برقم موبايلك,
+          من خلال نظام كنتكت الإلكتروني للتس الشراء و التقسيط من أكثر من 1000
+          منفذ بيع في جميع محافاظات الجمهورية. نظام التقسيط من كونتكت تسوق هو
+          أفضل و أسرع طريقة لتمويل جميع مشترياتك من خلال شبكة ضخمة من المنافذ
+          التجارية و معارض التجزئة و المتاجر الكبري و توكيلات الماركات العالمية.
+          والذي يتيح لك حرية تحديد مبلغ الدفعة المقدمة و يقدم أنظمة التقسيط
+          بفترات سداد تتراوح من 6 أشهر إلي 36 شهر.{" "}
+        </Box>
+      </Box>
       <IconTileSection></IconTileSection>
       <ImgListSection></ImgListSection>
 
       <VerticalCarousel
         itemsArray={t.general.places}
         Component={PlaceCard}
-        slidesPerView={5.3}
+        slidesPerView={4.3}
       ></VerticalCarousel>
     </Box>
   );
