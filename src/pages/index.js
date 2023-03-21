@@ -18,6 +18,8 @@ import ReviewCard from "@/components/ReviewCard";
 import IconTitle from "../components/mini-components/IconTile.jsx";
 import StepsComp from "../components/steps/stepsComp";
 import AboutSec from "../components/aboutSec/about";
+import RewardsSec from "../components/rewardsPoints/rewards";
+
 //
 import Statistic from "../components/statistics/statistics";
 
@@ -83,6 +85,7 @@ export default function Home() {
         <Statistic num={300000} text="كونتكت تمويل التشطيب" type="rewards" />
         <Statistic num={200000} text="كونتكت تمويل النقل" type="rewards" />
 
+        <RewardsSec />
         {/* <PageCover
           color="#74357D"
           img="/cart.png"

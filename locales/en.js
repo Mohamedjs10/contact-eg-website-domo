@@ -70,6 +70,12 @@ export default {
     plan1: "Economic Programme",
     plan2: "Flexible Program",
   },
+  rewards: {
+    title: "How points are calculated",
+    note: "Note: ",
+    noteText:
+      "The minimum price of the document for calculating points is EGP 5,000.",
+  },
   general: {
     reviews: [
       {
