@@ -25,7 +25,7 @@ export default function HomeDropdown({ isOpen }) {
         bgcolor: colors.white,
         transition: "1s",
         opacity: isOpen ? "100" : "0",
-        zIndex: isOpen ? "10" : "-1",
+        zIndex: isOpen ? "999999999" : "-1",
       }}
       style={{
         position: "absolute",

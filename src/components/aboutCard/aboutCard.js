@@ -16,8 +16,16 @@ export default function Card({ icon, heading, textArr }) {
       {textArr?.map((item, idx) => (
         <Typography
           key={idx}
-          variant="subtitle1"
-          sx={{ color: colors.blue }}
+          variant="subtitle2"
+          sx={{
+            margin: "auto",
+            fontWeight: "bold",
+            color: colors.blue,
+            width: {
+              xs: "100%",
+              md: "75%",
+            },
+          }}
           gutterBottom
         >
           {item}

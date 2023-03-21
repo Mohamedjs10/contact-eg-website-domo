@@ -18,6 +18,9 @@ export default {
       text3:
         "The cornerstone of Contact Financial Holding's success is the team of more than 2,200 industry-leading professionals. Believing in the role played by the work team in preserving the company's leadership and distinction, the company is always keen to invest in its employees and spares no effort in supporting them as it is confident that the company's success is only born with the success of its employees.",
     },
+    title: "Emphasize what is important to your company.",
+    text: "We always seek to employ our extensive experience in managing financial investments and providing financing in developing advanced financial solutions that suit the needs of our customers.",
+
     card: {
       visionTitle: "Our vision",
       visionText: [

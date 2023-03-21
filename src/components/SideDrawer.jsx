@@ -41,6 +41,7 @@ export default function SideDrawer({ state, setState }) {
         open={state}
         onClose={toggleDrawer()}
         dir={locale === "en" ? "ltr" : "rtl"}
+        sx={{ zIndex: "9999999 !important" }}
       >
         <Box
           sx={{

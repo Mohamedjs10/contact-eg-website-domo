@@ -24,7 +24,17 @@ export default function Statistics() {
   };
 
   return (
-    <Box sx={{ p: 5, bgcolor: "#f2f2f2", position: "relative" }}>
+    <Box
+      sx={{
+        p: 5,
+        px: {
+          xs: 6,
+          md: 12,
+        },
+        bgcolor: "#f2f2f2",
+        position: "relative",
+      }}
+    >
       <Box
         component="img"
         src="/images/about-line.png"
@@ -38,7 +48,7 @@ export default function Statistics() {
           height: "50%",
           display: {
             xs: "none",
-            md: "block",
+            lg: "block",
           },
         }}
       />
@@ -75,7 +85,7 @@ export default function Statistics() {
           display: "flex",
           flexDirection: {
             xs: "column",
-            md: "row",
+            lg: "row",
           },
           marginTop: "100px",
         }}
