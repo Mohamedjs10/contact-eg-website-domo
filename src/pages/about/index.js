@@ -180,6 +180,7 @@ export default function About() {
         </Box>
         <Box>
           <Carousal
+            bg="transparent"
             Component={MemberItem}
             slidesPerView={5.5}
             itemsArray={

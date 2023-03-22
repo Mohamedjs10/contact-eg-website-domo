@@ -61,6 +61,7 @@ export default function VerticalCarousel({
   itemsArray,
   Component,
   slidesPerView,
+  bg = colors.bg_grey,
 }) {
   const router = useRouter();
   const { locale } = router;
@@ -73,7 +74,7 @@ export default function VerticalCarousel({
       sx={{
         display: "flex",
         justifyContent: "flex-end",
-        bgcolor: colors.bg_grey,
+        bgcolor: bg,
       }}
     >
       <Box
