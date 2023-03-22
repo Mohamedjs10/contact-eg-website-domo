@@ -7,6 +7,7 @@ export const styles = {
     alignItems: "center",
     flexWrap: "wrap",
     gap: 4,
+    bgcolor: colors.white,
   }),
   container: (theme) => ({}),
 };
