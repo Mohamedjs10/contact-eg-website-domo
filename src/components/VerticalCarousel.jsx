@@ -69,7 +69,7 @@ export default function VerticalCarousel({
 
   return (
     <Box
-      className="vertical-safe-padding section-safe-padding-left"
+      className={`vertical-safe-padding section-safe-padding-${dir}`}
       sx={{
         display: "flex",
         justifyContent: "flex-end",

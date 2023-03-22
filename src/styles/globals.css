@@ -56,7 +56,7 @@ body {
   padding-left: 100px;
 }
 .section-safe-padding-right {
-  padding-left: 100px;
+  padding-right: 100px;
 }
 .section-safe-margin-top {
   margin-top: 20px;
@@ -116,7 +116,7 @@ xl, extra-large: 1536px */
     padding-left: 20px;
   }
   .section-safe-padding-right {
-    padding-left: 20px;
+    padding-right: 20px;
   }
   .section-safe-margin-top {
     margin-top: 5px;

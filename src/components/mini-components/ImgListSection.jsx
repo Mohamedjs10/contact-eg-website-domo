@@ -20,7 +20,7 @@ export default function Text({ title, img }) {
       <Box
         component="img"
         src="/img-list.png"
-        sx={{ width: { xs: "200px", sm: "350px", md: "650px" } }}
+        sx={{ width: { xs: "200px", sm: "350px", md: "600px" } }}
       />
       <Box
         sx={{

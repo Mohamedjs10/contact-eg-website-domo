@@ -42,7 +42,7 @@ export default function MemberCard({ img, name }) {
       <Box
         sx={{
           mb: 2,
-          ml: 3,
+          [locale === "en" ? "ml" : "mr"]: 3,
           fontSize: "20px",
           fontWeight: "bold",
           alignSelf: "flex-start",
