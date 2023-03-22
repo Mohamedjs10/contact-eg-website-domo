@@ -138,7 +138,10 @@ export default function About() {
               xs: "column",
               md: "row",
             },
-            mx: 12,
+            mx: {
+              xs: 6,
+              md: 12,
+            },
           }}
         >
           <Box
@@ -149,32 +152,33 @@ export default function About() {
               },
             }}
           >
-            <Typography variant="h5">مجلس الإدارة وفريق العمل</Typography>
+            <Typography variant="h5">{t.about.members.title}</Typography>
             <Typography sx={{ mt: 1, color: "#667085" }} variant="subtitle2">
-              نحن نبحث دائمًا عن الأفراد المتحمسين والديناميكيين والموهوبين.
+              {t.about.members.subtitle}
             </Typography>
           </Box>
           <Box
             sx={{
-              mt: {
+              my: {
                 xs: 2,
                 md: 0,
               },
             }}
           >
             <Button
+              className="mx-2 mt-1"
               onClick={() => handleActiveChange("1")}
               sx={active == "1" ? styles.downloadBtn : styles.loginBtn}
               variant="outlined"
             >
-              مجلس الادارة
+              {t.about.members.directors}
             </Button>
             <Button
-              className="mx-3"
+              className="mx-2 mt-1"
               onClick={() => handleActiveChange("2")}
               sx={active === "2" ? styles.downloadBtn : styles.loginBtn}
             >
-              الإدارة التنفيذية
+              {t.about.members.mangers}
             </Button>
           </Box>
         </Box>

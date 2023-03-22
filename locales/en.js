@@ -4,6 +4,13 @@ export default {
   direction: "ltr",
   test: { demo: "english" },
   about: {
+    members: {
+      directors: "Board of Directors",
+      mangers: "Executive management",
+      title: "Board of directors and staff",
+      subtitle:
+        "We are always looking for enthusiastic, dynamic and talented individuals.",
+    },
     aboutTitle: "About",
     aboutText:
       "Contact Financial Holding is a leading company characterized by providing a variety of financing solutions and services, including auto financing, consumer financing, real estate financing, insurance and other services to a wide customer base, in addition to being the main player in emerging debt instruments markets in Egypt, as it structures, organizes and covers subscription in Debt issuance operations for companies wishing to finance growth plans, manage risks, improve their financial conditions and increase liquidity levels.",

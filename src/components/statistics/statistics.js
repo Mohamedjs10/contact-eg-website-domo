@@ -6,7 +6,16 @@ import CountUp from "react-countup";
 
 export default function Statistics({ num, suffix, text, type }) {
   return type === "rewards" ? (
-    <Box sx={{ p: 5, bgcolor: "white", textAlign: "center", flex: "1 1 0" }}>
+    <Box
+      sx={{
+        p: 3,
+        borderRadius: "15px",
+        bgcolor: "white",
+        m: 1,
+        textAlign: "center",
+        flex: "1 1 0",
+      }}
+    >
       <Typography variant="subtitle2" sx={{ color: colors.blue }} gutterBottom>
         {text}
       </Typography>
