@@ -32,7 +32,11 @@ export default function Index() {
       />
       <Box sx={styles.body} className="section-safe-padding-bottom">
         {t.our_brand_page.body.map((item, index) => (
-          <ContentCard img={item.img} content={item.content}></ContentCard>
+          <ContentCard
+            img={item.img}
+            content={item.content}
+            key={index}
+          ></ContentCard>
         ))}
       </Box>
     </Box>

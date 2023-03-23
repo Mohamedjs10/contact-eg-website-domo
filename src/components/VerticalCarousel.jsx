@@ -161,9 +161,8 @@ export default function VerticalCarousel({
         >
           {itemsArray.map(
             ({ avatar, name, role, rating, review, img }, index) => (
-              <SwiperSlide>
+              <SwiperSlide key={index}>
                 <Component
-                  key={index}
                   // ReviewCard
                   avatar={avatar}
                   name={name}
