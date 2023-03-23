@@ -81,10 +81,20 @@ export default {
     plan2: "Flexible Program",
   },
   rewards: {
+    heading: "Customer Referral Program Points",
+    subHeading:
+      "In the event that an existing customer nominates a new customer, points will be calculated",
     title: "How points are calculated",
     note: "Note: ",
     noteText:
       "The minimum price of the document for calculating points is EGP 5,000.",
+    card: [
+      { title: "Contact Auto Finance", count: 40000 },
+      { title: "Contact Transportation Finance", count: 30000 },
+      { title: "Real Estate Shopping Contact", count: 25000 },
+      { title: "Contact Finishing Financing", count: 20000 },
+      { title: "Real Estate Financing Contact", count: 20000 },
+    ],
   },
   general: {
     reviews: [

@@ -27,6 +27,7 @@ export default function Statistics() {
     <Box
       sx={{
         p: 5,
+        pt: 10,
         px: {
           xs: 6,
           md: 12,

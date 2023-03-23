@@ -30,7 +30,7 @@ export default function About() {
       </Box>
       <Box
         sx={{
-          borderBottom: "1px solid lightgrey",
+          borderBottom: "2px solid lightgrey",
           mb: 3,
           mx: {
             md: 12,
@@ -40,10 +40,10 @@ export default function About() {
       />
       <Box sx={{ my: 4, textAlign: "center" }}>
         <Typography variant="h4" sx={{ color: colors.blue }}>
-          نقاط برنامج ترشيح العملاء
+          {t.rewards.heading}
         </Typography>
         <Typography variant="subtitle2" sx={{ fontWeight: "600" }}>
-          في حالة ترشيح عميل حالي لعميل جديد تحسب النقاط كال
+          {t.rewards.subHeading}
         </Typography>
         <Box
           sx={{
@@ -65,36 +65,16 @@ export default function About() {
             },
           }}
         >
-          <Statistics
-            type="rewards"
-            num={360}
-            suffix={t.about.statistic.sufTheous}
-            text={t.about.statistic.process}
-          />
-          <Statistics
-            type="rewards"
-            num={150}
-            suffix={t.about.statistic.sufTheous}
-            text={t.about.statistic.client}
-          />
-          <Statistics
-            type="rewards"
-            num={2200}
-            suffix=""
-            text={t.about.statistic.emp}
-          />
-          <Statistics
-            type="rewards"
-            num={2200}
-            suffix=""
-            text={t.about.statistic.emp}
-          />
-          <Statistics
-            type="rewards"
-            num={2200}
-            suffix=""
-            text={t.about.statistic.emp}
-          />
+          {t.rewards.card.map((item, idx) => {
+            return (
+              <Statistics
+                type="rewards"
+                key={idx}
+                num={item.count}
+                text={item.title}
+              />
+            );
+          })}
         </Box>
       </Box>
     </Box>
