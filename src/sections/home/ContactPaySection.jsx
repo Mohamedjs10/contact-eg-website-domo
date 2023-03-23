@@ -61,6 +61,7 @@ export default function IconsSection({}) {
         >
           {t.home_page.bos.body2.map((item, index) => (
             <Box
+              key={index}
               component="li"
               sx={{
                 width: { xs: "195px", sm: "205px", md: "220px" },

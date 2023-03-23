@@ -21,7 +21,7 @@ import { prefixer } from "stylis";
 import { CacheProvider } from "@emotion/react";
 import createCache from "@emotion/cache";
 
-export default function index() {
+export default function Pid() {
   const router = useRouter();
   const { pid } = router.query;
   const { locale } = router;

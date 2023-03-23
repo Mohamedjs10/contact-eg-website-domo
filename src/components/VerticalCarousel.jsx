@@ -159,20 +159,23 @@ export default function VerticalCarousel({
             },
           }}
         >
-          {itemsArray.map(({ avatar, name, role, rating, review, img }) => (
-            <SwiperSlide>
-              <Component
-                // ReviewCard
-                avatar={avatar}
-                name={name}
-                role={role}
-                rating={rating}
-                review={review}
-                // MemberCard
-                img={img}
-              ></Component>
-            </SwiperSlide>
-          ))}
+          {itemsArray.map(
+            ({ avatar, name, role, rating, review, img }, index) => (
+              <SwiperSlide>
+                <Component
+                  key={index}
+                  // ReviewCard
+                  avatar={avatar}
+                  name={name}
+                  role={role}
+                  rating={rating}
+                  review={review}
+                  // MemberCard
+                  img={img}
+                ></Component>
+              </SwiperSlide>
+            )
+          )}
         </Swiper>
       </Box>
     </Box>

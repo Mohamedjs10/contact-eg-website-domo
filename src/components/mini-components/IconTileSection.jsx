@@ -14,10 +14,15 @@ export default function Text({ title, img }) {
       sx={styles.sectionContainer}
       className="horizontal-safe-padding vertical-safe-padding"
     >
-      {t.general.icon_title.map((item) => (
-        <Box sx={styles.container}>
+      {t.general.icon_title.map((item, index) => (
+        <Box sx={styles.container} key={index}>
           <Box sx={styles.imgContainer}>
-            <img src={item.img} style={{ margin: "15px" }} width="30px" />
+            <img
+              src={item.img}
+              style={{ margin: "15px" }}
+              width="30px"
+              alt="img"
+            />
           </Box>
           <Box sx={styles.title}>{item.title}</Box>
         </Box>
