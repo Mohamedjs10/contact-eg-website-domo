@@ -2,9 +2,9 @@ import React from "react";
 import { Box, Typography } from "@mui/material";
 import { colors } from "../../utils/const";
 
-export default function Card({ icon, heading, textArr }) {
+export default function Card({ icon, heading, textArr, key }) {
   return (
-    <Box sx={{ flex: "1 1 0", p: 4, textAlign: "center" }}>
+    <Box key={key} sx={{ flex: "1 1 0", p: 4, textAlign: "center" }}>
       <img width="32px" src={icon} alt={heading} />
       <Typography
         sx={{ color: colors.orange, mt: 2 }}
@@ -19,6 +19,7 @@ export default function Card({ icon, heading, textArr }) {
           variant="subtitle2"
           sx={{
             margin: "auto",
+            mt: 1,
             fontWeight: "bold",
             color: colors.blue,
             width: {

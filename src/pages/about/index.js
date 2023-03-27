@@ -49,24 +49,15 @@ export default function About() {
           },
         }}
       >
-        <Statistics
-          type="about"
-          num={360}
-          suffix={t.about.statistic.sufTheous}
-          text={t.about.statistic.process}
-        />
-        <Statistics
-          type="about"
-          num={150}
-          suffix={t.about.statistic.sufTheous}
-          text={t.about.statistic.client}
-        />
-        <Statistics
-          type="about"
-          num={2200}
-          suffix=""
-          text={t.about.statistic.emp}
-        />
+        {t.about.statistic.map((item) => (
+          <Statistics
+            key={item.id}
+            type="about"
+            num={item.count}
+            suffix={item.sufTheous}
+            text={item.text}
+          />
+        ))}
       </Box>
       <Box
         sx={{
@@ -101,21 +92,14 @@ export default function About() {
             },
           }}
         >
-          <AboutCardVal
-            icon="/images/eye.png"
-            heading={t.about.card.visionTitle}
-            textArr={t.about.card.visionText}
-          />
-          <AboutCardVal
-            icon="/images/mission.png"
-            heading={t.about.card.missionTitle}
-            textArr={t.about.card.missionText}
-          />
-          <AboutCardVal
-            icon="/images/value.png"
-            heading={t.about.card.valueTitle}
-            textArr={t.about.card.valueText}
-          />
+          {t.about.card.vision_mission.map((item) => (
+            <AboutCardVal
+              key={item.id}
+              icon={item.img}
+              heading={item.title}
+              textArr={item.text}
+            />
+          ))}
         </Box>
       </Box>
       <Box

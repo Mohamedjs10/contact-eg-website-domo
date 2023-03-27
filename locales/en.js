@@ -29,43 +29,40 @@ export default {
     text: "We always seek to employ our extensive experience in managing financial investments and providing financing in developing advanced financial solutions that suit the needs of our customers.",
 
     card: {
-      visionTitle: "Our vision",
-      visionText: [
-        "Our vision is to be the first choice in providing innovative financial services to our clients.",
-      ],
-      missionTitle: "Our mission",
-      missionText: [
-        "We provide innovative digital financing services centered around the customer's requirements and needs, through our strong relationship and commitment to our customers. Our experts provide a unique experience through an integrated financing window using the latest advanced technologies and provide exceptional customer service. Our financing programs are also numerous to include serving individuals and companies with the goal of achieving all their financial goals.",
-      ],
-      valueTitle: "Our Values",
-      valueText: [
-        "It is our first approach and goal in providing smooth and exceptional financing services. Our awareness of customer value is the mainstay of a long-term relationship with our customers.",
-        "Integrity and credibility are our principles that we do not deviate from, whether at the level of individuals or as a team. We aspire to establish trust, which we believe is the basis of our extended personal and practical relationships.",
-        "We employ advanced technology to ensure ease and clarity of services provided to our customers.",
-      ],
-    },
-    card: {
-      visionTitle: "Our vision",
-      visionText: [
-        "Our vision is to be the first choice in providing innovative financial services to our clients.",
-      ],
-      missionTitle: "Our mission",
-      missionText: [
-        "We provide innovative digital financing services centered around the customer's requirements and needs, through our strong relationship and commitment to our customers. Our experts provide a unique experience through an integrated financing window using the latest advanced technologies and provide exceptional customer service. Our financing programs are also numerous to include serving individuals and companies with the goal of achieving all their financial goals.",
-      ],
-      valueTitle: "Our Values",
-      valueText: [
-        "It is our first approach and goal in providing smooth and exceptional financing services. Our awareness of customer value is the mainstay of a long-term relationship with our customers.",
-        "Integrity and credibility are our principles that we do not deviate from, whether at the level of individuals or as a team. We aspire to establish trust, which we believe is the basis of our extended personal and practical relationships.",
-        "We employ advanced technology to ensure ease and clarity of services provided to our customers.",
+      vision_mission: [
+        {
+          id: "1",
+          title: "Our vision",
+          text: [
+            "Our vision is to become the most innovative financial services provider of choice.",
+          ],
+          img: "/images/eye.png",
+        },
+        {
+          id: "2",
+          title: "Our mission",
+          text: [
+            "We provide innovative digital financial services through a customer-centric approach, capitalizing on our strong relationship and commitment with our customers. Through our highly skilled experts, we offer a one-stop-shop customer experience by adopting the latest top-notch technologies and providing exceptional customer service. Our high-end programs not only serve retails but also corporates, aiming to fulfill all their financial goals.",
+          ],
+          img: "/images/mission.png",
+        },
+        {
+          id: "3",
+          title: "Our Values",
+          text: [
+            "Customer-centric: Our long-term customer relationship is where our core values lie. An approach that ensures outstanding customers experience through a smooth customer journey.",
+            "Credibility and Integrity: We conduct ourselves with uncompromising integrity and honesty as individuals, teams, and companies. We strive to earn enduring credibility with others, which we believe is essential to long-term personnel and business relationships.",
+            "Simplicity: We strive for clarity and consistency by adopting top-notch technologies to ensure a smooth and simple customer journey.",
+          ],
+          img: "/images/value.png",
+        },
       ],
     },
-    statistic: {
-      sufTheous: " K",
-      emp: "Employee",
-      client: "Client",
-      process: "Practicability",
-    },
+    statistic: [
+      { id: "1", sufTheous: " K", text: "Customers", count: 150 },
+      { id: "2", sufTheous: " K", text: "Transactions", count: 360 },
+      { id: "3", sufTheous: "", text: "Employees", count: 2200 },
+    ],
   },
   calc: {
     monthlyAmount: "The monthly amount",
@@ -87,7 +84,43 @@ export default {
     title: "How points are calculated",
     note: "Note: ",
     noteText:
-      "The minimum price of the document for calculating points is EGP 5,000.",
+      "Policy amount must be more than 5000 EGP to start calculating the points",
+    pointsCard: [
+      {
+        id: "1",
+        title: "Contact Shopping",
+        headingKey: "Transaction type",
+        headingVal: "Points	",
+        subTitle:
+          "You are awarded points for each [Egyptian Pound] you spend in purchases, rounded down to the nearest point.",
+        purchaseKey: "Purchase",
+        purchaseVal: "1 point for every 1 EGP	",
+        firstTreatmentKey:
+          "1st Purchase transaction within 2 months of subscription",
+        firstTreatmentSubKey: "*Minimum transaction amount 10000 EGP",
+        firstTreatmentVal: "3000 Points	",
+        lastTreatmentKey: "5th Purchase transaction",
+        lastTreatmentSubKey: "*Minimum transaction amount 10000 EGP",
+        lastTreatmentVal: "2000 Points",
+      },
+      {
+        id: "2",
+        title: "Contact Finishing",
+        headingKey: "Transaction type",
+        headingVal: "Points	",
+        subTitle:
+          "You are awarded points for each [Egyptian Pound] you spend in purchases, rounded down to the nearest point.",
+        purchaseKey: "Purchase",
+        purchaseVal: "0.5 Points for every 1 EGP	",
+        firstTreatmentKey:
+          "1st Purchase transaction within 2 months of subscription",
+        firstTreatmentSubKey: "*Minimum transaction amount 20000 EGP",
+        firstTreatmentVal: "3000 Points",
+        lastTreatmentKey: "5th Purchase transaction",
+        lastTreatmentSubKey: "*Minimum transaction amount 20000 EGP",
+        lastTreatmentVal: "2000 Points",
+      },
+    ],
     card: [
       { title: "Contact Auto Finance", count: 40000 },
       { title: "Contact Transportation Finance", count: 30000 },
