@@ -8,7 +8,9 @@ import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import Button from "@mui/material/Button";
 import SideDrawer from "../components/SideDrawer.jsx";
-
+import { useRouter } from "next/router";
+import en from "../../locales/en";
+import ar from "../../locales/ar";
 export default function Navbar({
   leftOrRightValue,
   setLeftOrRightValue,
@@ -18,7 +20,17 @@ export default function Navbar({
   wrapperRef,
 }) {
   const matches = useMediaQuery("(max-width:900px)");
-  console.log("Navbar", wrapperRef);
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === "en" ? en : ar;
+  const toAr = () => {
+    const locale = "ar";
+    router.push(router.pathname, router.asPath, { locale });
+  };
+  const toEn = () => {
+    const locale = "en";
+    router.push(router.pathname, router.asPath, { locale });
+  };
 
   return (
     <>
@@ -53,15 +65,18 @@ export default function Navbar({
                 setState((prev) => !prev);
               }}
             >
-              <MenuIcon />
+              <MenuIcon sx={{}} />
             </IconButton>
-            <img src="logo.png" width="50px" height="20px" />
+            <img src={t.logo} width="50px" height="20px" />
             <Box
+              onClick={locale === "en" ? toAr : toEn}
               component={Button}
-              onClick={() => {}}
-              sx={{ color: colors.blue, fontWeight: "bold" }}
+              sx={{
+                color: colors.blue,
+                fontWeight: "bold",
+              }}
             >
-              <p className="my-8">{}</p>
+              {t.main_nav.lang}
             </Box>
           </Box>
           <SideDrawer state={state} setState={setState} />

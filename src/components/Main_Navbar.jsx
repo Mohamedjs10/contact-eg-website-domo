@@ -20,6 +20,7 @@ export default function Main_Navbar({
   const mainTab = useSelector((state) => state.mainTab.mainTab);
   const dispatch = useDispatch();
   const router = useRouter();
+
   const { locale } = router;
   const t = locale === "en" ? en : ar;
   // ------------------------------
@@ -34,26 +35,20 @@ export default function Main_Navbar({
   };
 
   return (
-    <Box sx={styles.container} style={{}} className="horizontal-safe-padding">
-      <Button ref={wrapperRef}>
+    <Box sx={styles.container} className="horizontal-safe-padding">
+      <Button
+        ref={wrapperRef}
+        sx={{
+          p: 0,
+        }}
+      >
         <MenuIcon
           sx={{
             fontSize: 40,
             color: colors.blue,
           }}
           onClick={() => {
-            console.log("btn touched", leftOrRightValue);
-            // if (leftOrRightValue == -500) {
-            //   setLeftOrRightValue(0);
-            // }
             setLeftOrRightValue((prev) => (prev == 0 ? -500 : 0));
-            // setLeftOrRightValue((prev) => {
-            //   if (prev == -500) {
-            //     return 0;
-            //   } else {
-            //     return -500;
-            //   }
-            // });
           }}
         />
       </Button>

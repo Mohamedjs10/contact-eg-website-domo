@@ -23,22 +23,7 @@ export default function Home() {
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : ar;
-  // ------------------------------
-  // const changeLanguage = (e) => {
-  //   const locale = e.target.value;
-  //   router.push(router.pathname, router.asPath, { locale });
-  // };
-  const toAr = () => {
-    // const locale = "ar";
-    // router.push(router.pathname, router.asPath, { locale });
-    router.push(router.pathname, router.asPath, "ar");
-  };
-  const toEn = () => {
-    // const locale = "en";
-    // router.push(router.pathname, router.asPath, { locale });
-    router.push(router.pathname, router.asPath, "en");
-  };
-  // -------------------------------
+
   return (
     <>
       <Head>
@@ -74,14 +59,14 @@ export default function Home() {
             slidesPerView={4.3}
           ></VerticalCarousel> */}
         </Box>
-        {/* <PageCover
+        <PageCover
           color="#74357D"
           img="/cart.png"
           title1={t.products_shopiing_page.cover.title1}
           title2={t.products_shopiing_page.cover.title2}
           description={t.products_shopiing_page.cover.description}
           formType="a"
-        ></PageCover> */}
+        ></PageCover>
         {/* <ImageSection></ImageSection>
         <IconsSection></IconsSection>
         <ContactPaySection></ContactPaySection> */}

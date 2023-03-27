@@ -2,6 +2,7 @@ import { colors } from "../utils/const";
 
 export const styles = {
   container: (theme) => ({
+    alignSelf: "flex-start",
     display: "flex",
     flexWrap: "wrap",
     justifyContent: "space-between",
@@ -16,7 +17,7 @@ export const styles = {
   inputWrapper: (theme) => ({ flex: "2 1 auto" }),
   label: (theme) => ({
     fontWeight: "bold",
-    fontSize: "20px",
+    fontSize: "17px",
     color: colors.manhattan_blue,
     pb: 1,
   }),

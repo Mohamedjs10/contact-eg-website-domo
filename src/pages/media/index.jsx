@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { styles } from "./styles";
+import { styles } from "./pid-styles";
 import { Box } from "@mui/material";
 import { colors } from "../../utils/const";
 import Link from "next/link";
@@ -42,11 +42,9 @@ export default function Index() {
     direction: "rtl", // Both here and <body dir="rtl">
     palette: {
       primary: {
-        // Purple and green play nicely together.
         main: colors.blue,
       },
       secondary: {
-        // This is green.A700 as hex.
         main: colors.orange,
       },
     },
@@ -54,11 +52,9 @@ export default function Index() {
   const theme1 = createTheme({
     palette: {
       primary: {
-        // Purple and green play nicely together.
         main: colors.blue,
       },
       secondary: {
-        // This is green.A700 as hex.
         main: colors.orange,
       },
     },
