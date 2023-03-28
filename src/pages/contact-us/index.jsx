@@ -13,7 +13,7 @@ import ar from "../../../locales/ar";
 import Form from "../../components/contact-us/Form.jsx";
 import EmailIcon from "@mui/icons-material/Email";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
-export default function index() {
+export default function Index() {
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : ar;

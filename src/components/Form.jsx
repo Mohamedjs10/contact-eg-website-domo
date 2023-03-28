@@ -33,6 +33,7 @@ export default function Form({ type, color }) {
       email: "",
       phoneNumber: "",
       governorate: "",
+      national_id: "",
       area: "",
       username: "",
       lastname: "",
@@ -121,6 +122,24 @@ export default function Form({ type, color }) {
         />
         <Box sx={styles.helperText}>
           {touched.phoneNumber && errors.phoneNumber}
+        </Box>
+      </Box>
+      {/* National ID ---------------------------------------------------------------------------------------------------------- */}
+      <Box sx={styles.inputWrapper} style={{ width: "100%" }}>
+        <InputLabel sx={styles.label}>{t.form_labels.national_id}</InputLabel>
+        <TextField
+          value={values.national_id}
+          onChange={handleChange}
+          id="national_id"
+          type="number"
+          onBlur={handleBlur}
+          error={touched.national_id && errors.national_id}
+          sx={styles.input}
+          InputProps={{ sx: { height: "45px" } }}
+          variant="outlined"
+        />
+        <Box sx={styles.helperText}>
+          {touched.national_id && errors.national_id}
         </Box>
       </Box>
       {/* Governorate ---------------------------------------------------------------------------------------------------------- */}

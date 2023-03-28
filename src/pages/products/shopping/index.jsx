@@ -19,7 +19,7 @@ import { useFormik } from "formik";
 import { Box, TextField, InputLabel, MenuItem, Button } from "@mui/material";
 
 // ================================================================
-export default function index() {
+export default function Index() {
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : ar;

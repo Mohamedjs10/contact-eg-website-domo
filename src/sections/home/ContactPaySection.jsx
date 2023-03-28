@@ -8,7 +8,7 @@ import ImageCard from "../../components/ImageCard.jsx";
 import { useRouter } from "next/router";
 import en from "../../../locales/en";
 import ar from "../../../locales/ar";
-import Title from "../../components/mini-components/Title.js";
+import Title from "../../components/mini-components/Title.jsx";
 export default function IconsSection({}) {
   const router = useRouter();
   const { locale } = router;
@@ -61,6 +61,7 @@ export default function IconsSection({}) {
         >
           {t.home_page.bos.body2.map((item, index) => (
             <Box
+              key={index}
               component="li"
               sx={{
                 width: { xs: "195px", sm: "205px", md: "220px" },

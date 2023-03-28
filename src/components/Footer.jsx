@@ -9,6 +9,9 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import Button from "@mui/material/Button";
+import InputLabel from "@mui/material/InputLabel";
+import TextField from "@mui/material/TextField";
 import { useRouter } from "next/router";
 import en from "../../locales/en";
 import ar from "../../locales/ar";
@@ -19,187 +22,168 @@ export default function Secondary_Navbar({ setIsOPen }) {
   // let leftOrRight = locale === "en" ? { right: "0px" } : { left: "0px" };
   let margin = locale === "en" ? "ml" : "mr";
   return (
-    <Box className="horizontal-safe-margin">
+    <Box
+      className="horizontal-safe-padding vertical-safe-padding"
+      sx={{ bgcolor: colors.bg_grey, border: `1px solid ${colors.dark_grey}` }}
+    >
       {/* section A ------------------------------------------------------------------------------------ */}
-      <Box sx={{ display: { xs: "none", md: "block" } }}>
-        <Box sx={styles.container}>
-          <img src="/logo.png" width="120px"></img>
-          <Box sx={styles.sub_container}>
-            <Box>خدمات تمويلية</Box>
-            <Box component={Link} href="/" sx={styles.link}>
-              تمويل السيارات
+      <Box sx={{ pb: 6 }}>
+        <Box sx={styles.a_container}>
+          <Box sx={{ textAlign: { xs: "center", sm: "initial" } }}>
+            <Box sx={{ color: colors.black, fontWeight: "bold", pb: 1 }}>
+              {t.footer.section_a.subscribe_now}
             </Box>
-            <Box component={Link} href="/" sx={styles.link}>
-              تمويل النقل
-            </Box>
-            <Box component={Link} href="/" sx={styles.link}>
-              تمويل تسويق
-            </Box>
-            <Box component={Link} href="/" sx={styles.link}>
-              تمويل التعليم
-            </Box>
-            <Box component={Link} href="/" sx={styles.link}>
-              تمويل اشتراكات الاندية
-            </Box>
-            <Box component={Link} href="/" sx={styles.link}>
-              تمويل تصميم وتشطيب
+            <Box sx={{ color: "#667085", fontWeight: "bold" }}>
+              {t.footer.section_a.in_email_service}
             </Box>
           </Box>
-          <Box sx={styles.sub_container}>
-            <Box>خدمات تمويلية</Box>
-            <Box component={Link} href="/" sx={styles.link}>
-              تمويل أفراح و مناسبات
-            </Box>
-            <Box component={Link} href="/" sx={styles.link}>
-              تمويل عقاري
-            </Box>
-            <Box component={Link} href="/" sx={styles.link}>
-              وساطة تأمينية
-            </Box>
-            <Box component={Link} href="/" sx={styles.link}>
-              تخصيم
-            </Box>
-            <Box component={Link} href="/" sx={styles.link}>
-              تأجير تمويلي
-            </Box>
-          </Box>
-          <Box sx={styles.sub_container}>
-            <Box>خدمات تمويلية</Box>
-            <Box component={Link} href="/" sx={styles.link}>
-              تمويل السيارات
-            </Box>
-            <Box component={Link} href="/" sx={styles.link}>
-              تمويل النقل
-            </Box>
-            <Box component={Link} href="/" sx={styles.link}>
-              تمويل تسويق
-            </Box>
-            <Box component={Link} href="/" sx={styles.link}>
-              تمويل التعليم
-            </Box>
-            <Box component={Link} href="/" sx={styles.link}>
-              تمويل اشتراكات الاندية
-            </Box>
-            <Box component={Link} href="/" sx={styles.link}>
-              تمويل تصميم وتشطيب
-            </Box>
-          </Box>{" "}
-          <Box sx={styles.sub_container}>
-            <Box>خدمات تمويلية</Box>
-            <Box component={Link} href="/" sx={styles.link}>
-              تمويل السيارات
-            </Box>
-            <Box component={Link} href="/" sx={styles.link}>
-              تمويل النقل
-            </Box>
-            <Box component={Link} href="/" sx={styles.link}>
-              تمويل تسويق
-            </Box>
-            <Box component={Link} href="/" sx={styles.link}>
-              تمويل التعليم
-            </Box>
-            <Box component={Link} href="/" sx={styles.link}>
-              تمويل اشتراكات الاندية
-            </Box>
-            <Box component={Link} href="/" sx={styles.link}>
-              تمويل تصميم وتشطيب
-            </Box>
-          </Box>{" "}
-          <Box sx={styles.sub_container}>
-            <Box>خدمات تمويلية</Box>
-            <Box component={Link} href="/" sx={styles.link}>
-              تمويل السيارات
-            </Box>
-            <Box component={Link} href="/" sx={styles.link}>
-              تمويل النقل
-            </Box>
-            <Box component={Link} href="/" sx={styles.link}>
-              تمويل تسويق
-            </Box>
-            <Box component={Link} href="/" sx={styles.link}>
-              تمويل التعليم
-            </Box>
-            <Box component={Link} href="/" sx={styles.link}>
-              تمويل اشتراكات الاندية
-            </Box>
-            <Box component={Link} href="/" sx={styles.link}>
-              تمويل تصميم وتشطيب
-            </Box>
-          </Box>{" "}
-          <Box sx={styles.sub_container}>
-            <Box>خدمات تمويلية</Box>
-            <Box component={Link} href="/" sx={styles.link}>
-              تمويل السيارات
-            </Box>
-            <Box component={Link} href="/" sx={styles.link}>
-              تمويل النقل
-            </Box>
-            <Box component={Link} href="/" sx={styles.link}>
-              تمويل تسويق
-            </Box>
-            <Box component={Link} href="/" sx={styles.link}>
-              تمويل التعليم
-            </Box>
-            <Box component={Link} href="/" sx={styles.link}>
-              تمويل اشتراكات الاندية
-            </Box>
-            <Box component={Link} href="/" sx={styles.link}>
-              تمويل تصميم وتشطيب
-            </Box>
+          <Box
+            sx={{
+              display: "flex",
+              flexWrap: "wrap",
+              alignItems: "flex-start",
+              justifyContent: { xs: "center", sm: "space-between", gap: 15 },
+            }}
+          >
+            <TextField
+              placeholder={t.footer.section_a.enter_email}
+              inputProps={{
+                sx: {
+                  fontSize: 13,
+                  fontWeight: "bold",
+                  lineHeight: "2",
+                },
+              }}
+              sx={styles.input}
+              defaultValue={""}
+              onChange={() => {}}
+              hiddenLabel
+              id="car-price"
+              size="small"
+            />
+            <Button variant="outlined" sx={styles.btn}>
+              {t.footer.section_a.button}
+            </Button>
           </Box>
         </Box>
       </Box>
-      {/* section A - Mobile ------------------------------------------------------------------------------------ */}
+      {/* section B ------------------------------------------------------------------------------------ */}
+      <Box
+        sx={{
+          display: { xs: "none", md: "block" },
+          borderTop: `1px solid ${colors.dark_grey}`,
+        }}
+        className="section-safe-padding-top"
+      >
+        <Box sx={styles.container}>
+          {/* 1---------- */}
+          <Box sx={styles.sub_container}>
+            <Box sx={styles.title}>{t.footer.section_b.financial_services}</Box>
+            {t.footer.section_b.financial_services_list1.map((item, index) => (
+              <Box
+                component={Link}
+                href={item.url}
+                sx={styles.link}
+                key={index}
+              >
+                {item.name}
+              </Box>
+            ))}
+          </Box>
+          {/* 2---------- */}
+          <Box sx={styles.sub_container}>
+            <Box sx={styles.title}>{t.footer.section_b.financial_services}</Box>
+            {t.footer.section_b.financial_services_list2.map((item, index) => (
+              <Box
+                component={Link}
+                href={item.url}
+                sx={styles.link}
+                key={index}
+              >
+                {item.name}
+              </Box>
+            ))}
+          </Box>
+          {/* 3---------- */}
+          <Box sx={styles.sub_container}>
+            <Box sx={styles.title}>{t.footer.section_b.other_services}</Box>
+            {t.footer.section_b.other_services_list.map((item, index) => (
+              <Box
+                component={Link}
+                href={item.url}
+                sx={styles.link}
+                key={index}
+              >
+                {item.name}
+              </Box>
+            ))}
+          </Box>
+          {/* 4---------- */}
+          <Box sx={styles.sub_container}>
+            <Box sx={styles.title}>{t.footer.section_b.contact}</Box>
+            {t.footer.section_b.contact_list.map((item, index) => (
+              <Box
+                component={Link}
+                href={item.url}
+                sx={styles.link}
+                key={index}
+              >
+                {item.name}
+              </Box>
+            ))}
+          </Box>
+          {/* 5---------- */}
+          <Box sx={styles.sub_container}>
+            <Box sx={styles.title}>{t.footer.section_b.company}</Box>
+            {t.footer.section_b.company_list.map((item, index) => (
+              <Box
+                component={Link}
+                href={item.url}
+                sx={styles.link}
+                key={index}
+              >
+                {item.name}
+              </Box>
+            ))}
+          </Box>
+          {/* 6---------- */}
+          <Box sx={styles.sub_container}>
+            <Box sx={styles.title}>{t.footer.section_b.policy}</Box>
+            {t.footer.section_b.policy_list.map((item, index) => (
+              <Box
+                component={Link}
+                href={item.url}
+                sx={styles.link}
+                key={index}
+              >
+                {item.name}
+              </Box>
+            ))}
+          </Box>
+        </Box>
+      </Box>
+      {/* section B - Mobile ------------------------------------------------------------------------------------ */}
 
       <Box sx={{ display: { md: "none" } }}>
         <Box>
-          <img
-            src="/logo.png"
-            width="120px"
-            style={{ paddingBottom: "20px" }}
-          ></img>
           <Accordion>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <Box sx={styles.accrodion_title}>خدمات تمويلية</Box>
+              <Box sx={styles.accrodion_title}>
+                {t.footer.section_b.financial_services}
+              </Box>
             </AccordionSummary>
             <AccordionDetails sx={styles.sub_container}>
-              <Box component={Link} href="/" sx={styles.link}>
-                تمويل السيارات
-              </Box>
-              <Box component={Link} href="/" sx={styles.link}>
-                تمويل النقل
-              </Box>
-              <Box component={Link} href="/" sx={styles.link}>
-                تمويل تسويق
-              </Box>
-              <Box component={Link} href="/" sx={styles.link}>
-                تمويل التعليم
-              </Box>
-              <Box component={Link} href="/" sx={styles.link}>
-                تمويل اشتراكات الاندية
-              </Box>
-              <Box component={Link} href="/" sx={styles.link}>
-                تمويل تصميم وتشطيب
-              </Box>
-              <Box component={Link} href="/" sx={styles.link}>
-                تمويل أفراح و مناسبات
-              </Box>
-              <Box component={Link} href="/" sx={styles.link}>
-                تمويل عقاري
-              </Box>
-              <Box component={Link} href="/" sx={styles.link}>
-                وساطة تأمينية
-              </Box>
-              <Box component={Link} href="/" sx={styles.link}>
-                تخصيم
-              </Box>
-              <Box component={Link} href="/" sx={styles.link}>
-                تأجير تمويلي
-              </Box>
+              {t.footer.section_b.financial_services_list1.map(
+                (item, index) => (
+                  <Box component={Link} href={item.url} sx={styles.link}>
+                    {item.name}
+                  </Box>
+                )
+              )}
             </AccordionDetails>
           </Accordion>
           <Accordion>
@@ -208,21 +192,18 @@ export default function Secondary_Navbar({ setIsOPen }) {
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <Box sx={styles.accrodion_title}>خدمات تمويلية</Box>
+              <Box sx={styles.accrodion_title}>
+                {t.footer.section_b.financial_services}
+              </Box>
             </AccordionSummary>
             <AccordionDetails sx={styles.sub_container}>
-              <Box component={Link} href="/" sx={styles.link}>
-                تمويل السيارات
-              </Box>
-              <Box component={Link} href="/" sx={styles.link}>
-                تمويل النقل
-              </Box>
-              <Box component={Link} href="/" sx={styles.link}>
-                تمويل تسويق
-              </Box>
-              <Box component={Link} href="/" sx={styles.link}>
-                تمويل التعليم
-              </Box>
+              {t.footer.section_b.financial_services_list2.map(
+                (item, index) => (
+                  <Box component={Link} href={item.url} sx={styles.link}>
+                    {item.name}
+                  </Box>
+                )
+              )}
             </AccordionDetails>
           </Accordion>
           <Accordion>
@@ -231,21 +212,16 @@ export default function Secondary_Navbar({ setIsOPen }) {
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <Box sx={styles.accrodion_title}>خدمات تمويلية</Box>
+              <Box sx={styles.accrodion_title}>
+                {t.footer.section_b.other_services}
+              </Box>
             </AccordionSummary>
             <AccordionDetails sx={styles.sub_container}>
-              <Box component={Link} href="/" sx={styles.link}>
-                تمويل السيارات
-              </Box>
-              <Box component={Link} href="/" sx={styles.link}>
-                تمويل النقل
-              </Box>
-              <Box component={Link} href="/" sx={styles.link}>
-                تمويل تسويق
-              </Box>
-              <Box component={Link} href="/" sx={styles.link}>
-                تمويل التعليم
-              </Box>
+              {t.footer.section_b.other_services_list.map((item, index) => (
+                <Box component={Link} href={item.url} sx={styles.link}>
+                  {item.name}
+                </Box>
+              ))}
             </AccordionDetails>
           </Accordion>
           <Accordion>
@@ -254,47 +230,78 @@ export default function Secondary_Navbar({ setIsOPen }) {
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <Box sx={styles.accrodion_title}>خدمات تمويلية</Box>
+              <Box sx={styles.accrodion_title}>
+                {t.footer.section_b.contact}
+              </Box>
             </AccordionSummary>
             <AccordionDetails sx={styles.sub_container}>
-              <Box component={Link} href="/" sx={styles.link}>
-                تمويل السيارات
+              {t.footer.section_b.contact_list.map((item, index) => (
+                <Box component={Link} href={item.url} sx={styles.link}>
+                  {item.name}
+                </Box>
+              ))}
+            </AccordionDetails>
+          </Accordion>
+          <Accordion>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+            >
+              <Box sx={styles.accrodion_title}>
+                {t.footer.section_b.company}
               </Box>
-              <Box component={Link} href="/" sx={styles.link}>
-                تمويل النقل
-              </Box>
-              <Box component={Link} href="/" sx={styles.link}>
-                تمويل تسويق
-              </Box>
-              <Box component={Link} href="/" sx={styles.link}>
-                تمويل التعليم
-              </Box>
+            </AccordionSummary>
+            <AccordionDetails sx={styles.sub_container}>
+              {t.footer.section_b.company_list.map((item, index) => (
+                <Box component={Link} href={item.url} sx={styles.link}>
+                  {item.name}
+                </Box>
+              ))}
+            </AccordionDetails>
+          </Accordion>
+          <Accordion>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+            >
+              <Box sx={styles.accrodion_title}>{t.footer.section_b.policy}</Box>
+            </AccordionSummary>
+            <AccordionDetails sx={styles.sub_container}>
+              {t.footer.section_b.policy_list.map((item, index) => (
+                <Box component={Link} href={item.url} sx={styles.link}>
+                  {item.name}
+                </Box>
+              ))}
             </AccordionDetails>
           </Accordion>
         </Box>
       </Box>
 
-      {/* section B ------------------------------------------------------------------------------------ */}
-      <Box sx={styles.app_section} className="section-safe-margin-top">
+      {/* section C ------------------------------------------------------------------------------------ */}
+      <Box sx={styles.app_section} className="section-safe-padding-top">
         <Box sx={styles.app_container}>
-          حمل تطبيق كونتكت
+          {/* {t.footer.section_c.download_app} */}
           <Box sx={styles.app_icons}>
-            <img src="google-play.png" />
-            <img src="app-store.png" />
+            <img src={t.footer.section_c.img1} width="140px" height="45px" />
+            <img src={t.footer.section_c.img2} width="140px" height="45px" />
           </Box>
         </Box>
       </Box>
-      {/* section C ------------------------------------------------------------------------------------ */}
+      {/* section D ------------------------------------------------------------------------------------ */}
       <img
         src="footer-line.png"
         width="100%"
         className="section-safe-margin-top"
       />
       {/* section D ------------------------------------------------------------------------------------ */}
-      <Box
-        className="section-safe-margin-top section-safe-margin-bottom"
-        sx={styles.copyright_section}
-      >
+      <Box className="section-safe-padding-top " sx={styles.copyright_section}>
+        <Box
+          sx={{ width: "280px", textAlign: { xs: "center", md: "initial" } }}
+        >
+          <img src={t.logo} width="120px"></img>
+        </Box>
         <Box
           sx={{
             display: "flex",
@@ -302,6 +309,7 @@ export default function Secondary_Navbar({ setIsOPen }) {
             justifyContent: "center",
             alignItems: "center",
             gap: 2,
+            // width: "240px",
           }}
         >
           <Box
@@ -367,7 +375,7 @@ export default function Secondary_Navbar({ setIsOPen }) {
         </Box>
         <Box
           sx={{
-            [margin]: { xs: 0, md: "auto" },
+            color: "#98A2B3",
             gap: { xs: 1, md: 0 },
             display: "flex",
             justifyContent: "center",
@@ -376,7 +384,7 @@ export default function Secondary_Navbar({ setIsOPen }) {
             textAlign: "center",
           }}
         >
-          جميع الحقوق محفوظة 2021 لكونتكت
+          {t.footer.section_d.copy_right}
           <img src="award.png" />
         </Box>
       </Box>

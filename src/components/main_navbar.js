@@ -7,8 +7,8 @@ export const styles = {
     alignItems: "center",
     gap: 3,
     color: colors.blue,
-    pt: 1,
-    pb: 1,
+    pt: 0.5,
+    pb: 0.5,
     bgcolor: colors.light_grey,
   },
   tab: {

@@ -1,9 +1,14 @@
 import * as yup from "yup";
 const phoneRegExp =
   /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
-
+const nationaId =
+  /^([1-9]{1})([0-9]{2})([0-9]{2})([0-9]{2})([0-9]{2})[0-9]{3}([0-9]{1})[0-9]{1}$/;
 export const EnSchema = yup.object().shape({
   email: yup.string().email("Please enter a valid email").required("Required"),
+  national_id: yup
+    .string()
+    .matches(nationaId, "National Id is not valid")
+    .required("Required"),
   phoneNumber: yup
     .string()
     .matches(phoneRegExp, "Phone number is not valid")

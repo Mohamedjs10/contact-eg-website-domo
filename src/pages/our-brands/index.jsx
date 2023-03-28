@@ -11,7 +11,7 @@ import { useRouter } from "next/router";
 import en from "../../../locales/en";
 import ar from "../../../locales/ar";
 import ContentCard from "../../components/our-brands/ContentCard";
-export default function index() {
+export default function Index() {
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : ar;
@@ -32,7 +32,11 @@ export default function index() {
       />
       <Box sx={styles.body} className="section-safe-padding-bottom">
         {t.our_brand_page.body.map((item, index) => (
-          <ContentCard img={item.img} content={item.content}></ContentCard>
+          <ContentCard
+            img={item.img}
+            content={item.content}
+            key={index}
+          ></ContentCard>
         ))}
       </Box>
     </Box>

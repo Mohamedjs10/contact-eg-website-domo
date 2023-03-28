@@ -21,6 +21,7 @@ export default function Service({ img, title, description, color }) {
           height: "75px",
           display: "flex",
           flexDirection: "column",
+          textAlign: { xs: "center", md: "initial" },
           justifyContent: "center",
           alignItems: { xs: "center", lg: "flex-start" },
           borderRadius: "5px",

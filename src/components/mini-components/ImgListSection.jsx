@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { styles } from "./Img-list-section";
+import { styles } from "./img-list-section";
 import { Box } from "@mui/material";
 import { colors } from "../../utils/const";
 import Link from "next/link";
@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 import en from "../../../locales/en";
 import ar from "../../../locales/ar";
 import Number from "./Number.jsx";
-export default function Text({ title, img }) {
+export default function ImgListSection({ title, img }) {
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : ar;
