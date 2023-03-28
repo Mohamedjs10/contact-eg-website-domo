@@ -291,7 +291,7 @@ export default function Secondary_Navbar({ setIsOPen }) {
       </Box>
       {/* section D ------------------------------------------------------------------------------------ */}
       <img
-        src="footer-line.png"
+        src="/footer-line.png"
         width="100%"
         className="section-safe-margin-top"
       />
@@ -322,7 +322,7 @@ export default function Secondary_Navbar({ setIsOPen }) {
               },
             }}
           >
-            <img src="l.png" />
+            <img src="/l.png" />
           </Box>
           <Box
             component="a"
@@ -334,7 +334,7 @@ export default function Secondary_Navbar({ setIsOPen }) {
               },
             }}
           >
-            <img src="t.png" />
+            <img src="/t.png" />
           </Box>
           <Box
             component="a"
@@ -346,7 +346,7 @@ export default function Secondary_Navbar({ setIsOPen }) {
               },
             }}
           >
-            <img src="y.png" />
+            <img src="/y.png" />
           </Box>
           <Box
             component="a"
@@ -358,7 +358,7 @@ export default function Secondary_Navbar({ setIsOPen }) {
               },
             }}
           >
-            <img src="i.png" />
+            <img src="/i.png" />
           </Box>
           <Box
             component="a"
@@ -370,7 +370,7 @@ export default function Secondary_Navbar({ setIsOPen }) {
               },
             }}
           >
-            <img src="f.png" />
+            <img src="/f.png" />
           </Box>
         </Box>
         <Box
@@ -385,7 +385,7 @@ export default function Secondary_Navbar({ setIsOPen }) {
           }}
         >
           {t.footer.section_d.copy_right}
-          <img src="award.png" />
+          <img src="/award.png" />
         </Box>
       </Box>
     </Box>
