@@ -8,7 +8,7 @@ import TextField from "@mui/material/TextField";
 import { useRouter } from "next/router";
 import en from "../../../locales/en";
 import ar from "../../../locales/ar";
-export default function BottomCard({ img, content }) {
+export default function BottomCard({ img, content, link }) {
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : ar;
@@ -51,7 +51,7 @@ export default function BottomCard({ img, content }) {
       >
         <img src={img} width="100px"></img>
         <Box sx={{ fontSize: "15px" }}>{content}</Box>
-        <Box component={Link} href="./" sx={styles.link}>
+        <Box component={Link} target="_blank" href={link} sx={styles.link}>
           {t.our_brand_page.link}
         </Box>
       </Box>

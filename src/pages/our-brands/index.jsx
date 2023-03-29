@@ -35,6 +35,7 @@ export default function Index() {
           <ContentCard
             img={item.img}
             content={item.content}
+            link={item.link}
             key={index}
           ></ContentCard>
         ))}

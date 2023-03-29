@@ -1084,33 +1084,38 @@ export default {
     body: [
       {
         id: 1,
-        img: "/our-brands/contact.png",
+        img: "https://contact.eg/wp-content/uploads/2020/10/logo-3.png",
+        link: "/",
         content:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "Established in 2001, Contact was the first specialized consumer finance company in Egypt.Set-up as an independent, management, and employee-led initiative, the company has managed to secure equity financing from various sources since its inception, including banks, private equity firms, and individuals.",
       },
       {
         id: 2,
-        img: "/our-brands/contact.png",
+        img: "https://contact.eg/wp-content/uploads/2021/02/Sarwa-Insurance-01.png",
+        link: "https://sarwa.insurance/sarwa-insurance",
         content:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "SARWA Insurance S.A.E is a fast-growing and dynamic insurer that offering a wide range of both Personal and Commercial lines insurance solutions. Our Core focus is to provide exemplary services and value. We hand-picked some of the best insurance practitioners in their fields to ensure that we are fully equipped to service the growing risk transfer and insurance needs of our clients. Our extensive experience as individuals working on truly international standards ensures that we can provide the most effective and economical solutions to our clients. At SARWA we are all committed to building confidence and creating certainty in our clients’ business.",
       },
       {
         id: 3,
-        img: "/our-brands/contact.png",
+        img: "https://contact.eg/wp-content/uploads/2021/02/Sarwa-Life-EN-1.jpg",
+        link: "https://sarwa.insurance/sarwa-Life",
         content:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "Building a holistic one-stop-digital shop approach bundled with the day-to-day financial needs with a state of the art digitally serve solution fitting the journey of life, medical, and other needs of our clients, Sarwa Life Insurance was incorporated with a paid-up capital of EGP 100 million. Providing distinguished and innovative services for clients. Through fast digital solutions that enable customers to manage all their needs digitally whether an individual or a corporate company anytime, anywhere.",
       },
       {
         id: 4,
-        img: "/our-brands/contact.png",
+        img: "https://contact.eg/wp-content/uploads/2021/03/Logo2.png",
+        link: "https://www.contactcars.com/en",
         content:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "Contactcars is the dominant automotive portal in Egypt. For over 19 years, contactcars.com has been pioneering the digital transformation of the automotive industry providing consumers a portfolio of products and services that make the buying and selling experience simple and user-friendly. As part of our continuous innovation drive, 2021 marks a milestone in which contactcars.com is re-launching its website and app as well as adding a host of new services for both consumers and dealers bringing the entire automotive ecosystem closer together and further simplifying the process of buying, selling, or owning a vehicle.",
       },
       {
         id: 5,
-        img: "/our-brands/contact.png",
+        img: "https://contact.eg/wp-content/uploads/2021/03/file-2-e1614693894411.png",
+        link: "/",
         content:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "Tapping debt capital markets (DCM) has long been central to Sarwa’s business model and allowed us to diversify our funding base and successfully refinance our operations since inception. Leveraging this deeply rooted experience in the DCM space, we brought to market a range of structured financing services that have driven us to become Egypt’s largest player in the industry. Sarwa has arranged and issued more than EGP 26 billion in debt issuances since 2005, including the very first securitization bond offering of its kind on the domestic market. Sarwa is also the first licensed sukuk issuer in the Egyptian market.",
       },
     ],
     link: "visit website",
