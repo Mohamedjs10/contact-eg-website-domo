@@ -1,6 +1,7 @@
 import React from "react";
 import { Box } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 import Link from "next/link";
 import Button from "@mui/material/Button";
 import { colors } from "../utils/const";
@@ -10,17 +11,12 @@ import { useRouter } from "next/router";
 import en from "../../locales/en";
 import ar from "../../locales/ar";
 import { useSelector, useDispatch } from "react-redux";
-import { updateMenu } from "../Redux/store";
-export default function Main_Navbar({
-  // leftOrRightValue,
-  setLeftOrRightValue,
-  wrapperRef,
-}) {
+
+export default function Main_Navbar({ leftOrRightValue, setLeftOrRightValue }) {
   const mainTab = useSelector((state) => state.mainTab.mainTab);
   const router = useRouter();
 
   const dispatch = useDispatch();
-  const leftOrRightValue = useSelector((state) => state.menu.leftOrRightVal);
 
   const { locale } = router;
   const t = locale === "en" ? en : ar;
@@ -38,26 +34,31 @@ export default function Main_Navbar({
   return (
     <Box sx={styles.container} className="horizontal-safe-padding">
       <Button
-        ref={wrapperRef}
         sx={{
           p: 0,
         }}
       >
-        <MenuIcon
-          sx={{
-            fontSize: 40,
-            color: colors.blue,
-          }}
-          onClick={() => {
-            if (leftOrRightValue == 0) {
-              dispatch(updateMenu(-500));
-            } else {
-              dispatch(updateMenu(0));
-            }
-            // dispatch(updateMenu(leftOrRightValue == 0 ? -500 : 0));
-            // setLeftOrRightValue((prev) => (prev == 0 ? -500 : 0));
-          }}
-        />
+        {leftOrRightValue == 0 ? (
+          <CloseIcon
+            sx={{
+              fontSize: 40,
+              color: colors.blue,
+            }}
+            onClick={() => {
+              setLeftOrRightValue((prev) => (prev == 0 ? -500 : 0));
+            }}
+          />
+        ) : (
+          <MenuIcon
+            sx={{
+              fontSize: 40,
+              color: colors.blue,
+            }}
+            onClick={() => {
+              setLeftOrRightValue((prev) => (prev == 0 ? -500 : 0));
+            }}
+          />
+        )}
       </Button>
 
       <Box

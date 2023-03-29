@@ -12,12 +12,13 @@ import Button from "@mui/material/Button";
 import { useRouter } from "next/router";
 import en from "../../locales/en";
 import ar from "../../locales/ar";
-export default function Secondary_Navbar({ setIsOPen }) {
+export default function Secondary_Navbar({ setIsOPen, setType }) {
   const secTab = useSelector((state) => state.secTab.secTab);
 
   const dispatch = useDispatch();
 
-  const [arrDir, setArrDir] = useState("down");
+  const [arrDirA, setArrDirA] = useState("down");
+  const [arrDirB, setArrDirB] = useState("down");
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : ar;
@@ -38,15 +39,16 @@ export default function Secondary_Navbar({ setIsOPen }) {
 
           <Box
             onClick={() => {
-              setArrDir((prev) => (prev == "up" ? "down" : "up"));
+              setArrDirA((prev) => (prev == "up" ? "down" : "up"));
               setIsOPen((prev) => !prev);
+              setType("a");
               dispatch(secTabActions.update("B-sec"));
             }}
             sx={{
               "&:hover": { cursor: "pointer" },
               "& svg": {
                 transition: "1s",
-                transform: `rotate(${arrDir === "up" ? "-180deg" : "0deg"})`,
+                transform: `rotate(${arrDirA === "up" ? "-180deg" : "0deg"})`,
               },
             }}
             style={{
@@ -60,6 +62,33 @@ export default function Secondary_Navbar({ setIsOPen }) {
             }}
           >
             {t.secondary_nav.financial_services}
+            <KeyboardArrowDownIcon />
+          </Box>
+          <Box
+            onClick={() => {
+              setArrDirB((prev) => (prev == "up" ? "down" : "up"));
+              setIsOPen((prev) => !prev);
+              setType("b");
+              dispatch(secTabActions.update("B-sec"));
+            }}
+            sx={{
+              "&:hover": { cursor: "pointer" },
+              "& svg": {
+                transition: "1s",
+                transform: `rotate(${arrDirB === "up" ? "-180deg" : "0deg"})`,
+              },
+            }}
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              color: colors.navy_blue,
+              fontSize: 15,
+              textDecoration: "none",
+              transition: "1s",
+            }}
+          >
+            {t.secondary_nav.clients_program}
             <KeyboardArrowDownIcon />
           </Box>
           <Box component={Link} href="/" onClick={() => {}} sx={styles.tab}>

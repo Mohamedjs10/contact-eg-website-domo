@@ -374,7 +374,7 @@ export default {
     financial_services: "خدمات تمويلية",
     insurance_services: "خدمات تأمينية",
     e_payments: "مدفوعات الكترونية",
-    clients_program: "Clients Program",
+    clients_program: "برنامج العملاء",
     investment_and_savings: "استثمار وادخار",
     branches_location: "اماكن الفروع",
     login: "تسجيل الدخول",
@@ -846,13 +846,19 @@ export default {
           title: "كونتكت هومز",
           description:
             "الان من خلال الشراكة بين شركة كونتكت, شركة التمويل الأولى في مصر، و شركة كولدويل بانكر",
+          full_description:
+            "الان من خلال الشراكة بين شركة كونتكت, شركة التمويل الأولى في مصر، و شركة كولدويل بانكر",
         },
+      ],
+      D: [
         {
           color: colors.blue,
           img: "services/clients.png",
           title: "برنامج ترشيح العملاء",
           description:
             "يمكنك ترشيح أصدقاءك والحصول على نقاط مجانية وخصومات حصرية",
+          full_description:
+            "الان من خلال الشراكة بين شركة كونتكت, شركة التمويل الأولى في مصر، و شركة كولدويل بانكر",
         },
       ],
     },

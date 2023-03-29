@@ -13,7 +13,7 @@ export default function FlyingCard({
   setLeftOrRightValue,
   // leftOrRightValue,
   children,
-  wrapperRef,
+  // wrapperRef,
 }) {
   const router = useRouter();
   const { locale } = router;
@@ -25,7 +25,7 @@ export default function FlyingCard({
   return (
     <>
       <Box
-        ref={wrapperRef}
+        // ref={wrapperRef}
         className="horizontal-safe-margin"
         sx={{
           boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
