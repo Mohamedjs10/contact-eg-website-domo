@@ -17,7 +17,6 @@ export default function Form({ color }) {
   // formik ==========================================================
   const onSubmit = async (values, actions) => {
     await new Promise((resolve) => setTimeout(resolve, 5000)); // simulate delay
-    console.log(values);
     actions.resetForm();
   };
   const {
@@ -135,7 +134,6 @@ export default function Form({ color }) {
       {/* Submit ---------------------------------------------------------------------------------------------------------- */}
       <Button
         disabled={isSubmitting}
-        // onClick={() => console.log("Submitting")}
         type="submit"
         sx={styles.btn}
         style={{

@@ -22,6 +22,8 @@ import Button from "@mui/material/Button";
 import { appWithTranslation } from "next-i18next";
 import { useTranslation } from "next-i18next";
 import FlyingCard from "@/components/mini-components/FlyingCard";
+import { useDispatch } from "react-redux";
+import { updateMenu } from "../Redux/store";
 // =================================================================
 function useOutsideAlerter(ref, leftOrRightValue, setLeftOrRightValue) {
   useEffect(() => {
@@ -53,6 +55,8 @@ const App = ({ Component, pageProps }) => {
   // =================================================================
   const wrapperRef = useRef(null);
   useOutsideAlerter(wrapperRef, leftOrRightValue, setLeftOrRightValue);
+
+  // const dispatch = useDispatch();
   // =================================================================
   return (
     <Provider store={store}>

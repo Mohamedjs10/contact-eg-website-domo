@@ -5,21 +5,22 @@ import Link from "next/link";
 import Button from "@mui/material/Button";
 import { colors } from "../utils/const";
 import { styles } from "./main_navbar.js";
-import { useSelector, useDispatch } from "react-redux";
 import { mainTabActions } from "../Redux/store";
 import { useRouter } from "next/router";
 import en from "../../locales/en";
 import ar from "../../locales/ar";
+import { useSelector, useDispatch } from "react-redux";
+import { updateMenu } from "../Redux/store";
 export default function Main_Navbar({
-  leftOrRightValue,
+  // leftOrRightValue,
   setLeftOrRightValue,
   wrapperRef,
 }) {
-  console.log("MainNavbar", wrapperRef);
-
   const mainTab = useSelector((state) => state.mainTab.mainTab);
-  const dispatch = useDispatch();
   const router = useRouter();
+
+  const dispatch = useDispatch();
+  const leftOrRightValue = useSelector((state) => state.menu.leftOrRightVal);
 
   const { locale } = router;
   const t = locale === "en" ? en : ar;
@@ -48,7 +49,13 @@ export default function Main_Navbar({
             color: colors.blue,
           }}
           onClick={() => {
-            setLeftOrRightValue((prev) => (prev == 0 ? -500 : 0));
+            if (leftOrRightValue == 0) {
+              dispatch(updateMenu(-500));
+            } else {
+              dispatch(updateMenu(0));
+            }
+            // dispatch(updateMenu(leftOrRightValue == 0 ? -500 : 0));
+            // setLeftOrRightValue((prev) => (prev == 0 ? -500 : 0));
           }}
         />
       </Button>

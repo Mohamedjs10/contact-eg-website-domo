@@ -11,6 +11,8 @@ import SideDrawer from "../components/SideDrawer.jsx";
 import { useRouter } from "next/router";
 import en from "../../locales/en";
 import ar from "../../locales/ar";
+import { useSelector, useDispatch } from "react-redux";
+
 export default function Navbar({
   leftOrRightValue,
   setLeftOrRightValue,

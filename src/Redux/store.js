@@ -19,11 +19,28 @@ const secTabSlice = createSlice({
   },
 });
 
+const menuSlice = createSlice({
+  name: "menu",
+  initialState: {
+    leftOrRightVal: -500,
+  },
+  reducers: {
+    updateMenu: (state, action) => {
+      state.leftOrRightVal = action.payload;
+    },
+  },
+});
+
 const store = configureStore({
-  reducer: { mainTab: mainTabSlice.reducer, secTab: secTabSlice.reducer },
+  reducer: {
+    mainTab: mainTabSlice.reducer,
+    secTab: secTabSlice.reducer,
+    menu: menuSlice.reducer,
+  },
 });
 
 export const mainTabActions = mainTabSlice.actions;
 export const secTabActions = secTabSlice.actions;
+export const { updateMenu } = menuSlice.actions;
 
 export default store;

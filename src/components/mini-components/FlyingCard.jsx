@@ -6,18 +6,22 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import en from "../../../locales/en";
 import ar from "../../../locales/ar";
+import { useSelector, useDispatch } from "react-redux";
+import { updateMenu } from "../../Redux/store";
+
 export default function FlyingCard({
   setLeftOrRightValue,
-  leftOrRightValue,
+  // leftOrRightValue,
   children,
   wrapperRef,
 }) {
-  console.log(wrapperRef);
-
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : ar;
   let leftOrRight = locale === "en" ? "left" : "right";
+
+  const leftOrRightValue = useSelector((state) => state.menu.leftOrRightVal);
+  const dispatch = useDispatch();
   return (
     <>
       <Box
@@ -56,7 +60,7 @@ export default function FlyingCard({
             component={Link}
             href="/"
             onClick={() => {
-              setLeftOrRightValue((prev) => (prev == 0 ? -500 : 0));
+              dispatch(updateMenu(-500));
             }}
             sx={styles.tab}
             style={{}}
@@ -68,7 +72,7 @@ export default function FlyingCard({
             component={Link}
             href="/"
             onClick={() => {
-              setLeftOrRightValue((prev) => (prev == 0 ? -500 : 0));
+              dispatch(updateMenu(-500));
             }}
             sx={styles.tab}
             style={{}}
@@ -80,7 +84,7 @@ export default function FlyingCard({
             component={Link}
             href="/"
             onClick={() => {
-              setLeftOrRightValue((prev) => (prev == 0 ? -500 : 0));
+              dispatch(updateMenu(-500));
             }}
             sx={styles.tab}
             style={{}}
@@ -92,7 +96,7 @@ export default function FlyingCard({
             component={Link}
             href="/"
             onClick={() => {
-              setLeftOrRightValue((prev) => (prev == 0 ? -500 : 0));
+              dispatch(updateMenu(-500));
             }}
             sx={styles.tab}
             style={{}}
@@ -104,7 +108,7 @@ export default function FlyingCard({
             component={Link}
             href="/"
             onClick={() => {
-              setLeftOrRightValue((prev) => (prev == 0 ? -500 : 0));
+              dispatch(updateMenu(-500));
             }}
             sx={styles.tab}
             style={{}}
