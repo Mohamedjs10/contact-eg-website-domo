@@ -373,7 +373,7 @@ export default {
     financial_services: "Financial Services",
     insurance_services: "Insurance Services",
     e_payments: "E-Payment",
-    clients_program: "Clients Program",
+    clients_program: "Referral Program",
     investment_and_savings: "Investment & Savings",
     branches_location: "Branches Locations",
     login: "Login",
@@ -903,13 +903,17 @@ export default {
           color: colors.blue,
           img: "services/homes.png",
           title: "Contact Homes",
+          description: "If you need to develop your agricultural investment.",
           full_description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development is the main pillar for economic growth, food security, and a cornerstone for a bright future. Contact will finance your agriculture investments to achieve environmental sustainability.",
         },
+      ],
+      D: [
         {
           color: colors.blue,
           img: "services/clients.png",
           title: "Client Filtering",
+          description: "If you need to develop your agricultural investment.",
           full_description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development is the main pillar for economic growth, food security, and a cornerstone for a bright future. Contact will finance your agriculture investments to achieve environmental sustainability.",
         },

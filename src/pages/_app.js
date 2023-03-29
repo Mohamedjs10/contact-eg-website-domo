@@ -22,39 +22,16 @@ import Button from "@mui/material/Button";
 import { appWithTranslation } from "next-i18next";
 import { useTranslation } from "next-i18next";
 import FlyingCard from "@/components/mini-components/FlyingCard";
-// =================================================================
-function useOutsideAlerter(ref, leftOrRightValue, setLeftOrRightValue) {
-  useEffect(() => {
-    function handleClickOutside(event) {
-      if (ref.current && !ref.current.contains(event.target)) {
-        // if (leftOrRightValue == 0) {
-        console.log("outside touched", leftOrRightValue);
-        setLeftOrRightValue(-500);
-        // }
-      }
-    }
-    // Bind the event listener
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      // Unbind the event listener on clean up
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [ref]);
-}
-// =================================================================
+
 const App = ({ Component, pageProps }) => {
   const router = useRouter();
   const { locale } = router;
-
   const [isOpen, setIsOPen] = useState(false);
+  const [type, setType] = useState("a");
   const [state, setState] = React.useState(false);
-
   const [leftOrRightValue, setLeftOrRightValue] = useState(-500);
   const matches = useMediaQuery("(max-width:900px)");
-  // =================================================================
-  const wrapperRef = useRef(null);
-  useOutsideAlerter(wrapperRef, leftOrRightValue, setLeftOrRightValue);
-  // =================================================================
+
   return (
     <Provider store={store}>
       <Box dir={locale === "en" ? "ltr" : "rtl"} sx={{}}>
@@ -65,7 +42,7 @@ const App = ({ Component, pageProps }) => {
           setIsOPen={setIsOPen}
           state={state}
           setState={setState}
-          wrapperRef={wrapperRef}
+          setType={setType}
         />
         {/* small screens ---------------------------------------------------------------------- */}
 
@@ -75,9 +52,9 @@ const App = ({ Component, pageProps }) => {
               setState={setState}
               leftOrRightValue={leftOrRightValue}
               setLeftOrRightValue={setLeftOrRightValue}
-              wrapperRef={wrapperRef}
+              // wrapperRef={wrapperRef}
             />
-            <HomeDropdown isOpen={isOpen} />
+            <HomeDropdown isOpen={isOpen} type={type} />
           </>
         )}
         {/* <Cover /> */}
