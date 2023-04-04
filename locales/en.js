@@ -1,6 +1,19 @@
 import { colors } from "../src/utils/const";
 
 export default {
+  calc: {
+    monthlyAmount: "The monthly amount",
+    priceCar: "Price Car",
+    preAmount: "Pre-amount",
+    plan: "Plan",
+    egyptianPound: "EGP",
+    duration: "Duration",
+    year1: "1 Year",
+    year2: "2 Year",
+    year3: "3 Year",
+    plan1: "Economic Programme",
+    plan2: "Flexible Program",
+  },
   general: {
     reviews: [
       {
@@ -323,43 +336,45 @@ export default {
       { id: 9, img: "/member.png", name: "Location Name" },
       { id: 10, img: "/member.png", name: "Location Name" },
     ],
-    icon_title: [
-      {
-        id: 1,
-        img: "/hands.png",
-        title: "lorem ipsum dolor sit amet, con lorem ipsum dolor sit amet",
-      },
-      {
-        id: 2,
-        img: "/hands.png",
-        title: "lorem ipsum dolor sit amet, con lorem ipsum dolor sit amet",
-      },
-      {
-        id: 3,
-        img: "/hands.png",
-        title: "lorem ipsum dolor sit amet, con lorem ipsum dolor sit amet",
-      },
-      {
-        id: 4,
-        img: "/hands.png",
-        title: "lorem ipsum dolor sit amet, con lorem ipsum dolor sit amet",
-      },
-      {
-        id: 5,
-        img: "/hands.png",
-        title: "lorem ipsum dolor sit amet, con lorem ipsum dolor sit amet",
-      },
-      {
-        id: 6,
-        img: "/hands.png",
-        title: "lorem ipsum dolor sit amet, con lorem ipsum dolor sit amet",
-      },
-      {
-        id: 7,
-        img: "/hands.png",
-        title: "lorem ipsum dolor sit amet, con lorem ipsum dolor sit amet",
-      },
-    ],
+    icon_title: {
+      products_shopping_page: [
+        {
+          id: 1,
+          img: "/hands.png",
+          title: "lorem ipsum dolor sit amet, con lorem ipsum dolor sit amet",
+        },
+        {
+          id: 2,
+          img: "/hands.png",
+          title: "lorem ipsum dolor sit amet, con lorem ipsum dolor sit amet",
+        },
+        {
+          id: 3,
+          img: "/hands.png",
+          title: "lorem ipsum dolor sit amet, con lorem ipsum dolor sit amet",
+        },
+        {
+          id: 4,
+          img: "/hands.png",
+          title: "lorem ipsum dolor sit amet, con lorem ipsum dolor sit amet",
+        },
+        {
+          id: 5,
+          img: "/hands.png",
+          title: "lorem ipsum dolor sit amet, con lorem ipsum dolor sit amet",
+        },
+        {
+          id: 6,
+          img: "/hands.png",
+          title: "lorem ipsum dolor sit amet, con lorem ipsum dolor sit amet",
+        },
+        {
+          id: 7,
+          img: "/hands.png",
+          title: "lorem ipsum dolor sit amet, con lorem ipsum dolor sit amet",
+        },
+      ],
+    },
   },
   logo: "/logo-en.png",
 
@@ -951,6 +966,100 @@ export default {
     },
   },
 
+  products_finishing: {
+    cover: {
+      img: "/pages/finishing-cover.png",
+      color: "#977859",
+      title1: "Home Interior",
+      title2: "Easy Installments For Your Dream Home Design",
+      description: `Our Home Interior program is your go to option to design and finish your house and transform it into the perfect home for you and your family.`,
+    },
+    section_a: {
+      title: "4,000,000 EGP",
+      body: `lorem ipsum dolor sit amet, consectetur adip non pro id, sed diam nonum vulputate velit sed diam nonum. 
+    Ut enim ad minim veniam, quis nostr arranged eu fugiat null a ante et d.`,
+    },
+    section_b: {
+      img: "/pages/without-advance.png",
+      title: "Without Advance",
+      body: `lorem ipsum dolor sit amet, consectetur adip non pro id, sed diam nonum vulputate velit sed diam nonum. 
+    Ut enim ad minim veniam, quis nostr arranged eu fugiat null a ante et d.`,
+    },
+  },
+  products_events: {
+    cover: {
+      img: "/pages/events-cover.png",
+      color: "#1F5B36",
+      title1: "Wedding & Events Financing",
+      title2: "Enjoy your event with Contact",
+      description: `Enjoy a memorable celebration or wedding with Contact through the simplest procedures, financing up to 1 million EGP, and convenient installment plans.`,
+    },
+  },
+  products_finishing: {
+    cover: {
+      img: "/pages/finishing-cover.png",
+      color: "#1F5B36",
+      title1: "تمويل فرش البيت",
+      title2: "جدد شكل بيتك",
+      description: `لو عايز تفرش وتجهز بيتك على مزاجك ومن أي مكان نفسك فيه، كونتكت هتسهلك المشوار بأكبر قيمة تمويل عشان تختار كل الديكور والفرش اللي بيتك محتاجة من خلال أكبر عدد من المعارض ومحلات الديكور والأثاث اللي بتناسب جميع الأذواق والإمكانيات.`,
+    },
+  },
+  products_maintainance: {
+    cover: {
+      img: "/pages/maintainance-cover-cover.png",
+      color: "#1F5B36",
+      title1: "تمويل الصيانة",
+      title2: "معاك في كل تفصيله",
+      description: `لو بيتك، عربيتك أو ممتلكاتك محتاجة صيانة، كونتكت سهلتها عليك وهتقسطها على فترات سداد مريحة.`,
+    },
+  },
+  products_insurance_page: {
+    cover: {
+      img: "/pages/insurance-cover.png",
+      color: "#3D3D3D",
+      title1: "Insurance Brokerage",
+      title2: "Stay secured.. Stay Insured",
+      description: `Contact Insurance Brokerage is known for its unparalleled tailor-made insurance services offered for corporate and retail clients`,
+    },
+    section_a: [
+      {
+        title: "You Family Protection",
+        points: [
+          "Medical Insurance",
+          "Life Insurance",
+          "Personal Accidents",
+          "Medical Card",
+        ],
+      },
+      {
+        title: "You Family Protection",
+        points: [
+          "Medical Insurance",
+          "Life Insurance",
+          "Personal Accidents",
+          "Medical Card",
+        ],
+      },
+      {
+        title: "You Family Protection",
+        points: [
+          "Medical Insurance",
+          "Life Insurance",
+          "Personal Accidents",
+          "Medical Card",
+        ],
+      },
+      {
+        title: "You Family Protection",
+        points: [
+          "Medical Insurance",
+          "Life Insurance",
+          "Personal Accidents",
+          "Medical Card",
+        ],
+      },
+    ],
+  },
   our_brand_page: {
     title: "Our Company",
     body: [

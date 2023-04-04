@@ -7,8 +7,9 @@ import en from "../../locales/en";
 import ar from "../../locales/ar";
 import Form from "../components/Form.jsx";
 import ImageSection from "../sections/home/ImageSection.jsx";
-import IconsSection from "../sections/home/IconsSection.jsx";
 import ContactPaySection from "../sections/home/ContactPaySection.jsx";
+import IconsSection from "../sections/home/IconsSection.jsx";
+import CoverSection from "../sections/home/CoverSection.jsx";
 import PageCover from "@/components/PageCover";
 import VerticalCarousel from "../components/VerticalCarousel.jsx";
 import { Box } from "@mui/material";
@@ -33,46 +34,15 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        {/* <>Home</> */}
-        {/* <Paragraph
-          img="/test.png"
-          title="title title"
-          body="body body body body body body body body"
-          orientation={1}
-          textStyle={{ textAlign: "center" }}
-        /> */}
-        {/* <Form type="c"></Form> */}
-        <Box sx={{ display: "flex", justifyContent: "center", my: 5 }}>
-          <IconTitle
-            title="الحرية في إختيار الدفعة المقدمة و فترة السداد"
-            img="hands.png"
-          ></IconTitle>
-          {/* <VerticalCarousel
-            // itemsArray={t.general.reviews}
-            // Component={ReviewCard}
-            // slidesPerView={4.3}
-            // itemsArray={t.general.directors}
-            // Component={MemberCard}
-            // slidesPerView={5.3}
-            itemsArray={t.general.reviews}
-            Component={ReviewCard}
-            slidesPerView={4.3}
-          ></VerticalCarousel> */}
-        </Box>
-        <PageCover
-          color="#74357D"
-          img="/cart.png"
-          title1={t.products_shopiing_page.cover.title1}
-          title2={t.products_shopiing_page.cover.title2}
-          description={t.products_shopiing_page.cover.description}
-          formType="a"
-        ></PageCover>
-        {/* <ImageSection></ImageSection>
+        <CoverSection></CoverSection>
+        <ImageSection></ImageSection>
         <IconsSection></IconsSection>
-        <ContactPaySection></ContactPaySection> */}
-        {/* <button onClick={toAr}>AR</button>
-        <button onClick={toEn}>EN</button>
-        <p className="my-8"> {}</p> */}
+        <VerticalCarousel
+          itemsArray={t.general.reviews}
+          Component={ReviewCard}
+          slidesPerView={4.3}
+        ></VerticalCarousel>
+        <ContactPaySection></ContactPaySection>
       </main>
     </>
   );
