@@ -23,7 +23,7 @@ export default function Secondary_Navbar({ setIsOPen }) {
   let margin = locale === "en" ? "ml" : "mr";
   return (
     <Box
-      className="horizontal-safe-padding vertical-safe-padding"
+      className="horizontal-safe-padding vertical-safe-padding mt-5"
       sx={{ bgcolor: colors.bg_grey, border: `1px solid ${colors.dark_grey}` }}
     >
       {/* section A ------------------------------------------------------------------------------------ */}

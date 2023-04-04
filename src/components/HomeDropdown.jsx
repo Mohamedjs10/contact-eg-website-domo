@@ -29,7 +29,7 @@ export default function HomeDropdown({ isOpen, type }) {
       }}
       style={{
         position: "absolute",
-        top: "132px",
+        top: "125px",
         width: "100%",
         // height: "620px",
       }}

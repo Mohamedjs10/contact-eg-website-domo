@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { styles } from "./pid-styles";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { colors } from "../../utils/const";
 import Link from "next/link";
 import InputLabel from "@mui/material/InputLabel";
@@ -237,48 +237,60 @@ export default function Index() {
       >
         <Box sx={{ width: "410px" }}>
           <Box component="img" src="/image.png" width="100%" />
-          <Box>كونتكت توقع برنامج تمويل فريد من نوعه في مصر مع كابيتر</Box>
-          <Box>
+          <Typography sx={{ fontWeight: "bold", my: 2, color: colors.blue }}>
+            كونتكت توقع برنامج تمويل فريد من نوعه في مصر مع كابيتر
+          </Typography>
+          <Box sx={{ color: colors.v_dark_grey }}>
             وقعت كونتكت المالية القابضة (CNFN)، الشركة الرائدة في مجال الخدمات
             المالية غير مصرفية في مصر، من خلال شركة كونتكت للتخصيم، أحد ...
           </Box>
         </Box>
         <Box sx={{ width: "410px" }}>
           <Box component="img" src="/image.png" width="100%" />
-          <Box>كونتكت توقع برنامج تمويل فريد من نوعه في مصر مع كابيتر</Box>
-          <Box>
+          <Typography sx={{ fontWeight: "bold", my: 2, color: colors.blue }}>
+            كونتكت توقع برنامج تمويل فريد من نوعه في مصر مع كابيتر
+          </Typography>
+          <Box sx={{ color: colors.v_dark_grey }}>
             وقعت كونتكت المالية القابضة (CNFN)، الشركة الرائدة في مجال الخدمات
             المالية غير مصرفية في مصر، من خلال شركة كونتكت للتخصيم، أحد ...
           </Box>
         </Box>
         <Box sx={{ width: "410px" }}>
           <Box component="img" src="/image.png" width="100%" />
-          <Box>كونتكت توقع برنامج تمويل فريد من نوعه في مصر مع كابيتر</Box>
-          <Box>
+          <Typography sx={{ fontWeight: "bold", my: 2, color: colors.blue }}>
+            كونتكت توقع برنامج تمويل فريد من نوعه في مصر مع كابيتر
+          </Typography>
+          <Box sx={{ color: colors.v_dark_grey }}>
             وقعت كونتكت المالية القابضة (CNFN)، الشركة الرائدة في مجال الخدمات
             المالية غير مصرفية في مصر، من خلال شركة كونتكت للتخصيم، أحد ...
           </Box>
         </Box>
         <Box sx={{ width: "410px" }}>
           <Box component="img" src="/image.png" width="100%" />
-          <Box>كونتكت توقع برنامج تمويل فريد من نوعه في مصر مع كابيتر</Box>
-          <Box>
+          <Typography sx={{ fontWeight: "bold", my: 2, color: colors.blue }}>
+            كونتكت توقع برنامج تمويل فريد من نوعه في مصر مع كابيتر
+          </Typography>
+          <Box sx={{ color: colors.v_dark_grey }}>
             وقعت كونتكت المالية القابضة (CNFN)، الشركة الرائدة في مجال الخدمات
             المالية غير مصرفية في مصر، من خلال شركة كونتكت للتخصيم، أحد ...
           </Box>
         </Box>
         <Box sx={{ width: "410px" }}>
           <Box component="img" src="/image.png" width="100%" />
-          <Box>كونتكت توقع برنامج تمويل فريد من نوعه في مصر مع كابيتر</Box>
-          <Box>
+          <Typography sx={{ fontWeight: "bold", my: 2, color: colors.blue }}>
+            كونتكت توقع برنامج تمويل فريد من نوعه في مصر مع كابيتر
+          </Typography>
+          <Box sx={{ color: colors.v_dark_grey }}>
             وقعت كونتكت المالية القابضة (CNFN)، الشركة الرائدة في مجال الخدمات
             المالية غير مصرفية في مصر، من خلال شركة كونتكت للتخصيم، أحد ...
           </Box>
         </Box>
         <Box sx={{ width: "410px" }}>
           <Box component="img" src="/image.png" width="100%" />
-          <Box>كونتكت توقع برنامج تمويل فريد من نوعه في مصر مع كابيتر</Box>
-          <Box>
+          <Typography sx={{ fontWeight: "bold", my: 2, color: colors.blue }}>
+            كونتكت توقع برنامج تمويل فريد من نوعه في مصر مع كابيتر
+          </Typography>
+          <Box sx={{ color: colors.v_dark_grey }}>
             وقعت كونتكت المالية القابضة (CNFN)، الشركة الرائدة في مجال الخدمات
             المالية غير مصرفية في مصر، من خلال شركة كونتكت للتخصيم، أحد ...
           </Box>

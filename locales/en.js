@@ -546,9 +546,9 @@ export default {
       ],
       contact: "Contact",
       contact_list: [
-        { name: "About Contact", url: "/" },
+        { name: "About Contact", url: "/about" },
         { name: "Our Company", url: "/" },
-        { name: "Contact News", url: "/" },
+        { name: "Contact News", url: "/media" },
         { name: "Contact Offers", url: "/" },
         { name: "Blog", url: "/" },
         { name: "Sustainability", url: "/" },

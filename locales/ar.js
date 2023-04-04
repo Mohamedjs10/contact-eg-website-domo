@@ -436,7 +436,7 @@ export default {
       contact_list: [
         { name: "عن كونتكت", url: "/about" },
         { name: "شركتنا", url: "/" },
-        { name: "أخبار كونتكت", url: "/" },
+        { name: "أخبار كونتكت", url: "/media" },
         { name: "عروض كونتكت", url: "/" },
         { name: "المدونة", url: "/" },
         { name: "الإستدامة", url: "/" },
