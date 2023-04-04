@@ -12,10 +12,13 @@ import IconsSection from "../sections/home/IconsSection.jsx";
 import CoverSection from "../sections/home/CoverSection.jsx";
 import PageCover from "@/components/PageCover";
 import VerticalCarousel from "../components/VerticalCarousel.jsx";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import MemberCard from "@/components/MemberCard";
 import PlaceCard from "@/components/PlaceCard";
 import ReviewCard from "@/components/ReviewCard";
+import Steps from "../components/steps/stepsComp";
+import { colors } from "../utils/const";
+
 import IconTitle from "../components/mini-components/IconTileSection.jsx";
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,6 +27,8 @@ export default function Home() {
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : ar;
+
+  let dir = locale === "en" ? "left" : "right";
 
   return (
     <>
@@ -37,12 +42,29 @@ export default function Home() {
         <CoverSection></CoverSection>
         <ImageSection></ImageSection>
         <IconsSection></IconsSection>
-        <VerticalCarousel
-          itemsArray={t.general.reviews}
-          Component={ReviewCard}
-          slidesPerView={4.3}
-        ></VerticalCarousel>
+        <Steps />
+
         <ContactPaySection></ContactPaySection>
+
+        <Box>
+          <Box
+            className={`vertical-safe-padding section-safe-padding-${dir} py-3`}
+            sx={{ background: colors.bg_grey }}
+          >
+            <Typography className="mt-4" variant="h3">
+              {t.general.reviewTitle}
+            </Typography>
+            <Typography className="mt-3">
+              {" "}
+              {t.general.reviewSubTitle}
+            </Typography>
+          </Box>
+          <VerticalCarousel
+            itemsArray={t.general.reviews}
+            Component={ReviewCard}
+            slidesPerView={4.3}
+          ></VerticalCarousel>
+        </Box>
       </main>
     </>
   );

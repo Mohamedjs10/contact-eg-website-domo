@@ -4,8 +4,15 @@ import Image from "next/image";
 import { colors } from "../utils/const";
 import { styles } from "../sections/home/image_section";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import en from "../../locales/en";
+import ar from "../../locales/ar";
 
 export default function ImageCard({ img, title1, title2 }) {
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === "en" ? en : ar;
+
   return (
     <Box
       component={Link}
@@ -17,7 +24,7 @@ export default function ImageCard({ img, title1, title2 }) {
         background: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url(${img})`,
         backgroundSize: "cover",
         borderRadius: 5,
-        textAlign: "right",
+        textAlign: t.textAlign,
         // lineHeight: "1",
         display: "flex",
         flexDirection: "column",

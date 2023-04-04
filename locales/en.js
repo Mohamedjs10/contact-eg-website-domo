@@ -2,6 +2,7 @@ import { colors } from "../src/utils/const";
 
 export default {
   direction: "ltr",
+  textAlign: "left",
   test: { demo: "english" },
   about: {
     members: {
@@ -130,6 +131,8 @@ export default {
     ],
   },
   general: {
+    reviewTitle: "What do customers say about us?",
+    reviewSubTitle: "What do customers say about us?",
     reviews: [
       {
         id: "1",
@@ -708,7 +711,7 @@ export default {
         bgColor: colors.blue,
         title: "Didn't Download The App Yet!",
         description:
-          "body body body body body body body body body body body body body body body body body body body body body body body body body ",
+          "Contact is the largest car financing company in the Egyptian market, with a direct presence in more than 1,000 showrooms and car dealerships across the country.",
         img: "https://i.postimg.cc/Xvz3nfP5/woman.png",
         button: "Order Service",
       },
@@ -716,7 +719,7 @@ export default {
         bgColor: colors.violet,
         title: "Didn't Download The App Yet!",
         description:
-          "body body body body body body body body body body body body body body body body body body body body body body body body body ",
+          "Contact is the largest car financing company in the Egyptian market, with a direct presence in more than 1,000 showrooms and car dealerships across the country.",
         img: "https://i.postimg.cc/W1Cf3dXC/phone.png",
         button: "Order Service",
       },
@@ -724,7 +727,7 @@ export default {
         bgColor: colors.petroli,
         title: "Didn't Download The App Yet!",
         description:
-          "body body body body body body body body body body body body body body body body body body body body body body body body body ",
+          "Contact is the largest car financing company in the Egyptian market, with a direct presence in more than 1,000 showrooms and car dealerships across the country.",
         img: "https://i.postimg.cc/bNT7z0Dv/car.png",
         button: "Order Service",
       },
@@ -1220,4 +1223,50 @@ export default {
     ],
     link: "visit website",
   },
+
+  featureSection: [
+    {
+      id: "1",
+
+      img: "shopping.png",
+      title: "Shopping",
+      text: "Find new products and brands. Get the best deal and earn rewards - just for shopping.",
+    },
+    {
+      id: "2",
+      img: "shopping.png",
+      title: "Installment",
+      text: "Choose the payment method in partner stores, via our app, card or browser extension.",
+    },
+    {
+      id: "3",
+      img: "shopping.png",
+      title: "Pay",
+      text: "Split your payments and manage purchases, with a smart spend overview and more.",
+    },
+  ],
+
+  stepsFeature: [
+    {
+      id: "1",
+      img: "/images/steps-image.png",
+      title: "Instant approval",
+      subTitle: "feature",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
+    },
+    {
+      id: "2",
+      img: "/images/steps-image.png",
+      title: "limit increase",
+      subTitle: "feature",
+      text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+    },
+    {
+      id: "3",
+      img: "/images/steps-image.png",
+      title: "Utilities and bill payment",
+      subTitle: "feature",
+      text: "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain",
+    },
+  ],
 };

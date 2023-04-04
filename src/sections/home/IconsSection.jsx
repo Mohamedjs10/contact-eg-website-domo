@@ -18,59 +18,30 @@ export default function IconsSection({}) {
   return (
     <Box
       sx={styles.container}
-      className="horizontal-safe-padding vertical-safe-padding"
+      className="horizontal-safe-padding vertical-safe-padding my-5"
     >
-      <Box sx={styles.item}>
-        <img src="shopping.png" alt="shopping" width="80px" />
-        <Box sx={{ fontSize: "40px", fontWeight: "bold", color: colors.blue }}>
-          تسوق
-        </Box>
-        <Box
-          sx={{
-            wordWrap: "break-word",
-            textAlign: "center",
-            ontSize: 2,
-            color: colors.petroli,
-          }}
-        >
-          ابحث عن منتجات وعلامات تجارية جديدة. احصل على أفضل صفقة واكسب مكافآت -
-          فقط للتسوق.
-        </Box>
-      </Box>
-      <Box sx={styles.item}>
-        <img src="shopping.png" alt="shopping" width="80px" />
-        <Box sx={{ fontSize: "40px", fontWeight: "bold", color: colors.blue }}>
-          تسوق
-        </Box>
-        <Box
-          sx={{
-            wordWrap: "break-word",
-            textAlign: "center",
-            ontSize: 2,
-            color: colors.petroli,
-          }}
-        >
-          ابحث عن منتجات وعلامات تجارية جديدة. احصل على أفضل صفقة واكسب مكافآت -
-          فقط للتسوق.
-        </Box>
-      </Box>
-      <Box sx={styles.item}>
-        <img src="shopping.png" alt="shopping" width="80px" />
-        <Box sx={{ fontSize: "40px", fontWeight: "bold", color: colors.blue }}>
-          تسوق
-        </Box>
-        <Box
-          sx={{
-            wordWrap: "break-word",
-            textAlign: "center",
-            ontSize: 2,
-            color: colors.petroli,
-          }}
-        >
-          ابحث عن منتجات وعلامات تجارية جديدة. احصل على أفضل صفقة واكسب مكافآت -
-          فقط للتسوق.
-        </Box>
-      </Box>
+      {t.featureSection.map((item) => {
+        return (
+          <Box key={item.id} sx={styles.item}>
+            <img src={item.img} alt={item.title} width="80px" />
+            <Box
+              sx={{ fontSize: "40px", fontWeight: "bold", color: colors.blue }}
+            >
+              {item.title}
+            </Box>
+            <Box
+              sx={{
+                wordWrap: "break-word",
+                textAlign: "center",
+                ontSize: 2,
+                color: colors.petroli,
+              }}
+            >
+              {item.text}
+            </Box>
+          </Box>
+        );
+      })}
     </Box>
   );
 }

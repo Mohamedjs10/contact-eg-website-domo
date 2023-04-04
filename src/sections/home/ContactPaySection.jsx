@@ -19,7 +19,7 @@ export default function IconsSection({}) {
   return (
     <Box
       sx={styles.container}
-      className="horizontal-safe-padding vertical-safe-padding"
+      className="horizontal-safe-padding vertical-safe-padding my-5"
     >
       <Box sx={styles.text}>
         <Box sx={{ display: "flex", gap: 1 }}>
