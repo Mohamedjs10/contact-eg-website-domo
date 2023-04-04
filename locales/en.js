@@ -734,20 +734,20 @@ export default {
     ],
     products_title: "Our Products",
     products: [
-      { title1: "Financing", title2: "Auto", img: "cart.png" },
-      { title1: "Financing", title2: "Mortage", img: "cart.png" },
-      { title1: "Financing", title2: "Trucks", img: "cart.png" },
-      { title1: "Financing", title2: "Consumer", img: "cart.png" },
-      { title1: "Financing", title2: "Consumer", img: "cart.png" },
-      { title1: "Financing", title2: "Consumer", img: "cart.png" },
-      { title1: "Financing", title2: "Consumer", img: "cart.png" },
-      { title1: "Financing", title2: "Consumer", img: "cart.png" },
-      { title1: "Financing", title2: "Consumer", img: "cart.png" },
-      { title1: "Financing", title2: "Consumer", img: "cart.png" },
-      { title1: "Financing", title2: "Consumer", img: "cart.png" },
-      { title1: "Financing", title2: "Consumer", img: "cart.png" },
-      { title1: "Financing", title2: "Consumer", img: "cart.png" },
-      { title1: "Financing", title2: "Consumer", img: "cart.png" },
+      { title1: "Financing", title2: "Auto", img: "/cart.png" },
+      { title1: "Financing", title2: "Mortage", img: "/cart.png" },
+      { title1: "Financing", title2: "Trucks", img: "/cart.png" },
+      { title1: "Financing", title2: "Consumer", img: "/cart.png" },
+      { title1: "Financing", title2: "Consumer", img: "/cart.png" },
+      { title1: "Financing", title2: "Consumer", img: "/cart.png" },
+      { title1: "Financing", title2: "Consumer", img: "/cart.png" },
+      { title1: "Financing", title2: "Consumer", img: "/cart.png" },
+      { title1: "Financing", title2: "Consumer", img: "/cart.png" },
+      { title1: "Financing", title2: "Consumer", img: "/cart.png" },
+      { title1: "Financing", title2: "Consumer", img: "/cart.png" },
+      { title1: "Financing", title2: "Consumer", img: "/cart.png" },
+      { title1: "Financing", title2: "Consumer", img: "/cart.png" },
+      { title1: "Financing", title2: "Consumer", img: "/cart.png" },
     ],
     bos: {
       title1: "Contact",
@@ -775,7 +775,7 @@ export default {
         {
           id: "1",
           color: colors.blue,
-          img: "services/car.png",
+          img: "/services/car.png",
           title: "Auto",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -784,7 +784,7 @@ export default {
         },
         {
           color: colors.dark_red,
-          img: "services/lorry.png",
+          img: "/services/lorry.png",
           title: "Trucks",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -793,7 +793,7 @@ export default {
         },
         {
           color: colors.dark_violet,
-          img: "services/cart.png",
+          img: "/services/cart.png",
           title: "Consumer Finance",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -802,7 +802,7 @@ export default {
         },
         {
           color: colors.green,
-          img: "services/education.png",
+          img: "/services/education.png",
           title: "Education",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -811,7 +811,7 @@ export default {
         },
         {
           color: colors.dark_petroli,
-          img: "services/clubs.png",
+          img: "/services/clubs.png",
           title: "Clubs",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -820,7 +820,7 @@ export default {
         },
         {
           color: colors.dark_brown,
-          img: "services/design.png",
+          img: "/services/design.png",
           title: "Home Interior",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -829,7 +829,7 @@ export default {
         },
         {
           color: colors.dark_brown,
-          img: "services/maintainance.png",
+          img: "/services/maintainance.png",
           title: "Maintainance",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -840,7 +840,7 @@ export default {
       B: [
         {
           color: colors.dark_green,
-          img: "services/ring.png",
+          img: "/services/ring.png",
           title: "Wedding & Events",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -849,7 +849,7 @@ export default {
         },
         {
           color: colors.dark_petroli,
-          img: "services/house.png",
+          img: "/services/house.png",
           title: "Mortage",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -858,7 +858,7 @@ export default {
         },
         {
           color: colors.ratty,
-          img: "services/mediation.png",
+          img: "/services/mediation.png",
           title: "Insurance Brokerage",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -867,7 +867,7 @@ export default {
         },
         {
           color: colors.dark_brown,
-          img: "services/discount.png",
+          img: "/services/discount.png",
           title: "Factoring",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -876,7 +876,7 @@ export default {
         },
         {
           color: colors.light_petroli,
-          img: "services/rent.png",
+          img: "/services/rent.png",
           title: "Leasing",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -885,7 +885,7 @@ export default {
         },
         {
           color: colors.light_green,
-          img: "services/green-finance.png",
+          img: "/services/green-finance.png",
           title: "Green Finance",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -894,7 +894,7 @@ export default {
         },
         {
           color: colors.light_green,
-          img: "services/green-finance.png",
+          img: "/services/green-finance.png",
           title: "Home Furniture",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -906,7 +906,7 @@ export default {
         {
           id: "1",
           color: colors.blue,
-          img: "services/car.png",
+          img: "/services/car.png",
           title: "Auto",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -915,7 +915,7 @@ export default {
         },
         {
           color: colors.dark_red,
-          img: "services/lorry.png",
+          img: "/services/lorry.png",
           title: "Trucks",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -924,7 +924,7 @@ export default {
         },
         {
           color: colors.dark_violet,
-          img: "services/cart.png",
+          img: "/services/cart.png",
           title: "Consumer Finance",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -933,7 +933,7 @@ export default {
         },
         {
           color: colors.green,
-          img: "services/education.png",
+          img: "/services/education.png",
           title: "Education",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -942,7 +942,7 @@ export default {
         },
         {
           color: colors.dark_petroli,
-          img: "services/clubs.png",
+          img: "/services/clubs.png",
           title: "Clubs",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -951,7 +951,7 @@ export default {
         },
         {
           color: colors.dark_brown,
-          img: "services/design.png",
+          img: "/services/design.png",
           title: "Home Interior",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -960,7 +960,7 @@ export default {
         },
         {
           color: colors.dark_brown,
-          img: "services/maintainance.png",
+          img: "/services/maintainance.png",
           title: "Maintainance",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -969,7 +969,7 @@ export default {
         },
         {
           color: colors.dark_green,
-          img: "services/ring.png",
+          img: "/services/ring.png",
           title: "Wedding & Events",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -978,7 +978,7 @@ export default {
         },
         {
           color: colors.dark_petroli,
-          img: "services/house.png",
+          img: "/services/house.png",
           title: "Mortage",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -987,7 +987,7 @@ export default {
         },
         {
           color: colors.ratty,
-          img: "services/mediation.png",
+          img: "/services/mediation.png",
           title: "Insurance Brokerage",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -996,7 +996,7 @@ export default {
         },
         {
           color: colors.dark_brown,
-          img: "services/discount.png",
+          img: "/services/discount.png",
           title: "Factoring",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -1005,7 +1005,7 @@ export default {
         },
         {
           color: colors.light_petroli,
-          img: "services/rent.png",
+          img: "/services/rent.png",
           title: "Leasing",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -1014,7 +1014,7 @@ export default {
         },
         {
           color: colors.light_green,
-          img: "services/green-finance.png",
+          img: "/services/green-finance.png",
           title: "Green Finance",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -1023,7 +1023,7 @@ export default {
         },
         {
           color: colors.light_green,
-          img: "services/green-finance.png",
+          img: "/services/green-finance.png",
           title: "Home Furniture",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -1034,7 +1034,7 @@ export default {
       C: [
         {
           color: colors.blue,
-          img: "services/homes.png",
+          img: "/services/homes.png",
           title: "Contact Homes",
           description: "If you need to develop your agricultural investment.",
           full_description:
@@ -1044,7 +1044,7 @@ export default {
       D: [
         {
           color: colors.blue,
-          img: "services/clients.png",
+          img: "/services/clients.png",
           title: "Client Filtering",
           description: "If you need to develop your agricultural investment.",
           full_description:
@@ -1058,14 +1058,14 @@ export default {
     news: [
       {
         id: "1",
-        img: "news/news1.png",
+        img: "/news/news1.png",
         title: "كونتكت تطلق منتج رقمي لتأمين السيارات",
         description:
           "كونتكت المالية القابضة تعلن اليوم عن إطلاق منتج رقمي بالكامل للتأمين التكميلى للسيارات في مصر. يتوفر المنتج من خلال منصة كونتكت كارز دوت كوم وشركة ثروة للتأمين وشركة كونتكت ...",
       },
       {
         id: "2",
-        img: "news/news2.png",
+        img: "/news/news2.png",
         title:
           "«شطبلي» توقع اتفاقية شراكة مع «كونتكت» لإتاحة برامج تمويل مبتكرة",
         description:
@@ -1073,7 +1073,7 @@ export default {
       },
       {
         id: "3",
-        img: "news/news3.png",
+        img: "/news/news3.png",
         title: "كونتكت توقع برنامج تمويل فريد من نوعه في مصر مع كابيتر",
         description:
           "وقعت كونتكت المالية القابضة (CNFN)، الشركة الرائدة في مجال الخدمات المالية غير مصرفية في مصر، من خلال شركة كونتكت للتخصيم، أحد ...",
@@ -1117,18 +1117,18 @@ export default {
       description: `Enjoy a memorable celebration or wedding with Contact through the simplest procedures, financing up to 1 million EGP, and convenient installment plans.`,
     },
   },
-  products_finishing: {
-    cover: {
-      img: "/pages/finishing-cover.png",
-      color: "#1F5B36",
-      title1: "تمويل فرش البيت",
-      title2: "جدد شكل بيتك",
-      description: `لو عايز تفرش وتجهز بيتك على مزاجك ومن أي مكان نفسك فيه، كونتكت هتسهلك المشوار بأكبر قيمة تمويل عشان تختار كل الديكور والفرش اللي بيتك محتاجة من خلال أكبر عدد من المعارض ومحلات الديكور والأثاث اللي بتناسب جميع الأذواق والإمكانيات.`,
-    },
-  },
+  // products_finishing: {
+  //   cover: {
+  //     img: "/pages/finishing-cover.png",
+  //     color: "#1F5B36",
+  //     title1: "تمويل فرش البيت",
+  //     title2: "جدد شكل بيتك",
+  //     description: `لو عايز تفرش وتجهز بيتك على مزاجك ومن أي مكان نفسك فيه، كونتكت هتسهلك المشوار بأكبر قيمة تمويل عشان تختار كل الديكور والفرش اللي بيتك محتاجة من خلال أكبر عدد من المعارض ومحلات الديكور والأثاث اللي بتناسب جميع الأذواق والإمكانيات.`,
+  //   },
+  // },
   products_maintainance: {
     cover: {
-      img: "/pages/maintainance-cover-cover.png",
+      img: "/pages/maintainance-cover.png",
       color: "#1F5B36",
       title1: "تمويل الصيانة",
       title2: "معاك في كل تفصيله",
@@ -1228,19 +1228,19 @@ export default {
     {
       id: "1",
 
-      img: "shopping.png",
+      img: "/shopping.png",
       title: "Shopping",
       text: "Find new products and brands. Get the best deal and earn rewards - just for shopping.",
     },
     {
       id: "2",
-      img: "shopping.png",
+      img: "/shopping.png",
       title: "Installment",
       text: "Choose the payment method in partner stores, via our app, card or browser extension.",
     },
     {
       id: "3",
-      img: "shopping.png",
+      img: "/shopping.png",
       title: "Pay",
       text: "Split your payments and manage purchases, with a smart spend overview and more.",
     },

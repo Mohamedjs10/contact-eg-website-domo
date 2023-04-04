@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import en from "../../../locales/en";
 import ar from "../../../locales/ar";
+import { textAlign } from "@mui/system";
 export default function Text({ title, img, page }) {
   const router = useRouter();
   const { locale } = router;
@@ -26,7 +27,9 @@ export default function Text({ title, img, page }) {
               alt="img"
             />
           </Box>
-          <Box sx={styles.title}>{item.title}</Box>
+          <Box sx={{ ...styles.title(), textAlign: t.textAlign }}>
+            {item.title}
+          </Box>
         </Box>
       ))}
     </Box>

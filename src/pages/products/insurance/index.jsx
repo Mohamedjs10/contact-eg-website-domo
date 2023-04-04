@@ -23,11 +23,9 @@ export default function Index() {
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : ar;
-  console.log(t.general.reviews);
   // formik ==========================================================
   const onSubmit = async (values, actions) => {
     await new Promise((resolve) => setTimeout(resolve, 5000)); // simulate delay
-    console.log(values);
     actions.resetForm();
   };
   const {

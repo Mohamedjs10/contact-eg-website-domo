@@ -621,20 +621,20 @@ export default {
     products_title: "منتجاتنا التمويلية",
 
     products: [
-      { title1: "تمويل", title2: "السيارات", img: "test.png" },
-      { title1: "تمويل", title2: "عقاري", img: "cart.png" },
-      { title1: "تمويل", title2: "النقل", img: "cart.png" },
-      { title1: "تمويل", title2: "استهلاكي", img: "cart.png" },
-      { title1: "برامج", title2: "التعليم", img: "cart.png" },
-      { title1: "تأجير", title2: "تمويلي", img: "cart.png" },
-      { title1: "تمويل", title2: "التشطيب", img: "cart.png" },
-      { title1: "تمويل", title2: "التخصيم", img: "cart.png" },
-      { title1: "اشتراكات", title2: "الاندية", img: "cart.png" },
-      { title1: "تمويل", title2: "الاخضر", img: "cart.png" },
-      { title1: "تمويل", title2: "الصيانة", img: "cart.png" },
-      { title1: "تمويل", title2: "فرش البيت", img: "cart.png" },
-      { title1: "تمويل", title2: "افراح", img: "cart.png" },
-      { title1: "وساطة", title2: "تامينية", img: "cart.png" },
+      { title1: "تمويل", title2: "السيارات", img: "/test.png" },
+      { title1: "تمويل", title2: "عقاري", img: "/cart.png" },
+      { title1: "تمويل", title2: "النقل", img: "/cart.png" },
+      { title1: "تمويل", title2: "استهلاكي", img: "/cart.png" },
+      { title1: "برامج", title2: "التعليم", img: "/cart.png" },
+      { title1: "تأجير", title2: "تمويلي", img: "/cart.png" },
+      { title1: "تمويل", title2: "التشطيب", img: "/cart.png" },
+      { title1: "تمويل", title2: "التخصيم", img: "/cart.png" },
+      { title1: "اشتراكات", title2: "الاندية", img: "/cart.png" },
+      { title1: "تمويل", title2: "الاخضر", img: "/cart.png" },
+      { title1: "تمويل", title2: "الصيانة", img: "/cart.png" },
+      { title1: "تمويل", title2: "فرش البيت", img: "/cart.png" },
+      { title1: "تمويل", title2: "افراح", img: "/cart.png" },
+      { title1: "وساطة", title2: "تامينية", img: "/cart.png" },
     ],
     bos: {
       title1: "كونتكت",
@@ -661,48 +661,48 @@ export default {
         {
           id: "1",
           color: colors.blue,
-          img: "services/car.png",
+          img: "/services/car.png",
           title: "تمويل السيارات",
           description:
             "لو عايز تشتري عربية جديدة أو مستعملة، كونتكت بتوفرلك حلول تمويلية متميزة لجميع الماركات ",
         },
         {
           color: colors.dark_red,
-          img: "services/lorry.png",
+          img: "/services/lorry.png",
           title: "تمويل النقل",
           description:
             "سواء محتاج نقل تقيل أو خفيف كونتكت هتقسطلك جميع أنواع الشاحنات الجديدة والمستعملة والاستيراد",
         },
         {
           color: colors.dark_violet,
-          img: "services/cart.png",
+          img: "/services/cart.png",
           title: "تمويل تسوق",
           description: "لو نفسك تشتري في أي وقت براحتك، كونتكت هتسهل حياتك",
         },
         {
           color: colors.green,
-          img: "services/education.png",
+          img: "/services/education.png",
           title: "تمويل التعليم",
           description:
             "نفسك في مستقبل أفضل ليك ولأولادك، كونتكت هتساعدك وهتكون معاك طول مشوار التعليم",
         },
         {
           color: colors.dark_petroli,
-          img: "services/clubs.png",
+          img: "/services/clubs.png",
           title: "تمويل إشتراكات الاندية",
           description:
             "نفسك تُنمى مهارات أولادك وتساعدهم يمارسوا الرياضة اللي بيحبوها، كونتكت هتقسطلك اشتراك ",
         },
         {
           color: colors.dark_brown,
-          img: "services/design.png",
+          img: "/services/design.png",
           title: "تمويل تصميم و تشطيب",
           description:
             "لو عايز تصمم وتشطب بيتك على مزاجك من خلال أفضل شركات التصميم الداخلي والديكور في مصر، ",
         },
         {
           color: colors.dark_brown,
-          img: "services/maintainance.png",
+          img: "/services/maintainance.png",
           title: "تمويل الصيانة",
           description:
             "لو بيتك، عربيتك أو ممتلكاتك محتاجة صيانة، كونتكت سهلتها عليك وهتقسطها على فترات سداد مريحة.",
@@ -711,49 +711,49 @@ export default {
       B: [
         {
           color: colors.dark_green,
-          img: "services/ring.png",
+          img: "/services/ring.png",
           title: "تمويل أفراح و مناسبات",
           description:
             "افرح وريح بالك، كونتكت حلتهالك وهتغطي تكاليف فرحك بأكبر قيمة تمويل وبتقسيط سهل ومريح",
         },
         {
           color: colors.dark_petroli,
-          img: "services/house.png",
+          img: "/services/house.png",
           title: "تمويل عقاري",
           description:
             'احصل على تمويل بيت أحلامك بأسهل وأسرع الإجراءات من خلال نظام "تمويل بيتك"',
         },
         {
           color: colors.ratty,
-          img: "services/mediation.png",
+          img: "/services/mediation.png",
           title: "وساطة تأمينية",
           description:
             "محتاج مكان واحد تقدر تأمن فيه على عيلتك، بيتك، عربيتك، مشروعك أو شركتك",
         },
         {
           color: colors.dark_brown,
-          img: "services/discount.png",
+          img: "/services/discount.png",
           title: "تخصيم",
           description:
             "لو محتاج سيولة نقدية، كونتكت هتدعمك وهتضمنلك تعزيز رأس المال الخاص بشركتك ",
         },
         {
           color: colors.light_petroli,
-          img: "services/rent.png",
+          img: "/services/rent.png",
           title: "تأجير تمويلي",
           description:
             "لو عايز تجهز عيادتك الطبية أو تطور أسطول النقل الخاص بشركتك",
         },
         {
           color: colors.light_green,
-          img: "services/green-finance.png",
+          img: "/services/green-finance.png",
           title: "التمويل الاخضر",
           description:
             "لو محتاج تُنمي استثمارك الزراعي، كونتكت بتقدملك التمويل اللازم اللي هيساعدك في تحقيق التنمية ",
         },
         {
           color: colors.light_green,
-          img: "services/green-finance.png",
+          img: "/services/green-finance.png",
           title: "تمويل فرش البيت",
           description:
             "لو عايز تفرش وتجهز بيتك على مزاجك ومن أي مكان نفسك فيه، كونتكت هتسهلك المشوار",
@@ -763,97 +763,97 @@ export default {
         {
           id: "1",
           color: colors.blue,
-          img: "services/car.png",
+          img: "/services/car.png",
           title: "تمويل السيارات",
           description:
             "لو عايز تشتري عربية جديدة أو مستعملة، كونتكت بتوفرلك حلول تمويلية متميزة لجميع الماركات ",
         },
         {
           color: colors.dark_red,
-          img: "services/lorry.png",
+          img: "/services/lorry.png",
           title: "تمويل النقل",
           description:
             "سواء محتاج نقل تقيل أو خفيف كونتكت هتقسطلك جميع أنواع الشاحنات الجديدة والمستعملة والاستيراد",
         },
         {
           color: colors.dark_violet,
-          img: "services/cart.png",
+          img: "/services/cart.png",
           title: "تمويل تسوق",
           description: "لو نفسك تشتري في أي وقت براحتك، كونتكت هتسهل حياتك",
         },
         {
           color: colors.green,
-          img: "services/education.png",
+          img: "/services/education.png",
           title: "تمويل التعليم",
           description:
             "نفسك في مستقبل أفضل ليك ولأولادك، كونتكت هتساعدك وهتكون معاك طول مشوار التعليم",
         },
         {
           color: colors.dark_petroli,
-          img: "services/clubs.png",
+          img: "/services/clubs.png",
           title: "تمويل إشتراكات الاندية",
           description:
             "نفسك تُنمى مهارات أولادك وتساعدهم يمارسوا الرياضة اللي بيحبوها، كونتكت هتقسطلك اشتراك ",
         },
         {
           color: colors.dark_brown,
-          img: "services/design.png",
+          img: "/services/design.png",
           title: "تمويل تصميم و تشطيب",
           description:
             "لو عايز تصمم وتشطب بيتك على مزاجك من خلال أفضل شركات التصميم الداخلي والديكور في مصر، ",
         },
         {
           color: colors.dark_brown,
-          img: "services/maintainance.png",
+          img: "/services/maintainance.png",
           title: "تمويل الصيانة",
           description:
             "لو بيتك، عربيتك أو ممتلكاتك محتاجة صيانة، كونتكت سهلتها عليك وهتقسطها على فترات سداد مريحة.",
         },
         {
           color: colors.dark_green,
-          img: "services/ring.png",
+          img: "/services/ring.png",
           title: "تمويل أفراح و مناسبات",
           description:
             "افرح وريح بالك، كونتكت حلتهالك وهتغطي تكاليف فرحك بأكبر قيمة تمويل وبتقسيط سهل ومريح",
         },
         {
           color: colors.dark_petroli,
-          img: "services/house.png",
+          img: "/services/house.png",
           title: "تمويل عقاري",
           description:
             'احصل على تمويل بيت أحلامك بأسهل وأسرع الإجراءات من خلال نظام "تمويل بيتك"',
         },
         {
           color: colors.ratty,
-          img: "services/mediation.png",
+          img: "/services/mediation.png",
           title: "وساطة تأمينية",
           description:
             "محتاج مكان واحد تقدر تأمن فيه على عيلتك، بيتك، عربيتك، مشروعك أو شركتك",
         },
         {
           color: colors.dark_brown,
-          img: "services/discount.png",
+          img: "/services/discount.png",
           title: "تخصيم",
           description:
             "لو محتاج سيولة نقدية، كونتكت هتدعمك وهتضمنلك تعزيز رأس المال الخاص بشركتك ",
         },
         {
           color: colors.light_petroli,
-          img: "services/rent.png",
+          img: "/services/rent.png",
           title: "تأجير تمويلي",
           description:
             "لو عايز تجهز عيادتك الطبية أو تطور أسطول النقل الخاص بشركتك",
         },
         {
           color: colors.light_green,
-          img: "services/green-finance.png",
+          img: "/services/green-finance.png",
           title: "التمويل الاخضر",
           description:
             "لو محتاج تُنمي استثمارك الزراعي، كونتكت بتقدملك التمويل اللازم اللي هيساعدك في تحقيق التنمية ",
         },
         {
           color: colors.light_green,
-          img: "services/green-finance.png",
+          img: "/services/green-finance.png",
           title: "تمويل فرش البيت",
           description:
             "لو عايز تفرش وتجهز بيتك على مزاجك ومن أي مكان نفسك فيه، كونتكت هتسهلك المشوار",
@@ -862,7 +862,7 @@ export default {
       C: [
         {
           color: colors.blue,
-          img: "services/homes.png",
+          img: "/services/homes.png",
           title: "كونتكت هومز",
           description:
             "الان من خلال الشراكة بين شركة كونتكت, شركة التمويل الأولى في مصر، و شركة كولدويل بانكر",
@@ -873,7 +873,7 @@ export default {
       D: [
         {
           color: colors.blue,
-          img: "services/clients.png",
+          img: "/services/clients.png",
           title: "برنامج ترشيح العملاء",
           description:
             "يمكنك ترشيح أصدقاءك والحصول على نقاط مجانية وخصومات حصرية",
@@ -888,14 +888,14 @@ export default {
     news: [
       {
         id: "1",
-        img: "news/news1.png",
+        img: "/news/news1.png",
         title: "كونتكت تطلق منتج رقمي لتأمين السيارات",
         description:
           "كونتكت المالية القابضة تعلن اليوم عن إطلاق منتج رقمي بالكامل للتأمين التكميلى للسيارات في مصر. يتوفر المنتج من خلال منصة كونتكت كارز دوت كوم وشركة ثروة للتأمين وشركة كونتكت ...",
       },
       {
         id: "2",
-        img: "news/news2.png",
+        img: "/news/news2.png",
         title:
           "«شطبلي» توقع اتفاقية شراكة مع «كونتكت» لإتاحة برامج تمويل مبتكرة",
         description:
@@ -903,7 +903,7 @@ export default {
       },
       {
         id: "3",
-        img: "news/news3.png",
+        img: "/news/news3.png",
         title: "كونتكت توقع برنامج تمويل فريد من نوعه في مصر مع كابيتر",
         description:
           "وقعت كونتكت المالية القابضة (CNFN)، الشركة الرائدة في مجال الخدمات المالية غير مصرفية في مصر، من خلال شركة كونتكت للتخصيم، أحد ...",
@@ -994,6 +994,89 @@ export default {
     plan1: "البرنامج الإقتصادي",
     plan2: "البرنامج المرن",
   },
+  products_events: {
+    cover: {
+      img: "/pages/events-cover.png",
+      color: "#1F5B36",
+      title1: "تمويل الأفراح والمناسبات",
+      title2: "هنكمل فرحتك",
+      description: `افرح وريح بالك، كونتكت حلتهالك وهتغطي تكاليف فرحك بأكبر قيمة تمويل وبتقسيط سهل ومريح، وكمان هتكون معاك في كل مناسباتك السعيدة سواء حفلات الخطوبة أو التخرج أو أعياد الميلاد.`,
+    },
+  },
+  products_finishing: {
+    cover: {
+      img: "/pages/finishing-cover.png",
+      color: "#977859",
+      title1: "تمويل تصميم وتشطيب بيتك",
+      title2: "بيتك على ذوقك",
+      description: `لو عايز تصمم وتشطب بيتك على مزاجك من خلال أفضل شركات التصميم الداخلي والديكور في مصر، كونتكت هتقدملك أكبر قيمة تمويل وعلى فترات سداد تناسب إمكانياتك.`,
+    },
+    section_a: {
+      title: "4 مليون جنية",
+      body: `برامج تمويل النقل تصل بحد أقصي إلي 2 مليون جنية مصري لسيارات النقل الجديدة, بفترات سداد تصل إلي 5 سنوات بمقدم يبدأ من 20% بأسهل الإجراءات كونتكت توفر لك أسرع و أبسط نظام لتمويل و تقسيط معاملاتك الشرائية, فقط من خلال بطاقة الرقم القومي الخاصة بك تستطيع شراء منتجات التشطيب التي تحتاجها مثل الحوائط و الأرضيات, أبوب و شبابيك, دهانات  و ديكور, مستلزمات كهربائية, الأدوات الصحية و غيرها, من خلال شبكة سريعة النمو من المنافذ التجارية و معارض التجزئة و المتاجر الكبري, كما يتوفر لك حرية إختيار الدفعة المقدمة و القسط الشهري المناسب مع فترات تقيسط تتراوح من 6 إلي 60 شهراً.`,
+    },
+    section_b: {
+      img: "/pages/without-advance.png",
+      title: "بدون مقدم",
+      body: `كونتكت توفر لك أسرع و أبسط نظام لتمويل و تقسيط معاملاتك الشرائية من خلال شبكة  سريعة النمو من المنافذ التجارية و معارض التجزئة و المتاجر الكبري. كما يتوفر لك حرية إختيار الدفعة المقدمة و القسط الشهري المناسب مع فترة تفسيط تتراوح بين 6 إلي 60 شهرا حد ائتماني يصل إلي 750,000 جنية بدون مقدم أو مصاريف إضافية. لا يتطلب ملكية الوحدة أو الرهن العقاري أسرع و أسهل إجراءات للإصدار`,
+    },
+  },
+  products_maintainance: {
+    cover: {
+      img: "/pages/maintainance-cover.png",
+      color: "#1F5B36",
+      title1: "تمويل الصيانة",
+      title2: "معاك في كل تفصيله",
+      description: `لو بيتك، عربيتك أو ممتلكاتك محتاجة صيانة، كونتكت سهلتها عليك وهتقسطها على فترات سداد مريحة.`,
+    },
+  },
+  products_insurance_page: {
+    cover: {
+      img: "/pages/insurance-cover.png",
+      color: "#3D3D3D",
+      title1: "وساطة تأمينية",
+      title2: "عيش مطّمن وانت مأمن",
+      description: `محتاج مكان واحد تقدر تأمن فيه على عيلتك، بيتك، عربيتك، مشروعك أو شركتك، مع كونتكت تقدر تختار ما بين الباقات التأمينية المختلفة اللي بنوفرهالك من خلال أقوي شركات التأمين في مصر بأقل الأسعار وبأفضل مزايا تأمينية تناسب إحتياجات الأفراد والشركات.`,
+    },
+    section_a: [
+      {
+        title: "حماية عائلتك",
+        points: [
+          "تأمين طبي",
+          "تأمين حياة",
+          "حوادث شخصية",
+          "كارت المزايا الطبية",
+        ],
+      },
+      {
+        title: "حماية عائلتك",
+        points: [
+          "تأمين طبي",
+          "تأمين حياة",
+          "حوادث شخصية",
+          "كارت المزايا الطبية",
+        ],
+      },
+      {
+        title: "حماية عائلتك",
+        points: [
+          "تأمين طبي",
+          "تأمين حياة",
+          "حوادث شخصية",
+          "كارت المزايا الطبية",
+        ],
+      },
+      {
+        title: "حماية عائلتك",
+        points: [
+          "تأمين طبي",
+          "تأمين حياة",
+          "حوادث شخصية",
+          "كارت المزايا الطبية",
+        ],
+      },
+    ],
+  },
   rewards: {
     heading: "نقاط برنامج ترشيح العملاء",
     subHeading: "في حالة ترشيح عميل حالي لعميل جديد تحسب النقاط كال",
@@ -1048,95 +1131,13 @@ export default {
     products_finishing: {
       cover: {
         img: "/pages/finishing-cover.png",
-        color: "#977859",
-        title1: "تمويل تصميم وتشطيب بيتك",
-        title2: "بيتك على ذوقك",
-        description: `لو عايز تصمم وتشطب بيتك على مزاجك من خلال أفضل شركات التصميم الداخلي والديكور في مصر، كونتكت هتقدملك أكبر قيمة تمويل وعلى فترات سداد تناسب إمكانياتك.`,
-      },
-      section_a: {
-        title: "4 مليون جنية",
-        body: `برامج تمويل النقل تصل بحد أقصي إلي 2 مليون جنية مصري لسيارات النقل الجديدة, بفترات سداد تصل إلي 5 سنوات بمقدم يبدأ من 20% بأسهل الإجراءات كونتكت توفر لك أسرع و أبسط نظام لتمويل و تقسيط معاملاتك الشرائية, فقط من خلال بطاقة الرقم القومي الخاصة بك تستطيع شراء منتجات التشطيب التي تحتاجها مثل الحوائط و الأرضيات, أبوب و شبابيك, دهانات  و ديكور, مستلزمات كهربائية, الأدوات الصحية و غيرها, من خلال شبكة سريعة النمو من المنافذ التجارية و معارض التجزئة و المتاجر الكبري, كما يتوفر لك حرية إختيار الدفعة المقدمة و القسط الشهري المناسب مع فترات تقيسط تتراوح من 6 إلي 60 شهراً.`,
-      },
-      section_b: {
-        img: "/pages/without-advance.png",
-        title: "بدون مقدم",
-        body: `كونتكت توفر لك أسرع و أبسط نظام لتمويل و تقسيط معاملاتك الشرائية من خلال شبكة  سريعة النمو من المنافذ التجارية و معارض التجزئة و المتاجر الكبري. كما يتوفر لك حرية إختيار الدفعة المقدمة و القسط الشهري المناسب مع فترة تفسيط تتراوح بين 6 إلي 60 شهرا حد ائتماني يصل إلي 750,000 جنية بدون مقدم أو مصاريف إضافية. لا يتطلب ملكية الوحدة أو الرهن العقاري أسرع و أسهل إجراءات للإصدار`,
-      },
-    },
-    products_events: {
-      cover: {
-        img: "/pages/events-cover.png",
-        color: "#1F5B36",
-        title1: "تمويل الأفراح والمناسبات",
-        title2: "هنكمل فرحتك",
-        description: `افرح وريح بالك، كونتكت حلتهالك وهتغطي تكاليف فرحك بأكبر قيمة تمويل وبتقسيط سهل ومريح، وكمان هتكون معاك في كل مناسباتك السعيدة سواء حفلات الخطوبة أو التخرج أو أعياد الميلاد.`,
-      },
-    },
-    products_finishing: {
-      cover: {
-        img: "/pages/finishing-cover.png",
         color: "#1F5B36",
         title1: "تمويل فرش البيت",
         title2: "جدد شكل بيتك",
         description: `لو عايز تفرش وتجهز بيتك على مزاجك ومن أي مكان نفسك فيه، كونتكت هتسهلك المشوار بأكبر قيمة تمويل عشان تختار كل الديكور والفرش اللي بيتك محتاجة من خلال أكبر عدد من المعارض ومحلات الديكور والأثاث اللي بتناسب جميع الأذواق والإمكانيات.`,
       },
     },
-    products_maintainance: {
-      cover: {
-        img: "/pages/maintainance-cover-cover.png",
-        color: "#1F5B36",
-        title1: "تمويل الصيانة",
-        title2: "معاك في كل تفصيله",
-        description: `لو بيتك، عربيتك أو ممتلكاتك محتاجة صيانة، كونتكت سهلتها عليك وهتقسطها على فترات سداد مريحة.`,
-      },
-    },
-    products_insurance_page: {
-      cover: {
-        img: "/pages/insurance-cover.png",
-        color: "#3D3D3D",
-        title1: "وساطة تأمينية",
-        title2: "عيش مطّمن وانت مأمن",
-        description: `محتاج مكان واحد تقدر تأمن فيه على عيلتك، بيتك، عربيتك، مشروعك أو شركتك، مع كونتكت تقدر تختار ما بين الباقات التأمينية المختلفة اللي بنوفرهالك من خلال أقوي شركات التأمين في مصر بأقل الأسعار وبأفضل مزايا تأمينية تناسب إحتياجات الأفراد والشركات.`,
-      },
-      section_a: [
-        {
-          title: "حماية عائلتك",
-          points: [
-            "تأمين طبي",
-            "تأمين حياة",
-            "حوادث شخصية",
-            "كارت المزايا الطبية",
-          ],
-        },
-        {
-          title: "حماية عائلتك",
-          points: [
-            "تأمين طبي",
-            "تأمين حياة",
-            "حوادث شخصية",
-            "كارت المزايا الطبية",
-          ],
-        },
-        {
-          title: "حماية عائلتك",
-          points: [
-            "تأمين طبي",
-            "تأمين حياة",
-            "حوادث شخصية",
-            "كارت المزايا الطبية",
-          ],
-        },
-        {
-          title: "حماية عائلتك",
-          points: [
-            "تأمين طبي",
-            "تأمين حياة",
-            "حوادث شخصية",
-            "كارت المزايا الطبية",
-          ],
-        },
-      ],
-    },
+
     our_brand_page: {
       title: "شركتنا",
       body: [
@@ -1183,19 +1184,19 @@ export default {
   featureSection: [
     {
       id: "1",
-      img: "shopping.png",
+      img: "/shopping.png",
       title: "تسوق",
       text: " ابحث عن منتجات وعلامات تجارية جديدة. احصل على أفضل صفقة واكسب مكافآت - فقط للتسوق.",
     },
     {
       id: "2",
-      img: "shopping.png",
+      img: "/shopping.png",
       title: "تقسيط",
       text: "اختر طريقة الدفع في المتاجر الشريكة ، عبر تطبيقنا أو بطاقة  أو امتداد المتصفح.",
     },
     {
       id: "3",
-      img: "shopping.png",
+      img: "/shopping.png",
       title: "تدفع",
       text: "قم بتقسيم مدفوعاتك وإدارة المشتريات ، من خلال نظرة عامة على الإنفاق الذكي والمزيد.",
     },
