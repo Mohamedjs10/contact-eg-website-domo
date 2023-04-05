@@ -135,9 +135,9 @@ export default function HorizontalNonLinearStepper() {
           },
           width: {
             xs: "200px",
-            sm: "300px",
-            md: "300px",
-            xl: "400px",
+            sm: "250px",
+            md: "275px",
+            xl: "300px",
           },
         }}
         src={img}

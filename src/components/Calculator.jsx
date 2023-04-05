@@ -14,21 +14,32 @@ import ar from "../../locales/ar";
 import { useRouter } from "next/router";
 
 export default function Calcuation() {
-  const [val, setVal] = useState("");
-  const [value, setValue] = useState(5000);
+  const [carPrice, setCarPrice] = useState("");
+  const [stepValue, setStepValue] = useState(5000);
+  const [duration, setDuration] = useState();
+  const [plan, setPlan] = useState();
+  const [value, setValue] = useState();
 
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : ar;
 
-  const handleChange = (e) => {
+  const checkInputs = (carPrice, stepValue, duration, plan) => {
+    if (carPrice && stepValue && duration & plan) {
+      setValue(10000);
+    } else {
+      setValue(null);
+    }
+  };
+
+  const handleCarPriceChange = (e) => {
     const re = /^[0-9\b]+$/;
 
     // if value is not blank, then test the regex
 
     if (e.target.value === "" || re.test(e.target.value)) {
-      setVal(e.target.value);
-    } else {
+      setCarPrice(e.target.value);
+      checkInputs(e.target.value, stepValue, duration, plan);
     }
   };
 
@@ -36,8 +47,19 @@ export default function Calcuation() {
     return `${value}°C`;
   }
 
-  const handleValChange = (e) => {
-    setValue(e.target.value);
+  const handleStepChange = (e) => {
+    setStepValue(e.target.value);
+    checkInputs(carPrice, e.target.value, duration, plan);
+  };
+
+  const handleDurationChange = (e) => {
+    setDuration(e.target.value);
+    checkInputs(carPrice, stepValue, e.target.value, plan);
+  };
+
+  const handlePlanChange = (e) => {
+    setPlan(e.target.value);
+    checkInputs(carPrice, stepValue, duration, e.target.value);
   };
   return (
     <Box
@@ -84,8 +106,8 @@ export default function Calcuation() {
               },
             },
           }}
-          value={val}
-          onChange={handleChange}
+          value={carPrice}
+          onChange={handleCarPriceChange}
           hiddenLabel
           id="car-price"
           size="small"
@@ -103,14 +125,15 @@ export default function Calcuation() {
             sx={{ color: colors.blue, fontWeight: "bold" }}
             gutterBottom
           >
-            {value} {t.calc.egyptianPound}
+            {stepValue} {t.calc.egyptianPound}
           </Typography>
           <Slider
             valueLabelDisplay="auto"
-            value={value}
-            onChange={handleValChange}
+            value={stepValue}
+            onChange={handleStepChange}
             sx={{ color: colors.blue, mt: 1 }}
             min={0}
+            step={100}
             max={2000000}
             getAriaValueText={valuetext}
           />
@@ -130,6 +153,7 @@ export default function Calcuation() {
               {t.calc.duration}
             </Typography>
             <Select
+              value={duration ?? " "}
               sx={{
                 width: "100%",
                 ".MuiOutlinedInput-notchedOutline": {
@@ -146,7 +170,7 @@ export default function Calcuation() {
                 },
               }}
               size="small"
-              onChange={handleChange}
+              onChange={handleDurationChange}
             >
               <MenuItem value={1}>{t.calc.year1}</MenuItem>
               <MenuItem value={2}>{t.calc.year2}</MenuItem>
@@ -166,6 +190,7 @@ export default function Calcuation() {
               {t.calc.plan}
             </Typography>
             <Select
+              value={plan ?? " "}
               sx={{
                 width: "100%",
 
@@ -183,7 +208,7 @@ export default function Calcuation() {
                 },
               }}
               size="small"
-              onChange={handleChange}
+              onChange={handlePlanChange}
             >
               <MenuItem value={1}>{t.calc.plan1}</MenuItem>
               <MenuItem value={2}>{t.calc.plan2}</MenuItem>
@@ -208,7 +233,13 @@ export default function Calcuation() {
             {t.calc.monthlyAmount}
           </Typography>
           <Typography variant="h5" sx={{ color: colors.blue }} gutterBottom>
-            10000 {t.calc.egyptianPound}
+            {value ? (
+              <>
+                {value} {t.calc.egyptianPound}
+              </>
+            ) : (
+              "----"
+            )}
           </Typography>
         </Box>
       </Box>
