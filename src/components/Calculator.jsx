@@ -36,7 +36,6 @@ export default function Calcuation() {
     const re = /^[0-9\b]+$/;
 
     // if value is not blank, then test the regex
-
     if (e.target.value === "" || re.test(e.target.value)) {
       setCarPrice(e.target.value);
       checkInputs(e.target.value, stepValue, duration, plan);
@@ -247,7 +246,8 @@ export default function Calcuation() {
         sx={{
           margin: "auto",
           width: {
-            xs: "320px",
+            xs: "250px",
+            sm: "300px",
             md: "480px",
           },
           flex: "1 1 0",
