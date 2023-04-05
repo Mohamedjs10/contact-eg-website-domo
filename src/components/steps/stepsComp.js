@@ -208,7 +208,6 @@ export default function HorizontalNonLinearStepper() {
           top: 0,
           left: locale === "en" ? "" : 0,
           right: locale === "ar" ? "" : 0,
-
           height: "100%",
         }}
         src="/images/home-line.png"
