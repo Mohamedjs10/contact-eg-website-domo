@@ -43,7 +43,6 @@ export default function Home() {
           slidesPerView={4.3}
         ></VerticalCarousel>
         <ContactPaySection></ContactPaySection>
-        <ContactPaySection></ContactPaySection>
       </main>
     </>
   );
