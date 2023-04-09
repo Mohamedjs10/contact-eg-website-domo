@@ -24,26 +24,22 @@ export default function Index() {
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : ar;
-  // formik ==========================================================
-  const onSubmit = async (values, actions) => {
-    await new Promise((resolve) => setTimeout(resolve, 5000)); // simulate delay
-    actions.resetForm();
-  };
+  console.log(t.general.reviews);
 
   return (
     <Box sx={styles.container}>
       <PageCover
-        color={t.products_finishing.cover.color}
-        img={t.products_finishing.cover.img}
-        title1={t.products_finishing.cover.title1}
-        title2={t.products_finishing.cover.title2}
-        description={t.products_finishing.cover.description}
+        color={t.products_education.cover.color}
+        img={t.products_education.cover.img}
+        title1={t.products_education.cover.title1}
+        title2={t.products_education.cover.title2}
+        description={t.products_education.cover.description}
         formType="a"
       />
-      <IconTileSection page="finishing"></IconTileSection>
+      <IconTileSection page="shopping"></IconTileSection>
 
       {/* =============================================================== */}
-      <Calculator />
+      <Calculator></Calculator>
     </Box>
   );
 }
