@@ -22,7 +22,8 @@ export const EnSchema = yup.object().shape({
     .min(3, "Username must be at least 3 characters long")
     .required("Required"),
   governorate: yup.string().required("Required"),
+  products: yup.string().required("Required"),
   area: yup.string().required("Required"),
-  car_type: yup.string().required("Required"),
-  car_price: yup.number().positive().required("Required"),
+  // car_type: yup.string().required("Required"),
+  // car_price: yup.number().positive().required("Required"),
 });

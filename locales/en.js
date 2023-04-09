@@ -451,43 +451,45 @@ export default {
       { id: 9, img: "/member.png", name: "Location Name" },
       { id: 10, img: "/member.png", name: "Location Name" },
     ],
-    icon_title: [
-      {
-        id: 1,
-        img: "/hands.png",
-        title: "lorem ipsum dolor sit amet, con lorem ipsum dolor sit amet",
-      },
-      {
-        id: 2,
-        img: "/hands.png",
-        title: "lorem ipsum dolor sit amet, con lorem ipsum dolor sit amet",
-      },
-      {
-        id: 3,
-        img: "/hands.png",
-        title: "lorem ipsum dolor sit amet, con lorem ipsum dolor sit amet",
-      },
-      {
-        id: 4,
-        img: "/hands.png",
-        title: "lorem ipsum dolor sit amet, con lorem ipsum dolor sit amet",
-      },
-      {
-        id: 5,
-        img: "/hands.png",
-        title: "lorem ipsum dolor sit amet, con lorem ipsum dolor sit amet",
-      },
-      {
-        id: 6,
-        img: "/hands.png",
-        title: "lorem ipsum dolor sit amet, con lorem ipsum dolor sit amet",
-      },
-      {
-        id: 7,
-        img: "/hands.png",
-        title: "lorem ipsum dolor sit amet, con lorem ipsum dolor sit amet",
-      },
-    ],
+    icon_title: {
+      products_shopping_page: [
+        {
+          id: 1,
+          img: "/hands.png",
+          title: "lorem ipsum dolor sit amet, con lorem ipsum dolor sit amet",
+        },
+        {
+          id: 2,
+          img: "/hands.png",
+          title: "lorem ipsum dolor sit amet, con lorem ipsum dolor sit amet",
+        },
+        {
+          id: 3,
+          img: "/hands.png",
+          title: "lorem ipsum dolor sit amet, con lorem ipsum dolor sit amet",
+        },
+        {
+          id: 4,
+          img: "/hands.png",
+          title: "lorem ipsum dolor sit amet, con lorem ipsum dolor sit amet",
+        },
+        {
+          id: 5,
+          img: "/hands.png",
+          title: "lorem ipsum dolor sit amet, con lorem ipsum dolor sit amet",
+        },
+        {
+          id: 6,
+          img: "/hands.png",
+          title: "lorem ipsum dolor sit amet, con lorem ipsum dolor sit amet",
+        },
+        {
+          id: 7,
+          img: "/hands.png",
+          title: "lorem ipsum dolor sit amet, con lorem ipsum dolor sit amet",
+        },
+      ],
+    },
   },
   logo: "/logo-en.png",
 
@@ -517,20 +519,20 @@ export default {
     section_b: {
       financial_services: "Financial Services",
       financial_services_list1: [
-        { name: "Auto", url: "/" },
-        { name: "Trucks", url: "/" },
-        { name: "Shopping", url: "/" },
-        { name: "Education", url: "/" },
-        { name: "Clubs", url: "/" },
-        { name: "Home Design", url: "/" },
+        { name: "Auto", url: "/products/cars" },
+        { name: "Trucks", url: "/products/trucks" },
+        { name: "Shopping", url: "/products/shopping" },
+        { name: "Education", url: "/products/education" },
+        { name: "Clubs", url: "/products/clubs" },
+        { name: "Home Design", url: "/products/home-interior" },
       ],
       financial_services_list2: [
-        { name: "Wedding & Events", url: "/" },
-        { name: "Mortage", url: "/" },
-        { name: "Insurance Brokerage", url: "/" },
-        { name: "Factoring", url: "/" },
-        { name: "Leasing", url: "/" },
-        { name: "Green Finance", url: "/" },
+        { name: "Wedding & Events", url: "/products/events" },
+        { name: "Mortage", url: "/products/home" },
+        { name: "Insurance Brokerage", url: "/products/insurance" },
+        { name: "Factoring", url: "/products/factoring" },
+        { name: "Leasing", url: "/products/leasing" },
+        { name: "Green Finance", url: "/products/green-finance" },
       ],
       other_services: "Other Services",
       other_services_list: [
@@ -1083,6 +1085,235 @@ export default {
     },
   },
 
+  products_finishing: {
+    cover: {
+      img: "/pages/finishing-cover.png",
+      color: "#977859",
+      title1: "Home Interior",
+      title2: "Easy Installments For Your Dream Home Design",
+      description: `Our Home Interior program is your go to option to design and finish your house and transform it into the perfect home for you and your family.`,
+    },
+    section_a: {
+      title: "4,000,000 EGP",
+      body: `lorem ipsum dolor sit amet, consectetur adip non pro id, sed diam nonum vulputate velit sed diam nonum. 
+    Ut enim ad minim veniam, quis nostr arranged eu fugiat null a ante et d.`,
+    },
+    section_b: {
+      img: "/pages/without-advance.png",
+      title: "Without Advance",
+      body: `lorem ipsum dolor sit amet, consectetur adip non pro id, sed diam nonum vulputate velit sed diam nonum. 
+    Ut enim ad minim veniam, quis nostr arranged eu fugiat null a ante et d.`,
+    },
+  },
+  products_events: {
+    cover: {
+      img: "/pages/events-cover.png",
+      color: "#1F5B36",
+      title1: "Wedding & Events Financing",
+      title2: "Enjoy your event with Contact",
+      description: `Enjoy a memorable celebration or wedding with Contact through the simplest procedures, financing up to 1 million EGP, and convenient installment plans.`,
+    },
+  },
+  products_factoring: {
+    cover: {
+      img: "/pages/factoring-cover.png",
+      color: "#5B311F",
+      title1: "Factoring",
+      title2: "Easy Financing Solution",
+      description: `Through our factoring services, we ensure empowering your business and boosting your working capital long before collecting bills and extended payment terms.`,
+    },
+  },
+  products_clubs: {
+    cover: {
+      img: "/pages/clubs-cover.png",
+      color: "#745306",
+      title1: "Contact Clubs Program",
+      title2: "Championship made easy",
+      description: `Through the Clubs membership financing Program, you can finance the membership of your aspired club in Egypt with the easiest and fastest procedures, and payment plans from 6 to 60 months.`,
+    },
+    clubs_title: "Subscribed Clubs",
+    clubs: [
+      ["Wadi Degla Club", "/pages/club1.png"],
+      ["Matrix Club", "/pages/club2.png"],
+      ["Zohor Club", "/pages/club3.png"],
+      ["Island Club", "/pages/club4.png"],
+      ["Hawar Club", "/pages/club5.png"],
+      ["Platinum Club", "/pages/club6.png"],
+    ],
+  },
+
+  products_maintainance: {
+    cover: {
+      img: "/pages/maintainance-cover.png",
+      color: "#1F5B36",
+      title1: "تمويل الصيانة",
+      title2: "معاك في كل تفصيله",
+      description: `لو بيتك، عربيتك أو ممتلكاتك محتاجة صيانة، كونتكت سهلتها عليك وهتقسطها على فترات سداد مريحة.`,
+    },
+  },
+  products_trucks: {
+    cover: {
+      img: "/pages/trucks-cover.png",
+      color: "#1E4256",
+      title1: "Contact Trucks",
+      title2: "Heavy Trucks.. Light Installments..",
+      description: `Financing plans for all types of trucks, from light commercial vehicles to heavy transport trucks and trailers`,
+    },
+  },
+  products_cars: {
+    cover: {
+      img: "/pages/cars-cover.png",
+      color: "#1169A8",
+      title1: "Contact Cars",
+      title2: "Your Car won't Wait.. Finance It With Contact..s",
+      description: `Contact is the market leader in auto financing, with a network of over 1,000 showrooms across the country and offering different finance solutions for both new and used cars.
+      `,
+    },
+  },
+  products_education: {
+    cover: {
+      img: "/pages/education-cover.png",
+      color: "#3C3B3A",
+      title1: "Education Program",
+      title2: "Funding Education, Building the Future…",
+      description: `At Contact, we believe in building futures. You can now finance all stages of local and international educational programs within Egypt up to 1 million EGP. Whether it’s a school, university, or even a postgraduate study, we support you and your Family for a brighter future.`,
+    },
+  },
+  products_home: {
+    cover: {
+      img: "/pages/home-cover.png",
+      color: "#2D9A8F",
+      title1: "Mortage",
+      title2: "Finance your dream home with Contact",
+      description: `Finance your dream home with Contact Mortgage. The Home Finance program offers you up to 6 million EGP financing and up to 10 years installments. Sign up now and own your dream home, with the easiest and fastest procedures from Contact.`,
+    },
+    section_a: {
+      img: "/pages/without-advance.png",
+      title: "Advantages",
+      body: ["a", "b", "c", "d"],
+    },
+    section_b: {
+      img: "/pages/without-advance.png",
+      title: "Advantages",
+      body: ["a", "b", "c", "d"],
+    },
+    card_section_title: "Programs",
+    cards: [
+      {
+        title: "title",
+        body: [
+          "body body body body",
+          "body body body body",
+          "body body body body",
+        ],
+      },
+      {
+        title: "title",
+        body: [
+          "body body body body",
+          "body body body body",
+          "body body body body",
+        ],
+      },
+    ],
+  },
+  products_leasing: {
+    cover: {
+      img: "/pages/leasing-cover.png",
+      color: "#7A1315",
+      title1: "Contact Leasing",
+      title2: "Grow You Bussiness With Contact",
+      description: `If you’re looking to develop your business whatever it is, Contact Leasing will always find a way to help you grow. Today, we’ve focused our efforts on two leading leasing sectors: transportation assets and medical devices with financing up to EGP 15 million.`,
+    },
+    section_a: {
+      img: "/pages/without-advance.png",
+      title: "Contact Leasing Benefits",
+      body: ["body", "body", "body", "body", "body", "body", "body"],
+    },
+    section_b: {
+      img: "/pages/without-advance.png",
+      title: "How It Works",
+      description: `We design our solutions around the market value of the assets that your business needs to acquire, and nothing else.`,
+      list: [
+        [
+          "FIND THE RIGHT ASSET FOR YOUR BUSINESS",
+          "Our Partner Network covers medical and transportation asset sectors, whether new, used, or refurbished.",
+          "1",
+        ],
+        [
+          "COMPLETE OUR SIMPLE APPLICATION PROCESS",
+          "We’ve worked hard on simplifying our process so that you know well in advance what documentation you’ll need, and we’ll give you a quick and committed response date.",
+          "2",
+        ],
+        [
+          "CHOOSE A PAYMENT PLAN THAT SUITS YOU",
+          "We will then provide you with payment plans based on the market value of your chosen asset. The plans include everything from the down-payment you’ll need to our administrative fees, without hidden charges and personal discounts.",
+          "3",
+        ],
+      ],
+    },
+  },
+  products_green_finance: {
+    cover: {
+      img: "/pages/leasing-cover.png",
+      color: "#7A1315",
+      title1: "Contact Leasing",
+      title2: "Grow You Bussiness With Contact",
+      description: `If you’re looking to develop your business whatever it is, Contact Leasing will always find a way to help you grow. Today, we’ve focused our efforts on two leading leasing sectors: transportation assets and medical devices with financing up to EGP 15 million.`,
+    },
+    section_a: {
+      img: "/pages/without-advance.png",
+      title: "Contact Leasing Benefits",
+      body: ["body", "body", "body", "body", "body", "body", "body"],
+    },
+  },
+  products_insurance_page: {
+    cover: {
+      img: "/pages/insurance-cover.png",
+      color: "#3D3D3D",
+      title1: "Insurance Brokerage",
+      title2: "Stay secured.. Stay Insured",
+      description: `Contact Insurance Brokerage is known for its unparalleled tailor-made insurance services offered for corporate and retail clients`,
+    },
+    section_a: [
+      {
+        title: "You Family Protection",
+        points: [
+          "Medical Insurance",
+          "Life Insurance",
+          "Personal Accidents",
+          "Medical Card",
+        ],
+      },
+      {
+        title: "You Family Protection",
+        points: [
+          "Medical Insurance",
+          "Life Insurance",
+          "Personal Accidents",
+          "Medical Card",
+        ],
+      },
+      {
+        title: "You Family Protection",
+        points: [
+          "Medical Insurance",
+          "Life Insurance",
+          "Personal Accidents",
+          "Medical Card",
+        ],
+      },
+      {
+        title: "You Family Protection",
+        points: [
+          "Medical Insurance",
+          "Life Insurance",
+          "Personal Accidents",
+          "Medical Card",
+        ],
+      },
+    ],
+  },
   our_brand_page: {
     title: "Our Company",
     body: [

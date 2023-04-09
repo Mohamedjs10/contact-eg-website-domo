@@ -5,16 +5,18 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import en from "../../../locales/en";
 import ar from "../../../locales/ar";
-export default function Text({ title, img }) {
+export default function Text({ title, img, page }) {
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : ar;
+  const pageLocale =
+    page === "shopping" ? "products_shopping_page" : "products_shopping_page";
   return (
     <Box
       sx={styles.sectionContainer}
       className="horizontal-safe-padding vertical-safe-padding"
     >
-      {t.general.icon_title.map((item, index) => (
+      {t.general.icon_title[pageLocale].map((item, index) => (
         <Box sx={styles.container} key={index}>
           <Box sx={styles.imgContainer}>
             <img

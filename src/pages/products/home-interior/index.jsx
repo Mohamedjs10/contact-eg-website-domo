@@ -17,15 +17,18 @@ import { useFormik } from "formik";
 // import { EnSchema } from "../utils/en_schema";
 // import { ArSchema } from "../utils/ar_schema";
 import { Box, TextField, InputLabel, MenuItem, Button } from "@mui/material";
+import Calculator from "../../../components/Calculator.jsx";
 
 // ================================================================
 export default function Index() {
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : ar;
+  console.log(t.general.reviews);
   // formik ==========================================================
   const onSubmit = async (values, actions) => {
     await new Promise((resolve) => setTimeout(resolve, 5000)); // simulate delay
+    console.log(values);
     actions.resetForm();
   };
   const {
@@ -53,13 +56,15 @@ export default function Index() {
   return (
     <Box sx={styles.container}>
       <PageCover
-        color="#74357D"
-        img="/cart.png"
-        title1={t.products_shopiing_page.cover.title1}
-        title2={t.products_shopiing_page.cover.title2}
-        description={t.products_shopiing_page.cover.description}
+        color={t.products_finishing.cover.color}
+        img={t.products_finishing.cover.img}
+        title1={t.products_finishing.cover.title1}
+        title2={t.products_finishing.cover.title2}
+        description={t.products_finishing.cover.description}
         formType="a"
       />
+      <IconTileSection page="shopping"></IconTileSection>
+
       <Box
         sx={{ textAlign: "center" }}
         className="horizontal-safe-padding vertical-safe-padding"
@@ -72,29 +77,43 @@ export default function Index() {
             justifyContent: "center",
             alignItems: "center",
             gap: 1,
+            fontSize: "56px",
           }}
         >
-          <Box sx={{ fontSize: "56px" }}>
-            36 شهر
-            {/* 36 months */}
-          </Box>
-          <Box sx={{ fontSize: "30px" }}>
-            فترة سداد
-            {/* payment period */}
-          </Box>
+          {t.products_finishing.section_a.title}
         </Box>
         <Box sx={{ maxWidth: "1000px", m: "auto" }}>
-          إشتري كل إحتياجاتك بدون عمليات معقدة فقط برقم البطاقة و برقم موبايلك,
-          من خلال نظام كنتكت الإلكتروني للتس الشراء و التقسيط من أكثر من 1000
-          منفذ بيع في جميع محافاظات الجمهورية. نظام التقسيط من كونتكت تسوق هو
-          أفضل و أسرع طريقة لتمويل جميع مشترياتك من خلال شبكة ضخمة من المنافذ
-          التجارية و معارض التجزئة و المتاجر الكبري و توكيلات الماركات العالمية.
-          والذي يتيح لك حرية تحديد مبلغ الدفعة المقدمة و يقدم أنظمة التقسيط
-          بفترات سداد تتراوح من 6 أشهر إلي 36 شهر.{" "}
+          {t.products_finishing.section_a.body}
         </Box>
       </Box>
-      <IconTileSection page="shopping"></IconTileSection>
-      <ImgListSection></ImgListSection>
+      {/* ============================ Img-Paragraph-Section ============================= */}
+      <Box
+        className="horizontal-safe-padding section-safe-padding-top"
+        sx={{
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: { xs: "center", lg: "space-between" },
+          alignItems: "center",
+          textAlign: { xs: "center", md: "initial" },
+        }}
+      >
+        <Box
+          sx={{
+            maxWidth: "800px",
+          }}
+        >
+          <Box sx={{ fontSize: "42px", color: colors.orange }}>
+            {t.products_finishing.section_b.title}
+          </Box>
+          <Box>{t.products_finishing.section_b.body}</Box>
+        </Box>
+        <Box
+          component="img"
+          src={t.products_finishing.section_b.img}
+          sx={{ width: { xs: "200px", sm: "250px", md: "300px", lg: "400px" } }}
+        />
+      </Box>
+
       {/* ============================ Form ============================= */}
 
       <Box
@@ -229,6 +248,8 @@ export default function Index() {
         Component={PlaceCard}
         slidesPerView={4.3}
       ></VerticalCarousel>
+      {/* =============================================================== */}
+      <Calculator></Calculator>
     </Box>
   );
 }

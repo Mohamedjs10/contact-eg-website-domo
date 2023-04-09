@@ -23,7 +23,8 @@ export const ArSchema = yup.object().shape({
     .min(3, "الاسم يجب ان يكون على الأقل 3 حروف")
     .required("اجباري"),
   governorate: yup.string().required("اجباري"),
+  products: yup.string().required("اجباري"),
   area: yup.string().required("اجباري"),
-  car_type: yup.string().required("اجباري"),
-  car_price: yup.number().positive().required("اجباري"),
+  // car_type: yup.string().required("اجباري"),
+  // car_price: yup.number().positive().required("اجباري"),
 });

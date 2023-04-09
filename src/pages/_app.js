@@ -22,6 +22,8 @@ import Button from "@mui/material/Button";
 import { appWithTranslation } from "next-i18next";
 import { useTranslation } from "next-i18next";
 import FlyingCard from "@/components/mini-components/FlyingCard";
+import CardSlider from "@/components/CardSlider.jsx";
+
 const App = ({ Component, pageProps }) => {
   const router = useRouter();
   const { locale } = router;
@@ -55,7 +57,7 @@ const App = ({ Component, pageProps }) => {
             <HomeDropdown isOpen={isOpen} type={type} />
           </>
         )}
-        {/* <Cover /> */}
+        <CardSlider></CardSlider>
         <Component {...pageProps} />
         <Footer />
       </Box>

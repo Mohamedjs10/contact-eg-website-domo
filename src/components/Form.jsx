@@ -36,8 +36,11 @@ export default function Form({ type, color }) {
       area: "",
       username: "",
       lastname: "",
-      car_type: "",
-      car_price: "",
+      // car_type: "",
+      // car_price: "",
+      car_type: null,
+      car_price: null,
+      products: "",
     },
     validationSchema: locale === "en" ? EnSchema : ArSchema,
     onSubmit,
@@ -269,6 +272,46 @@ export default function Form({ type, color }) {
         </>
       )}
       {/* Products ---------------------------------------------------------------------------------------------------------- */}
+
+      {type === "b" && (
+        <>
+          <Box sx={styles.inputWrapper} style={{ width: "200px" }}>
+            <InputLabel sx={styles.label}>{t.form_labels.products}</InputLabel>
+            <TextField
+              value={values.products || "default"}
+              onChange={handleChange}
+              name="products"
+              type="text"
+              onBlur={handleBlur}
+              error={touched.products && errors.products}
+              sx={styles.input}
+              select
+              style={{ height: "45px" }}
+              InputProps={{
+                sx: {
+                  height: "45px",
+                  color: "grey",
+                  // fontWeight: "bold",
+                  lineHeight: "2",
+                },
+              }}
+            >
+              <MenuItem disabled value="default">
+                {t.form_labels.products_placeholder}
+              </MenuItem>
+              {t.home_page.products.map((option, index) => (
+                <MenuItem key={index} value={option.title2}>
+                  {option.title2}
+                </MenuItem>
+              ))}
+            </TextField>
+            <Box sx={styles.helperText}>
+              {touched.products && errors.products}
+            </Box>
+          </Box>
+        </>
+      )}
+
       {/* {type === "b" && (
         <Box sx={styles.inputWrapper} style={{ width: "200px" }}>
           <InputLabel sx={styles.label}>{t.form_labels.products}</InputLabel>
