@@ -31,21 +31,42 @@ export default function Index() {
     console.log(values);
     actions.resetForm();
   };
-
+  const {
+    values,
+    errors,
+    touched,
+    isSubmitting,
+    handleBlur,
+    handleChange,
+    handleSubmit,
+  } = useFormik({
+    initialValues: {
+      email: "",
+      phoneNumber: "",
+      governorate: "",
+      area: "",
+      username: "",
+      lastname: "",
+      car_type: "",
+      car_price: "",
+    },
+    // validationSchema: locale === "en" ? EnSchema : ArSchema,
+    onSubmit,
+  });
   return (
     <Box sx={styles.container}>
       <PageCover
-        color={t.products_finishing.cover.color}
-        img={t.products_finishing.cover.img}
-        title1={t.products_finishing.cover.title1}
-        title2={t.products_finishing.cover.title2}
-        description={t.products_finishing.cover.description}
+        color={t.products_factoring.cover.color}
+        img={t.products_factoring.cover.img}
+        title1={t.products_factoring.cover.title1}
+        title2={t.products_factoring.cover.title2}
+        description={t.products_factoring.cover.description}
         formType="a"
       />
-      <IconTileSection page="finishing"></IconTileSection>
+      <IconTileSection page="shopping"></IconTileSection>
 
       {/* =============================================================== */}
-      <Calculator />
+      <Calculator></Calculator>
     </Box>
   );
 }

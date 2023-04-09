@@ -25,27 +25,54 @@ export default function Index() {
   const { locale } = router;
   const t = locale === "en" ? en : ar;
   console.log(t.general.reviews);
-  // formik ==========================================================
-  const onSubmit = async (values, actions) => {
-    await new Promise((resolve) => setTimeout(resolve, 5000)); // simulate delay
-    console.log(values);
-    actions.resetForm();
-  };
 
   return (
     <Box sx={styles.container}>
       <PageCover
-        color={t.products_finishing.cover.color}
-        img={t.products_finishing.cover.img}
-        title1={t.products_finishing.cover.title1}
-        title2={t.products_finishing.cover.title2}
-        description={t.products_finishing.cover.description}
+        color={t.products_clubs.cover.color}
+        img={t.products_clubs.cover.img}
+        title1={t.products_clubs.cover.title1}
+        title2={t.products_clubs.cover.title2}
+        description={t.products_clubs.cover.description}
         formType="a"
       />
-      <IconTileSection page="finishing"></IconTileSection>
+      <IconTileSection page="shopping"></IconTileSection>
 
       {/* =============================================================== */}
-      <Calculator />
+      <Box sx={{ px: { xs: 0, md: 45 } }} className="vertical-safe-padding">
+        <Box
+          sx={{
+            textAlign: "center",
+            fontSize: "56px",
+            fontWeight: "bold",
+            color: colors.orange,
+            py: 2,
+          }}
+        >
+          {t.products_clubs.clubs_title}
+        </Box>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            gap: 10,
+            flexWrap: "wrap",
+          }}
+        >
+          {t.products_clubs.clubs.map((item) => (
+            <Box>
+              <Box
+                component="img"
+                src={item[1]}
+                sx={{ width: "200px", height: "200px", mb: 2 }}
+              />
+              <Box sx={{ textAlign: "center" }}>{item[0]}</Box>
+            </Box>
+          ))}
+        </Box>
+      </Box>
+      {/* =============================================================== */}
+      <Calculator></Calculator>
     </Box>
   );
 }
