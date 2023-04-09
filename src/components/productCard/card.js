@@ -7,7 +7,6 @@ export default function Card({ title, textArr, bgcolor }) {
     <Box
       sx={{
         bgcolor,
-
         p: 4,
         mx: 2,
         width: "250px",
