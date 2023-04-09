@@ -17,6 +17,7 @@ import MemberCard from "@/components/MemberCard";
 import PlaceCard from "@/components/PlaceCard";
 import ReviewCard from "@/components/ReviewCard";
 import Steps from "../components/steps/stepsComp";
+import MapBox from "../components/maps/maps";
 import { colors } from "../utils/const";
 
 import IconTitle from "../components/mini-components/IconTileSection.jsx";
@@ -64,6 +65,7 @@ export default function Home() {
             Component={ReviewCard}
             slidesPerView={4.3}
           ></VerticalCarousel>
+          <MapBox />
         </Box>
       </main>
     </>
