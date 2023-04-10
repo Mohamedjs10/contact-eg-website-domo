@@ -195,9 +195,9 @@ export default function MapBox() {
             <MenuItem sx={{ color: "#bcbcbc" }} value="none" disabled>
               {t.map.placeholderBranch}
             </MenuItem>
-            <MenuItem value={10}>Ten</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
+            <MenuItem value={10}>1</MenuItem>
+            <MenuItem value={20}>2</MenuItem>
+            <MenuItem value={30}>3</MenuItem>
           </Select>
         </Box>
       </Box>
