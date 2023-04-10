@@ -1,5 +1,3 @@
-import { colors } from "../../utils/const";
-
 export const styles = {
   img: (theme) => ({
     width: "30px",

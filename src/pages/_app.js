@@ -1,7 +1,7 @@
 import React, { useRef, forwardRef, useEffect, useState } from "react";
 import store from "../Redux/store";
 import { Provider } from "react-redux";
-import { styles } from "./app";
+import { styles } from "../utils/styles/app";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Link from "next/link";
 import "@/styles/globals.css";

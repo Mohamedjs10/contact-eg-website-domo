@@ -1,7 +1,15 @@
-import { colors } from "../../../utils/const";
+import { colors } from "../const";
 
 export const styles = {
   container: (theme) => ({ bgcolor: colors.bg_grey }),
+  sectionContainer: (theme) => ({
+    display: "flex",
+    justifyContent: "space-around",
+    alignItems: "center",
+    flexWrap: "wrap",
+    gap: 4,
+    bgcolor: colors.bg_grey,
+  }),
   img: (theme) => ({}),
   body: (theme) => ({}),
 
