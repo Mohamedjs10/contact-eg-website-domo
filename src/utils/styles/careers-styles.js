@@ -1,4 +1,4 @@
-import { colors } from "../../utils/const";
+import { colors } from "../const";
 
 export const styles = {
   container: (theme) => ({}),

@@ -1,10 +1,11 @@
-import { colors } from "../../utils/const";
+import { colors } from "../const";
 
 export const styles = {
   container: (theme) => ({
     display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
+    flexWrap: "wrap",
+    justifyContent: { xs: "center", lg: "space-between" },
+    gap: 0,
   }),
   img: (theme) => ({
     width: "80%",

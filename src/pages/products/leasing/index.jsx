@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import Image from "next/image";
-import { styles } from "./styles";
+import { styles } from "../../../utils/styles/products-leasing-styles";
 import { colors } from "../../../utils/const";
 import Link from "next/link";
 import { useRouter } from "next/router";

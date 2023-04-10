@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { styles } from "./pid-styles";
+import { styles } from "../../utils/styles/media-styles";
 import { Box, Typography } from "@mui/material";
 import { colors } from "../../utils/const";
 import Link from "next/link";
