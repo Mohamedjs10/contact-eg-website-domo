@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { styles } from "../../utils/styles/our-brands-styles";
+import { styles } from "./our-brands-styles";
 import { Box } from "@mui/material";
 import { colors } from "../../utils/const";
 import Link from "next/link";
