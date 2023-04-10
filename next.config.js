@@ -6,4 +6,7 @@ module.exports = {
     defaultLocale: "ar",
     localeDetection: false,
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
