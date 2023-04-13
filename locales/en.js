@@ -1412,5 +1412,6 @@ export default {
     subTitle: "See the nearest branch to you through the map",
     placeholderGovernate: "Governorate",
     placeholderBranch: "Branches within the governorate",
+    noOption: "There are no governorates",
   },
 };
