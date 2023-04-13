@@ -153,3 +153,56 @@ xl, extra-large: 1536px */
 .css-1pe7n21-MuiStepConnector-root {
   margin-left: 20px !important;
 }
+
+/* =========loading========= */
+
+.box-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  margin: auto;
+}
+
+.loader {
+  --loader-size: 40px;
+  --loader-border-size: 3px;
+  --loader-border-color: #f18222;
+  width: var(--loader-size);
+  height: var(--loader-size);
+  border: var(--loader-border-size) solid var(--loader-border-color);
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  background-color: transparent;
+  border-radius: 50%;
+  position: relative;
+  animation: rotateX 1s infinite linear;
+}
+
+.loader::before {
+  content: "";
+  border: var(--loader-border-size) solid var(--loader-border-color);
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  background-color: transparent;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  animation: rotateX 0.5s infinite linear reverse;
+}
+
+@keyframes rotateX {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}

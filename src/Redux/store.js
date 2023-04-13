@@ -31,16 +31,30 @@ const menuSlice = createSlice({
   },
 });
 
+const productsSlice = createSlice({
+  name: "products",
+  initialState: {
+    products: null,
+  },
+  reducers: {
+    updateProducts: (state, action) => {
+      state.products = action.payload;
+    },
+  },
+});
+
 const store = configureStore({
   reducer: {
     mainTab: mainTabSlice.reducer,
     secTab: secTabSlice.reducer,
     menu: menuSlice.reducer,
+    products: productsSlice.reducer,
   },
 });
 
 export const mainTabActions = mainTabSlice.actions;
 export const secTabActions = secTabSlice.actions;
 export const { updateMenu } = menuSlice.actions;
+export const { updateProducts } = productsSlice.actions;
 
 export default store;

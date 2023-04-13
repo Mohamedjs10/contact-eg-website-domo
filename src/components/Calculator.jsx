@@ -12,33 +12,85 @@ import { colors } from "../utils/const";
 import en from "../../locales/en";
 import ar from "../../locales/ar";
 import { useRouter } from "next/router";
+import { useSelector, useDispatch } from "react-redux";
+import { updateProducts } from "../Redux/store";
 
-export default function Calcuation() {
-  const [carPrice, setCarPrice] = useState("");
-  const [stepValue, setStepValue] = useState(5000);
+import { useEffect } from "react";
+
+export default function Calcuation({ productName = "Mortgage" }) {
+  const [productPrice, setProductPrice] = useState("");
+  const [downPayment, setDownPayment] = useState(0);
   const [duration, setDuration] = useState();
   const [plan, setPlan] = useState();
   const [value, setValue] = useState();
+  const [packages, setPackages] = useState();
+  const [loading, setLoading] = useState(false);
 
+  const { products } = useSelector((state) => state.products);
+
+  const dispatch = useDispatch();
   const router = useRouter();
+
   const { locale } = router;
   const t = locale === "en" ? en : ar;
 
-  const checkInputs = (carPrice, stepValue, duration, plan) => {
-    if (carPrice && stepValue && duration & plan) {
-      setValue(10000);
+  const productsURL = "https://api-mobile.contact.eg/products";
+
+  const getProductPackages = (id) => {
+    fetch(`${productsURL}/${id}/loan-calculator/packages?lang=${locale}`)
+      .then((res) => res.json())
+      .then((packages) => setPackages(packages));
+  };
+
+  useEffect(() => {
+    if (!products) {
+      fetch(`${productsURL}?lang=en`)
+        .then((res) => res.json())
+        .then((response) => {
+          dispatch(updateProducts(response));
+          const productID = response.find(
+            (product) => product.name == productName
+          ).id;
+          return productID;
+        })
+        .then((id) => {
+          getProductPackages(id);
+        });
+    } else {
+      const productID = products.find(
+        (product) => product.name == productName
+      ).id;
+      getProductPackages(productID);
+    }
+  }, []);
+
+  const checkInputs = (productPrice, duration, plan) => {
+    if (productPrice && duration && plan) {
+      setLoading(true);
+      fetch(
+        `${productsURL}/${productName}/loan-calculator?months=${
+          duration * 12
+        }&package=${plan}&price=${productPrice}&downPayment=${
+          downPayment ? downPayment : 0
+        }`
+      )
+        .then((res) => res.json())
+        .then((value) => {
+          setValue(value[0].amount);
+          setLoading(false);
+        });
     } else {
       setValue(null);
     }
   };
 
-  const handleCarPriceChange = (e) => {
+  const handleProductPriceChange = (e) => {
     const re = /^[0-9\b]+$/;
 
     // if value is not blank, then test the regex
     if (e.target.value === "" || re.test(e.target.value)) {
-      setCarPrice(e.target.value);
-      checkInputs(e.target.value, stepValue, duration, plan);
+      setProductPrice(e.target.value);
+      checkInputs(e.target.value, duration, plan);
     }
   };
 
@@ -46,19 +98,22 @@ export default function Calcuation() {
     return `${value}°C`;
   }
 
-  const handleStepChange = (e) => {
-    setStepValue(e.target.value);
-    checkInputs(carPrice, e.target.value, duration, plan);
+  const handleDownPaymentChange = (e) => {
+    setDownPayment(e.target.value);
+  };
+
+  const handleDownPaymentChangeValue = (e) => {
+    checkInputs(productPrice, duration, plan);
   };
 
   const handleDurationChange = (e) => {
     setDuration(e.target.value);
-    checkInputs(carPrice, stepValue, e.target.value, plan);
+    checkInputs(productPrice, e.target.value, plan);
   };
 
   const handlePlanChange = (e) => {
     setPlan(e.target.value);
-    checkInputs(carPrice, stepValue, duration, e.target.value);
+    checkInputs(productPrice, duration, e.target.value);
   };
   return (
     <Box
@@ -105,8 +160,8 @@ export default function Calcuation() {
               },
             },
           }}
-          value={carPrice}
-          onChange={handleCarPriceChange}
+          value={productPrice}
+          onChange={handleProductPriceChange}
           hiddenLabel
           id="car-price"
           size="small"
@@ -124,16 +179,17 @@ export default function Calcuation() {
             sx={{ color: colors.blue, fontWeight: "bold" }}
             gutterBottom
           >
-            {stepValue} {t.calc.egyptianPound}
+            {downPayment} {t.calc.egyptianPound}
           </Typography>
           <Slider
             valueLabelDisplay="auto"
-            value={stepValue}
-            onChange={handleStepChange}
+            value={downPayment}
+            onChange={handleDownPaymentChange}
+            onChangeCommitted={handleDownPaymentChangeValue}
             sx={{ color: colors.blue, mt: 1 }}
             min={0}
-            step={100}
-            max={2000000}
+            step={1000}
+            max={1000000}
             getAriaValueText={valuetext}
           />
         </Box>
@@ -174,6 +230,9 @@ export default function Calcuation() {
               <MenuItem value={1}>{t.calc.year1}</MenuItem>
               <MenuItem value={2}>{t.calc.year2}</MenuItem>
               <MenuItem value={3}>{t.calc.year3}</MenuItem>
+              <MenuItem value={4}>{t.calc.year4}</MenuItem>
+              <MenuItem value={5}>{t.calc.year5}</MenuItem>
+              <MenuItem value={6}>{t.calc.year6}</MenuItem>
             </Select>
           </Box>
           <Box
@@ -209,8 +268,12 @@ export default function Calcuation() {
               size="small"
               onChange={handlePlanChange}
             >
-              <MenuItem value={1}>{t.calc.plan1}</MenuItem>
-              <MenuItem value={2}>{t.calc.plan2}</MenuItem>
+              {packages &&
+                packages.map((item) => (
+                  <MenuItem key={item.packageId} value={item.packageId}>
+                    {item.title}
+                  </MenuItem>
+                ))}
             </Select>
           </Box>
         </Box>
@@ -231,15 +294,21 @@ export default function Calcuation() {
           >
             {t.calc.monthlyAmount}
           </Typography>
-          <Typography variant="h5" sx={{ color: colors.blue }} gutterBottom>
-            {value ? (
-              <>
-                {value} {t.calc.egyptianPound}
-              </>
-            ) : (
-              "----"
-            )}
-          </Typography>
+          {loading ? (
+            <div className="box-loading">
+              <span className="loader"></span>
+            </div>
+          ) : (
+            <Typography variant="h5" sx={{ color: colors.blue }} gutterBottom>
+              {value ? (
+                <>
+                  {value} {t.calc.egyptianPound}
+                </>
+              ) : (
+                "----"
+              )}
+            </Typography>
+          )}
         </Box>
       </Box>
       <Box
