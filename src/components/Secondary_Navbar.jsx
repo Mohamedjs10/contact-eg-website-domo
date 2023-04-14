@@ -12,13 +12,20 @@ import Button from "@mui/material/Button";
 import { useRouter } from "next/router";
 import en from "../../locales/en";
 import ar from "../../locales/ar";
-export default function Secondary_Navbar({ setIsOPen, setType }) {
+export default function Secondary_Navbar({
+  setIsOPenA,
+  setIsOPenB,
+  setType,
+  arrDirA,
+  arrDirB,
+  setArrDirA,
+  setArrDirB,
+}) {
   const secTab = useSelector((state) => state.secTab.secTab);
 
   const dispatch = useDispatch();
-
-  const [arrDirA, setArrDirA] = useState("down");
-  const [arrDirB, setArrDirB] = useState("down");
+  // const [arrDirA, setArrDirA] = useState("down");
+  // const [arrDirB, setArrDirB] = useState("down");
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : ar;
@@ -40,7 +47,11 @@ export default function Secondary_Navbar({ setIsOPen, setType }) {
           <Box
             onClick={() => {
               setArrDirA((prev) => (prev == "up" ? "down" : "up"));
-              setIsOPen((prev) => !prev);
+              setIsOPenA((prev) => !prev);
+              // reset the other
+              setArrDirB("down");
+              setIsOPenB(false);
+              // --------------
               setType("a");
               dispatch(secTabActions.update("B-sec"));
             }}
@@ -67,7 +78,11 @@ export default function Secondary_Navbar({ setIsOPen, setType }) {
           <Box
             onClick={() => {
               setArrDirB((prev) => (prev == "up" ? "down" : "up"));
-              setIsOPen((prev) => !prev);
+              setIsOPenB((prev) => !prev);
+              // reset the other
+              setArrDirA("down");
+              setIsOPenA(false);
+              // --------------
               setType("b");
               dispatch(secTabActions.update("B-sec"));
             }}

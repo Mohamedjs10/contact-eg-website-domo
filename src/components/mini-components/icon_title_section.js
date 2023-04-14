@@ -2,7 +2,7 @@ import { colors } from "../../utils/const";
 
 export const styles = {
   sectionContainer: (theme) => ({
-    bgcolor: colors.bg_grey,
+    bgcolor: colors.white,
     display: "flex",
     flexWrap: "wrap",
     gap: 5,

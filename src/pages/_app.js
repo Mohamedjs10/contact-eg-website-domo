@@ -27,7 +27,10 @@ import CardSlider from "@/components/CardSlider.jsx";
 const App = ({ Component, pageProps }) => {
   const router = useRouter();
   const { locale } = router;
-  const [isOpen, setIsOPen] = useState(false);
+  const [arrDirA, setArrDirA] = useState("down");
+  const [arrDirB, setArrDirB] = useState("down");
+  const [isOpenA, setIsOPenA] = useState(false);
+  const [isOpenB, setIsOPenB] = useState(false);
   const [type, setType] = useState("a");
   const [state, setState] = React.useState(false);
   const [leftOrRightValue, setLeftOrRightValue] = useState(-500);
@@ -37,9 +40,14 @@ const App = ({ Component, pageProps }) => {
       <Box dir={locale === "en" ? "ltr" : "rtl"} sx={{}}>
         {/* large screens ---------------------------------------------------------------------- */}
         <Navbar
+          arrDirA={arrDirA}
+          arrDirB={arrDirB}
+          setArrDirA={setArrDirA}
+          setArrDirB={setArrDirB}
           leftOrRightValue={leftOrRightValue}
           setLeftOrRightValue={setLeftOrRightValue}
-          setIsOPen={setIsOPen}
+          setIsOPenA={setIsOPenA}
+          setIsOPenB={setIsOPenB}
           state={state}
           setState={setState}
           setType={setType}
@@ -54,10 +62,16 @@ const App = ({ Component, pageProps }) => {
               setLeftOrRightValue={setLeftOrRightValue}
               // wrapperRef={wrapperRef}
             />
-            <HomeDropdown isOpen={isOpen} type={type} />
+            <HomeDropdown
+              isOpen={isOpenA || isOpenB}
+              setIsOPenA={setIsOPenA}
+              setIsOPenB={setIsOPenB}
+              setArrDirA={setArrDirA}
+              setArrDirB={setArrDirB}
+              type={type}
+            />
           </>
         )}
-        <CardSlider></CardSlider>
         <Component {...pageProps} />
         <Footer />
       </Box>

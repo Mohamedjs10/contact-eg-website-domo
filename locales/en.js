@@ -777,6 +777,7 @@ export default {
       A: [
         {
           id: "1",
+          url: "/products/cars",
           color: colors.blue,
           img: "/services/car.png",
           title: "Auto",
@@ -786,6 +787,7 @@ export default {
             "If you need to develop your agricultural investment, Contact believes that agriculture development is the main pillar for economic growth, food security, and a cornerstone for a bright future. Contact will finance your agriculture investments to achieve environmental sustainability.",
         },
         {
+          url: "/products/trucks",
           color: colors.dark_red,
           img: "/services/lorry.png",
           title: "Trucks",
@@ -795,6 +797,7 @@ export default {
             "If you need to develop your agricultural investment, Contact believes that agriculture development is the main pillar for economic growth, food security, and a cornerstone for a bright future. Contact will finance your agriculture investments to achieve environmental sustainability.",
         },
         {
+          url: "/products/trucks",
           color: colors.dark_violet,
           img: "/services/cart.png",
           title: "Consumer Finance",
@@ -804,6 +807,7 @@ export default {
             "If you need to develop your agricultural investment, Contact believes that agriculture development is the main pillar for economic growth, food security, and a cornerstone for a bright future. Contact will finance your agriculture investments to achieve environmental sustainability.",
         },
         {
+          url: "/products/education",
           color: colors.green,
           img: "/services/education.png",
           title: "Education",
@@ -813,6 +817,7 @@ export default {
             "If you need to develop your agricultural investment, Contact believes that agriculture development is the main pillar for economic growth, food security, and a cornerstone for a bright future. Contact will finance your agriculture investments to achieve environmental sustainability.",
         },
         {
+          url: "/products/clubs",
           color: colors.dark_petroli,
           img: "/services/clubs.png",
           title: "Clubs",
@@ -822,6 +827,7 @@ export default {
             "If you need to develop your agricultural investment, Contact believes that agriculture development is the main pillar for economic growth, food security, and a cornerstone for a bright future. Contact will finance your agriculture investments to achieve environmental sustainability.",
         },
         {
+          url: "/products/home-interior",
           color: colors.dark_brown,
           img: "/services/design.png",
           title: "Home Interior",
@@ -831,6 +837,8 @@ export default {
             "If you need to develop your agricultural investment, Contact believes that agriculture development is the main pillar for economic growth, food security, and a cornerstone for a bright future. Contact will finance your agriculture investments to achieve environmental sustainability.",
         },
         {
+          url: "/products/maintainance",
+
           color: colors.dark_brown,
           img: "/services/maintainance.png",
           title: "Maintainance",
@@ -842,6 +850,8 @@ export default {
       ],
       B: [
         {
+          url: "/products/events",
+
           color: colors.dark_green,
           img: "/services/ring.png",
           title: "Wedding & Events",
@@ -851,6 +861,8 @@ export default {
             "If you need to develop your agricultural investment, Contact believes that agriculture development is the main pillar for economic growth, food security, and a cornerstone for a bright future. Contact will finance your agriculture investments to achieve environmental sustainability.",
         },
         {
+          url: "/products/home",
+
           color: colors.dark_petroli,
           img: "/services/house.png",
           title: "Mortage",
@@ -860,6 +872,8 @@ export default {
             "If you need to develop your agricultural investment, Contact believes that agriculture development is the main pillar for economic growth, food security, and a cornerstone for a bright future. Contact will finance your agriculture investments to achieve environmental sustainability.",
         },
         {
+          url: "/products/insurance",
+
           color: colors.ratty,
           img: "/services/mediation.png",
           title: "Insurance Brokerage",
@@ -869,6 +883,8 @@ export default {
             "If you need to develop your agricultural investment, Contact believes that agriculture development is the main pillar for economic growth, food security, and a cornerstone for a bright future. Contact will finance your agriculture investments to achieve environmental sustainability.",
         },
         {
+          url: "/products/factoring",
+
           color: colors.dark_brown,
           img: "/services/discount.png",
           title: "Factoring",
@@ -878,6 +894,8 @@ export default {
             "If you need to develop your agricultural investment, Contact believes that agriculture development is the main pillar for economic growth, food security, and a cornerstone for a bright future. Contact will finance your agriculture investments to achieve environmental sustainability.",
         },
         {
+          url: "/products/leasing",
+
           color: colors.light_petroli,
           img: "/services/rent.png",
           title: "Leasing",
@@ -887,6 +905,8 @@ export default {
             "If you need to develop your agricultural investment, Contact believes that agriculture development is the main pillar for economic growth, food security, and a cornerstone for a bright future. Contact will finance your agriculture investments to achieve environmental sustainability.",
         },
         {
+          url: "/products/green-finance",
+
           color: colors.light_green,
           img: "/services/green-finance.png",
           title: "Green Finance",
@@ -896,6 +916,8 @@ export default {
             "If you need to develop your agricultural investment, Contact believes that agriculture development is the main pillar for economic growth, food security, and a cornerstone for a bright future. Contact will finance your agriculture investments to achieve environmental sustainability.",
         },
         {
+          url: "/products/green-finance",
+
           color: colors.light_green,
           img: "/services/green-finance.png",
           title: "Home Furniture",
@@ -907,6 +929,8 @@ export default {
       ],
       All: [
         {
+          url: "/products/cars",
+
           id: "1",
           color: colors.blue,
           img: "/services/car.png",
@@ -917,6 +941,8 @@ export default {
             "If you need to develop your agricultural investment, Contact believes that agriculture development is the main pillar for economic growth, food security, and a cornerstone for a bright future. Contact will finance your agriculture investments to achieve environmental sustainability.",
         },
         {
+          url: "/products/trucks",
+
           color: colors.dark_red,
           img: "/services/lorry.png",
           title: "Trucks",
@@ -926,6 +952,8 @@ export default {
             "If you need to develop your agricultural investment, Contact believes that agriculture development is the main pillar for economic growth, food security, and a cornerstone for a bright future. Contact will finance your agriculture investments to achieve environmental sustainability.",
         },
         {
+          url: "/products/shopping",
+
           color: colors.dark_violet,
           img: "/services/cart.png",
           title: "Consumer Finance",
@@ -935,6 +963,8 @@ export default {
             "If you need to develop your agricultural investment, Contact believes that agriculture development is the main pillar for economic growth, food security, and a cornerstone for a bright future. Contact will finance your agriculture investments to achieve environmental sustainability.",
         },
         {
+          url: "/products/education",
+
           color: colors.green,
           img: "/services/education.png",
           title: "Education",
@@ -944,6 +974,8 @@ export default {
             "If you need to develop your agricultural investment, Contact believes that agriculture development is the main pillar for economic growth, food security, and a cornerstone for a bright future. Contact will finance your agriculture investments to achieve environmental sustainability.",
         },
         {
+          url: "/products/clubs",
+
           color: colors.dark_petroli,
           img: "/services/clubs.png",
           title: "Clubs",
@@ -953,6 +985,8 @@ export default {
             "If you need to develop your agricultural investment, Contact believes that agriculture development is the main pillar for economic growth, food security, and a cornerstone for a bright future. Contact will finance your agriculture investments to achieve environmental sustainability.",
         },
         {
+          url: "/products/home-interior",
+
           color: colors.dark_brown,
           img: "/services/design.png",
           title: "Home Interior",
@@ -962,6 +996,8 @@ export default {
             "If you need to develop your agricultural investment, Contact believes that agriculture development is the main pillar for economic growth, food security, and a cornerstone for a bright future. Contact will finance your agriculture investments to achieve environmental sustainability.",
         },
         {
+          url: "/products/maintainance",
+
           color: colors.dark_brown,
           img: "/services/maintainance.png",
           title: "Maintainance",
@@ -971,6 +1007,8 @@ export default {
             "If you need to develop your agricultural investment, Contact believes that agriculture development is the main pillar for economic growth, food security, and a cornerstone for a bright future. Contact will finance your agriculture investments to achieve environmental sustainability.",
         },
         {
+          url: "/products/events",
+
           color: colors.dark_green,
           img: "/services/ring.png",
           title: "Wedding & Events",
@@ -980,6 +1018,8 @@ export default {
             "If you need to develop your agricultural investment, Contact believes that agriculture development is the main pillar for economic growth, food security, and a cornerstone for a bright future. Contact will finance your agriculture investments to achieve environmental sustainability.",
         },
         {
+          url: "/products/home",
+
           color: colors.dark_petroli,
           img: "/services/house.png",
           title: "Mortage",
@@ -989,6 +1029,8 @@ export default {
             "If you need to develop your agricultural investment, Contact believes that agriculture development is the main pillar for economic growth, food security, and a cornerstone for a bright future. Contact will finance your agriculture investments to achieve environmental sustainability.",
         },
         {
+          url: "/products/insurance",
+
           color: colors.ratty,
           img: "/services/mediation.png",
           title: "Insurance Brokerage",
@@ -998,6 +1040,8 @@ export default {
             "If you need to develop your agricultural investment, Contact believes that agriculture development is the main pillar for economic growth, food security, and a cornerstone for a bright future. Contact will finance your agriculture investments to achieve environmental sustainability.",
         },
         {
+          url: "/products/factoring",
+
           color: colors.dark_brown,
           img: "/services/discount.png",
           title: "Factoring",
@@ -1007,6 +1051,8 @@ export default {
             "If you need to develop your agricultural investment, Contact believes that agriculture development is the main pillar for economic growth, food security, and a cornerstone for a bright future. Contact will finance your agriculture investments to achieve environmental sustainability.",
         },
         {
+          url: "/products/leasing",
+
           color: colors.light_petroli,
           img: "/services/rent.png",
           title: "Leasing",
@@ -1016,6 +1062,8 @@ export default {
             "If you need to develop your agricultural investment, Contact believes that agriculture development is the main pillar for economic growth, food security, and a cornerstone for a bright future. Contact will finance your agriculture investments to achieve environmental sustainability.",
         },
         {
+          url: "/products/green-finance",
+
           color: colors.light_green,
           img: "/services/green-finance.png",
           title: "Green Finance",
@@ -1025,6 +1073,8 @@ export default {
             "If you need to develop your agricultural investment, Contact believes that agriculture development is the main pillar for economic growth, food security, and a cornerstone for a bright future. Contact will finance your agriculture investments to achieve environmental sustainability.",
         },
         {
+          url: "/products/green-finance",
+
           color: colors.light_green,
           img: "/services/green-finance.png",
           title: "Home Furniture",
@@ -1036,6 +1086,8 @@ export default {
       ],
       C: [
         {
+          url: "/products/leasing",
+
           color: colors.blue,
           img: "/services/homes.png",
           title: "Contact Homes",
@@ -1046,6 +1098,8 @@ export default {
       ],
       D: [
         {
+          url: "/products/leasing",
+
           color: colors.blue,
           img: "/services/clients.png",
           title: "Client Filtering",
@@ -1090,7 +1144,6 @@ export default {
       description: `Contact make your life easier anytime you want to buy anything via financial solutions without any troubles. Contact make your life easier anytime you want to buy anything via financial solutions without any troubles`,
     },
   },
-
   products_finishing: {
     cover: {
       img: "/pages/finishing-cover.png",
@@ -1175,6 +1228,57 @@ export default {
       description: `Contact is the market leader in auto financing, with a network of over 1,000 showrooms across the country and offering different finance solutions for both new and used cars.
       `,
     },
+    plans_title: "Installments Plans",
+    plans: [
+      {
+        title: "flexible",
+        bodyList: [
+          "20% down payment",
+          "Auto Insurance Required",
+          "Up to 5 years installments plans",
+        ],
+      },
+      {
+        title: "flexible",
+        bodyList: [
+          "20% down payment",
+          "Auto Insurance Required",
+          "Up to 5 years installments plans",
+        ],
+      },
+      {
+        title: "flexible",
+        bodyList: [
+          "20% down payment",
+          "Auto Insurance Required",
+          "Up to 5 years installments plans",
+        ],
+      },
+      {
+        title: "flexible",
+        bodyList: [
+          "20% down payment",
+          "Auto Insurance Required",
+          "Up to 5 years installments plans",
+        ],
+      },
+      {
+        title: "flexible",
+        bodyList: [
+          "20% down payment",
+          "Auto Insurance Required",
+          "Up to 5 years installments plans",
+        ],
+      },
+      {
+        title: "flexible",
+        bodyList: [
+          "20% down payment",
+          "Auto Insurance Required",
+          "Up to 5 years installments plans",
+        ],
+      },
+    ],
   },
   products_education: {
     cover: {

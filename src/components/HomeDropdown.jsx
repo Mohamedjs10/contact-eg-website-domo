@@ -12,7 +12,14 @@ import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import { useRouter } from "next/router";
 import en from "../../locales/en";
 import ar from "../../locales/ar";
-export default function HomeDropdown({ isOpen, type }) {
+export default function HomeDropdown({
+  setIsOPenA,
+  setIsOPenB,
+  isOpen,
+  type,
+  setArrDirA,
+  setArrDirB,
+}) {
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : ar;
@@ -39,26 +46,36 @@ export default function HomeDropdown({ isOpen, type }) {
           <>
             <Box sx={{ overflow: "auto", height: "600px" }}>
               {t.home_page.services.A.map(
-                ({ color, title, description, img }, index) => (
+                ({ color, title, description, img, url }, index) => (
                   <Service
+                    url={url}
                     key={index}
                     color={color}
                     title={title}
                     description={description}
                     img={img}
+                    setIsOPenA={setIsOPenA}
+                    setIsOPenB={setIsOPenB}
+                    setArrDirA={setArrDirA}
+                    setArrDirB={setArrDirB}
                   />
                 )
               )}
             </Box>
             <Box sx={{ overflow: "auto", height: "600px" }}>
               {t.home_page.services.B.map(
-                ({ color, title, description, img }, index) => (
+                ({ color, title, description, img, url }, index) => (
                   <Service
+                    url={url}
                     key={index}
                     color={color}
                     title={title}
                     description={description}
                     img={img}
+                    setIsOPenA={setIsOPenA}
+                    setIsOPenB={setIsOPenB}
+                    setArrDirA={setArrDirA}
+                    setArrDirB={setArrDirB}
                   />
                 )
               )}
@@ -68,26 +85,36 @@ export default function HomeDropdown({ isOpen, type }) {
           <>
             <Box sx={{ overflow: "auto", height: "600px" }}>
               {t.home_page.services.C.map(
-                ({ color, title, description, img }, index) => (
+                ({ color, title, description, img, url }, index) => (
                   <Service
+                    url={url}
                     key={index}
                     color={color}
                     title={title}
                     description={description}
                     img={img}
+                    setIsOPenA={setIsOPenA}
+                    setIsOPenB={setIsOPenB}
+                    setArrDirA={setArrDirA}
+                    setArrDirB={setArrDirB}
                   />
                 )
               )}
             </Box>
             <Box sx={{ overflow: "auto", height: "600px" }}>
               {t.home_page.services.D.map(
-                ({ color, title, description, img }, index) => (
+                ({ color, title, description, img, url }, index) => (
                   <Service
+                    url={url}
                     key={index}
                     color={color}
                     title={title}
                     description={description}
                     img={img}
+                    setIsOPenA={setIsOPenA}
+                    setIsOPenB={setIsOPenB}
+                    setArrDirA={setArrDirA}
+                    setArrDirB={setArrDirB}
                   />
                 )
               )}
@@ -106,8 +133,9 @@ export default function HomeDropdown({ isOpen, type }) {
           >
             {t.home_page.news_title}
           </Box>
-          {t.home_page.news.map(({ title, description, img }, index) => (
+          {t.home_page.news.map(({ title, description, img, url }, index) => (
             <NewsCard
+              url={url}
               key={index}
               title={title}
               description={description}

@@ -314,7 +314,8 @@ export default function Secondary_Navbar({ setIsOPen }) {
         >
           <Box
             component="a"
-            href="/"
+            href="https://www.linkedin.com/company/contact-eg/"
+            target="_blank"
             sx={{
               transition: ".5s",
               "&:hover": {
@@ -326,7 +327,8 @@ export default function Secondary_Navbar({ setIsOPen }) {
           </Box>
           <Box
             component="a"
-            href="/"
+            href="https://twitter.com/home"
+            target="_blank"
             sx={{
               transition: ".5s",
               "&:hover": {
@@ -338,7 +340,8 @@ export default function Secondary_Navbar({ setIsOPen }) {
           </Box>
           <Box
             component="a"
-            href="/"
+            href="https://m.youtube.com/channel/UCJKMN9HwnY2V9aWtqG-OhKQ"
+            target="_blank"
             sx={{
               transition: ".5s",
               "&:hover": {
@@ -350,7 +353,8 @@ export default function Secondary_Navbar({ setIsOPen }) {
           </Box>
           <Box
             component="a"
-            href="/"
+            href="https://www.instagram.com/contact.eg/"
+            target="_blank"
             sx={{
               transition: ".5s",
               "&:hover": {
@@ -362,7 +366,8 @@ export default function Secondary_Navbar({ setIsOPen }) {
           </Box>
           <Box
             component="a"
-            href="/"
+            href="https://www.facebook.com/ContactEg"
+            target="_blank"
             sx={{
               transition: ".5s",
               "&:hover": {

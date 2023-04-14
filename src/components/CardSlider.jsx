@@ -25,12 +25,14 @@ export default function BottomCard({}) {
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : ar;
-  const arr = ["", "", "", "", "", "", "", "", "", ""];
-
+  // const arr = ["", "", "", "", "", "", "", "", "", ""];
+  const arr = t.products_cars.plans;
+  const title = t.products_cars.plans_title;
   return (
     <Box
+      className="vertical-safe-padding"
       sx={{
-        py: 30,
+        // py: 5,
         "& .swiper-slide-active": {
           transition: ".5s",
           scale: { xs: "1", md: "1.2" },
@@ -41,6 +43,18 @@ export default function BottomCard({}) {
         },
       }}
     >
+      <Box
+        sx={{
+          pb: 5,
+          textAlign: "center",
+          color: "#1064A0",
+          fontWeight: "bold",
+          fontSize: "35px",
+        }}
+      >
+        {title}
+      </Box>
+
       <Swiper
         centeredSlides={true}
         autoplay={{
@@ -70,12 +84,8 @@ export default function BottomCard({}) {
             <Card
               state={state}
               index={index}
-              title={"النقل الجديد النظام العادي"}
-              bodyList={[
-                "٪٢٠ نم أدبي مدقم",
-                "التأمين أجباري",
-                "فترات سداد تصل الي 3 سنوات",
-              ]}
+              title={item.title}
+              bodyList={item.bodyList}
               color="#1169A8"
             ></Card>
           </SwiperSlide>

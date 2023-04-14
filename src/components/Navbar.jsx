@@ -16,10 +16,15 @@ import { useSelector, useDispatch } from "react-redux";
 export default function Navbar({
   leftOrRightValue,
   setLeftOrRightValue,
-  setIsOPen,
+  setIsOPenA,
+  setIsOPenB,
   state,
   setState,
   setType,
+  arrDirA,
+  arrDirB,
+  setArrDirA,
+  setArrDirB,
 }) {
   const matches = useMediaQuery("(max-width:900px)");
   const router = useRouter();
@@ -45,8 +50,13 @@ export default function Navbar({
             leftOrRightValue={leftOrRightValue}
           ></Main_Navbar>
           <Secondary_Navbar
-            setIsOPen={setIsOPen}
+            setIsOPenA={setIsOPenA}
+            setIsOPenB={setIsOPenB}
             setType={setType}
+            arrDirA={arrDirA}
+            arrDirB={arrDirB}
+            setArrDirA={setArrDirA}
+            setArrDirB={setArrDirB}
           ></Secondary_Navbar>
         </>
       )}
