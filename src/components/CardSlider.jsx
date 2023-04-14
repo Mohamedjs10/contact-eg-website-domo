@@ -36,10 +36,11 @@ export default function BottomCard({}) {
         "& .swiper-slide-active": {
           transition: ".5s",
           scale: { xs: "1", md: "1.2" },
-          overflow: "visible",
+          // overflow: "visible",
         },
         "& .swiper": {
-          overflow: { xs: "hidden", md: "visible" },
+          overflowX: "hidden",
+          py: "20px",
         },
       }}
     >
