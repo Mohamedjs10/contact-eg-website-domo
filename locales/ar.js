@@ -659,6 +659,8 @@ export default {
       A: [
         {
           id: "1",
+          url: "/products/cars",
+
           color: colors.blue,
           img: "/services/car.png",
           title: "تمويل السيارات",
@@ -666,6 +668,8 @@ export default {
             "لو عايز تشتري عربية جديدة أو مستعملة، كونتكت بتوفرلك حلول تمويلية متميزة لجميع الماركات ",
         },
         {
+          url: "/products/trucks",
+
           color: colors.dark_red,
           img: "/services/lorry.png",
           title: "تمويل النقل",
@@ -673,12 +677,16 @@ export default {
             "سواء محتاج نقل تقيل أو خفيف كونتكت هتقسطلك جميع أنواع الشاحنات الجديدة والمستعملة والاستيراد",
         },
         {
+          url: "/products/shopping",
+
           color: colors.dark_violet,
           img: "/services/cart.png",
           title: "تمويل تسوق",
           description: "لو نفسك تشتري في أي وقت براحتك، كونتكت هتسهل حياتك",
         },
         {
+          url: "/products/education",
+
           color: colors.green,
           img: "/services/education.png",
           title: "تمويل التعليم",
@@ -686,6 +694,8 @@ export default {
             "نفسك في مستقبل أفضل ليك ولأولادك، كونتكت هتساعدك وهتكون معاك طول مشوار التعليم",
         },
         {
+          url: "/products/clubs",
+
           color: colors.dark_petroli,
           img: "/services/clubs.png",
           title: "تمويل إشتراكات الاندية",
@@ -693,6 +703,8 @@ export default {
             "نفسك تُنمى مهارات أولادك وتساعدهم يمارسوا الرياضة اللي بيحبوها، كونتكت هتقسطلك اشتراك ",
         },
         {
+          url: "/products/home",
+
           color: colors.dark_brown,
           img: "/services/design.png",
           title: "تمويل تصميم و تشطيب",
@@ -700,6 +712,8 @@ export default {
             "لو عايز تصمم وتشطب بيتك على مزاجك من خلال أفضل شركات التصميم الداخلي والديكور في مصر، ",
         },
         {
+          url: "/products/maintainance",
+
           color: colors.dark_brown,
           img: "/services/maintainance.png",
           title: "تمويل الصيانة",
@@ -709,6 +723,8 @@ export default {
       ],
       B: [
         {
+          url: "/products/events",
+
           color: colors.dark_green,
           img: "/services/ring.png",
           title: "تمويل أفراح و مناسبات",
@@ -716,6 +732,8 @@ export default {
             "افرح وريح بالك، كونتكت حلتهالك وهتغطي تكاليف فرحك بأكبر قيمة تمويل وبتقسيط سهل ومريح",
         },
         {
+          url: "/products/home",
+
           color: colors.dark_petroli,
           img: "/services/house.png",
           title: "تمويل عقاري",
@@ -723,6 +741,8 @@ export default {
             'احصل على تمويل بيت أحلامك بأسهل وأسرع الإجراءات من خلال نظام "تمويل بيتك"',
         },
         {
+          url: "/products/insurance",
+
           color: colors.ratty,
           img: "/services/mediation.png",
           title: "وساطة تأمينية",
@@ -730,6 +750,8 @@ export default {
             "محتاج مكان واحد تقدر تأمن فيه على عيلتك، بيتك، عربيتك، مشروعك أو شركتك",
         },
         {
+          url: "/products/factoring",
+
           color: colors.dark_brown,
           img: "/services/discount.png",
           title: "تخصيم",
@@ -737,6 +759,8 @@ export default {
             "لو محتاج سيولة نقدية، كونتكت هتدعمك وهتضمنلك تعزيز رأس المال الخاص بشركتك ",
         },
         {
+          url: "/products/leasing",
+
           color: colors.light_petroli,
           img: "/services/rent.png",
           title: "تأجير تمويلي",
@@ -744,6 +768,8 @@ export default {
             "لو عايز تجهز عيادتك الطبية أو تطور أسطول النقل الخاص بشركتك",
         },
         {
+          url: "/products/green-finance",
+
           color: colors.light_green,
           img: "/services/green-finance.png",
           title: "التمويل الاخضر",
@@ -751,6 +777,8 @@ export default {
             "لو محتاج تُنمي استثمارك الزراعي، كونتكت بتقدملك التمويل اللازم اللي هيساعدك في تحقيق التنمية ",
         },
         {
+          url: "/products/green-finance",
+
           color: colors.light_green,
           img: "/services/green-finance.png",
           title: "تمويل فرش البيت",
@@ -760,6 +788,8 @@ export default {
       ],
       All: [
         {
+          url: "/products/cars",
+
           id: "1",
           color: colors.blue,
           img: "/services/car.png",
@@ -768,6 +798,8 @@ export default {
             "لو عايز تشتري عربية جديدة أو مستعملة، كونتكت بتوفرلك حلول تمويلية متميزة لجميع الماركات ",
         },
         {
+          url: "/products/trucks",
+
           color: colors.dark_red,
           img: "/services/lorry.png",
           title: "تمويل النقل",
@@ -775,12 +807,16 @@ export default {
             "سواء محتاج نقل تقيل أو خفيف كونتكت هتقسطلك جميع أنواع الشاحنات الجديدة والمستعملة والاستيراد",
         },
         {
+          url: "/products/shopping",
+
           color: colors.dark_violet,
           img: "/services/cart.png",
           title: "تمويل تسوق",
           description: "لو نفسك تشتري في أي وقت براحتك، كونتكت هتسهل حياتك",
         },
         {
+          url: "/products/education",
+
           color: colors.green,
           img: "/services/education.png",
           title: "تمويل التعليم",
@@ -788,6 +824,8 @@ export default {
             "نفسك في مستقبل أفضل ليك ولأولادك، كونتكت هتساعدك وهتكون معاك طول مشوار التعليم",
         },
         {
+          url: "/products/clubs",
+
           color: colors.dark_petroli,
           img: "/services/clubs.png",
           title: "تمويل إشتراكات الاندية",
@@ -795,6 +833,8 @@ export default {
             "نفسك تُنمى مهارات أولادك وتساعدهم يمارسوا الرياضة اللي بيحبوها، كونتكت هتقسطلك اشتراك ",
         },
         {
+          url: "/products/home",
+
           color: colors.dark_brown,
           img: "/services/design.png",
           title: "تمويل تصميم و تشطيب",
@@ -802,6 +842,8 @@ export default {
             "لو عايز تصمم وتشطب بيتك على مزاجك من خلال أفضل شركات التصميم الداخلي والديكور في مصر، ",
         },
         {
+          url: "/products/maintainance",
+
           color: colors.dark_brown,
           img: "/services/maintainance.png",
           title: "تمويل الصيانة",
@@ -809,6 +851,8 @@ export default {
             "لو بيتك، عربيتك أو ممتلكاتك محتاجة صيانة، كونتكت سهلتها عليك وهتقسطها على فترات سداد مريحة.",
         },
         {
+          url: "/products/events",
+
           color: colors.dark_green,
           img: "/services/ring.png",
           title: "تمويل أفراح و مناسبات",
@@ -816,6 +860,8 @@ export default {
             "افرح وريح بالك، كونتكت حلتهالك وهتغطي تكاليف فرحك بأكبر قيمة تمويل وبتقسيط سهل ومريح",
         },
         {
+          url: "/products/home",
+
           color: colors.dark_petroli,
           img: "/services/house.png",
           title: "تمويل عقاري",
@@ -823,6 +869,8 @@ export default {
             'احصل على تمويل بيت أحلامك بأسهل وأسرع الإجراءات من خلال نظام "تمويل بيتك"',
         },
         {
+          url: "/products/insurance",
+
           color: colors.ratty,
           img: "/services/mediation.png",
           title: "وساطة تأمينية",
@@ -830,6 +878,8 @@ export default {
             "محتاج مكان واحد تقدر تأمن فيه على عيلتك، بيتك، عربيتك، مشروعك أو شركتك",
         },
         {
+          url: "/products/factoring",
+
           color: colors.dark_brown,
           img: "/services/discount.png",
           title: "تخصيم",
@@ -837,6 +887,8 @@ export default {
             "لو محتاج سيولة نقدية، كونتكت هتدعمك وهتضمنلك تعزيز رأس المال الخاص بشركتك ",
         },
         {
+          url: "/products/leasing",
+
           color: colors.light_petroli,
           img: "/services/rent.png",
           title: "تأجير تمويلي",
@@ -844,6 +896,8 @@ export default {
             "لو عايز تجهز عيادتك الطبية أو تطور أسطول النقل الخاص بشركتك",
         },
         {
+          url: "/products/green-finance",
+
           color: colors.light_green,
           img: "/services/green-finance.png",
           title: "التمويل الاخضر",
@@ -851,6 +905,8 @@ export default {
             "لو محتاج تُنمي استثمارك الزراعي، كونتكت بتقدملك التمويل اللازم اللي هيساعدك في تحقيق التنمية ",
         },
         {
+          url: "/products/green-finance",
+
           color: colors.light_green,
           img: "/services/green-finance.png",
           title: "تمويل فرش البيت",
@@ -860,6 +916,8 @@ export default {
       ],
       C: [
         {
+          url: "/products/leasing",
+
           color: colors.blue,
           img: "/services/homes.png",
           title: "كونتكت هومز",
@@ -871,6 +929,8 @@ export default {
       ],
       D: [
         {
+          url: "/products/leasing",
+
           color: colors.blue,
           img: "/services/clients.png",
           title: "برنامج ترشيح العملاء",
@@ -1101,6 +1161,57 @@ export default {
       title2: "فرحة عربيتك الجديدة مستنياك",
       description: `لو عايز تشتري عربية جديدة أو مستعملة، كونتكت بتوفرلك حلول تمويلية متميزة لجميع الماركات والموديلات بمرونة في الإجراءات وأنظمة تقسيط متعددة تناسب جميع احتياجاتك`,
     },
+    plans_title: "خطط التقسيط",
+    plans: [
+      {
+        title: "النقل الجديد النظام العادي",
+        bodyList: [
+          "٪٢٠ نم أدبي مدقم",
+          "التأمين أجباري",
+          "فترات سداد تصل الي 3 سنوات",
+        ],
+      },
+      {
+        title: "النقل الجديد النظام العادي",
+        bodyList: [
+          "٪٢٠ نم أدبي مدقم",
+          "التأمين أجباري",
+          "فترات سداد تصل الي 3 سنوات",
+        ],
+      },
+      {
+        title: "النقل الجديد النظام العادي",
+        bodyList: [
+          "٪٢٠ نم أدبي مدقم",
+          "التأمين أجباري",
+          "فترات سداد تصل الي 3 سنوات",
+        ],
+      },
+      {
+        title: "النقل الجديد النظام العادي",
+        bodyList: [
+          "٪٢٠ نم أدبي مدقم",
+          "التأمين أجباري",
+          "فترات سداد تصل الي 3 سنوات",
+        ],
+      },
+      {
+        title: "النقل الجديد النظام العادي",
+        bodyList: [
+          "٪٢٠ نم أدبي مدقم",
+          "التأمين أجباري",
+          "فترات سداد تصل الي 3 سنوات",
+        ],
+      },
+      {
+        title: "النقل الجديد النظام العادي",
+        bodyList: [
+          "٪٢٠ نم أدبي مدقم",
+          "التأمين أجباري",
+          "فترات سداد تصل الي 3 سنوات",
+        ],
+      },
+    ],
   },
   products_education: {
     cover: {

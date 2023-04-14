@@ -7,13 +7,38 @@ import { styles } from "./service";
 import { useRouter } from "next/router";
 import en from "../../locales/en";
 import ar from "../../locales/ar";
-export default function Service({ img, title, description, color }) {
+export default function Service({
+  img,
+  title,
+  description,
+  color,
+  setIsOPenA,
+  setIsOPenB,
+  setArrDirA,
+  setArrDirB,
+  url,
+  // for side drawer toggle (close after click service)
+  setState,
+}) {
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : ar;
   return (
     <Box>
       <Box
+        onClick={() => {
+          if (setIsOPenA) {
+            setIsOPenA(false);
+            setIsOPenB(false);
+            setArrDirA("down");
+            setArrDirB("down");
+          }
+          if (setState) {
+            setState((prev) => !prev);
+          }
+        }}
+        component={Link}
+        href={url}
         sx={{
           fontSize: "11px",
           maxWidth: { xs: "90px", md: "170px", lg: "380px" },
@@ -31,13 +56,15 @@ export default function Service({ img, title, description, color }) {
           pr: locale === "en" ? 3 : 2,
           pl: locale === "en" ? 2 : 3,
           transition: "1s",
+          textDecoration: "none",
+
           "&:hover": {
             pr: 2,
             pl: 3,
             pr: locale === "en" ? 2 : 3,
             pl: locale === "en" ? 3 : 2,
             bgcolor: colors.light_grey,
-            cursor: "pointer",
+            textDecoration: "none",
           },
         }}
       >

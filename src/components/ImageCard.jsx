@@ -22,10 +22,11 @@ export default function ImageCard({ img, title1, title2 }) {
         height: "154px",
         color: colors.white,
         background: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url(${img})`,
-        backgroundSize: "cover",
+        backgroundSize: "282px 154px",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
         borderRadius: 5,
         textAlign: t.textAlign,
-        // lineHeight: "1",
         display: "flex",
 
         flexDirection: "column",
@@ -34,7 +35,8 @@ export default function ImageCard({ img, title1, title2 }) {
         textDecoration: "none",
 
         "&:hover": {
-          transform: "scale(1.1)",
+          backgroundSize: "310px 180px",
+
           color: colors.white,
         },
       }}

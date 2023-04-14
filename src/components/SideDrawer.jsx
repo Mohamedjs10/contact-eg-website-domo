@@ -65,13 +65,16 @@ export default function SideDrawer({ state, setState }) {
             <Collapse in={open1} timeout="auto" unmountOnExit>
               <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1, m: "7px" }}>
                 {t.home_page.services.All.map(
-                  ({ color, title, description, img }, index) => (
+                  ({ color, title, description, img, url }, index) => (
                     <Service
+                      url={url}
                       key={index}
                       color={color}
                       title={title}
                       description={description}
                       img={img}
+                      // for side drawer toggle (close after click service)
+                      setState={setState}
                     />
                   )
                 )}
@@ -92,13 +95,16 @@ export default function SideDrawer({ state, setState }) {
             <Collapse in={open2} timeout="auto" unmountOnExit>
               <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1, m: "7px" }}>
                 {t.home_page.services.C.map(
-                  ({ color, title, description, img }, index) => (
+                  ({ color, title, description, img, url }, index) => (
                     <Service
+                      url={url}
                       key={index}
                       color={color}
                       title={title}
                       description={description}
                       img={img}
+                      // for side drawer toggle (close after click service)
+                      setState={setState}
                     />
                   )
                 )}
