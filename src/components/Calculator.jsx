@@ -17,7 +17,7 @@ import { updateProducts } from "../Redux/store";
 
 import { useEffect } from "react";
 
-export default function Calcuation({ productName = "Mortgage" }) {
+export default function Calcuation({ productName = "Mortgage", productLabel }) {
   const [productPrice, setProductPrice] = useState("");
   const [downPayment, setDownPayment] = useState(0);
   const [duration, setDuration] = useState();
@@ -33,6 +33,12 @@ export default function Calcuation({ productName = "Mortgage" }) {
 
   const { locale } = router;
   const t = locale === "en" ? en : ar;
+
+  productLabel = productLabel
+    ? productLabel
+    : locale === "en"
+    ? "Product"
+    : "المنتج";
 
   const productsURL = "https://api-mobile.contact.eg/products";
 
@@ -142,7 +148,7 @@ export default function Calcuation({ productName = "Mortgage" }) {
           htmlFor="car-price"
           sx={{ fontSize: 16, color: colors.blue, mb: 1, fontWeight: "800" }}
         >
-          {t.calc.priceCar}
+          {t.calc.priceCar} {productLabel}
         </InputLabel>
         <TextField
           sx={{

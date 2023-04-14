@@ -5,7 +5,7 @@ export default {
   textAlign: "right",
   calc: {
     monthlyAmount: " قيمة القسط الشهري",
-    priceCar: "سعر السيارة",
+    priceCar: "سعر ",
     preAmount: "المقدم",
     plan: "الخطة",
     plan: "الخطة",
@@ -984,7 +984,7 @@ export default {
   },
   calc: {
     monthlyAmount: " قيمة القسط الشهري",
-    priceCar: "سعر السيارة",
+    priceCar: "سعر ",
     preAmount: "المقدم",
     plan: "الخطة",
     plan: "الخطة",

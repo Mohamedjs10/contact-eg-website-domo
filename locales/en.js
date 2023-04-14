@@ -67,7 +67,7 @@ export default {
   },
   calc: {
     monthlyAmount: "The monthly amount",
-    priceCar: "Price Car",
+    priceCar: "Price ",
     preAmount: "Pre-amount",
     plan: "Plan",
     egyptianPound: "EGP",
