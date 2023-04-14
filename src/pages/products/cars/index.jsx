@@ -48,7 +48,7 @@ export default function Index() {
       {/* =============================================================== */}
       <CardSlider></CardSlider>
       {/* =============================================================== */}
-      <Calculator />
+      <Calculator productName="Auto" productLabel="Car" />
     </Box>
   );
 }

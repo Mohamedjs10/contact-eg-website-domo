@@ -17,7 +17,7 @@ import { updateProducts } from "../Redux/store";
 
 import { useEffect } from "react";
 
-export default function Calcuation({ productName = "Mortgage", productLabel }) {
+export default function Calcuation({ productName = "Auto", productLabel }) {
   const [productPrice, setProductPrice] = useState("");
   const [downPayment, setDownPayment] = useState(0);
   const [duration, setDuration] = useState();
