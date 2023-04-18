@@ -17,72 +17,39 @@ import { updateProducts } from "../Redux/store";
 
 import { useEffect } from "react";
 
-export default function Calcuation({ productName = "Auto", productLabel }) {
+export default function Calcuation({ products_packages }) {
   const [productPrice, setProductPrice] = useState("");
   const [downPayment, setDownPayment] = useState(0);
   const [duration, setDuration] = useState();
-  const [plan, setPlan] = useState();
+  const [plan, setPlan] = useState(114);
   const [value, setValue] = useState();
-  const [packages, setPackages] = useState();
   const [loading, setLoading] = useState(false);
 
-  const { products } = useSelector((state) => state.products);
-
-  const dispatch = useDispatch();
   const router = useRouter();
 
   const { locale } = router;
   const t = locale === "en" ? en : ar;
 
-  productLabel = productLabel
-    ? productLabel
-    : locale === "en"
-    ? "Product"
-    : "المنتج";
-
-  const productsURL = "https://api-mobile.contact.eg/products";
-
-  const getProductPackages = (id) => {
-    fetch(`${productsURL}/${id}/loan-calculator/packages?lang=${locale}`)
-      .then((res) => res.json())
-      .then((packages) => setPackages(packages));
-  };
-
-  useEffect(() => {
-    if (!products) {
-      fetch(`${productsURL}?lang=en`)
-        .then((res) => res.json())
-        .then((response) => {
-          dispatch(updateProducts(response));
-          const productID = response.find(
-            (product) => product.name == productName
-          ).id;
-          return productID;
-        })
-        .then((id) => {
-          getProductPackages(id);
-        });
-    } else {
-      const productID = products.find(
-        (product) => product.name == productName
-      ).id;
-      getProductPackages(productID);
-    }
-  }, []);
+  const url = "https://api-mobile.contact.eg/products/general-loan-calculator";
 
   const checkInputs = (productPrice, duration, plan) => {
     if (productPrice && duration && plan) {
       setLoading(true);
-      fetch(
-        `${productsURL}/${productName}/loan-calculator?months=${
-          duration * 12
-        }&package=${plan}&price=${productPrice}&downPayment=${
-          downPayment ? downPayment : 0
-        }`
-      )
+      fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          amount: +productPrice,
+          downPayment: downPayment ? downPayment : 0,
+          packageId: plan,
+          tenors: duration * 12,
+        }),
+      })
         .then((res) => res.json())
         .then((value) => {
-          setValue(value[0].amount);
+          setValue(value?.amount);
           setLoading(false);
         });
     } else {
@@ -148,7 +115,7 @@ export default function Calcuation({ productName = "Auto", productLabel }) {
           htmlFor="car-price"
           sx={{ fontSize: 16, color: colors.blue, mb: 1, fontWeight: "800" }}
         >
-          {t.calc.priceCar} {productLabel}
+          {t.calc.priceCar}
         </InputLabel>
         <TextField
           sx={{
@@ -274,8 +241,8 @@ export default function Calcuation({ productName = "Auto", productLabel }) {
               size="small"
               onChange={handlePlanChange}
             >
-              {packages &&
-                packages.map((item) => (
+              {products_packages &&
+                products_packages.map((item) => (
                   <MenuItem key={item.packageId} value={item.packageId}>
                     {item.title}
                   </MenuItem>
