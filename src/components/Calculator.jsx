@@ -12,16 +12,12 @@ import { colors } from "../utils/const";
 import en from "../../locales/en";
 import ar from "../../locales/ar";
 import { useRouter } from "next/router";
-import { useSelector, useDispatch } from "react-redux";
-import { updateProducts } from "../Redux/store";
-
-import { useEffect } from "react";
 
 export default function Calcuation({ products_packages }) {
   const [productPrice, setProductPrice] = useState("");
   const [downPayment, setDownPayment] = useState(0);
   const [duration, setDuration] = useState();
-  const [plan, setPlan] = useState(114);
+  const [plan, setPlan] = useState();
   const [value, setValue] = useState();
   const [loading, setLoading] = useState(false);
 
