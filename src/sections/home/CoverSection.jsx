@@ -92,13 +92,16 @@ export default function Cover() {
                   height: "170px",
                 }}
               />
-              <a href="https://www.facebook.com" target="_blank">
+              <a href="https://www.facebook.com/ContactEg" target="_blank">
                 <Box component="img" src="facebook.png" sx={styles.icon} />
               </a>
-              <a href="https://www.instagram.com" target="_blank">
+              <a href="https://www.instagram.com/contact.eg/" target="_blank">
                 <Box component="img" src="instagram.png" sx={styles.icon} />
               </a>
-              <a href="https://www.linkedin.com" target="_blank">
+              <a
+                href="https://www.linkedin.com/company/contact-eg/"
+                target="_blank"
+              >
                 <Box component="img" src="linked-in.png" sx={styles.icon} />
               </a>
               <Box

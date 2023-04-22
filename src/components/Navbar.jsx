@@ -25,6 +25,8 @@ export default function Navbar({
   arrDirB,
   setArrDirA,
   setArrDirB,
+  anchorEl,
+  setAnchorEl,
 }) {
   const matches = useMediaQuery("(max-width:900px)");
   const router = useRouter();
@@ -48,6 +50,8 @@ export default function Navbar({
           <Main_Navbar
             setLeftOrRightValue={setLeftOrRightValue}
             leftOrRightValue={leftOrRightValue}
+            anchorEl={anchorEl}
+            setAnchorEl={setAnchorEl}
           ></Main_Navbar>
           <Secondary_Navbar
             setIsOPenA={setIsOPenA}

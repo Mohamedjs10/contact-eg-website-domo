@@ -12,7 +12,7 @@ import en from "../../locales/en";
 import ar from "../../locales/ar";
 import { useSelector, useDispatch } from "react-redux";
 
-export default function Main_Navbar({ leftOrRightValue, setLeftOrRightValue }) {
+export default function Main_Navbar({ anchorEl, setAnchorEl }) {
   const mainTab = useSelector((state) => state.mainTab.mainTab);
   const router = useRouter();
 
@@ -34,28 +34,25 @@ export default function Main_Navbar({ leftOrRightValue, setLeftOrRightValue }) {
   return (
     <Box sx={styles.container} className="horizontal-safe-padding">
       <Button
+        onClick={(event) => {
+          setAnchorEl(event.currentTarget);
+        }}
         sx={{
           p: 0,
         }}
       >
-        {leftOrRightValue == 0 ? (
+        {anchorEl ? (
           <CloseIcon
             sx={{
-              fontSize: 40,
+              fontSize: 30,
               color: colors.blue,
-            }}
-            onClick={() => {
-              setLeftOrRightValue((prev) => (prev == 0 ? -500 : 0));
             }}
           />
         ) : (
           <MenuIcon
             sx={{
-              fontSize: 40,
+              fontSize: 30,
               color: colors.blue,
-            }}
-            onClick={() => {
-              setLeftOrRightValue((prev) => (prev == 0 ? -500 : 0));
             }}
           />
         )}

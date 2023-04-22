@@ -9,24 +9,15 @@ import ar from "../../../locales/ar";
 import { useSelector, useDispatch } from "react-redux";
 import { updateMenu } from "../../Redux/store";
 
-export default function FlyingCard({
-  setLeftOrRightValue,
-  // leftOrRightValue,
-  children,
-  // wrapperRef,
-}) {
+export default function FlyingCard({ setAnchorEl }) {
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : ar;
-  let leftOrRight = locale === "en" ? "left" : "right";
-
-  const leftOrRightValue = useSelector((state) => state.menu.leftOrRightVal);
   const dispatch = useDispatch();
   return (
     <>
       <Box
-        // ref={wrapperRef}
-        className="horizontal-safe-margin"
+        dir={locale === "en" ? "ltr" : "rtl"}
         sx={{
           boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
           borderRadius: "5px",
@@ -38,10 +29,7 @@ export default function FlyingCard({
           alignItems: "flex-start",
         }}
         style={{
-          position: "absolute",
-          top: "55px",
-          [leftOrRight]: leftOrRightValue,
-          width: leftOrRightValue == -500 ? 0 : "250px",
+          width: "250px",
           height: "250px",
           overflow: "hidden",
         }}
@@ -58,62 +46,62 @@ export default function FlyingCard({
         >
           <Box
             component={Link}
-            href="/"
+            href="/about"
             onClick={() => {
-              dispatch(updateMenu(-500));
+              setAnchorEl(null);
             }}
             sx={styles.tab}
             style={{}}
           >
-            نبذة عن
+            {t.general.menu.about_us}
           </Box>
           <Box sx={styles.line}></Box>
           <Box
             component={Link}
-            href="/"
+            href="/media"
             onClick={() => {
-              dispatch(updateMenu(-500));
+              setAnchorEl(null);
             }}
             sx={styles.tab}
             style={{}}
           >
-            ميديا
+            {t.general.menu.media}
           </Box>
           <Box sx={styles.line}></Box>
           <Box
             component={Link}
-            href="/"
+            href="/careers"
             onClick={() => {
-              dispatch(updateMenu(-500));
+              setAnchorEl(null);
             }}
             sx={styles.tab}
             style={{}}
           >
-            وظائف
+            {t.general.menu.careers}
           </Box>
           <Box sx={styles.line}></Box>
           <Box
             component={Link}
-            href="/"
+            href="/our-brands"
             onClick={() => {
-              dispatch(updateMenu(-500));
+              setAnchorEl(null);
             }}
             sx={styles.tab}
             style={{}}
           >
-            شركاتنا
+            {t.general.menu.our_brand}
           </Box>
           <Box sx={styles.line}></Box>
           <Box
             component={Link}
-            href="/"
+            href="/contact-us"
             onClick={() => {
-              dispatch(updateMenu(-500));
+              setAnchorEl(null);
             }}
             sx={styles.tab}
             style={{}}
           >
-            اتصل بنا
+            {t.general.menu.contact_us}
           </Box>
           <Box sx={styles.line}></Box>
         </Box>

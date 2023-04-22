@@ -23,7 +23,7 @@ import { appWithTranslation } from "next-i18next";
 import { useTranslation } from "next-i18next";
 import FlyingCard from "@/components/mini-components/FlyingCard";
 import CardSlider from "@/components/CardSlider.jsx";
-
+import Popover from "@mui/material/Popover";
 const App = ({ Component, pageProps }) => {
   const router = useRouter();
   const { locale } = router;
@@ -34,7 +34,14 @@ const App = ({ Component, pageProps }) => {
   const [type, setType] = useState("a");
   const [state, setState] = React.useState(false);
   const [leftOrRightValue, setLeftOrRightValue] = useState(-500);
+  const [anchorEl, setAnchorEl] = useState(null);
+
   const matches = useMediaQuery("(max-width:900px)");
+
+  // ==========
+
+  const open = Boolean(anchorEl);
+  const id = open ? "simple-popover" : undefined;
   return (
     <Provider store={store}>
       <Box dir={locale === "en" ? "ltr" : "rtl"} sx={{}}>
@@ -51,17 +58,32 @@ const App = ({ Component, pageProps }) => {
           state={state}
           setState={setState}
           setType={setType}
+          anchorEl={anchorEl}
+          setAnchorEl={setAnchorEl}
         />
         {/* small screens ---------------------------------------------------------------------- */}
 
         {!matches && (
           <>
-            <FlyingCard
-              setState={setState}
-              leftOrRightValue={leftOrRightValue}
-              setLeftOrRightValue={setLeftOrRightValue}
-              // wrapperRef={wrapperRef}
-            />
+            <Popover
+              sx={{ mt: 1 }}
+              id={id}
+              open={open}
+              anchorEl={anchorEl}
+              onClose={() => {
+                setAnchorEl(null);
+              }}
+              anchorOrigin={{
+                vertical: "bottom",
+                horizontal: locale === "en" ? "left" : "right",
+              }}
+              transformOrigin={{
+                horizontal: locale === "en" ? "left" : "right",
+              }}
+            >
+              <FlyingCard setState={setState} setAnchorEl={setAnchorEl} />
+            </Popover>
+
             <HomeDropdown
               isOpen={isOpenA || isOpenB}
               setIsOPenA={setIsOPenA}

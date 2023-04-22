@@ -28,6 +28,7 @@ export default function ImageSection({}) {
             title1={item.title1}
             title2={item.title2}
             img={item.img}
+            url={item.url}
           />
         ))}
       </Box>

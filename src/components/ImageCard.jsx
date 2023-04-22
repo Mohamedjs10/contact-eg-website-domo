@@ -8,7 +8,7 @@ import { useRouter } from "next/router";
 import en from "../../locales/en";
 import ar from "../../locales/ar";
 
-export default function ImageCard({ img, title1, title2 }) {
+export default function ImageCard({ img, title1, title2, url }) {
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : ar;
@@ -16,7 +16,7 @@ export default function ImageCard({ img, title1, title2 }) {
   return (
     <Box
       component={Link}
-      href="/"
+      href={url}
       sx={{
         width: "282px",
         height: "154px",
