@@ -69,8 +69,9 @@ export default function Navbar({
       {matches && (
         <>
           <Box
-            className="horizontal-safe-padding vertical-safe-padding"
+            className="horizontal-safe-padding"
             sx={{
+              py: 1,
               bgcolor: colors.dark_grey,
               display: "flex",
               justifyContent: "space-between",

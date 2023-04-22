@@ -32,12 +32,11 @@ export default function HomeDropdown({
         bgcolor: colors.white,
         transition: "1s",
         opacity: isOpen ? "100%" : "0",
-        // zIndex: isOpen ? "999999999" : "-1",
-        zIndex: "999999999",
+        zIndex: isOpen ? "999999999" : "-1",
       }}
       style={{
         position: "absolute",
-        top: "121px",
+        top: "130px",
         width: "100%",
         // height: "620px",
       }}

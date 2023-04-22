@@ -38,7 +38,7 @@ export default function Main_Navbar({ anchorEl, setAnchorEl }) {
           setAnchorEl(event.currentTarget);
         }}
         sx={{
-          p: 0,
+          py: 1,
         }}
       >
         {anchorEl ? (
