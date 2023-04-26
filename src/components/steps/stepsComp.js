@@ -25,6 +25,7 @@ export default function HorizontalNonLinearStepper() {
 
   const contentGen = ({ title, heading, text, img }) => (
     <Box
+      className="stepper-box"
       sx={{
         display: "flex",
         flexDirection: {

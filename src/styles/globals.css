@@ -289,6 +289,7 @@ body {
   }
 }
 
-.css-rko9yk-MuiButtonBase-root-MuiStepButton-root {
+.stepper-box .css-rko9yk-MuiButtonBase-root-MuiStepButton-root,
+.stepper-box .css-105xk4f {
   position: unset;
 }
