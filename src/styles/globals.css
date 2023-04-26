@@ -288,3 +288,7 @@ body {
     transform: rotateZ(360deg);
   }
 }
+
+.css-rko9yk-MuiButtonBase-root-MuiStepButton-root {
+  position: unset;
+}
