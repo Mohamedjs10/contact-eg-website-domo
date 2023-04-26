@@ -17,6 +17,7 @@ import { useFormik } from "formik";
 // import { EnSchema } from "../utils/en_schema";
 // import { ArSchema } from "../utils/ar_schema";
 import { Box, TextField, InputLabel, MenuItem, Button } from "@mui/material";
+import CardSlider from "../../../components/CardSlider.jsx";
 import Calculator from "../../../components/Calculator.jsx";
 
 // ================================================================
@@ -45,7 +46,7 @@ export default function Index() {
       {/* =============================================================== */}
       <IconTileSection page="finishing"></IconTileSection>
       {/* =============================================================== */}
-
+      <CardSlider page="trucks"></CardSlider>
       {/* =============================================================== */}
       <Calculator products_packages={t.calc_packages.trucks} />
     </Box>

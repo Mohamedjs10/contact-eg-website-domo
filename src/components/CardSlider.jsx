@@ -8,26 +8,38 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper";
-
-import { styles } from "./bottom_card";
 import { Box } from "@mui/material";
-import { colors } from "../utils/const";
-import Link from "next/link";
-import Button from "@mui/material/Button";
-import InputLabel from "@mui/material/InputLabel";
-import TextField from "@mui/material/TextField";
 import Card from "./Card.jsx";
 import { useRouter } from "next/router";
 import en from "../../locales/en";
 import ar from "../../locales/ar";
-export default function BottomCard({}) {
+export default function BottomCard({ page }) {
   const [state, setState] = useState(0);
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : ar;
-  // const arr = ["", "", "", "", "", "", "", "", "", ""];
-  const arr = t.products_cars.plans;
-  const title = t.products_cars.plans_title;
+
+  let arr;
+  let title;
+
+  switch (page) {
+    case "cars":
+      arr = t.products_cars.plans;
+      title = t.products_cars.plans_title;
+      break;
+    case "trucks":
+      arr = t.products_trucks.plans;
+      title = t.products_trucks.plans_title;
+      break;
+    case "mortgage":
+      arr = t.products_home.plans;
+      title = t.products_home.plans_title;
+      break;
+    // default:
+    // arr = t.products_trucks.plans;
+    // title = t.products_trucks.plans_title;
+  }
+
   return (
     <Box
       className="vertical-safe-padding"
@@ -59,7 +71,7 @@ export default function BottomCard({}) {
       <Swiper
         centeredSlides={true}
         autoplay={{
-          delay: 1000,
+          delay: 2500,
           disableOnInteraction: false,
         }}
         modules={[Autoplay, Pagination, Navigation]}

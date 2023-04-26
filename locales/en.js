@@ -1326,6 +1326,17 @@ export default {
       title2: "Heavy Trucks.. Light Installments..",
       description: `Financing plans for all types of trucks, from light commercial vehicles to heavy transport trucks and trailers`,
     },
+    plans_title: "Trucks Installments Plans",
+    plans: [
+      {
+        title: "Standard",
+        bodyList: ["30% down payment"],
+      },
+      {
+        title: "Flexible",
+        bodyList: ["20% down payment"],
+      },
+    ],
   },
   products_cars: {
     cover: {
@@ -1336,54 +1347,59 @@ export default {
       description: `Contact is the market leader in auto financing, with a network of over 1,000 showrooms across the country and offering different finance solutions for both new and used cars.
       `,
     },
-    plans_title: "Installments Plans",
+    plans_title: "Cars Installments Plans",
     plans: [
       {
-        title: "flexible",
+        title: "Economy",
         bodyList: [
           "20% down payment",
-          "Auto Insurance Required",
-          "Up to 5 years installments plans",
+          "Auto insurance required",
+          "1 to 3 years installments plans",
         ],
       },
       {
-        title: "flexible",
+        title: "Economy Plus",
         bodyList: [
           "20% down payment",
-          "Auto Insurance Required",
+          "Auto insurance required",
           "Up to 5 years installments plans",
+          "Full or partial prepayment after 1 year",
         ],
       },
       {
-        title: "flexible",
+        title: "Flexible",
         bodyList: [
           "20% down payment",
-          "Auto Insurance Required",
+          "Auto insurance required",
           "Up to 5 years installments plans",
+          "Full or partial prepayment option after 1 year",
         ],
       },
       {
-        title: "flexible",
+        title: "Flexible Plus",
         bodyList: [
           "20% down payment",
-          "Auto Insurance Required",
+          "No auto insurance required",
           "Up to 5 years installments plans",
+          "Full or partial prepayment option",
         ],
       },
       {
-        title: "flexible",
+        title: "Used Cars Packages",
         bodyList: [
           "20% down payment",
-          "Auto Insurance Required",
+          "No auto insurance required",
           "Up to 5 years installments plans",
+          "Early prepayment option after 6 installments",
         ],
       },
       {
-        title: "flexible",
+        title: "Corporate Packages",
         bodyList: [
-          "20% down payment",
-          "Auto Insurance Required",
+          "10% down payment",
+          "Auto insurance required",
           "Up to 5 years installments plans",
+          "Full prepayment option after one year",
         ],
       },
     ],
@@ -1405,6 +1421,27 @@ export default {
       title2: "Finance your dream home with Contact",
       description: `Finance your dream home with Contact Mortgage. The Home Finance program offers you up to 6 million EGP financing and up to 10 years installments. Sign up now and own your dream home, with the easiest and fastest procedures from Contact.`,
     },
+    // plans_title: "Mortgage Installments Plans",
+    // plans: [
+    // {
+    //   title: "Economy",
+    //   bodyList: [
+    //     "No down payment",
+    //     "Financing up to 6 Million EGP",
+    //     "Payment plans from 1 to 5 years",
+    //     "The possibility of full and partial settlement after one year",
+    //   ],
+    // },
+    // {
+    //   title: "Flexible",
+    //   bodyList: [
+    //     "No down payment",
+    //     "Financing up to 6 Million EGP",
+    //     "Payment plans from 1 to 5 years",
+    //     "The possibility of full or partial prepayment expenses",
+    //   ],
+    // },
+    // ],
     section_a: {
       img: "/pages/without-advance.png",
       title: "Advantages",
@@ -1418,19 +1455,21 @@ export default {
     card_section_title: "Programs",
     cards: [
       {
-        title: "title",
+        title: "Economy",
         body: [
-          "body body body body",
-          "body body body body",
-          "body body body body",
+          "No down payment",
+          "Financing up to 6 Million EGP",
+          "Payment plans from 1 to 5 years",
+          "The possibility of full and partial settlement after one year",
         ],
       },
       {
-        title: "title",
+        title: "Flexible",
         body: [
-          "body body body body",
-          "body body body body",
-          "body body body body",
+          "No down payment",
+          "Financing up to 6 Million EGP",
+          "Payment plans from 1 to 5 years",
+          "The possibility of full or partial prepayment expenses",
         ],
       },
     ],

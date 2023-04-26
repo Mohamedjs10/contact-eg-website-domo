@@ -46,7 +46,7 @@ export default function Index() {
       {/* =============================================================== */}
       <IconTileSection page="finishing"></IconTileSection>
       {/* =============================================================== */}
-      <CardSlider></CardSlider>
+      <CardSlider page="cars"></CardSlider>
       {/* =============================================================== */}
       <Calculator products_packages={t.calc_packages.auto} />
     </Box>

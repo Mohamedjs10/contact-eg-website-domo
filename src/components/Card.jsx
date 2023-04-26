@@ -20,7 +20,7 @@ export default function Card({ title, bodyList, color, scaled }) {
         bgcolor: color,
         color: "white",
         width: { xs: "250px", md: "370px" },
-        height: "200px",
+        minHeight: "200px",
         borderRadius: "30px",
         p: 2,
         cursor: "default",
