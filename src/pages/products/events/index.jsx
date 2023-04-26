@@ -64,7 +64,7 @@ export default function Index() {
       <IconTileSection page="shopping"></IconTileSection>
 
       {/* =============================================================== */}
-      <Calculator></Calculator>
+      <Calculator products_packages={t.calc_packages.wedding} />
     </Box>
   );
 }

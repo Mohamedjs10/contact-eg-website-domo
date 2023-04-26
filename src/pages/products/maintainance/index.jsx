@@ -64,7 +64,7 @@ export default function Index() {
       <IconTileSection page="maintainance"></IconTileSection>
 
       {/* =============================================================== */}
-      <Calculator></Calculator>
+      <Calculator products_packages={t.calc_packages.maintenance}></Calculator>
     </Box>
   );
 }

@@ -17,6 +17,7 @@ import { useFormik } from "formik";
 // import { EnSchema } from "../utils/en_schema";
 // import { ArSchema } from "../utils/ar_schema";
 import { Box, TextField, InputLabel, MenuItem, Button } from "@mui/material";
+import Calculator from "../../../components/Calculator.jsx";
 
 // ================================================================
 export default function Index() {
@@ -229,6 +230,8 @@ export default function Index() {
         Component={PlaceCard}
         slidesPerView={4.3}
       ></VerticalCarousel>
+      {/* =============================================================== */}
+      <Calculator products_packages={t.calc_packages.consumer_finance} />
     </Box>
   );
 }

@@ -47,7 +47,7 @@ export default function Index() {
       {/* =============================================================== */}
 
       {/* =============================================================== */}
-      <Calculator />
+      <Calculator products_packages={t.calc_packages.trucks} />
     </Box>
   );
 }

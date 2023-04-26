@@ -20,6 +20,37 @@ export default {
     plan1: "البرنامج الإقتصادي",
     plan2: "البرنامج المرن",
   },
+  calc_packages: {
+    auto: [
+      { packageId: 268, title: "المرن بلس" },
+      { packageId: 114, title: "الاقتصادي" },
+      { packageId: 262, title: "الاقتصادي بلس" },
+      { packageId: 144, title: "السيارات المستعملة" },
+    ],
+    trucks: [
+      { packageId: 247, title: "النظام المرن" },
+      { packageId: 234, title: "النظام العادي" },
+    ],
+    consumer_finance: [{ packageId: 408, title: "كريدي تيك" }],
+    mortgage: [
+      { packageId: 179, title: "إعادة تمويل بيتك - البرنامج الاقتصادي" },
+      { packageId: 180, title: "إعادة تمويل بيتك - البرنامج المرن" },
+      { packageId: 336, title: "تمويل بيتك" },
+    ],
+    clubs: [{ packageId: 452, title: "عضوية الأندية" }],
+    education: [{ packageId: 363, title: "التعليم" }],
+    insurance: [{ packageId: 402, title: "تأمين" }],
+    wedding: [{ packageId: 437, title: "أفراح" }],
+    maintenance: [{ packageId: 439, title: "صيانة البيت" }],
+    green_finance: [
+      {
+        packageId: 459,
+        title: "التمويل الأخضر أ (ربع سنوي)",
+        packageId: 458,
+        title: "التمويل الأخضر ب (شهري)",
+      },
+    ],
+  },
   general: {
     menu: {
       about_us: "نبذة عنا",

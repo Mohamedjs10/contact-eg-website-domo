@@ -48,7 +48,7 @@ export default function Index() {
       {/* =============================================================== */}
       <CardSlider></CardSlider>
       {/* =============================================================== */}
-      <Calculator productName="Auto" productLabel="Car" />
+      <Calculator products_packages={t.calc_packages.auto} />
     </Box>
   );
 }

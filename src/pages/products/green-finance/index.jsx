@@ -127,7 +127,7 @@ export default function Index() {
         </Box>
       </Box>
       {/* =============================================================== */}
-      <Calculator />
+      <Calculator products_packages={t.calc_packages.green_finance} />
     </Box>
   );
 }

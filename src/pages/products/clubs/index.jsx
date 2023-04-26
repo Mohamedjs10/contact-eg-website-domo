@@ -72,7 +72,7 @@ export default function Index() {
         </Box>
       </Box>
       {/* =============================================================== */}
-      <Calculator></Calculator>
+      <Calculator products_packages={t.calc_packages.clubs} />
     </Box>
   );
 }
