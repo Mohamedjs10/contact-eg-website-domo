@@ -231,7 +231,8 @@ body {
   .MuiStepConnector-line.MuiStepConnector-lineVertical.css-8t49rw-MuiStepConnector-line {
   border-color: #f18222;
 }
-.css-1pe7n21-MuiStepConnector-root {
+.css-1pe7n21-MuiStepConnector-root,
+.css-8t49rw-MuiStepConnector-root {
   margin-left: 20px !important;
 }
 
