@@ -217,12 +217,14 @@ body {
   clip-path: circle(50% at 50% 50%);
 }
 
-.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root {
+.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root,
+.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-4ff9q7 {
   color: #afb0b8 !important;
   font-size: 25px;
   font-size: 42px;
 }
-.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.MuiStepIcon-root.Mui-active.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root {
+.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.MuiStepIcon-root.Mui-active.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root,
+.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.MuiStepIcon-root.Mui-active.css-4ff9q7 {
   color: #f18222 !important;
 }
 .MuiStepConnector-root.MuiStepConnector-vertical.Mui-active.css-1pe7n21-MuiStepConnector-root
