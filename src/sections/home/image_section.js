@@ -6,8 +6,8 @@ export const styles = {
   }),
   grid: (theme) => ({
     display: "grid",
-    gridTemplateColumns: "auto auto auto auto",
-    gridTemplateColumns: "repeat(auto-fill, 300px)",
+    // gridTemplateColumns: "auto auto auto auto",
+    gridTemplateColumns: { sx: "", sm: "repeat(auto-fill, 300px)" },
     justifyContent: { xs: "center", md: "space-between" },
     gridGap: 25,
     pt: 2,
