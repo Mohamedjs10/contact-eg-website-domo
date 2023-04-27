@@ -3,6 +3,7 @@ import { colors } from "../src/utils/const";
 export default {
   direction: "ltr",
   textAlign: "left",
+  clipboardMsg: "Link copied successfully",
   calc: {
     monthlyAmount: "The monthly amount",
     priceCar: "Price ",
