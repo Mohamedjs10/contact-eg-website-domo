@@ -21,7 +21,7 @@ import {
   Marker,
   InfoWindow,
 } from "@react-google-maps/api";
-const top100Films = [
+const governates = [
   { label: "القاهرة", id: 1 },
   { label: "الجيزة", id: 2 },
   { label: "الاسكندرية", id: 3 },
@@ -120,7 +120,17 @@ export default function MapBox() {
               size="small"
               disablePortal
               id="search-box"
-              options={top100Films}
+              options={governates}
+              onChange={(e) => {
+                console.log(e.target.innerHTML);
+                setMarkers([
+                  {
+                    id: 1,
+                    name: "name",
+                    position: { lat: 30.04048, lng: 31.20948 },
+                  },
+                ]);
+              }}
               sx={{
                 width: 250,
                 mx: 1,
