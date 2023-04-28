@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Box, Typography } from "@mui/material";
 import TextField from "@mui/material/TextField";
 import { Autocomplete as AutocompleteInput } from "@mui/material";
-
+import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
@@ -11,41 +11,20 @@ import { useRouter } from "next/router";
 import { colors } from "../../utils/const";
 import en from "../../../locales/en";
 import ar from "../../../locales/ar";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import {
   GoogleMap,
   LoadScript,
   ScriptLoaded,
   Marker,
-  Autocomplete,
+  InfoWindow,
 } from "@react-google-maps/api";
-const top100Films = [
+const governates = [
   { label: "القاهرة", id: 1 },
   { label: "الجيزة", id: 2 },
   { label: "الاسكندرية", id: 3 },
-];
-
-const markers = [
-  {
-    id: 1,
-    name: "Chicago, Illinois",
-    position: { lat: 30.20876, lng: 31.18906 },
-  },
-  {
-    id: 2,
-    name: "Denver, Colorado",
-    position: { lat: 30.09776, lng: 31.42906 },
-  },
-  {
-    id: 3,
-    name: "Los Angeles, California",
-    position: { lat: 30.09776, lng: 31.32906 },
-  },
-  {
-    id: 4,
-    name: "New York, New York",
-    position: { lat: 30.08776, lng: 31.32906 },
-  },
-  { id: 5, position: { lat: 30.04048, lng: 31.20948 } },
 ];
 
 const mapContainerStyle = {
@@ -62,6 +41,33 @@ export default function MapBox() {
 
   const [mapInstance, setMapInstance] = useState(false);
   const [branch, setBranch] = useState("");
+  const [markers, setMarkers] = useState([]);
+  const [selected, setSelected] = useState([]);
+
+  useEffect(() => {
+    setMapInstance(false);
+    fetch(`https://api-mobile.contact.eg/general/branches?lang=${locale}`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => res.json())
+      .then((value) => {
+        console.log(value);
+        const branches = value?.map((item, index) => {
+          return {
+            id: index + 1,
+            name: item.address,
+            position: { lat: item.latitude, lng: item.longitude },
+          };
+        });
+        console.log(branches);
+        setMarkers(branches);
+        setMapInstance(true);
+      })
+      .catch((err) => console.log(err));
+  }, []);
 
   const onLoad = (marker) => {};
 
@@ -114,7 +120,17 @@ export default function MapBox() {
               size="small"
               disablePortal
               id="search-box"
-              options={top100Films}
+              options={governates}
+              onChange={(e) => {
+                console.log(e.target.innerHTML);
+                setMarkers([
+                  {
+                    id: 1,
+                    name: "name",
+                    position: { lat: 30.04048, lng: 31.20948 },
+                  },
+                ]);
+              }}
               sx={{
                 width: 250,
                 mx: 1,
@@ -195,36 +211,98 @@ export default function MapBox() {
             <MenuItem sx={{ color: "#bcbcbc" }} value="none" disabled>
               {t.map.placeholderBranch}
             </MenuItem>
-            <MenuItem value={10}>1</MenuItem>
-            <MenuItem value={20}>2</MenuItem>
-            <MenuItem value={30}>3</MenuItem>
+            <MenuItem value={1}>1</MenuItem>
+            <MenuItem value={2}>2</MenuItem>
+            <MenuItem value={3}>3</MenuItem>
           </Select>
         </Box>
       </Box>
       <Box sx={{ background: "white" }}>
         <LoadScript googleMapsApiKey="AIzaSyBUQUZh1KHcrl2R-tbouYTowdRxjZcLODE">
           <GoogleMap
+            id="map"
             mapContainerStyle={mapContainerStyle}
             center={{ lat: 30.04048, lng: 31.20948 }}
             zoom={10}
-            onLoad={(map) => setTimeout(() => setMapInstance(map))}
+            // onLoad={(map) => setTimeout(() => setMapInstance(map))}
           >
             {mapInstance &&
-              markers.map(({ id, name, position }) => (
-                <Marker
-                  key={id}
-                  position={position}
-                  onLoad={onLoad}
-                  onClick={() => console.log(position)}
-                  icon={
-                    "/images/marker.png"
-                    // "https://cdn.iconscout.com/icon/premium/png-512-thumb/map-824-341998.png?f=avif&w=42"
-                  }
-                />
+              markers?.map(({ id, name, position }) => (
+                <>
+                  <Marker
+                    key={id}
+                    position={position}
+                    onLoad={onLoad}
+                    onClick={(marker) => {
+                      setSelected([id]);
+                    }}
+                    icon={"/images/marker.png"}
+                  />
+                  {selected.includes(id) && (
+                    <InfoWindow
+                      onCloseClick={() => setSelected([])}
+                      onLoad={onLoad}
+                      position={position}
+                    >
+                      <Box
+                        sx={{
+                          color: "#1169a8",
+                          background: `white`,
+                          width: "350px",
+                          textAlign: t.textAlign,
+                          padding: "10px 25px",
+                        }}
+                      >
+                        <ContentCopyIcon
+                          sx={{ cursor: "pointer" }}
+                          onClick={() => {
+                            navigator.clipboard.writeText(
+                              `http://maps.google.com/maps?z=12&t=m&q=loc:${position.lat}+${position.lng}`
+                            );
+                            toast.success(t.clipboardMsg, {
+                              position: "top-center",
+                              autoClose: 5000,
+                              hideProgressBar: true,
+                              closeOnClick: true,
+                              pauseOnHover: true,
+                              draggable: true,
+                              progress: undefined,
+                              theme: "colored",
+                            });
+                          }}
+                        />
+                        <Typography
+                          onClick={() =>
+                            window.open(
+                              `http://maps.google.com/maps?z=12&t=m&q=loc:${position.lat}+${position.lng}`,
+                              "_blank"
+                            )
+                          }
+                          sx={{ cursor: "pointer", mt: 2, lineHeight: 1.2 }}
+                          variant="h6"
+                        >
+                          {name}
+                        </Typography>
+                      </Box>
+                    </InfoWindow>
+                  )}
+                </>
               ))}
           </GoogleMap>
         </LoadScript>
       </Box>
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={locale === "en" ? false : true}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
     </Box>
   );
 }

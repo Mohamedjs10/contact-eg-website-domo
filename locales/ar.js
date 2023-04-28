@@ -3,6 +3,7 @@ import { colors } from "../src/utils/const";
 export default {
   direction: "rtl",
   textAlign: "right",
+  clipboardMsg: "تم نسخ الرابط بنجاح",
   calc: {
     monthlyAmount: " قيمة القسط الشهري",
     priceCar: "السعر ",
