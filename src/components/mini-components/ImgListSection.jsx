@@ -44,9 +44,7 @@ export default function ImgListSection({ title, img }) {
               fontSize: { xs: "15px", sm: "20px" },
             }}
           >
-            أكبر عدد من المحلات والمعارض ومنافذ البيع والتحصيارض ومنافذ البيع
-            والتحصيل أكبر عدد من المحلات والمعارض ومنافذ البيع والتحصيارض ومنافذ
-            البيع والتحصيل
+            {t.products_shopiing_page.section_b[0]}
           </Box>
         </Box>
         <Box
@@ -62,9 +60,7 @@ export default function ImgListSection({ title, img }) {
               fontSize: { xs: "15px", sm: "20px" },
             }}
           >
-            أكبر عدد من المحلات والمعارض ومنافذ البيع والتحصيارض ومنافذ البيع
-            والتحصيل أكبر عدد من المحلات والمعارض ومنافذ البيع والتحصيارض ومنافذ
-            البيع والتحصيل
+            {t.products_shopiing_page.section_b[1]}
           </Box>
         </Box>
         <Box
@@ -80,9 +76,7 @@ export default function ImgListSection({ title, img }) {
               fontSize: { xs: "15px", sm: "20px" },
             }}
           >
-            أكبر عدد من المحلات والمعارض ومنافذ البيع والتحصيارض ومنافذ البيع
-            والتحصيل أكبر عدد من المحلات والمعارض ومنافذ البيع والتحصيارض ومنافذ
-            البيع والتحصيل
+            {t.products_shopiing_page.section_b[2]}
           </Box>
         </Box>
         <Box
@@ -98,9 +92,7 @@ export default function ImgListSection({ title, img }) {
               fontSize: { xs: "15px", sm: "20px" },
             }}
           >
-            أكبر عدد من المحلات والمعارض ومنافذ البيع والتحصيارض ومنافذ البيع
-            والتحصيل أكبر عدد من المحلات والمعارض ومنافذ البيع والتحصيارض ومنافذ
-            البيع والتحصيل
+            {t.products_shopiing_page.section_b[3]}
           </Box>
         </Box>
         <Box
@@ -116,9 +108,7 @@ export default function ImgListSection({ title, img }) {
               fontSize: { xs: "15px", sm: "20px" },
             }}
           >
-            أكبر عدد من المحلات والمعارض ومنافذ البيع والتحصيارض ومنافذ البيع
-            والتحصيل أكبر عدد من المحلات والمعارض ومنافذ البيع والتحصيارض ومنافذ
-            البيع والتحصيل
+            {t.products_shopiing_page.section_b[4]}
           </Box>
         </Box>
       </Box>

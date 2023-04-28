@@ -36,7 +36,7 @@ export default function Index() {
         description={t.products_education.cover.description}
         formType="a"
       />
-      <IconTileSection page="shopping"></IconTileSection>
+      <IconTileSection page="education"></IconTileSection>
 
       {/* =============================================================== */}
       <Calculator products_packages={t.calc_packages.education} />

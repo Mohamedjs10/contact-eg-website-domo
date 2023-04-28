@@ -36,7 +36,7 @@ export default function Index() {
         description={t.products_clubs.cover.description}
         formType="a"
       />
-      <IconTileSection page="shopping"></IconTileSection>
+      <IconTileSection page="clubs"></IconTileSection>
 
       {/* =============================================================== */}
       <Box sx={{ px: { xs: 0, md: 45 } }} className="vertical-safe-padding">

@@ -496,41 +496,181 @@ export default {
       { id: 10, img: "/member.png", name: "Location Name" },
     ],
     icon_title: {
-      products_shopping_page: [
+      products_auto_page: [
         {
           id: 1,
-          img: "/hands.png",
-          title: "lorem ipsum dolor sit amet, con lorem ipsum dolor sit amet",
+          img: "/alarm.png",
+          title: "5 Years",
+          description: "Payment plans up to 5 years",
         },
         {
           id: 2,
-          img: "/hands.png",
-          title: "lorem ipsum dolor sit amet, con lorem ipsum dolor sit amet",
+          img: "/payment.png",
+          title: "20% down payment",
+          description: "Down payment starts from 20%",
         },
         {
           id: 3,
-          img: "/hands.png",
-          title: "lorem ipsum dolor sit amet, con lorem ipsum dolor sit amet",
+          img: "/coins.png",
+          title: "4 Million EGP20% down payment",
+          description: "Financing up to 4 Million EGP",
         },
         {
           id: 4,
-          img: "/hands.png",
-          title: "lorem ipsum dolor sit amet, con lorem ipsum dolor sit amet",
+          img: "/flash.png",
+          title: "Fast",
+          description: "Fast financing procedures",
         },
         {
           id: 5,
-          img: "/hands.png",
-          title: "lorem ipsum dolor sit amet, con lorem ipsum dolor sit amet",
+          img: "/ticket-expired.png",
+          title: "Instalments Facilities",
+          description: "Fast financing procedures",
         },
         {
           id: 6,
-          img: "/hands.png",
-          title: "lorem ipsum dolor sit amet, con lorem ipsum dolor sit amet",
+          img: "/receipt.png",
+          title: "Without Insuranceas",
+          description: "Applicable with and without insurance",
+        },
+      ],
+      products_trucks_page: [
+        {
+          id: 1,
+          img: "/alarm.png",
+          title: "5 Years",
+          description: "Payment plans up to 5 years",
         },
         {
-          id: 7,
-          img: "/hands.png",
-          title: "lorem ipsum dolor sit amet, con lorem ipsum dolor sit amet",
+          id: 2,
+          img: "/payment.png",
+          title: "20% down payment",
+          description: "Down payment starts from 20%",
+        },
+        {
+          id: 3,
+          img: "/coins.png",
+          title: "4 Million EGP20% down payment",
+          description: "Financing up to 4 Million EGP",
+        },
+        {
+          id: 4,
+          img: "/flash.png",
+          title: "Fast",
+          description: "Fast financing procedures",
+        },
+      ],
+      products_shopping_page: [
+        {
+          id: 1,
+          img: "/alarm.png",
+          title: "Payment plans up to 5 years",
+        },
+        {
+          id: 2,
+          img: "/coins.png",
+          title: "Financing up to 1 Million EGP",
+        },
+        {
+          id: 3,
+          img: "/payment.png",
+          title: "No down payment",
+        },
+        {
+          id: 4,
+          img: "/tax.png",
+          title: "Fast and Easy Payment via",
+          title: "Easy and fast purchases",
+        },
+        {
+          id: 5,
+          img: "/bank.png",
+          title: "A large number of retail outlets, merchants, and megastores",
+        },
+        {
+          id: null,
+        },
+      ],
+      products_clubs_page: [
+        {
+          id: 1,
+          img: "/alarm.png",
+          title: "Payment plans up to 5 years",
+        },
+        {
+          id: 2,
+          img: "/coins.png",
+          title: "Financing up to 1 Million EGP",
+        },
+        {
+          id: 3,
+          img: "/payment.png",
+          title: "No down payment",
+        },
+        {
+          id: 4,
+          img: "/tax.png",
+          title: "Fast and Easy Payment via",
+          title: "Easy and fast purchases",
+        },
+        {
+          id: 5,
+          img: "/graduation.png",
+          title: "Membership activated immediately",
+        },
+        {
+          id: null,
+        },
+      ],
+      products_factoring_page: [
+        {
+          id: 1,
+          img: "/alarm.png",
+          title:
+            "Immediate access to easier and faster approval process than traditional bank lending.",
+        },
+        {
+          id: 2,
+          img: "/coins.png",
+          title: "Cash for your business growth and empowerment",
+        },
+        {
+          id: 3,
+          img: "/payment.png",
+          title:
+            "Covering a diversity of industries, education, clubs’ memberships, renewable energy and others…",
+        },
+      ],
+      products_education_page: [
+        {
+          id: 1,
+          img: "/alarm.png",
+          title:
+            "Payment plans up to 12 months for schools, universities and couurses.",
+        },
+        {
+          id: 2,
+          img: "/coins.png",
+          title: "Financing up to 1 Million EGP",
+        },
+        {
+          id: 3,
+          img: "/payment.png",
+          title: "No down payment",
+        },
+        {
+          id: 4,
+          img: "/tax.png",
+          title: "Easy and fast purchases",
+        },
+        {
+          id: 5,
+          img: "/graduation.png",
+          title:
+            "Payment plans up to 3 years for Master's Degree, and 5 years for Doctoral Degree.",
+        },
+        {
+          id: null,
         },
       ],
     },
@@ -1251,6 +1391,18 @@ export default {
       title2: "We Make Your Life Easier",
       description: `Contact make your life easier anytime you want to buy anything via financial solutions without any troubles. Contact make your life easier anytime you want to buy anything via financial solutions without any troubles`,
     },
+    section_a: {
+      title1: "Payment Period",
+      title2: "36 Months",
+      body: "Enjoy your purchasing experience with our hassle-free financial solutions, fast approval process, and the widest merchant network for consumer products & services. Choose your installment plan from 6 to 60 months and pay at your convenience through the most diverse payment and collection network across Egypt.",
+    },
+    section_b: [
+      "Choose your merchant from our network",
+      "Go to the store with the national id and mobile registered in the service",
+      "Decide the amount and payment period you can choose from 6 to 60 months",
+      "You will receive code via sms to provide to the cashier",
+      "Then an electronic invoice will be sent via sms",
+    ],
   },
   products_finishing: {
     cover: {
@@ -1342,8 +1494,8 @@ export default {
     cover: {
       img: "/pages/cars-cover.png",
       color: "#1169A8",
-      title1: "Contact Cars",
-      title2: "Your Car won't Wait.. Finance It With Contact..s",
+      title1: "Contact Auto",
+      title2: "Your Car won't Wait.. Finance It With Contact..",
       description: `Contact is the market leader in auto financing, with a network of over 1,000 showrooms across the country and offering different finance solutions for both new and used cars.
       `,
     },
@@ -1445,12 +1597,22 @@ export default {
     section_a: {
       img: "/pages/without-advance.png",
       title: "Advantages",
-      body: ["a", "b", "c", "d"],
+      body: [
+        "25 Down payment",
+        "Financing up to 6 Million EGP",
+        "Payment plans up to 10 years",
+        "Financing all types of Residential units (standalone and compound units)",
+      ],
     },
     section_b: {
       img: "/pages/without-advance.png",
-      title: "Advantages",
-      body: ["a", "b", "c", "d"],
+      title: "Mortgage Benefits",
+      body: [
+        "25 Down payment",
+        "Financing up to 6 Million EGP",
+        "Payment plans up to 10 years",
+        "Financing all types of Residential units (standalone and compound units)",
+      ],
     },
     card_section_title: "Programs",
     cards: [
@@ -1485,7 +1647,15 @@ export default {
     section_a: {
       img: "/pages/without-advance.png",
       title: "Contact Leasing Benefits",
-      body: ["body", "body", "body", "body", "body", "body", "body"],
+      body: [
+        "Efficient and transparent process",
+        "Comprehensive and wide supplier network",
+        "Access to world-class manufacturers",
+        "Straightforward plans structured to suit your needs",
+        "Positive impact on the company’s financial indicators",
+        "Payment Plans from 1 year up to 5 years",
+        "Down payment starting from 10% according to the asset type",
+      ],
     },
     section_b: {
       img: "/pages/without-advance.png",
@@ -1493,17 +1663,17 @@ export default {
       description: `We design our solutions around the market value of the assets that your business needs to acquire, and nothing else.`,
       list: [
         [
-          "FIND THE RIGHT ASSET FOR YOUR BUSINESS",
+          "Find the right asset for your business",
           "Our Partner Network covers medical and transportation asset sectors, whether new, used, or refurbished.",
           "1",
         ],
         [
-          "COMPLETE OUR SIMPLE APPLICATION PROCESS",
+          "Complete our simple application process",
           "We’ve worked hard on simplifying our process so that you know well in advance what documentation you’ll need, and we’ll give you a quick and committed response date.",
           "2",
         ],
         [
-          "CHOOSE A PAYMENT PLAN THAT SUITS YOU",
+          "Choose a payment plan that suits you",
           "We will then provide you with payment plans based on the market value of your chosen asset. The plans include everything from the down-payment you’ll need to our administrative fees, without hidden charges and personal discounts.",
           "3",
         ],

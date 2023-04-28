@@ -76,22 +76,17 @@ export default function Index() {
           }}
         >
           <Box sx={{ fontSize: "56px" }}>
-            36 شهر
+            {t.products_shopiing_page.section_a.title2}
+
             {/* 36 months */}
           </Box>
           <Box sx={{ fontSize: "30px" }}>
-            فترة سداد
+            {t.products_shopiing_page.section_a.title1}
             {/* payment period */}
           </Box>
         </Box>
         <Box sx={{ maxWidth: "1000px", m: "auto" }}>
-          إشتري كل إحتياجاتك بدون عمليات معقدة فقط برقم البطاقة و برقم موبايلك,
-          من خلال نظام كنتكت الإلكتروني للتس الشراء و التقسيط من أكثر من 1000
-          منفذ بيع في جميع محافاظات الجمهورية. نظام التقسيط من كونتكت تسوق هو
-          أفضل و أسرع طريقة لتمويل جميع مشترياتك من خلال شبكة ضخمة من المنافذ
-          التجارية و معارض التجزئة و المتاجر الكبري و توكيلات الماركات العالمية.
-          والذي يتيح لك حرية تحديد مبلغ الدفعة المقدمة و يقدم أنظمة التقسيط
-          بفترات سداد تتراوح من 6 أشهر إلي 36 شهر.{" "}
+          {t.products_shopiing_page.section_a.body}
         </Box>
       </Box>
       <IconTileSection page="shopping"></IconTileSection>

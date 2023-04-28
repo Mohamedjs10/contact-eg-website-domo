@@ -44,7 +44,7 @@ export default function Index() {
         formType="a"
       />
       {/* =============================================================== */}
-      <IconTileSection page="finishing"></IconTileSection>
+      <IconTileSection page="auto"></IconTileSection>
       {/* =============================================================== */}
       <CardSlider page="cars"></CardSlider>
       {/* =============================================================== */}

@@ -63,7 +63,7 @@ export default function Index() {
         description={t.products_factoring.cover.description}
         formType="a"
       />
-      <IconTileSection page="shopping"></IconTileSection>
+      <IconTileSection page="factoring"></IconTileSection>
 
       {/* =============================================================== */}
       <Calculator></Calculator>
