@@ -92,7 +92,7 @@ export default function PageCover({
         {/* image ================================================================================ */}
         <Box
           sx={{
-            width: { xs: "300px" },
+            width: { xs: "500px" },
             display: { xs: "none", lg: "block" },
             m: 5,
             transform: locale === "en" ? "scaleX(-1)" : "scaleX(1)",

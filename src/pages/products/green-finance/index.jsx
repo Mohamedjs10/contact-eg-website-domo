@@ -23,11 +23,11 @@ export default function Index() {
   return (
     <Box sx={styles.container}>
       <PageCover
-        color={t.products_leasing.cover.color}
-        img={t.products_leasing.cover.img}
-        title1={t.products_leasing.cover.title1}
-        title2={t.products_leasing.cover.title2}
-        description={t.products_leasing.cover.description}
+        color={t.products_green_finance.cover.color}
+        img={t.products_green_finance.cover.img}
+        title1={t.products_green_finance.cover.title1}
+        title2={t.products_green_finance.cover.title2}
+        description={t.products_green_finance.cover.description}
         formType="a"
       />
       {/* ============================ Section A ============================= */}
@@ -48,7 +48,10 @@ export default function Index() {
           }}
         >
           <Box sx={{ fontSize: "42px", color: colors.orange, mb: 1.5 }}>
-            {t.products_leasing.section_a.title}
+            {t.products_green_finance.section_a.title1}
+          </Box>
+          <Box sx={{ fontSize: "42px", color: colors.orange, mb: 1.5 }}>
+            {t.products_green_finance.section_a.title2}
           </Box>
           <Box
             component="ul"
@@ -59,7 +62,7 @@ export default function Index() {
               textAlign: "initial",
             }}
           >
-            {t.products_leasing.section_a.body.map((item, index) => (
+            {t.products_green_finance.section_a.body.map((item, index) => (
               <li>{item}</li>
             ))}
           </Box>
@@ -70,62 +73,7 @@ export default function Index() {
           sx={{ width: { xs: "200px", sm: "250px", md: "300px", lg: "400px" } }}
         />
       </Box>
-      {/* ============================ Section B ============================= */}
-      <Box className="horizontal-safe-padding vertical-safe-padding">
-        <Box sx={{ mb: 2 }}>
-          <Box
-            sx={{ fontSize: "42px", color: colors.orange, fontWeight: "bold" }}
-          >
-            {t.products_leasing.section_b.title}
-          </Box>
-          <Box>{t.products_leasing.section_b.description}</Box>
-        </Box>
-        <Box sx={styles.sectionContainer}>
-          <Box
-            component="img"
-            src="/img-list.png"
-            sx={{ width: { xs: "200px", sm: "350px", md: "600px" } }}
-          />
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "space-between",
-              fontSize: "30px",
-              gap: 2,
-            }}
-          >
-            {t.products_leasing.section_b.list.map((item) => (
-              <>
-                <Box
-                  sx={{ display: "flex", gap: 2 }}
-                  onMouseEnter={() => setState(item[2])}
-                  onMouseLeave={() => setState("")}
-                >
-                  <Number n={item[2]} state={state} />
-                  <Box
-                    component="span"
-                    sx={{
-                      width: { xs: "300px", sm: "650px" },
-                      fontSize: { xs: "15px", sm: "20px" },
-                    }}
-                  >
-                    {item[0]}
-                  </Box>
-                </Box>
-                <Box
-                  sx={{
-                    width: { xs: "300px", sm: "650px" },
-                    fontSize: { xs: "12px", sm: "15px" },
-                  }}
-                >
-                  {item[1]}
-                </Box>
-              </>
-            ))}
-          </Box>
-        </Box>
-      </Box>
+
       {/* =============================================================== */}
       <Calculator products_packages={t.calc_packages.green_finance} />
     </Box>

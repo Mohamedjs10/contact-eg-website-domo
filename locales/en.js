@@ -561,6 +561,28 @@ export default {
           description: "Fast financing procedures",
         },
       ],
+      products_maintainance_page: [
+        {
+          id: 1,
+          img: "/alarm.png",
+          title: "Payment plans up to 24 months",
+        },
+        {
+          id: 2,
+          img: "/coins.png",
+          title: "Financing up to 1.5 Million EGP",
+        },
+        {
+          id: 3,
+          img: "/payment.png",
+          title: "No down payment",
+        },
+        {
+          id: 4,
+          img: "/tax.png",
+          title: "Easy and fast purchases",
+        },
+      ],
       products_shopping_page: [
         {
           id: 1,
@@ -580,7 +602,6 @@ export default {
         {
           id: 4,
           img: "/tax.png",
-          title: "Fast and Easy Payment via",
           title: "Easy and fast purchases",
         },
         {
@@ -980,7 +1001,7 @@ export default {
         // title1: "Financing",
         title2: "Maintenance",
         img: "/our-products/clubs.jpg",
-        url: "/products/clubs",
+        url: "/products/maintainance",
       },
       {
         // title1: "Financing",
@@ -1466,9 +1487,9 @@ export default {
     cover: {
       img: "/pages/maintainance-cover.png",
       color: "#1F5B36",
-      title1: "تمويل الصيانة",
-      title2: "معاك في كل تفصيله",
-      description: `لو بيتك، عربيتك أو ممتلكاتك محتاجة صيانة، كونتكت سهلتها عليك وهتقسطها على فترات سداد مريحة.`,
+      title1: "Contact Maintainance",
+      title2: "Facilitating every detail",
+      description: `Your home, Car or property needs maintenance, Contact made it easy and will finance your maintenance with the easiest procedures and convenient payment plans.`,
     },
   },
   products_trucks: {
@@ -1683,16 +1704,25 @@ export default {
   },
   products_green_finance: {
     cover: {
-      img: "/pages/leasing-cover.png",
-      color: "#7A1315",
-      title1: "Contact Leasing",
-      title2: "Grow You Bussiness With Contact",
-      description: `If you’re looking to develop your business whatever it is, Contact Leasing will always find a way to help you grow. Today, we’ve focused our efforts on two leading leasing sectors: transportation assets and medical devices with financing up to EGP 15 million.`,
+      img: "/pages/green-finance-cover.png",
+      color: "#415B1F",
+      title1: "Green Finance",
+      title2: "Together we plant, together we develop…",
+      description: `If you need to develop your agricultural investment, Contact believes that agriculture development is the main pillar for economic growth, food security, and a cornerstone for a bright future. Contact will finance your agriculture investments to achieve environmental sustainability.`,
     },
     section_a: {
       img: "/pages/without-advance.png",
-      title: "Contact Leasing Benefits",
-      body: ["body", "body", "body", "body", "body", "body", "body"],
+      title1: "Small Farmers’ financing",
+      title2: "– 1 to 5 acres",
+      body: [
+        "Financing solar panels",
+        "Financing the development of irrigation systems",
+        "Financing greenhouses",
+        "Financing developing and equipping projects of trench plantings and plastic sheets for tunnels and greenhouses",
+        "Financing fishery ponds and equipment",
+        "Financing poultry farms and equipment",
+        "Financing livestock farms and equipment",
+      ],
     },
   },
   products_insurance_page: {

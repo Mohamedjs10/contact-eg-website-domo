@@ -23,6 +23,8 @@ export default function Text({ title, img, page }) {
       ? "products_factoring_page"
       : page === "clubs"
       ? "products_clubs_page"
+      : page === "maintainance"
+      ? "products_maintainance_page"
       : "products_shopping_page";
   return (
     <Box
