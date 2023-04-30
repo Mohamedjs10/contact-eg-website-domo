@@ -659,6 +659,8 @@ export default {
       download_app: "حمل تطبيق كونتكت",
       img1: "/google-play-ar.png",
       img2: "/app-store-ar.png",
+      img1: "/google-play-ar.png",
+      img3: "/huawei-store-ar.png",
     },
     section_d: { copy_right: "جميع الحقوق محفوظة  2021  لكونتكت" },
   },

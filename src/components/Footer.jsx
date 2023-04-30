@@ -284,8 +284,24 @@ export default function Secondary_Navbar({ setIsOPen }) {
         <Box sx={styles.app_container}>
           {/* {t.footer.section_c.download_app} */}
           <Box sx={styles.app_icons}>
-            <img src={t.footer.section_c.img1} width="140px" height="45px" />
-            <img src={t.footer.section_c.img2} width="140px" height="45px" />
+            <a
+              href="https://play.google.com/store/apps/details?id=eg.contact"
+              target="_blank"
+            >
+              <img src={t.footer.section_c.img1} width="140px" height="45px" />
+            </a>
+            <a
+              href="https://apps.apple.com/us/app/contactnow-%D9%83%D9%88%D9%86%D8%AA%D9%83%D8%AA/id1544159088"
+              target="_blank"
+            >
+              <img src={t.footer.section_c.img2} width="140px" height="45px" />
+            </a>
+            <a
+              href="https://appgallery.huawei.com/app/C108100655"
+              target="_blank"
+            >
+              <img src={t.footer.section_c.img3} width="140px" height="45px" />
+            </a>
           </Box>
         </Box>
       </Box>

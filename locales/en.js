@@ -775,6 +775,7 @@ export default {
       download_app: "Download Contact App",
       img1: "/google-play-en.png",
       img2: "/app-store-en.png",
+      img3: "/huawei-store-en.jpg",
     },
     section_d: {
       copy_right: "Copyright 2020 © – All rights reserved to Contact",

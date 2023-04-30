@@ -51,6 +51,8 @@ export const styles = {
     borderRadius: "8px",
     "&:hover": {
       backgroundColor: colors.blue,
+      color: colors.white,
+
       // boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
     },
     "&:active": {

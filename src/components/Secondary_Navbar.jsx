@@ -126,7 +126,7 @@ export default function Secondary_Navbar({
               ml: { xs: 0, md: locale === "en" ? "auto" : 0 },
             }}
           >
-            <Button
+            {/* <Button
               variant="outlined"
               sx={styles.loginBtn}
               style={{
@@ -135,8 +135,14 @@ export default function Secondary_Navbar({
               }}
             >
               {t.secondary_nav.login}
-            </Button>
-            <Button variant="contained" sx={styles.downloadBtn}>
+            </Button> */}
+            <Button
+              variant="contained"
+              sx={styles.downloadBtn}
+              component="a"
+              target="_blank"
+              href="https://onelink.to/contactnow"
+            >
               {t.secondary_nav.download_app}
             </Button>
           </Box>
