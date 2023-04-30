@@ -32,7 +32,10 @@ export default function Cover() {
           >
             <Box
               sx={{
-                height: "100%",
+                // height: "100%",
+                // width: "400px",
+                height: { xs: "150px", sm: "300px", md: "400px" },
+                width: { xs: "200px", sm: "300px", md: "400px" },
                 transform: locale === "en" ? "scaleX(-1)" : "scaleX(1)",
                 display: "flex",
                 justifyContent: "center",
@@ -54,7 +57,6 @@ export default function Cover() {
               <Box
                 sx={{
                   mt: "30px",
-
                   mb: { xs: 1, sm: 2, md: 3, lg: 4 },
                   fontSize: { xs: "15px", sm: "30px", md: "40px", lg: "50px" },
                   fontWeight: "bold",
