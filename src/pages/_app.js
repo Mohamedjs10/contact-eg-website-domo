@@ -66,7 +66,7 @@ const App = ({ Component, pageProps }) => {
         {!matches && (
           <>
             <Popover
-              sx={{ mt: 1 }}
+              sx={{ mt: 1, zIndex: 100000000000000000000 }}
               id={id}
               open={open}
               anchorEl={anchorEl}

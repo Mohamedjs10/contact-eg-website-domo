@@ -82,7 +82,7 @@ export default {
           id: "1",
           title: "Our vision",
           text: [
-            "Our vision is to become the most innovative financial services provider of choice.",
+            "Our vision is to be the most innovative financial services provider of choice. We provide our customers with access to the latest fintech, products and services. Our goal is to make sure that everyone can take advantage of our innovative solutions and maximize their financial potential. We strive for excellence in everything we do and are committed to providing a first-class customer experience.",
           ],
           img: "/images/eye.png",
         },
@@ -1050,7 +1050,7 @@ export default {
           id: "1",
           url: "/products/cars",
           color: colors.blue,
-          img: "/services/car.png",
+          img: "/services/car.svg",
           title: "Auto",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -1060,7 +1060,7 @@ export default {
         {
           url: "/products/trucks",
           color: colors.dark_red,
-          img: "/services/lorry.png",
+          img: "/services/lorry.svg",
           title: "Trucks",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -1070,7 +1070,7 @@ export default {
         {
           url: "/products/trucks",
           color: colors.dark_violet,
-          img: "/services/cart.png",
+          img: "/services/cart.svg",
           title: "Consumer Finance",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -1080,7 +1080,7 @@ export default {
         {
           url: "/products/education",
           color: colors.green,
-          img: "/services/education.png",
+          img: "/services/education.svg",
           title: "Education",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -1090,7 +1090,7 @@ export default {
         {
           url: "/products/clubs",
           color: colors.dark_petroli,
-          img: "/services/clubs.png",
+          img: "/services/clubs.svg",
           title: "Clubs",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -1100,7 +1100,7 @@ export default {
         {
           url: "/products/home-interior",
           color: colors.dark_brown,
-          img: "/services/design.png",
+          img: "/services/design.svg",
           title: "Home Interior",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -1111,7 +1111,7 @@ export default {
           url: "/products/maintainance",
 
           color: colors.dark_brown,
-          img: "/services/maintainance.png",
+          img: "/services/maintainance.svg",
           title: "Maintainance",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -1124,7 +1124,7 @@ export default {
           url: "/products/events",
 
           color: colors.dark_green,
-          img: "/services/ring.png",
+          img: "/services/ring.svg",
           title: "Wedding & Events",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -1135,7 +1135,7 @@ export default {
           url: "/products/home",
 
           color: colors.dark_petroli,
-          img: "/services/house.png",
+          img: "/services/house.svg",
           title: "Mortage",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -1146,7 +1146,7 @@ export default {
           url: "/products/insurance",
 
           color: colors.ratty,
-          img: "/services/mediation.png",
+          img: "/services/mediation.svg",
           title: "Insurance Brokerage",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -1157,7 +1157,7 @@ export default {
           url: "/products/factoring",
 
           color: colors.dark_brown,
-          img: "/services/discount.png",
+          img: "/services/discount.svg",
           title: "Factoring",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -1168,7 +1168,7 @@ export default {
           url: "/products/leasing",
 
           color: colors.light_petroli,
-          img: "/services/rent.png",
+          img: "/services/rent.svg",
           title: "Leasing",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -1179,7 +1179,7 @@ export default {
           url: "/products/green-finance",
 
           color: colors.light_green,
-          img: "/services/green-finance.png",
+          img: "/services/green-finance.svg",
           title: "Green Finance",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -1190,7 +1190,7 @@ export default {
           url: "/products/green-finance",
 
           color: colors.light_green,
-          img: "/services/green-finance.png",
+          img: "/services/green-finance.svg",
           title: "Home Furniture",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -1204,7 +1204,7 @@ export default {
 
           id: "1",
           color: colors.blue,
-          img: "/services/car.png",
+          img: "/services/car.svg",
           title: "Auto",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -1215,7 +1215,7 @@ export default {
           url: "/products/trucks",
 
           color: colors.dark_red,
-          img: "/services/lorry.png",
+          img: "/services/lorry.svg",
           title: "Trucks",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -1226,7 +1226,7 @@ export default {
           url: "/products/shopping",
 
           color: colors.dark_violet,
-          img: "/services/cart.png",
+          img: "/services/cart.svg",
           title: "Consumer Finance",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -1237,7 +1237,7 @@ export default {
           url: "/products/education",
 
           color: colors.green,
-          img: "/services/education.png",
+          img: "/services/education.svg",
           title: "Education",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -1248,7 +1248,7 @@ export default {
           url: "/products/clubs",
 
           color: colors.dark_petroli,
-          img: "/services/clubs.png",
+          img: "/services/clubs.svg",
           title: "Clubs",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -1259,7 +1259,7 @@ export default {
           url: "/products/home-interior",
 
           color: colors.dark_brown,
-          img: "/services/design.png",
+          img: "/services/design.svg",
           title: "Home Interior",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -1270,7 +1270,7 @@ export default {
           url: "/products/maintainance",
 
           color: colors.dark_brown,
-          img: "/services/maintainance.png",
+          img: "/services/maintainance.svg",
           title: "Maintainance",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -1281,7 +1281,7 @@ export default {
           url: "/products/events",
 
           color: colors.dark_green,
-          img: "/services/ring.png",
+          img: "/services/ring.svg",
           title: "Wedding & Events",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -1292,7 +1292,7 @@ export default {
           url: "/products/home",
 
           color: colors.dark_petroli,
-          img: "/services/house.png",
+          img: "/services/house.svg",
           title: "Mortage",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -1303,7 +1303,7 @@ export default {
           url: "/products/insurance",
 
           color: colors.ratty,
-          img: "/services/mediation.png",
+          img: "/services/mediation.svg",
           title: "Insurance Brokerage",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -1314,7 +1314,7 @@ export default {
           url: "/products/factoring",
 
           color: colors.dark_brown,
-          img: "/services/discount.png",
+          img: "/services/discount.svg",
           title: "Factoring",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -1325,7 +1325,7 @@ export default {
           url: "/products/leasing",
 
           color: colors.light_petroli,
-          img: "/services/rent.png",
+          img: "/services/rent.svg",
           title: "Leasing",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -1336,7 +1336,7 @@ export default {
           url: "/products/green-finance",
 
           color: colors.light_green,
-          img: "/services/green-finance.png",
+          img: "/services/green-finance.svg",
           title: "Green Finance",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -1347,7 +1347,7 @@ export default {
           url: "/products/green-finance",
 
           color: colors.light_green,
-          img: "/services/green-finance.png",
+          img: "/services/green-finance.svg",
           title: "Home Furniture",
           description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development.",
@@ -1360,7 +1360,7 @@ export default {
           url: "/products/leasing",
 
           color: colors.blue,
-          img: "/services/homes.png",
+          img: "/services/homes.svg",
           title: "Contact Homes",
           description: "If you need to develop your agricultural investment.",
           full_description:
@@ -1372,7 +1372,7 @@ export default {
           url: "/products/leasing",
 
           color: colors.blue,
-          img: "/services/clients.png",
+          img: "/services/clients.svg",
           title: "Client Filtering",
           description: "If you need to develop your agricultural investment.",
           full_description:

@@ -934,7 +934,7 @@ export default {
           url: "/products/cars",
 
           color: colors.blue,
-          img: "/services/car.png",
+          img: "/services/car.svg",
           title: "تمويل السيارات",
           description:
             "لو عايز تشتري عربية جديدة أو مستعملة، كونتكت بتوفرلك حلول تمويلية متميزة لجميع الماركات ",
@@ -943,7 +943,7 @@ export default {
           url: "/products/trucks",
 
           color: colors.dark_red,
-          img: "/services/lorry.png",
+          img: "/services/lorry.svg",
           title: "تمويل النقل",
           description:
             "سواء محتاج نقل تقيل أو خفيف كونتكت هتقسطلك جميع أنواع الشاحنات الجديدة والمستعملة والاستيراد",
@@ -952,7 +952,7 @@ export default {
           url: "/products/shopping",
 
           color: colors.dark_violet,
-          img: "/services/cart.png",
+          img: "/services/cart.svg",
           title: "تمويل تسوق",
           description: "لو نفسك تشتري في أي وقت براحتك، كونتكت هتسهل حياتك",
         },
@@ -960,7 +960,7 @@ export default {
           url: "/products/education",
 
           color: colors.green,
-          img: "/services/education.png",
+          img: "/services/education.svg",
           title: "تمويل التعليم",
           description:
             "نفسك في مستقبل أفضل ليك ولأولادك، كونتكت هتساعدك وهتكون معاك طول مشوار التعليم",
@@ -969,7 +969,7 @@ export default {
           url: "/products/clubs",
 
           color: colors.dark_petroli,
-          img: "/services/clubs.png",
+          img: "/services/clubs.svg",
           title: "تمويل إشتراكات الاندية",
           description:
             "نفسك تُنمى مهارات أولادك وتساعدهم يمارسوا الرياضة اللي بيحبوها، كونتكت هتقسطلك اشتراك ",
@@ -978,7 +978,7 @@ export default {
           url: "/products/home",
 
           color: colors.dark_brown,
-          img: "/services/design.png",
+          img: "/services/design.svg",
           title: "تمويل تصميم و تشطيب",
           description:
             "لو عايز تصمم وتشطب بيتك على مزاجك من خلال أفضل شركات التصميم الداخلي والديكور في مصر، ",
@@ -987,7 +987,7 @@ export default {
           url: "/products/maintainance",
 
           color: colors.dark_brown,
-          img: "/services/maintainance.png",
+          img: "/services/maintainance.svg",
           title: "تمويل الصيانة",
           description:
             "لو بيتك، عربيتك أو ممتلكاتك محتاجة صيانة، كونتكت سهلتها عليك وهتقسطها على فترات سداد مريحة.",
@@ -998,7 +998,7 @@ export default {
           url: "/products/events",
 
           color: colors.dark_green,
-          img: "/services/ring.png",
+          img: "/services/ring.svg",
           title: "تمويل أفراح و مناسبات",
           description:
             "افرح وريح بالك، كونتكت حلتهالك وهتغطي تكاليف فرحك بأكبر قيمة تمويل وبتقسيط سهل ومريح",
@@ -1007,7 +1007,7 @@ export default {
           url: "/products/home",
 
           color: colors.dark_petroli,
-          img: "/services/house.png",
+          img: "/services/house.svg",
           title: "تمويل عقاري",
           description:
             'احصل على تمويل بيت أحلامك بأسهل وأسرع الإجراءات من خلال نظام "تمويل بيتك"',
@@ -1016,7 +1016,7 @@ export default {
           url: "/products/insurance",
 
           color: colors.ratty,
-          img: "/services/mediation.png",
+          img: "/services/mediation.svg",
           title: "وساطة تأمينية",
           description:
             "محتاج مكان واحد تقدر تأمن فيه على عيلتك، بيتك، عربيتك، مشروعك أو شركتك",
@@ -1025,7 +1025,7 @@ export default {
           url: "/products/factoring",
 
           color: colors.dark_brown,
-          img: "/services/discount.png",
+          img: "/services/discount.svg",
           title: "تخصيم",
           description:
             "لو محتاج سيولة نقدية، كونتكت هتدعمك وهتضمنلك تعزيز رأس المال الخاص بشركتك ",
@@ -1034,7 +1034,7 @@ export default {
           url: "/products/leasing",
 
           color: colors.light_petroli,
-          img: "/services/rent.png",
+          img: "/services/rent.svg",
           title: "تأجير تمويلي",
           description:
             "لو عايز تجهز عيادتك الطبية أو تطور أسطول النقل الخاص بشركتك",
@@ -1043,7 +1043,7 @@ export default {
           url: "/products/green-finance",
 
           color: colors.light_green,
-          img: "/services/green-finance.png",
+          img: "/services/green-finance.svg",
           title: "التمويل الاخضر",
           description:
             "لو محتاج تُنمي استثمارك الزراعي، كونتكت بتقدملك التمويل اللازم اللي هيساعدك في تحقيق التنمية ",
@@ -1052,7 +1052,7 @@ export default {
           url: "/products/green-finance",
 
           color: colors.light_green,
-          img: "/services/green-finance.png",
+          img: "/services/green-finance.svg",
           title: "تمويل فرش البيت",
           description:
             "لو عايز تفرش وتجهز بيتك على مزاجك ومن أي مكان نفسك فيه، كونتكت هتسهلك المشوار",
@@ -1064,7 +1064,7 @@ export default {
 
           id: "1",
           color: colors.blue,
-          img: "/services/car.png",
+          img: "/services/car.svg",
           title: "تمويل السيارات",
           description:
             "لو عايز تشتري عربية جديدة أو مستعملة، كونتكت بتوفرلك حلول تمويلية متميزة لجميع الماركات ",
@@ -1073,7 +1073,7 @@ export default {
           url: "/products/trucks",
 
           color: colors.dark_red,
-          img: "/services/lorry.png",
+          img: "/services/lorry.svg",
           title: "تمويل النقل",
           description:
             "سواء محتاج نقل تقيل أو خفيف كونتكت هتقسطلك جميع أنواع الشاحنات الجديدة والمستعملة والاستيراد",
@@ -1082,7 +1082,7 @@ export default {
           url: "/products/shopping",
 
           color: colors.dark_violet,
-          img: "/services/cart.png",
+          img: "/services/cart.svg",
           title: "تمويل تسوق",
           description: "لو نفسك تشتري في أي وقت براحتك، كونتكت هتسهل حياتك",
         },
@@ -1090,7 +1090,7 @@ export default {
           url: "/products/education",
 
           color: colors.green,
-          img: "/services/education.png",
+          img: "/services/education.svg",
           title: "تمويل التعليم",
           description:
             "نفسك في مستقبل أفضل ليك ولأولادك، كونتكت هتساعدك وهتكون معاك طول مشوار التعليم",
@@ -1099,7 +1099,7 @@ export default {
           url: "/products/clubs",
 
           color: colors.dark_petroli,
-          img: "/services/clubs.png",
+          img: "/services/clubs.svg",
           title: "تمويل إشتراكات الاندية",
           description:
             "نفسك تُنمى مهارات أولادك وتساعدهم يمارسوا الرياضة اللي بيحبوها، كونتكت هتقسطلك اشتراك ",
@@ -1108,7 +1108,7 @@ export default {
           url: "/products/home",
 
           color: colors.dark_brown,
-          img: "/services/design.png",
+          img: "/services/design.svg",
           title: "تمويل تصميم و تشطيب",
           description:
             "لو عايز تصمم وتشطب بيتك على مزاجك من خلال أفضل شركات التصميم الداخلي والديكور في مصر، ",
@@ -1117,7 +1117,7 @@ export default {
           url: "/products/maintainance",
 
           color: colors.dark_brown,
-          img: "/services/maintainance.png",
+          img: "/services/maintainance.svg",
           title: "تمويل الصيانة",
           description:
             "لو بيتك، عربيتك أو ممتلكاتك محتاجة صيانة، كونتكت سهلتها عليك وهتقسطها على فترات سداد مريحة.",
@@ -1126,7 +1126,7 @@ export default {
           url: "/products/events",
 
           color: colors.dark_green,
-          img: "/services/ring.png",
+          img: "/services/ring.svg",
           title: "تمويل أفراح و مناسبات",
           description:
             "افرح وريح بالك، كونتكت حلتهالك وهتغطي تكاليف فرحك بأكبر قيمة تمويل وبتقسيط سهل ومريح",
@@ -1135,7 +1135,7 @@ export default {
           url: "/products/home",
 
           color: colors.dark_petroli,
-          img: "/services/house.png",
+          img: "/services/house.svg",
           title: "تمويل عقاري",
           description:
             'احصل على تمويل بيت أحلامك بأسهل وأسرع الإجراءات من خلال نظام "تمويل بيتك"',
@@ -1144,7 +1144,7 @@ export default {
           url: "/products/insurance",
 
           color: colors.ratty,
-          img: "/services/mediation.png",
+          img: "/services/mediation.svg",
           title: "وساطة تأمينية",
           description:
             "محتاج مكان واحد تقدر تأمن فيه على عيلتك، بيتك، عربيتك، مشروعك أو شركتك",
@@ -1153,7 +1153,7 @@ export default {
           url: "/products/factoring",
 
           color: colors.dark_brown,
-          img: "/services/discount.png",
+          img: "/services/discount.svg",
           title: "تخصيم",
           description:
             "لو محتاج سيولة نقدية، كونتكت هتدعمك وهتضمنلك تعزيز رأس المال الخاص بشركتك ",
@@ -1162,7 +1162,7 @@ export default {
           url: "/products/leasing",
 
           color: colors.light_petroli,
-          img: "/services/rent.png",
+          img: "/services/rent.svg",
           title: "تأجير تمويلي",
           description:
             "لو عايز تجهز عيادتك الطبية أو تطور أسطول النقل الخاص بشركتك",
@@ -1171,7 +1171,7 @@ export default {
           url: "/products/green-finance",
 
           color: colors.light_green,
-          img: "/services/green-finance.png",
+          img: "/services/green-finance.svg",
           title: "التمويل الاخضر",
           description:
             "لو محتاج تُنمي استثمارك الزراعي، كونتكت بتقدملك التمويل اللازم اللي هيساعدك في تحقيق التنمية ",
@@ -1180,7 +1180,7 @@ export default {
           url: "/products/green-finance",
 
           color: colors.light_green,
-          img: "/services/green-finance.png",
+          img: "/services/green-finance.svg",
           title: "تمويل فرش البيت",
           description:
             "لو عايز تفرش وتجهز بيتك على مزاجك ومن أي مكان نفسك فيه، كونتكت هتسهلك المشوار",
@@ -1191,7 +1191,7 @@ export default {
           url: "/products/leasing",
 
           color: colors.blue,
-          img: "/services/homes.png",
+          img: "/services/homes.svg",
           title: "كونتكت هومز",
           description:
             "الان من خلال الشراكة بين شركة كونتكت, شركة التمويل الأولى في مصر، و شركة كولدويل بانكر",
@@ -1204,7 +1204,7 @@ export default {
           url: "/products/leasing",
 
           color: colors.blue,
-          img: "/services/clients.png",
+          img: "/services/clients.svg",
           title: "برنامج ترشيح العملاء",
           description:
             "يمكنك ترشيح أصدقاءك والحصول على نقاط مجانية وخصومات حصرية",
@@ -1293,7 +1293,7 @@ export default {
           id: "1",
           title: "رؤيتنا",
           text: [
-            "رؤيتنا هي ان نكون الإختيار الأول في تقديم الخدمات المالية المبتكرة لعملائنا .",
+            "نسعى أن نكون الاختيار الأول في تقديم الخدمات المالية لعملائنا مستخدمين أحدث التقنيات التكنولوجية للتأكد من تمكين العملاء من الاستفادة من حلولنا المبتكرة وتعظيم إمكاناتهم المالية. كما نسعى جاهدين للتميز في كل ما نقوم به ونلتزم بتقديم تجربة عملاء متميزة.",
           ],
           img: "/images/eye.png",
         },
