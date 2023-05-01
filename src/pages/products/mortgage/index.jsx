@@ -25,7 +25,7 @@ export default function Index() {
         title1={t.products_home.cover.title1}
         title2={t.products_home.cover.title2}
         description={t.products_home.cover.description}
-        formType="a"
+        formType="b"
       />
       {/* ============================ Section A ============================= */}
       <Box

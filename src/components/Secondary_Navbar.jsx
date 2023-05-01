@@ -136,7 +136,7 @@ export default function Secondary_Navbar({
             >
               {t.secondary_nav.login}
             </Button> */}
-            <Button
+            {/* <Button
               variant="contained"
               sx={styles.downloadBtn}
               component="a"
@@ -144,7 +144,7 @@ export default function Secondary_Navbar({
               href="https://onelink.to/contactnow"
             >
               {t.secondary_nav.download_app}
-            </Button>
+            </Button> */}
           </Box>
         </Box>
       </Box>

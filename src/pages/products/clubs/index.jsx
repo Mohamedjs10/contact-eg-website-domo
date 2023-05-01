@@ -34,7 +34,7 @@ export default function Index() {
         title1={t.products_clubs.cover.title1}
         title2={t.products_clubs.cover.title2}
         description={t.products_clubs.cover.description}
-        formType="a"
+        formType="b"
       />
       <IconTileSection page="clubs"></IconTileSection>
 

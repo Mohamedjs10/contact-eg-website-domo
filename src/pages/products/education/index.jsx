@@ -34,7 +34,7 @@ export default function Index() {
         title1={t.products_education.cover.title1}
         title2={t.products_education.cover.title2}
         description={t.products_education.cover.description}
-        formType="a"
+        // formType="a"
       />
       <IconTileSection page="education"></IconTileSection>
 

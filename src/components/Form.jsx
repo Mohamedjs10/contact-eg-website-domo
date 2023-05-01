@@ -3,8 +3,8 @@ import { styles } from "./form";
 import { colors } from "../utils/const";
 import Link from "next/link";
 import { useFormik } from "formik";
-import { EnSchema } from "../utils/en_schema";
-import { ArSchema } from "../utils/ar_schema";
+import { EnSchema, EnSchemaA, EnSchemaB } from "../utils/en_schema";
+import { ArSchema, ArSchemaA, ArSchemaB } from "../utils/ar_schema";
 import { Box, TextField, InputLabel, MenuItem, Button } from "@mui/material";
 
 import { useRouter } from "next/router";
@@ -17,8 +17,53 @@ export default function Form({ type, color }) {
   // formik ==========================================================
   const onSubmit = async (values, actions) => {
     await new Promise((resolve) => setTimeout(resolve, 5000)); // simulate delay
+    console.log(values);
     actions.resetForm();
   };
+  let ArSchemaTest;
+  let EnSchemaTest;
+  let initialValuesTest;
+  if (!type) {
+    ArSchemaTest = ArSchema;
+    EnSchemaTest = EnSchema;
+    initialValuesTest = {
+      username: "",
+      lastname: "",
+      email: "",
+      phoneNumber: "",
+      national_id: "",
+      governorate: "",
+      area: "",
+    };
+  } else if (type == "a") {
+    ArSchemaTest = ArSchemaA;
+    EnSchemaTest = EnSchemaA;
+    initialValuesTest = {
+      username: "",
+      lastname: "",
+      email: "",
+      phoneNumber: "",
+      national_id: "",
+      governorate: "",
+      area: "",
+      car_type: "",
+      car_price: "",
+    };
+  } else if (type == "b") {
+    ArSchemaTest = ArSchemaB;
+    EnSchemaTest = EnSchemaB;
+    initialValuesTest = {
+      username: "",
+      lastname: "",
+      email: "",
+      phoneNumber: "",
+      national_id: "",
+      governorate: "",
+      area: "",
+      products: "",
+    };
+  }
+
   const {
     values,
     errors,
@@ -28,21 +73,8 @@ export default function Form({ type, color }) {
     handleChange,
     handleSubmit,
   } = useFormik({
-    initialValues: {
-      email: "",
-      phoneNumber: "",
-      governorate: "",
-      national_id: "",
-      area: "",
-      username: "",
-      lastname: "",
-      // car_type: "",
-      // car_price: "",
-      car_type: null,
-      car_price: null,
-      products: "",
-    },
-    validationSchema: locale === "en" ? EnSchema : ArSchema,
+    initialValues: initialValuesTest,
+    validationSchema: locale === "en" ? EnSchemaTest : ArSchemaTest,
     onSubmit,
   });
   // ================================================================
@@ -258,7 +290,7 @@ export default function Form({ type, color }) {
               value={values.car_price}
               onChange={handleChange}
               id="car_price"
-              type="text"
+              type="number"
               onBlur={handleBlur}
               error={touched.car_price && errors.car_price}
               sx={styles.input}
@@ -312,33 +344,6 @@ export default function Form({ type, color }) {
         </>
       )}
 
-      {/* {type === "b" && (
-        <Box sx={styles.inputWrapper} style={{ width: "200px" }}>
-          <InputLabel sx={styles.label}>{t.form_labels.products}</InputLabel>
-          <TextField
-            sx={styles.input}
-            select
-            value={globalState.products || "default"}
-            onChange={(event) => {
-              setGlobalState((prev) => ({
-                ...prev,
-                products: event.target.value,
-              }));
-            }}
-            style={{ height: "45px" }}
-            InputProps={{ sx: { height: "45px" } }}
-          >
-            <MenuItem disabled value="default">
-              {t.form_labels.products_placeholder}
-            </MenuItem>
-            {t.governorates.map((option) => (
-              <MenuItem key={option.id} value={option.governorate_name}>
-                {option.governorate_name}
-              </MenuItem>
-            ))}
-          </TextField>
-        </Box>
-      )} */}
       {/* Submit ---------------------------------------------------------------------------------------------------------- */}
       <Button
         disabled={isSubmitting}

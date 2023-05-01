@@ -59,7 +59,7 @@ export default function Index() {
         title1={t.products_shopiing_page.cover.title1}
         title2={t.products_shopiing_page.cover.title2}
         description={t.products_shopiing_page.cover.description}
-        formType="a"
+        formType="b"
       />
       <Box
         sx={{ textAlign: "center" }}
