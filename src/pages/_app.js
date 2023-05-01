@@ -78,6 +78,7 @@ const App = ({ Component, pageProps }) => {
                 horizontal: locale === "en" ? "left" : "right",
               }}
               transformOrigin={{
+                vertical: "top",
                 horizontal: locale === "en" ? "left" : "right",
               }}
             >

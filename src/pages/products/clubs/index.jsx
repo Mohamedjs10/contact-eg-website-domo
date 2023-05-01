@@ -24,7 +24,6 @@ export default function Index() {
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : ar;
-  console.log(t.general.reviews);
 
   return (
     <Box sx={styles.container}>

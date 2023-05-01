@@ -62,7 +62,7 @@ export default function Main_Navbar({ anchorEl, setAnchorEl }) {
         component={Link}
         sx={styles.tab}
         style={{
-          fontWeight: mainTab === "افراد" ? "bold" : "",
+          fontWeight: mainTab === "افراد" ? "bold" : "normal",
           borderBottom: mainTab === "افراد" ? `2px solid ${colors.blue}` : "",
         }}
         href="/"
@@ -76,7 +76,7 @@ export default function Main_Navbar({ anchorEl, setAnchorEl }) {
         component={Link}
         sx={styles.tab}
         style={{
-          fontWeight: mainTab === "شركات" ? "bold" : "",
+          fontWeight: mainTab === "شركات" ? "bold" : "normal",
           borderBottom: mainTab === "شركات" ? `2px solid ${colors.blue}` : "",
         }}
         href="/"
@@ -90,7 +90,7 @@ export default function Main_Navbar({ anchorEl, setAnchorEl }) {
         component={Link}
         sx={styles.tab}
         style={{
-          fontWeight: mainTab === "مستثمرين" ? "bold" : "",
+          fontWeight: mainTab === "مستثمرين" ? "bold" : "normal",
           borderBottom:
             mainTab === "مستثمرين" ? `2px solid ${colors.blue}` : "",
         }}

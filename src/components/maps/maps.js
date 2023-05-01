@@ -54,7 +54,6 @@ export default function MapBox() {
     })
       .then((res) => res.json())
       .then((value) => {
-        console.log(value);
         const branches = value?.map((item, index) => {
           return {
             id: index + 1,
@@ -62,11 +61,11 @@ export default function MapBox() {
             position: { lat: item.latitude, lng: item.longitude },
           };
         });
-        console.log(branches);
+        // console.log(branches);
         setMarkers(branches);
         setMapInstance(true);
-      })
-      .catch((err) => console.log(err));
+      });
+    // .catch((err) => console.log(err));
   }, []);
 
   const onLoad = (marker) => {};
@@ -122,7 +121,7 @@ export default function MapBox() {
               id="search-box"
               options={governates}
               onChange={(e) => {
-                console.log(e.target.innerHTML);
+                // console.log(e.target.innerHTML);
                 setMarkers([
                   {
                     id: 1,
@@ -228,9 +227,9 @@ export default function MapBox() {
           >
             {mapInstance &&
               markers?.map(({ id, name, position }) => (
-                <>
+                <Box key={id}>
                   <Marker
-                    key={id}
+                    // key={id}
                     position={position}
                     onLoad={onLoad}
                     onClick={(marker) => {
@@ -286,7 +285,7 @@ export default function MapBox() {
                       </Box>
                     </InfoWindow>
                   )}
-                </>
+                </Box>
               ))}
           </GoogleMap>
         </LoadScript>

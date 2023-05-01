@@ -17,7 +17,6 @@ export default function Form({ type, color }) {
   // formik ==========================================================
   const onSubmit = async (values, actions) => {
     await new Promise((resolve) => setTimeout(resolve, 5000)); // simulate delay
-    console.log(values);
     actions.resetForm();
   };
   let ArSchemaTest;
