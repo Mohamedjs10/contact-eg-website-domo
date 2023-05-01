@@ -1189,7 +1189,6 @@ export default {
       C: [
         {
           url: "/products/leasing",
-
           color: colors.blue,
           img: "/services/homes.svg",
           title: "كونتكت هومز",

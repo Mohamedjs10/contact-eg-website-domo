@@ -1370,7 +1370,6 @@ export default {
       D: [
         {
           url: "/products/leasing",
-
           color: colors.blue,
           img: "/services/clients.svg",
           title: "Client Filtering",

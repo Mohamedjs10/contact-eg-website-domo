@@ -58,7 +58,7 @@ export default function SideDrawer({ state, setState }) {
                 <ListItemIcon>
                   <InboxIcon />
                 </ListItemIcon>
-                <ListItemText primary="خدمات تمويلية" />
+                <ListItemText primary={t.secondary_nav.financial_services} />
                 {open1 ? <ExpandLess /> : <ExpandMore />}
               </ListItemButton>
             </ListItem>
@@ -86,7 +86,7 @@ export default function SideDrawer({ state, setState }) {
                 <ListItemIcon>
                   <InboxIcon />
                 </ListItemIcon>
-                <ListItemText primary="برنامج العملاء" />
+                <ListItemText primary={t.secondary_nav.clients_program} />
                 {/* <ListItemText primary={t.secondary_nav.insurance_services} /> */}
 
                 {open2 ? <ExpandLess /> : <ExpandMore />}
@@ -108,6 +108,20 @@ export default function SideDrawer({ state, setState }) {
                     />
                   )
                 )}
+                {t.home_page.services.D.map(
+                  ({ color, title, description, img, url }, index) => (
+                    <Service
+                      url={url}
+                      key={index}
+                      color={color}
+                      title={title}
+                      description={description}
+                      img={img}
+                      // for side drawer toggle (close after click service)
+                      setState={setState}
+                    />
+                  )
+                )}
               </Box>
             </Collapse>
             {/* C ---------------------------------------------------------*/}
@@ -116,7 +130,7 @@ export default function SideDrawer({ state, setState }) {
                 <ListItemIcon>
                   <MailIcon />
                 </ListItemIcon>
-                <ListItemText primary="خدمات تأمينية" />
+                <ListItemText primary={t.secondary_nav.insurance_services} />
               </ListItemButton>
             </ListItem>
             {/* D ---------------------------------------------------------*/}
@@ -125,7 +139,7 @@ export default function SideDrawer({ state, setState }) {
                 <ListItemIcon>
                   <MailIcon />
                 </ListItemIcon>
-                <ListItemText primary="مدفوعات الكترونية" />
+                <ListItemText primary={t.secondary_nav.e_payments} />
               </ListItemButton>
             </ListItem>
             {/* E ---------------------------------------------------------*/}
@@ -134,7 +148,9 @@ export default function SideDrawer({ state, setState }) {
                 <ListItemIcon>
                   <MailIcon />
                 </ListItemIcon>
-                <ListItemText primary="إستثمار و ادخار" />
+                <ListItemText
+                  primary={t.secondary_nav.investment_and_savings}
+                />
               </ListItemButton>
             </ListItem>
             {/* F ---------------------------------------------------------*/}
@@ -143,7 +159,7 @@ export default function SideDrawer({ state, setState }) {
                 <ListItemIcon>
                   <MailIcon />
                 </ListItemIcon>
-                <ListItemText primary="اماكن الفروع" />
+                <ListItemText primary={t.secondary_nav.branches_location} />
               </ListItemButton>
             </ListItem>
           </List>
