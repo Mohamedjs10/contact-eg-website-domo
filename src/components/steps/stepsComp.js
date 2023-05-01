@@ -75,40 +75,50 @@ export default function HorizontalNonLinearStepper() {
               mb: 2,
             }}
           >
-            <Box
-              component="img"
-              sx={{
-                width: "140px",
-                cursor: "pointer",
-                mx: {
-                  xs: 1,
-                  md: 2,
-                },
-                mt: {
-                  xs: 1,
-                  md: 1,
-                },
-              }}
-              src="/images/home-google-play.png"
-              alt="app-store"
-            />
-            <Box
-              component="img"
-              sx={{
-                width: "140px",
-                mx: {
-                  xs: 1,
-                  md: 2,
-                },
-                mt: {
-                  xs: 1,
-                  md: 1,
-                },
-                cursor: "pointer",
-              }}
-              src="/images/home-app-store.png"
-              alt="app-store"
-            />
+            <a
+              href="https://play.google.com/store/apps/details?id=eg.contact"
+              target="_blank"
+            >
+              <Box
+                component="img"
+                sx={{
+                  width: "140px",
+                  cursor: "pointer",
+                  mx: {
+                    xs: 1,
+                    md: 2,
+                  },
+                  mt: {
+                    xs: 1,
+                    md: 1,
+                  },
+                }}
+                src="/images/home-google-play.png"
+                alt="app-store"
+              />
+            </a>
+            <a
+              href="https://apps.apple.com/us/app/contactnow-%D9%83%D9%88%D9%86%D8%AA%D9%83%D8%AA/id1544159088"
+              target="_blank"
+            >
+              <Box
+                component="img"
+                sx={{
+                  width: "140px",
+                  mx: {
+                    xs: 1,
+                    md: 2,
+                  },
+                  mt: {
+                    xs: 1,
+                    md: 1,
+                  },
+                  cursor: "pointer",
+                }}
+                src="/images/home-app-store.png"
+                alt="app-store"
+              />
+            </a>
           </Box>
           <Box
             sx={{
