@@ -99,6 +99,7 @@ export default function PageCover({
           data-aos="fade-up"
           sx={{
             width: { xs: "500px" },
+            height: { xs: "500px" },
             display: { xs: "none", lg: "block" },
             m: 5,
             transform: locale === "en" ? "scaleX(-1)" : "scaleX(1)",

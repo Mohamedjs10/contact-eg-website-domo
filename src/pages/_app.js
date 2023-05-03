@@ -48,7 +48,7 @@ const App = ({ Component, pageProps }) => {
   const open = Boolean(anchorEl);
   const id = open ? "simple-popover" : undefined;
   useEffect(() => {
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
     AOS.init({
       easing: "ease-out-cubic",
       once: true,
