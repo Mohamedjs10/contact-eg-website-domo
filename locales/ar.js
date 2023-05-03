@@ -53,6 +53,8 @@ export default {
     ],
   },
   general: {
+    gifs: { hi: "/gif/hi-ar.gif", calculationg: "/gif/calculating-ar.gif" },
+
     menu: {
       about_us: "نبذة عنا",
       media: "ميديا",
@@ -1860,18 +1862,21 @@ export default {
   featureSection: [
     {
       id: "1",
+      delay: "0",
       img: "/shopping.png",
       title: "تسوق",
       text: " ابحث عن منتجات وعلامات تجارية جديدة. احصل على أفضل صفقة واكسب مكافآت - فقط للتسوق.",
     },
     {
       id: "2",
+      delay: "200",
       img: "/shopping.png",
       title: "تقسيط",
       text: "اختر طريقة الدفع في المتاجر الشريكة ، عبر تطبيقنا أو بطاقة  أو امتداد المتصفح.",
     },
     {
       id: "3",
+      delay: "400",
       img: "/shopping.png",
       title: "تدفع",
       text: "قم بتقسيم مدفوعاتك وإدارة المشتريات ، من خلال نظرة عامة على الإنفاق الذكي والمزيد.",

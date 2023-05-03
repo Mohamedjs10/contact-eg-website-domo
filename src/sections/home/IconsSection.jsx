@@ -22,7 +22,12 @@ export default function IconsSection({}) {
     >
       {t.featureSection.map((item) => {
         return (
-          <Box key={item.id} sx={styles.item}>
+          <Box
+            key={item.id}
+            sx={styles.item}
+            data-aos="fade-up"
+            data-aos-delay={item.delay}
+          >
             <img src={item.img} alt={item.title} width="80px" />
             <Box
               sx={{ fontSize: "40px", fontWeight: "bold", color: colors.blue }}

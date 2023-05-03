@@ -8,13 +8,15 @@ import { useRouter } from "next/router";
 import en from "../../locales/en";
 import ar from "../../locales/ar";
 
-export default function ImageCard({ img, title1, title2, url }) {
+export default function ImageCard({ img, title1, title2, url, delay }) {
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : ar;
 
   return (
     <Box
+      data-aos="fade-up"
+      // data-aos-delay={`${delay}`}
       component={Link}
       href={url}
       sx={{
@@ -28,7 +30,6 @@ export default function ImageCard({ img, title1, title2, url }) {
         borderRadius: 5,
         textAlign: t.textAlign,
         display: "flex",
-
         flexDirection: "column",
         justifyContent: "flex-end",
         transition: "1.5s",
