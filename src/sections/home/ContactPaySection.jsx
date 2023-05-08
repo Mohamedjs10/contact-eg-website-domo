@@ -21,7 +21,11 @@ export default function IconsSection({}) {
       sx={styles.container}
       className="horizontal-safe-padding vertical-safe-padding my-5"
     >
-      <Box sx={styles.text}>
+      <Box
+        data-aos={locale == "en" ? "fade-right" : "fade-left"}
+        // data-aos-delay="100"
+        sx={styles.text}
+      >
         <Box sx={{ display: "flex", gap: 1 }}>
           <Box
             sx={{
@@ -75,8 +79,8 @@ export default function IconsSection({}) {
       </Box>
       <Box
         sx={styles.img}
-        data-aos={locale == "en" ? "fade-right" : "fade-left"}
-        data-aos-delay="200"
+        data-aos={locale == "en" ? "fade-left" : "fade-right"}
+        // data-aos-delay="200"
       >
         <img
           src="bos.png"

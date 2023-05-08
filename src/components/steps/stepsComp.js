@@ -44,6 +44,8 @@ export default function HorizontalNonLinearStepper() {
       }}
     >
       <Box
+        data-aos={locale == "en" ? "fade-right" : "fade-left"}
+        data-aos-delay="100"
         sx={{
           width: {
             xs: "100%",
@@ -128,6 +130,8 @@ export default function HorizontalNonLinearStepper() {
       </Box>
       <Box
         component="img"
+        data-aos={locale == "en" ? "fade-left" : "fade-right"}
+        // data-aos-delay="100"
         sx={{
           margin: {
             md: "inherit",
@@ -199,6 +203,7 @@ export default function HorizontalNonLinearStepper() {
             </Step>
           ))}
         </Stepper>
+
         {extractContent(activeStep)}
       </Box>
       <Box

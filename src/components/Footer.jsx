@@ -78,9 +78,12 @@ export default function Secondary_Navbar({ setIsOPen }) {
         <Box sx={styles.container}>
           {/* 1---------- */}
           <Box sx={styles.sub_container}>
-            <Box sx={styles.title}>{t.footer.section_b.financial_services}</Box>
+            <Box sx={styles.title} data-aos="fade-up">
+              {t.footer.section_b.financial_services}
+            </Box>
             {t.footer.section_b.financial_services_list1.map((item, index) => (
               <Box
+                data-aos="fade-up"
                 component={Link}
                 href={item.url}
                 sx={styles.link}
@@ -92,9 +95,12 @@ export default function Secondary_Navbar({ setIsOPen }) {
           </Box>
           {/* 2---------- */}
           <Box sx={styles.sub_container}>
-            <Box sx={styles.title}>{t.footer.section_b.financial_services}</Box>
+            <Box sx={styles.title} data-aos="fade-up">
+              {t.footer.section_b.financial_services}
+            </Box>
             {t.footer.section_b.financial_services_list2.map((item, index) => (
               <Box
+                data-aos="fade-up"
                 component={Link}
                 href={item.url}
                 sx={styles.link}
@@ -106,9 +112,12 @@ export default function Secondary_Navbar({ setIsOPen }) {
           </Box>
           {/* 3---------- */}
           <Box sx={styles.sub_container}>
-            <Box sx={styles.title}>{t.footer.section_b.other_services}</Box>
+            <Box sx={styles.title} data-aos="fade-up">
+              {t.footer.section_b.other_services}
+            </Box>
             {t.footer.section_b.other_services_list.map((item, index) => (
               <Box
+                data-aos="fade-up"
                 component={Link}
                 href={item.url}
                 sx={styles.link}
@@ -120,9 +129,12 @@ export default function Secondary_Navbar({ setIsOPen }) {
           </Box>
           {/* 4---------- */}
           <Box sx={styles.sub_container}>
-            <Box sx={styles.title}>{t.footer.section_b.contact}</Box>
+            <Box sx={styles.title} data-aos="fade-up">
+              {t.footer.section_b.contact}
+            </Box>
             {t.footer.section_b.contact_list.map((item, index) => (
               <Box
+                data-aos="fade-up"
                 component={Link}
                 href={item.url}
                 sx={styles.link}
@@ -134,9 +146,12 @@ export default function Secondary_Navbar({ setIsOPen }) {
           </Box>
           {/* 5---------- */}
           <Box sx={styles.sub_container}>
-            <Box sx={styles.title}>{t.footer.section_b.company}</Box>
+            <Box sx={styles.title} data-aos="fade-up">
+              {t.footer.section_b.company}
+            </Box>
             {t.footer.section_b.company_list.map((item, index) => (
               <Box
+                data-aos="fade-up"
                 component={Link}
                 href={item.url}
                 sx={styles.link}
@@ -148,9 +163,12 @@ export default function Secondary_Navbar({ setIsOPen }) {
           </Box>
           {/* 6---------- */}
           <Box sx={styles.sub_container}>
-            <Box sx={styles.title}>{t.footer.section_b.policy}</Box>
+            <Box sx={styles.title} data-aos="fade-up">
+              {t.footer.section_b.policy}
+            </Box>
             {t.footer.section_b.policy_list.map((item, index) => (
               <Box
+                data-aos="fade-up"
                 component={Link}
                 href={item.url}
                 sx={styles.link}

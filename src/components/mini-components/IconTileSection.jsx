@@ -33,6 +33,8 @@ export default function Text({ title, img, page }) {
     >
       {t.general.icon_title[pageLocale].map((item, index) => (
         <Box
+          data-aos="fade-up"
+          // data-aos-delay="100"
           sx={styles.container}
           style={{ visibility: item.id == null ? "hidden" : "" }}
           key={index}
