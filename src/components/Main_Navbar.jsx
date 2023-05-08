@@ -6,7 +6,7 @@ import Link from "next/link";
 import Button from "@mui/material/Button";
 import { colors } from "../utils/const";
 import { styles } from "./main_navbar.js";
-import { mainTabActions } from "../Redux/store";
+import { mainTabActions, gifActions } from "../Redux/store";
 import { useRouter } from "next/router";
 import en from "../../locales/en";
 import ar from "../../locales/ar";
@@ -14,10 +14,11 @@ import { useSelector, useDispatch } from "react-redux";
 
 export default function Main_Navbar({ anchorEl, setAnchorEl }) {
   const mainTab = useSelector((state) => state.mainTab.mainTab);
+  const gif = useSelector((state) => state.gif.gif);
+
   const router = useRouter();
 
   const dispatch = useDispatch();
-
   const { locale } = router;
   const t = locale === "en" ? en : ar;
   // ------------------------------
@@ -33,6 +34,31 @@ export default function Main_Navbar({ anchorEl, setAnchorEl }) {
 
   return (
     <Box sx={styles.container} className="horizontal-safe-padding">
+      <Box
+        component="img"
+        src={gif == "hi" ? t.general.gifs.hi : t.general.gifs.calculationg}
+        sx={{
+          zIndex: "100000000000",
+          height: "150px",
+          position: "fixed",
+          bottom: "30px",
+          [locale === "en" ? "right" : "left"]: "60px",
+        }}
+      ></Box>
+      <a href="https://wa.me/20216177" target="_blank">
+        <Box
+          component="img"
+          src="/whatsapp.png"
+          sx={{
+            zIndex: "100000000000",
+            height: "65px",
+            position: "fixed",
+            bottom: "65px",
+            [locale === "en" ? "right" : "left"]: "15px",
+          }}
+        ></Box>
+      </a>
+
       <Button
         onClick={(event) => {
           setAnchorEl(event.currentTarget);
@@ -62,7 +88,7 @@ export default function Main_Navbar({ anchorEl, setAnchorEl }) {
         component={Link}
         sx={styles.tab}
         style={{
-          fontWeight: mainTab === "افراد" ? "bold" : "",
+          fontWeight: mainTab === "افراد" ? "bold" : "normal",
           borderBottom: mainTab === "افراد" ? `2px solid ${colors.blue}` : "",
         }}
         href="/"
@@ -76,7 +102,7 @@ export default function Main_Navbar({ anchorEl, setAnchorEl }) {
         component={Link}
         sx={styles.tab}
         style={{
-          fontWeight: mainTab === "شركات" ? "bold" : "",
+          fontWeight: mainTab === "شركات" ? "bold" : "normal",
           borderBottom: mainTab === "شركات" ? `2px solid ${colors.blue}` : "",
         }}
         href="/"
@@ -90,7 +116,7 @@ export default function Main_Navbar({ anchorEl, setAnchorEl }) {
         component={Link}
         sx={styles.tab}
         style={{
-          fontWeight: mainTab === "مستثمرين" ? "bold" : "",
+          fontWeight: mainTab === "مستثمرين" ? "bold" : "normal",
           borderBottom:
             mainTab === "مستثمرين" ? `2px solid ${colors.blue}` : "",
         }}

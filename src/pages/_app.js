@@ -24,7 +24,12 @@ import { useTranslation } from "next-i18next";
 import FlyingCard from "@/components/mini-components/FlyingCard";
 import CardSlider from "@/components/CardSlider.jsx";
 import Popover from "@mui/material/Popover";
+// -----
+import AOS from "aos";
+import "aos/dist/aos.css";
+// import "../scss/style.scss";
 const App = ({ Component, pageProps }) => {
+  // ==========
   const router = useRouter();
   const { locale } = router;
   const [arrDirA, setArrDirA] = useState("down");
@@ -42,6 +47,15 @@ const App = ({ Component, pageProps }) => {
 
   const open = Boolean(anchorEl);
   const id = open ? "simple-popover" : undefined;
+  useEffect(() => {
+    // window.scrollTo(0, 0);
+    AOS.init({
+      easing: "ease-out-cubic",
+      once: true,
+      offset: 50,
+    });
+  }, []);
+
   return (
     <Provider store={store}>
       <Box dir={locale === "en" ? "ltr" : "rtl"} sx={{}}>
@@ -78,6 +92,7 @@ const App = ({ Component, pageProps }) => {
                 horizontal: locale === "en" ? "left" : "right",
               }}
               transformOrigin={{
+                vertical: "top",
                 horizontal: locale === "en" ? "left" : "right",
               }}
             >

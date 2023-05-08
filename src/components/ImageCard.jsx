@@ -8,42 +8,44 @@ import { useRouter } from "next/router";
 import en from "../../locales/en";
 import ar from "../../locales/ar";
 
-export default function ImageCard({ img, title1, title2, url }) {
+export default function ImageCard({ img, title1, title2, url, delay }) {
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : ar;
 
   return (
     <Box
-      component={Link}
-      href={url}
-      sx={{
-        width: "282px",
-        height: "154px",
-        color: colors.white,
-        background: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url(${img})`,
-        backgroundSize: "282px 154px",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
-        borderRadius: 5,
-        textAlign: t.textAlign,
-        display: "flex",
-
-        flexDirection: "column",
-        justifyContent: "flex-end",
-        transition: "1.5s",
-        textDecoration: "none",
-
-        "&:hover": {
-          backgroundSize: "310px 180px",
-
-          color: colors.white,
-        },
-      }}
+      data-aos="fade-up"
+      // data-aos-delay={`${delay}`}
     >
-      <Box sx={{ p: 2 }}>
-        <Box sx={{ fontSize: "25px" }}>{title1}</Box>
-        <Box sx={{ fontWeight: "bold", fontSize: "32px" }}>{title2}</Box>
+      <Box
+        component={Link}
+        href={url}
+        sx={{
+          width: "282px",
+          height: "154px",
+          color: colors.white,
+          background: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url(${img})`,
+          backgroundSize: "282px 154px",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          borderRadius: 5,
+          textAlign: t.textAlign,
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "flex-end",
+          transition: "1.5s",
+          textDecoration: "none",
+          "&:hover": {
+            backgroundSize: "310px 180px",
+            color: colors.white,
+          },
+        }}
+      >
+        <Box sx={{ p: 2 }}>
+          <Box sx={{ fontSize: "25px" }}>{title1}</Box>
+          <Box sx={{ fontWeight: "bold", fontSize: "32px" }}>{title2}</Box>
+        </Box>
       </Box>
     </Box>
   );

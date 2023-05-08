@@ -17,7 +17,6 @@ export default function Form({ type, color }) {
   // formik ==========================================================
   const onSubmit = async (values, actions) => {
     await new Promise((resolve) => setTimeout(resolve, 5000)); // simulate delay
-    console.log(values);
     actions.resetForm();
   };
   let ArSchemaTest;
@@ -80,6 +79,7 @@ export default function Form({ type, color }) {
   // ================================================================
   return (
     <Box
+      data-aos={locale == "en" ? "fade-right" : "fade-left"}
       component="form"
       sx={styles.container}
       onSubmit={handleSubmit}

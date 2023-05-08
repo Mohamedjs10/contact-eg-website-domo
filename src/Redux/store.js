@@ -43,12 +43,23 @@ const productsSlice = createSlice({
   },
 });
 
+const gifSlice = createSlice({
+  name: "gif",
+  initialState: { gif: "hi" },
+  reducers: {
+    update(state, action) {
+      state.gif = action.payload;
+    },
+  },
+});
+
 const store = configureStore({
   reducer: {
     mainTab: mainTabSlice.reducer,
     secTab: secTabSlice.reducer,
     menu: menuSlice.reducer,
     products: productsSlice.reducer,
+    gif: gifSlice.reducer,
   },
 });
 
@@ -56,5 +67,6 @@ export const mainTabActions = mainTabSlice.actions;
 export const secTabActions = secTabSlice.actions;
 export const { updateMenu } = menuSlice.actions;
 export const { updateProducts } = productsSlice.actions;
+export const gifActions = gifSlice.actions;
 
 export default store;

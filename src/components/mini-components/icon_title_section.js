@@ -20,13 +20,15 @@ export const styles = {
   title: (theme) => ({
     color: colors.blue,
     fontSize: { xs: "12px", sm: "20px" },
-    textAlign: { xs: "center", sm: "initial" },
+    // textAlign: { xs: "center", sm: "initial" },
+    textAlign: "initial",
     fontWeight: "bold",
   }),
   description: (theme) => ({
     color: colors.blue,
     fontSize: { xs: "8px", sm: "12px" },
-    textAlign: { xs: "center", sm: "initial" },
+    // textAlign: { xs: "center", sm: "initial" },
+    textAlign: "initial",
     fontWeight: "bold",
   }),
   imgContainer: (theme) => ({

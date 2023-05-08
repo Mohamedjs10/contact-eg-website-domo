@@ -73,7 +73,11 @@ export default function IconsSection({}) {
           ))}
         </Box>
       </Box>
-      <Box sx={styles.img}>
+      <Box
+        sx={styles.img}
+        data-aos={locale == "en" ? "fade-right" : "fade-left"}
+        data-aos-delay="200"
+      >
         <img
           src="bos.png"
           width="100%"

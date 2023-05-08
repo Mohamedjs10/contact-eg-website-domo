@@ -50,6 +50,7 @@ export default function PageCover({
       >
         {/* title1 ================================================================================ */}
         <Box
+          data-aos="fade-up"
           sx={{
             fontSize: { xs: "30px", sm: "35px", md: "42px" },
 
@@ -64,6 +65,8 @@ export default function PageCover({
         </Box>
         {/* title2 ================================================================================ */}
         <Box
+          data-aos="fade-up"
+          data-aos-delay="100"
           sx={{
             fontSize: { xs: "30px", sm: "35px", md: "42px" },
 
@@ -75,6 +78,8 @@ export default function PageCover({
         {/* description ================================================================================ */}
 
         <Box
+          data-aos="fade-up"
+          data-aos-delay="300"
           sx={{
             fontSize: "16px",
             wordWrap: "break-word",
@@ -91,8 +96,10 @@ export default function PageCover({
         </Box>
         {/* image ================================================================================ */}
         <Box
+          data-aos="fade-up"
           sx={{
             width: { xs: "500px" },
+            // height: { xs: "500px" },
             display: { xs: "none", lg: "block" },
             m: 5,
             transform: locale === "en" ? "scaleX(-1)" : "scaleX(1)",

@@ -166,6 +166,7 @@ export default {
     ],
   },
   general: {
+    gifs: { hi: "/gif/hi-en.gif", calculationg: "/gif/calculating-en.gif" },
     menu: {
       about_us: "About Us",
       media: "Media",
@@ -1817,19 +1818,21 @@ export default {
   featureSection: [
     {
       id: "1",
-
+      delay: "0",
       img: "/shopping.png",
       title: "Shopping",
       text: "Find new products and brands. Get the best deal and earn rewards - just for shopping.",
     },
     {
       id: "2",
+      delay: "200",
       img: "/shopping.png",
       title: "Installment",
       text: "Choose the payment method in partner stores, via our app, card or browser extension.",
     },
     {
       id: "3",
+      delay: "400",
       img: "/shopping.png",
       title: "Pay",
       text: "Split your payments and manage purchases, with a smart spend overview and more.",
