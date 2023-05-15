@@ -18,6 +18,7 @@ import { useFormik } from "formik";
 // import { ArSchema } from "../utils/ar_schema";
 import { Box, TextField, InputLabel, MenuItem, Button } from "@mui/material";
 import Calculator from "../../../components/Calculator.jsx";
+import Head from "next/head";
 
 // ================================================================
 export default function Index() {
@@ -26,19 +27,26 @@ export default function Index() {
   const t = locale === "en" ? en : ar;
 
   return (
-    <Box sx={styles.container}>
-      <PageCover
-        color={t.products_education.cover.color}
-        img={t.products_education.cover.img}
-        title1={t.products_education.cover.title1}
-        title2={t.products_education.cover.title2}
-        description={t.products_education.cover.description}
-        // formType="a"
-      />
-      <IconTileSection page="education"></IconTileSection>
+    <>
+      <Head>
+        <title>Products-Education</title>
+        <meta name="" content="" />
+      </Head>
 
-      {/* =============================================================== */}
-      <Calculator products_packages={t.calc_packages.education} />
-    </Box>
+      <Box sx={styles.container}>
+        <PageCover
+          color={t.products_education.cover.color}
+          img={t.products_education.cover.img}
+          title1={t.products_education.cover.title1}
+          title2={t.products_education.cover.title2}
+          description={t.products_education.cover.description}
+          // formType="a"
+        />
+        <IconTileSection page="education"></IconTileSection>
+
+        {/* =============================================================== */}
+        <Calculator products_packages={t.calc_packages.education} />
+      </Box>
+    </>
   );
 }

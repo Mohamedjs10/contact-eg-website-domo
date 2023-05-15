@@ -13,56 +13,65 @@ import ar from "../../../locales/ar";
 import Form from "../../components/contact-us/Form.jsx";
 import EmailIcon from "@mui/icons-material/Email";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
+import Head from "next/head";
+
 export default function Index() {
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : ar;
   return (
-    <Box
-      sx={styles.container}
-      className="horizontal-safe-margin vertical-safe-margin"
-    >
+    <>
+      <Head>
+        <title>Products-Contact-Us</title>
+        <meta name="" content="" />
+      </Head>
+
       <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          //   justifyContent: "space-between",
-          p: 5,
-        }}
+        sx={styles.container}
+        className="horizontal-safe-margin vertical-safe-margin"
       >
         <Box
           sx={{
-            fontWeight: "bold",
-            fontSize: { xs: "25px", md: "40px" },
-            mx: { xs: "auto", md: 0 },
-            color: colors.blue,
-            pb: 2,
+            display: "flex",
+            flexDirection: "column",
+            //   justifyContent: "space-between",
+            p: 5,
           }}
         >
-          نود أن نستمع إليك
-        </Box>
-        <Box sx={{ mb: 2, mx: { xs: "auto", md: 0 } }}>
-          <EmailIcon />
-          <Box component="spa" sx={{ mx: 2 }}>
-            Info@contact.eg
+          <Box
+            sx={{
+              fontWeight: "bold",
+              fontSize: { xs: "25px", md: "40px" },
+              mx: { xs: "auto", md: 0 },
+              color: colors.blue,
+              pb: 2,
+            }}
+          >
+            نود أن نستمع إليك
           </Box>
-        </Box>
-        <Box sx={{ mb: 2, mx: { xs: "auto", md: 0 } }}>
-          <LocalPhoneIcon />
-          <Box component="spa" sx={{ mx: 2 }}>
-            16177
+          <Box sx={{ mb: 2, mx: { xs: "auto", md: 0 } }}>
+            <EmailIcon />
+            <Box component="spa" sx={{ mx: 2 }}>
+              Info@contact.eg
+            </Box>
           </Box>
+          <Box sx={{ mb: 2, mx: { xs: "auto", md: 0 } }}>
+            <LocalPhoneIcon />
+            <Box component="spa" sx={{ mx: 2 }}>
+              16177
+            </Box>
+          </Box>
+          <Box
+            component="img"
+            src="/contact-us/cover.png"
+            sx={{
+              width: { xs: "200px", sm: "300px", sm: "400px" },
+              mt: { xs: 3, md: "auto" },
+            }}
+          />
         </Box>
-        <Box
-          component="img"
-          src="/contact-us/cover.png"
-          sx={{
-            width: { xs: "200px", sm: "300px", sm: "400px" },
-            mt: { xs: 3, md: "auto" },
-          }}
-        />
+        <Form color={colors.blue}></Form>
       </Box>
-      <Form color={colors.blue}></Form>
-    </Box>
+    </>
   );
 }

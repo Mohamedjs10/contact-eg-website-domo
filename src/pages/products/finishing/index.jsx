@@ -18,6 +18,7 @@ import { useFormik } from "formik";
 // import { ArSchema } from "../utils/ar_schema";
 import { Box, TextField, InputLabel, MenuItem, Button } from "@mui/material";
 import Calculator from "../../../components/Calculator.jsx";
+import Head from "next/head";
 
 // ================================================================
 export default function Index() {
@@ -31,19 +32,26 @@ export default function Index() {
   };
 
   return (
-    <Box sx={styles.container}>
-      <PageCover
-        color={t.products_finishing.cover.color}
-        img={t.products_finishing.cover.img}
-        title1={t.products_finishing.cover.title1}
-        title2={t.products_finishing.cover.title2}
-        description={t.products_finishing.cover.description}
-        formType="a"
-      />
-      <IconTileSection page="finishing"></IconTileSection>
+    <>
+      <Head>
+        <title>Products-Finishing</title>
+        <meta name="" content="" />
+      </Head>
 
-      {/* =============================================================== */}
-      <Calculator />
-    </Box>
+      <Box sx={styles.container}>
+        <PageCover
+          color={t.products_finishing.cover.color}
+          img={t.products_finishing.cover.img}
+          title1={t.products_finishing.cover.title1}
+          title2={t.products_finishing.cover.title2}
+          description={t.products_finishing.cover.description}
+          formType="a"
+        />
+        <IconTileSection page="finishing"></IconTileSection>
+
+        {/* =============================================================== */}
+        <Calculator />
+      </Box>
+    </>
   );
 }

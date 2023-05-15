@@ -28,6 +28,8 @@ import Popover from "@mui/material/Popover";
 import AOS from "aos";
 import "aos/dist/aos.css";
 // import "../scss/style.scss";
+import Head from "next/head";
+
 const App = ({ Component, pageProps }) => {
   // ==========
   const router = useRouter();
@@ -58,6 +60,10 @@ const App = ({ Component, pageProps }) => {
 
   return (
     <Provider store={store}>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.png" />
+      </Head>
       <Box dir={locale === "en" ? "ltr" : "rtl"} sx={{}}>
         {/* large screens ---------------------------------------------------------------------- */}
         <Navbar

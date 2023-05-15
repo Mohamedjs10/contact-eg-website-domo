@@ -19,6 +19,7 @@ import { useFormik } from "formik";
 import { Box, TextField, InputLabel, MenuItem, Button } from "@mui/material";
 import Calculator from "../../../components/Calculator.jsx";
 import CardSlider from "../../../components/CardSlider.jsx";
+import Head from "next/head";
 
 // ================================================================
 export default function Index() {
@@ -32,21 +33,27 @@ export default function Index() {
   };
 
   return (
-    <Box sx={styles.container}>
-      <PageCover
-        color={t.products_cars.cover.color}
-        img={t.products_cars.cover.img}
-        title1={t.products_cars.cover.title1}
-        title2={t.products_cars.cover.title2}
-        description={t.products_cars.cover.description}
-        formType="a"
-      />
-      {/* =============================================================== */}
-      <IconTileSection page="auto"></IconTileSection>
-      {/* =============================================================== */}
-      <CardSlider page="cars"></CardSlider>
-      {/* =============================================================== */}
-      <Calculator products_packages={t.calc_packages.auto} />
-    </Box>
+    <div>
+      <Head>
+        <title>Products-Cars</title>
+        <meta name="" content="" />
+      </Head>
+      <Box sx={styles.container}>
+        <PageCover
+          color={t.products_cars.cover.color}
+          img={t.products_cars.cover.img}
+          title1={t.products_cars.cover.title1}
+          title2={t.products_cars.cover.title2}
+          description={t.products_cars.cover.description}
+          formType="a"
+        />
+        {/* =============================================================== */}
+        <IconTileSection page="auto"></IconTileSection>
+        {/* =============================================================== */}
+        <CardSlider page="cars"></CardSlider>
+        {/* =============================================================== */}
+        <Calculator products_packages={t.calc_packages.auto} />
+      </Box>
+    </div>
   );
 }
