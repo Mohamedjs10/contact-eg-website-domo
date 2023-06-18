@@ -936,6 +936,22 @@ export default {
         button: "Request service",
         img: "/home-cover/cover_img_3_en.png",
       },
+      {
+        bgColor: "#2D317F",
+        logo: "/home-cover/contact-now-en.png",
+        text: "Download the App and enjoy the ultimate financing experience",
+        textColor: colors.white,
+        button: "Request service",
+        img: "/home-cover/cover_img_4_en.png",
+      },
+      {
+        bgColor: "#EAEAEA",
+        logo: "/home-cover/contact-blue-en.png",
+        text: "Financing everything you need",
+        textColor: colors.ratty,
+        button: "Request service",
+        img: "/home-cover/cover_img_5_en.png",
+      },
     ],
     products_title: "Our Products",
     products: [

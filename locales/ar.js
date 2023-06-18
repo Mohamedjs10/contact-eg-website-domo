@@ -820,6 +820,22 @@ export default {
         button: "Request service",
         img: "/home-cover/cover_img_3_ar.png",
       },
+      {
+        bgColor: "#2D317F",
+        logo: "/home-cover/contact-now-ar.png",
+        text: "حمل التطبيق واستمتع بخدمات تمويلية غير محدودة",
+        textColor: colors.white,
+        button: "Request service",
+        img: "/home-cover/cover_img_4_ar.png",
+      },
+      {
+        bgColor: "#EAEAEA",
+        logo: "/home-cover/contact-blue-ar.png",
+        text: "اسهل تقسيط واكبر تمويل",
+        textColor: colors.ratty,
+        button: "Request service",
+        img: "/home-cover/cover_img_5_ar.png",
+      },
     ],
     products_title: "منتجاتنا التمويلية",
 
