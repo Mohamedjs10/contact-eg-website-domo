@@ -797,28 +797,28 @@ export default {
   home_page: {
     slides: [
       {
-        bgColor: colors.blue,
-        title: "لسه منزلتش ال App !!",
-        description:
-          "كونتكت هي أكبر شركة متخصصة في تمويل شراء السيارات في السوق المصري، وتحظى بتواجد مباشر في أكثر من 1000 معرض وتوكيل سيارات بمختلف أنحاء الجمهورية.",
-        img: "https://i.postimg.cc/Xvz3nfP5/woman.png",
-        button: "اطلب الخدمة",
+        bgColor: "#EAEAEA",
+        logo: "/home-cover/contact-pay-ar.png",
+        text: "كونتكت اقرب ليك!",
+        textColor: colors.ratty,
+        button: "أطلب الخدمة",
+        img: "/home-cover/cover_img_2_ar.png",
       },
       {
-        bgColor: colors.violet,
-        title: "لسه منزلتش ال App !!",
-        description:
-          "كونتكت هي أكبر شركة متخصصة في تمويل شراء السيارات في السوق المصري، وتحظى بتواجد مباشر في أكثر من 1000 معرض وتوكيل سيارات بمختلف أنحاء الجمهورية.",
-        img: "https://i.postimg.cc/W1Cf3dXC/phone.png",
-        button: "اطلب الخدمة",
+        bgColor: "#2D317F",
+        logo: "/home-cover/contact-ar.png",
+        text: "ادفع فواتيرك وأنت في مكانك",
+        textColor: colors.white,
+        button: "أطلب الخدمة",
+        img: "/home-cover/cover_img_1_ar.png",
       },
       {
-        bgColor: colors.petroli,
-        title: "لسه منزلتش ال App !!",
-        description:
-          "كونتكت هي أكبر شركة متخصصة في تمويل شراء السيارات في السوق المصري، وتحظى بتواجد مباشر في أكثر من 1000 معرض وتوكيل سيارات بمختلف أنحاء الجمهورية.",
-        img: "https://i.postimg.cc/bNT7z0Dv/car.png",
-        button: "اطلب الخدمة",
+        bgColor: "#EAEAEA",
+        logo: "/home-cover/contact-brokerage-ar.png",
+        text: "نافذة واحدة وشاملة لكل الخدمات التأمينية",
+        textColor: colors.ratty,
+        button: "Request service",
+        img: "/home-cover/cover_img_3_ar.png",
       },
     ],
     products_title: "منتجاتنا التمويلية",

@@ -21,58 +21,54 @@ export default function Cover() {
             sx={{
               color: "white",
               bgcolor: item.bgColor,
-              height: { xs: "200px", sm: "300px", md: "400px", lg: "500px" },
+              height: { xs: "200px", sm: "350px", md: "450px", lg: "500px" },
               display: "flex",
-              justifyContent: "space-between",
+              flexDirection: { xs: "column", sm: "row" },
+              justifyContent: "space-around",
               alignItems: "center",
-              gap: 1,
+              gap: 6,
               position: "relative",
+              py: { xs: 32, sm: 20 },
             }}
             // className="d-block w-100"
           >
             <Box
               sx={{
+                order: { xs: 2, sm: 1 },
+
+                width: { xs: "150px", sm: "150px", md: "200px", lg: "300px" },
                 // height: "100%",
-                // width: "400px",
-                height: { xs: "150px", sm: "300px", md: "400px" },
-                width: { xs: "200px", sm: "300px", md: "400px" },
-                transform: locale === "en" ? "scaleX(-1)" : "scaleX(1)",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <img src={item.img} height="100%" />
-            </Box>
-            <Box
-              sx={{
-                width: { xs: "150px", sm: "200px", md: "500px", lg: "600px" },
-                height: "100%",
                 display: "flex",
                 flexDirection: "column",
-                justifyContent: "space-around",
-                alignItems: "flex-start",
+                gap: 2,
+                // justifyContent: "space-around",
+                alignItems: { xs: "center", sm: "flex-start" },
               }}
             >
               <Box
                 sx={{
-                  mt: "30px",
-                  mb: { xs: 1, sm: 2, md: 3, lg: 4 },
-                  fontSize: { xs: "15px", sm: "30px", md: "40px", lg: "50px" },
-                  fontWeight: "bold",
+                  // height: "100%",
+                  // width: "400px",
+                  height: { xs: "40px", sm: "60px", md: "100px" },
+                  // width: { xs: "200px", sm: "300px", md: "400px" },
+                  // transform: locale === "en" ? "scaleX(-1)" : "scaleX(1)",
+                  // display: "flex",
+                  // justifyContent: "center",
+                  // alignItems: "center",
                 }}
               >
-                {item.title}
+                <img src={item.logo} height="100%" />
               </Box>
               <Box
                 sx={{
+                  width: { xs: "150px", sm: "200px", md: "300px", lg: "400px" },
                   mb: { xs: 1 },
-
-                  fontSize: { xs: "10px", sm: "15px", md: "20px", lg: "25px" },
-                  display: { xs: "none", md: "block" },
+                  fontSize: { xs: "15px", sm: "15px", md: "20px", lg: "25px" },
+                  // display: { xs: "none", md: "block" },
+                  color: item.textColor,
                 }}
               >
-                {item.description}
+                {item.text}
               </Box>
               <Button variant="outlined" sx={styles.btn}>
                 {item.button}
@@ -80,53 +76,18 @@ export default function Cover() {
             </Box>
             <Box
               sx={{
-                [margin]: { xs: "10px", sm: "30px", md: "60px", lg: "90px" },
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-                zIndex: 3,
+                // height: "100%",
+                // width: "400px",
+                height: { xs: "200px", sm: "300px", md: "400px" },
+                // width: { xs: "200px", sm: "300px", md: "400px" },
+                // transform: locale === "en" ? "scaleX(-1)" : "scaleX(1)",
+                // display: "flex",
+                // justifyContent: "center",
+                // alignItems: "center",
+                order: { xs: 1, sm: 2 },
               }}
             >
-              <Box
-                sx={{
-                  borderLeft: `2px solid ${colors.white}`,
-                  height: "170px",
-                }}
-              />
-              <a href="https://www.facebook.com/ContactEg" target="_blank">
-                <Box component="img" src="facebook.png" sx={styles.icon} />
-              </a>
-              <a href="https://www.instagram.com/contact.eg/" target="_blank">
-                <Box component="img" src="instagram.png" sx={styles.icon} />
-              </a>
-              <a
-                href="https://www.linkedin.com/company/contact-eg/"
-                target="_blank"
-              >
-                <Box component="img" src="linked-in.png" sx={styles.icon} />
-              </a>
-              <Box
-                sx={{
-                  borderLeft: `2px solid ${colors.white}`,
-                  height: "170px",
-                }}
-              />
-            </Box>
-            <Box
-              sx={{
-                width: { xs: "100px", sm: "200px", md: "300px", lg: "400px" },
-                position: "absolute",
-                top: "-10px",
-                // left: "0px",
-                ...leftOrRight,
-                transform: locale === "en" ? "scaleX(-1)" : "scaleX(1)",
-
-                opacity: ".2",
-                zIndex: 2,
-              }}
-            >
-              <img src="decorator.png" width="100%" />
+              <img src={item.img} height="100%" />
             </Box>
           </Box>
         </Carousel.Item>

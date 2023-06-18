@@ -913,28 +913,28 @@ export default {
   home_page: {
     slides: [
       {
-        bgColor: colors.blue,
-        title: "Didn't Download The App Yet!",
-        description:
-          "Contact is the largest car financing company in the Egyptian market, with a direct presence in more than 1,000 showrooms and car dealerships across the country.",
-        img: "https://i.postimg.cc/Xvz3nfP5/woman.png",
-        button: "Order Service",
+        bgColor: "#EAEAEA",
+        logo: "/home-cover/contact-pay-en.png",
+        text: "Payments made easy",
+        textColor: colors.ratty,
+        button: "Request service",
+        img: "/home-cover/cover_img_1_en.png",
       },
       {
-        bgColor: colors.violet,
-        title: "Didn't Download The App Yet!",
-        description:
-          "Contact is the largest car financing company in the Egyptian market, with a direct presence in more than 1,000 showrooms and car dealerships across the country.",
-        img: "https://i.postimg.cc/W1Cf3dXC/phone.png",
-        button: "Order Service",
+        bgColor: "#2D317F",
+        logo: "/home-cover/contact-en.png",
+        text: "We are closer to you through 75 branches all over Egypt",
+        textColor: colors.white,
+        button: "Request service",
+        img: "/home-cover/cover_img_2_en.png",
       },
       {
-        bgColor: colors.petroli,
-        title: "Didn't Download The App Yet!",
-        description:
-          "Contact is the largest car financing company in the Egyptian market, with a direct presence in more than 1,000 showrooms and car dealerships across the country.",
-        img: "https://i.postimg.cc/bNT7z0Dv/car.png",
-        button: "Order Service",
+        bgColor: "#EAEAEA",
+        logo: "/home-cover/contact-brokerage-en.png",
+        text: "One-stop-shop for all your insurance needs",
+        textColor: colors.ratty,
+        button: "Request service",
+        img: "/home-cover/cover_img_3_en.png",
       },
     ],
     products_title: "Our Products",

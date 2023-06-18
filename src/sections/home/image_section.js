@@ -2,7 +2,7 @@ import { colors } from "../../utils/const";
 
 export const styles = {
   container: (theme) => ({
-    bgcolor: colors.light_grey,
+    bgcolor: "#F8F8F8",
   }),
   grid: (theme) => ({
     display: "grid",
