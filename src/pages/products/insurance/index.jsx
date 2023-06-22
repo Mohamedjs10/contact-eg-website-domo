@@ -66,6 +66,7 @@ export default function Index() {
           title2={t.products_insurance_page.cover.title2}
           description={t.products_shopiing_page.cover.description}
           formType="b"
+          product="brokerage"
         />
         <Box
           className="horizontal-safe-padding vertical-safe-padding"

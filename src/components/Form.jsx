@@ -6,18 +6,80 @@ import { useFormik } from "formik";
 import { EnSchema, EnSchemaA, EnSchemaB } from "../utils/en_schema";
 import { ArSchema, ArSchemaA, ArSchemaB } from "../utils/ar_schema";
 import { Box, TextField, InputLabel, MenuItem, Button } from "@mui/material";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import { useRouter } from "next/router";
 import en from "../../locales/en";
 import ar from "../../locales/ar";
-export default function Form({ type, color }) {
+export default function Form({ type, color, product }) {
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : ar;
+  const defaultValues = {
+    name: "",
+    homePhone: "",
+    mobilePhone: "", //mandatory
+    email: "", //mandatory
+    governance: "",
+    area: "",
+    carCondition: "",
+    insuranceType: "",
+    brand: "Brand",
+    model: "",
+    modelYear: "",
+    buyerEmail: "",
+    buyerName: "",
+    buyerPhone: "",
+    refName: "",
+    refIdNo: "",
+    refPhoneNumber: "",
+    refProduct: "",
+    needHelp: false,
+    plan: "",
+    category: "",
+    refIdNumber: "",
+    tenor: "0",
+    amount: "0",
+    downPayment: "0",
+    installmentValue: "0",
+    hrLetter: "",
+    electricityBill: "",
+  };
+
   // formik ==========================================================
   const onSubmit = async (values, actions) => {
-    await new Promise((resolve) => setTimeout(resolve, 5000)); // simulate delay
-    actions.resetForm();
+    // ----------------------------------------------------------------
+
+    await fetch(
+      `https://api-mobile.contact.eg/programs/${product}/info-request`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...defaultValues,
+          ...values,
+        }),
+      }
+    )
+      .then((res) => res.json())
+      .then((response) => {
+        if (!response.error) {
+          toast.success(t.formMsg, {
+            position: "top-center",
+            autoClose: 2000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+          });
+          actions.resetForm();
+        }
+      });
   };
   let ArSchemaTest;
   let EnSchemaTest;
@@ -26,39 +88,41 @@ export default function Form({ type, color }) {
     ArSchemaTest = ArSchema;
     EnSchemaTest = EnSchema;
     initialValuesTest = {
-      username: "",
-      lastname: "",
+      name: "",
+      // lastname: "",
       email: "",
-      phoneNumber: "",
+      mobilePhone: "",
       national_id: "",
-      governorate: "",
-      area: "",
+      governance: "",
+      // area: "",
     };
   } else if (type == "a") {
     ArSchemaTest = ArSchemaA;
     EnSchemaTest = EnSchemaA;
     initialValuesTest = {
-      username: "",
-      lastname: "",
+      name: "",
+      // lastname: "",
       email: "",
-      phoneNumber: "",
+      mobilePhone: "",
       national_id: "",
-      governorate: "",
-      area: "",
-      car_type: "",
-      car_price: "",
+      governance: "",
+      // area: "",
+      // car_type: "",
+      category: "",
+      // car_price: "",
+      amount: "",
     };
   } else if (type == "b") {
     ArSchemaTest = ArSchemaB;
     EnSchemaTest = EnSchemaB;
     initialValuesTest = {
-      username: "",
-      lastname: "",
+      name: "",
+      // lastname: "",
       email: "",
-      phoneNumber: "",
+      mobilePhone: "",
       national_id: "",
-      governorate: "",
-      area: "",
+      governance: "",
+      // area: "",
       products: "",
     };
   }
@@ -87,23 +151,23 @@ export default function Form({ type, color }) {
       noValidate
     >
       {/* First Name ---------------------------------------------------------------------------------------------------------- */}
-      <Box sx={styles.inputWrapper} style={{ width: "200px" }}>
-        <InputLabel sx={styles.label}>{t.form_labels.first_name}</InputLabel>
+      <Box sx={styles.inputWrapper} style={{ width: "100%" }}>
+        <InputLabel sx={styles.label}>{t.form_labels.full_name}</InputLabel>
         <TextField
-          value={values.username}
+          value={values.name}
           onChange={handleChange}
-          id="username"
+          id="name"
           type="text"
           onBlur={handleBlur}
-          error={touched.username && errors.username}
+          error={touched.name && errors.name}
           sx={styles.input}
           InputProps={{ sx: { height: "45px" } }}
           variant="outlined"
         />
-        <Box sx={styles.helperText}>{touched.username && errors.username}</Box>
+        <Box sx={styles.helperText}>{touched.name && errors.name}</Box>
       </Box>
       {/* Last Name ---------------------------------------------------------------------------------------------------------- */}
-      <Box sx={styles.inputWrapper} style={{ width: "200px" }}>
+      {/* <Box sx={styles.inputWrapper} style={{ width: "200px" }}>
         <InputLabel sx={styles.label}>{t.form_labels.last_name}</InputLabel>
         <TextField
           value={values.lastname}
@@ -123,7 +187,7 @@ export default function Form({ type, color }) {
           variant="outlined"
         />
         <Box sx={styles.helperText}>{touched.lastname && errors.lastname}</Box>
-      </Box>
+      </Box> */}
       {/* Email Adress ---------------------------------------------------------------------------------------------------------- */}
       <Box sx={styles.inputWrapper} style={{ width: "200px" }}>
         <InputLabel sx={styles.label}>{t.form_labels.email_adress}</InputLabel>
@@ -144,18 +208,19 @@ export default function Form({ type, color }) {
       <Box sx={styles.inputWrapper} style={{ width: "200px" }}>
         <InputLabel sx={styles.label}>{t.form_labels.phone_number}</InputLabel>
         <TextField
-          value={values.phoneNumber}
+          value={values.mobilePhone}
           onChange={handleChange}
-          id="phoneNumber"
-          type="number"
+          id="mobilePhone"
+          // type="number"
+          type="text"
           onBlur={handleBlur}
-          error={touched.phoneNumber && errors.phoneNumber}
+          error={touched.mobilePhone && errors.mobilePhone}
           sx={styles.input}
           InputProps={{ sx: { height: "45px" } }}
           variant="outlined"
         />
         <Box sx={styles.helperText}>
-          {touched.phoneNumber && errors.phoneNumber}
+          {touched.mobilePhone && errors.mobilePhone}
         </Box>
       </Box>
       {/* National ID ---------------------------------------------------------------------------------------------------------- */}
@@ -177,15 +242,15 @@ export default function Form({ type, color }) {
         </Box>
       </Box>
       {/* Governorate ---------------------------------------------------------------------------------------------------------- */}
-      <Box sx={styles.inputWrapper} style={{ width: "200px" }}>
+      <Box sx={styles.inputWrapper} style={{ width: "100%" }}>
         <InputLabel sx={styles.label}>{t.form_labels.governorate}</InputLabel>
         <TextField
-          value={values.governorate || "default"}
+          value={values.governance || "default"}
           onChange={handleChange}
-          name="governorate"
+          name="governance"
           type="text"
           onBlur={handleBlur}
-          error={touched.governorate && errors.governorate}
+          error={touched.governance && errors.governance}
           sx={styles.input}
           select
           style={{ height: "45px" }}
@@ -210,11 +275,11 @@ export default function Form({ type, color }) {
           {/* </Box> */}
         </TextField>
         <Box sx={styles.helperText}>
-          {touched.governorate && errors.governorate}
+          {touched.governance && errors.governance}
         </Box>
       </Box>
       {/* Area ---------------------------------------------------------------------------------------------------------- */}
-      <Box sx={styles.inputWrapper} style={{ width: "200px" }}>
+      {/* <Box sx={styles.inputWrapper} style={{ width: "200px" }}>
         <InputLabel sx={styles.label}>{t.form_labels.area}</InputLabel>
         <TextField
           value={values.area || "default"}
@@ -245,19 +310,22 @@ export default function Form({ type, color }) {
           ))}
         </TextField>
         <Box sx={styles.helperText}>{touched.area && errors.area}</Box>
-      </Box>
+      </Box> */}
       {/* Car Type & Price ---------------------------------------------------------------------------------------------------------- */}
       {type === "a" && (
         <>
           <Box sx={styles.inputWrapper} style={{ width: "200px" }}>
             <InputLabel sx={styles.label}>{t.form_labels.car_type}</InputLabel>
             <TextField
-              value={values.car_type || "default"}
+              // value={values.car_type || "default"}
+              value={values.category || "default"}
               onChange={handleChange}
-              name="car_type"
+              // name="car_type"
+              name="category"
               type="text"
               onBlur={handleBlur}
-              error={touched.car_type && errors.car_type}
+              // error={touched.car_type && errors.car_type}
+              error={touched.category && errors.category}
               sx={styles.input}
               select
               style={{ height: "45px" }}
@@ -273,33 +341,32 @@ export default function Form({ type, color }) {
               <MenuItem disabled value="default">
                 {t.form_labels.car_placeholder}
               </MenuItem>
-              {t.governorates.map((option) => (
-                <MenuItem key={option.id} value={option.governorate_name}>
-                  {option.governorate_name}
+              {t.car_type.map((option) => (
+                <MenuItem key={option.id} value={option.value}>
+                  {option.value}
                 </MenuItem>
               ))}
             </TextField>
             <Box sx={styles.helperText}>
-              {touched.car_type && errors.car_type}
+              {/* {touched.car_type && errors.car_type} */}
+              {touched.category && errors.category}
             </Box>
           </Box>
 
           <Box sx={styles.inputWrapper} style={{ width: "100%" }}>
             <InputLabel sx={styles.label}>{t.form_labels.car_price}</InputLabel>
             <TextField
-              value={values.car_price}
+              value={values.amount}
               onChange={handleChange}
-              id="car_price"
-              type="number"
+              id="amount"
+              type="text"
               onBlur={handleBlur}
-              error={touched.car_price && errors.car_price}
+              error={touched.amount && errors.amount}
               sx={styles.input}
               InputProps={{ sx: { height: "45px" } }}
               variant="outlined"
             />
-            <Box sx={styles.helperText}>
-              {touched.car_price && errors.car_price}
-            </Box>
+            <Box sx={styles.helperText}>{touched.amount && errors.amount}</Box>
           </Box>
         </>
       )}
@@ -345,6 +412,7 @@ export default function Form({ type, color }) {
       )}
 
       {/* Submit ---------------------------------------------------------------------------------------------------------- */}
+
       <Button
         disabled={isSubmitting}
         type="submit"
@@ -356,6 +424,7 @@ export default function Form({ type, color }) {
       >
         {t.form_labels.submit}
       </Button>
+      <ToastContainer style={{ width: "300px", textAlign: "center" }} />
     </Box>
   );
 }

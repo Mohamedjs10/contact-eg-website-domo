@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Box } from "@mui/material";
 import Link from "next/link";
-import Image from "next/image";
 import { colors } from "../utils/const";
 import { styles } from "./footer";
 import Accordion from "@mui/material/Accordion";
@@ -10,7 +9,6 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Button from "@mui/material/Button";
-import InputLabel from "@mui/material/InputLabel";
 import TextField from "@mui/material/TextField";
 import { useRouter } from "next/router";
 import en from "../../locales/en";

@@ -36,8 +36,10 @@ const App = ({ Component, pageProps }) => {
   const { locale } = router;
   const [arrDirA, setArrDirA] = useState("down");
   const [arrDirB, setArrDirB] = useState("down");
+  const [arrDirC, setArrDirC] = useState("down");
   const [isOpenA, setIsOPenA] = useState(false);
   const [isOpenB, setIsOPenB] = useState(false);
+  const [isOpenC, setIsOPenC] = useState(false);
   const [type, setType] = useState("a");
   const [state, setState] = React.useState(false);
   const [leftOrRightValue, setLeftOrRightValue] = useState(-500);
@@ -69,12 +71,15 @@ const App = ({ Component, pageProps }) => {
         <Navbar
           arrDirA={arrDirA}
           arrDirB={arrDirB}
+          arrDirC={arrDirC}
           setArrDirA={setArrDirA}
           setArrDirB={setArrDirB}
+          setArrDirC={setArrDirC}
           leftOrRightValue={leftOrRightValue}
           setLeftOrRightValue={setLeftOrRightValue}
           setIsOPenA={setIsOPenA}
           setIsOPenB={setIsOPenB}
+          setIsOPenC={setIsOPenC}
           state={state}
           setState={setState}
           setType={setType}
@@ -102,15 +107,21 @@ const App = ({ Component, pageProps }) => {
                 horizontal: locale === "en" ? "left" : "right",
               }}
             >
-              <FlyingCard setState={setState} setAnchorEl={setAnchorEl} />
+              <FlyingCard
+                setState={setState}
+                setAnchorEl={setAnchorEl}
+                type="a"
+              />
             </Popover>
 
             <HomeDropdown
-              isOpen={isOpenA || isOpenB}
+              isOpen={isOpenA || isOpenB || isOpenC}
               setIsOPenA={setIsOPenA}
               setIsOPenB={setIsOPenB}
+              setIsOPenC={setIsOPenC}
               setArrDirA={setArrDirA}
               setArrDirB={setArrDirB}
+              setArrDirC={setArrDirC}
               type={type}
             />
           </>

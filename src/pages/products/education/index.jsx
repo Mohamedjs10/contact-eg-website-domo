@@ -41,6 +41,7 @@ export default function Index() {
           title2={t.products_education.cover.title2}
           description={t.products_education.cover.description}
           // formType="a"
+          product="education"
         />
         <IconTileSection page="education"></IconTileSection>
 

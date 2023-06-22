@@ -15,6 +15,7 @@ export default function PageCover({
   img,
   color,
   formType,
+  product,
 }) {
   const router = useRouter();
   const { locale } = router;
@@ -109,7 +110,7 @@ export default function PageCover({
         </Box>
       </Box>
       {/* form ================================================================================ */}
-      <Form color={color} type={formType} />
+      <Form color={color} type={formType} product={product} />
     </Box>
   );
 }

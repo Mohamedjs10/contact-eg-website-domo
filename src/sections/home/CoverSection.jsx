@@ -20,7 +20,9 @@ export default function Cover() {
           <Box
             sx={{
               color: "white",
-              bgcolor: item.bgColor,
+              // bgcolor: item.bgColor,
+              background: `url(${item.bgImage})`,
+              backgroundSize: "cover",
               height: { xs: "200px", sm: "350px", md: "450px", lg: "500px" },
               display: "flex",
               flexDirection: { xs: "column", sm: "row" },

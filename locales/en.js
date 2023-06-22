@@ -3,6 +3,7 @@ import { colors } from "../src/utils/const";
 export default {
   direction: "ltr",
   textAlign: "left",
+  formMsg: "Form Submitted Successfully",
   clipboardMsg: "Link copied successfully",
   calc: {
     monthlyAmount: "The monthly amount",
@@ -179,102 +180,45 @@ export default {
     reviews: [
       {
         id: "1",
-        name: "Maher Fayad",
-        role: "employee at Contact",
-        avatar: "/member.png",
-        rating: 2,
-        review:
-          "This products is working properly. I really didn't expect that at the beginning",
+        name: "Mohamed Diab",
+        role: "30 December 2022",
+        avatar: "/male-avatar.svg",
+        rating: 5,
+        review: "Excellent application and very useful and easy to use.",
       },
       {
         id: "2",
-        name: "Maher Fayad",
-        role: "employee at Contact",
-        avatar: "/member.png",
-
-        rating: 2,
-        review:
-          "This products is working properly. I really didn't expect that at the beginning",
+        name: "Martina Ibrahem",
+        role: "3 January 2023",
+        avatar: "/female-avatar.png",
+        rating: 5,
+        review: "Excellent application and very easy to use.",
       },
       {
         id: "3",
-        name: "Maher Fayad",
-        role: "employee at Contact",
-        avatar: "/member.png",
-
-        rating: 2,
-        review:
-          "This products is working properly. I really didn't expect that at the beginning",
+        name: "Mena Alber",
+        role: "15 January 2023",
+        avatar: "/male-avatar.svg",
+        rating: 5,
+        review: "Useful application, easy and fast.",
       },
       {
         id: "4",
-        name: "Maher Fayad",
-        role: "employee at Contact",
-        avatar: "/member.png",
-
-        rating: 2,
+        name: "Aziz Mohamed Salah",
+        role: "31 December 2022",
+        avatar: "/male-avatar.svg",
+        rating: 5,
         review:
-          "This products is working properly. I really didn't expect that at the beginning",
+          "All new app, all new features, and easy to use. Thanks for the great effort.",
       },
       {
         id: "5",
-        name: "Maher Fayad",
-        role: "employee at Contact",
-        avatar: "/member.png",
-
-        rating: 2,
+        name: "Mo Abwahab",
+        role: "30 December 2022",
+        avatar: "/male-avatar.svg",
+        rating: 5,
         review:
-          "This products is working properly. I really didn't expect that at the beginning",
-      },
-      {
-        id: "6",
-        name: "Maher Fayad",
-        role: "employee at Contact",
-        avatar: "/member.png",
-
-        rating: 2,
-        review:
-          "This products is working properly. I really didn't expect that at the beginning",
-      },
-      {
-        id: "7",
-        name: "Maher Fayad",
-        role: "employee at Contact",
-        avatar: "/member.png",
-
-        rating: 2,
-        review:
-          "This products is working properly. I really didn't expect that at the beginning",
-      },
-      {
-        id: "8",
-        name: "Maher Fayad",
-        role: "employee at Contact",
-        avatar: "/member.png",
-
-        rating: 2,
-        review:
-          "This products is working properly. I really didn't expect that at the beginning",
-      },
-      {
-        id: "9",
-        name: "Maher Fayad",
-        role: "employee at Contact",
-        avatar: "/member.png",
-
-        rating: 2,
-        review:
-          "This products is working properly. I really didn't expect that at the beginning",
-      },
-      {
-        id: "10",
-        name: "Maher Fayad",
-        role: "employee at Contact",
-        avatar: "/member.png",
-
-        rating: 2,
-        review:
-          "This products is working properly. I really didn't expect that at the beginning",
+          "Useful. It gives us a great experience. Thanks for the new features.",
       },
     ],
     directors: [
@@ -709,6 +653,17 @@ export default {
   secondary_nav: {
     financial_services: "Financial Services",
     insurance_services: "Insurance Services",
+    insurance_services_dropdown: {
+      motor: "Motor",
+      home: "Home",
+      personal: "Personal Accident & Lifestyle",
+      property: "Property",
+      engineering: "Engineering",
+      motor_fleet: "Motor Fleet",
+      marine: "Marine & Island Cargo",
+      liability: "Liability, Casualty, AND Financial",
+      medical: "Medical",
+    },
     e_payments: "E-Payment",
     clients_program: "Referral Program",
     investment_and_savings: "Investment & Savings",
@@ -787,7 +742,7 @@ export default {
     send: "send",
   },
   form_labels: {
-    first_name: "First Name",
+    full_name: "Full Name",
     last_name: "Last Name",
     email_adress: "Email Adress",
     phone_number: "Phone Number",
@@ -910,10 +865,18 @@ export default {
       governorate_name: "Sohag",
     },
   ],
+  car_type: [
+    {
+      id: "1",
+      value: "New",
+    },
+    { id: "2", value: "Used" },
+  ],
   home_page: {
     slides: [
       {
         bgColor: "#EAEAEA",
+        bgImage: "/bgs/01-en.svg",
         logo: "/home-cover/contact-pay-en.png",
         text: "Payments made easy",
         textColor: colors.ratty,
@@ -922,6 +885,7 @@ export default {
       },
       {
         bgColor: "#2D317F",
+        bgImage: "/bgs/02-en.svg",
         logo: "/home-cover/contact-en.png",
         text: "We are closer to you through 75 branches all over Egypt",
         textColor: colors.white,
@@ -930,6 +894,7 @@ export default {
       },
       {
         bgColor: "#EAEAEA",
+        bgImage: "/bgs/03-en.svg",
         logo: "/home-cover/contact-brokerage-en.png",
         text: "One-stop-shop for all your insurance needs",
         textColor: colors.ratty,
@@ -938,6 +903,7 @@ export default {
       },
       {
         bgColor: "#2D317F",
+        bgImage: "/bgs/04-en.svg",
         logo: "/home-cover/contact-now-en.png",
         text: "Download the App and enjoy the ultimate financing experience",
         textColor: colors.white,
@@ -946,6 +912,7 @@ export default {
       },
       {
         bgColor: "#EAEAEA",
+        bgImage: "/bgs/05-en.svg",
         logo: "/home-cover/contact-blue-en.png",
         text: "Financing everything you need",
         textColor: colors.ratty,
@@ -1866,14 +1833,14 @@ export default {
     {
       id: "2",
       img: "/images/steps-image.png",
-      title: "limit increase",
+      title: "Credit limit increase",
       subTitle: "feature",
       text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
     },
     {
       id: "3",
       img: "/images/steps-image.png",
-      title: "Utilities and bill payment",
+      title: "Pay your bills",
       subTitle: "feature",
       text: "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain",
     },

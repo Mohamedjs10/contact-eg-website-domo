@@ -18,13 +18,16 @@ export default function Navbar({
   setLeftOrRightValue,
   setIsOPenA,
   setIsOPenB,
+  setIsOPenC,
   state,
   setState,
   setType,
   arrDirA,
   arrDirB,
+  arrDirC,
   setArrDirA,
   setArrDirB,
+  setArrDirC,
   anchorEl,
   setAnchorEl,
 }) {
@@ -56,11 +59,14 @@ export default function Navbar({
           <Secondary_Navbar
             setIsOPenA={setIsOPenA}
             setIsOPenB={setIsOPenB}
+            setIsOPenC={setIsOPenC}
             setType={setType}
             arrDirA={arrDirA}
             arrDirB={arrDirB}
+            arrDirC={arrDirC}
             setArrDirA={setArrDirA}
             setArrDirB={setArrDirB}
+            setArrDirC={setArrDirC}
           ></Secondary_Navbar>
         </>
       )}

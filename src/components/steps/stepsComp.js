@@ -48,18 +48,20 @@ export default function HorizontalNonLinearStepper() {
         data-aos-delay="100"
         sx={{
           width: {
-            xs: "100%",
-            md: "50%",
+            // xs: "100%",
+            xs: "450px",
+            // md: "50%",
+            md: "900px",
           },
         }}
       >
-        <Typography variant="subtitle2" sx={{ mt: 2, py: 1 }}>
+        {/* <Typography variant="subtitle2" sx={{ mt: 2, py: 1 }}>
           {title}
-        </Typography>
+        </Typography> */}
         <Typography sx={{ mb: 3 }} variant="h4">
           {heading}{" "}
         </Typography>
-        <Typography variant="subtitle1">{text}</Typography>
+        {/* <Typography variant="subtitle1">{text}</Typography> */}
         <Box
           sx={{
             display: "flex",

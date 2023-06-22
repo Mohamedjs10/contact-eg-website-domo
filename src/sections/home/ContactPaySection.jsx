@@ -1,14 +1,10 @@
 import React, { useState } from "react";
 import { Box } from "@mui/material";
-import Link from "next/link";
-import Image from "next/image";
 import { colors } from "../../utils/const";
 import { styles } from "./contact-pay-section";
-import ImageCard from "../../components/ImageCard.jsx";
 import { useRouter } from "next/router";
 import en from "../../../locales/en";
 import ar from "../../../locales/ar";
-import Title from "../../components/mini-components/Title.jsx";
 export default function IconsSection({}) {
   const router = useRouter();
   const { locale } = router;
@@ -83,7 +79,7 @@ export default function IconsSection({}) {
         // data-aos-delay="200"
       >
         <img
-          src="bos.png"
+          src="/bos.png"
           width="100%"
           style={{
             transform: locale === "en" ? "scaleX(-1)" : "scaleX(1)",
