@@ -62,6 +62,7 @@ export default function VerticalCarousel({
   Component,
   slidesPerView,
   bg = colors.bg_grey,
+  hideDots,
 }) {
   const router = useRouter();
   const { locale } = router;
@@ -86,6 +87,7 @@ export default function VerticalCarousel({
           },
           "& .swiper-pagination-bullet": {
             bgcolor: "#000",
+            display: hideDots ? "none" : "",
           },
           "& .swiper-button-next": {
             zIndex: "100",
@@ -136,6 +138,7 @@ export default function VerticalCarousel({
         }}
       >
         <Swiper
+          showsPagination={false}
           style={{ paddingBottom: "80px" }}
           pagination={{
             clickable: true,
@@ -161,7 +164,21 @@ export default function VerticalCarousel({
           }}
         >
           {itemsArray.map(
-            ({ avatar, name, role, rating, review, img }, index) => (
+            (
+              {
+                avatar,
+                name,
+                role,
+                rating,
+                review,
+                img,
+                imageUrl,
+                title,
+                id,
+                branches,
+              },
+              index
+            ) => (
               <SwiperSlide key={index}>
                 <Component
                   // ReviewCard
@@ -171,7 +188,11 @@ export default function VerticalCarousel({
                   rating={rating}
                   review={review}
                   // MemberCard
-                  img={img}
+                  img={img || imageUrl || "/merchant.png"} // imageUrl: merchants api
+                  // PlaceCard
+                  title={title} //  merchants api
+                  id={id} //  merchants api
+                  branches={branches} //  merchants api
                 ></Component>
               </SwiperSlide>
             )

@@ -7,14 +7,18 @@ import { styles } from "./place_card";
 import { useRouter } from "next/router";
 import en from "../../locales/en";
 import ar from "../../locales/ar";
-export default function MemberCard({ img, name }) {
+export default function PlaceCard({ img, title, id, branches }) {
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : ar;
   return (
     <Box
+      component="a"
+      href=""
+      target="_blank"
       sx={{
-        "&:hover": { cursor: "grab" },
+        textDecoration: "none",
+        "&:hover": { cursor: "grab", textDecoration: "none" },
         "&:active": { cursor: "grabbing" },
         width: "280px", // change me
         height: "320px", //change me
@@ -48,7 +52,7 @@ export default function MemberCard({ img, name }) {
           alignSelf: "flex-start",
         }}
       >
-        {name}
+        {title}
       </Box>
     </Box>
   );
