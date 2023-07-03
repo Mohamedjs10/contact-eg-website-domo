@@ -20,6 +20,7 @@ import { Box, TextField, InputLabel, MenuItem, Button } from "@mui/material";
 import Calculator from "../../../components/Calculator.jsx";
 import Head from "next/head";
 import axios from "axios";
+import LinearProgress from "@mui/material/LinearProgress";
 
 // ================================================================
 export default function Index() {
@@ -39,6 +40,9 @@ export default function Index() {
   console.log("====areas====>", areas);
   const [areaId, setAreaId] = useState("");
   console.log("====areaId====>", areaId);
+  const [loading, setLoading] = useState(false);
+  console.log("====loading====>", loading);
+
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : ar;
@@ -98,7 +102,7 @@ export default function Index() {
           console.log(error);
         });
     }
-  }, [categoryId, cityId, areaId, data]);
+  }, [categoryId, cityId, areaId]);
   return (
     <>
       <Head>
@@ -215,6 +219,7 @@ export default function Index() {
               onChange={(e) => {
                 console.log(`${e.target.value}`);
                 setCityId(`${e.target.value}`);
+                setAreaId("");
               }}
               name="governorate"
               type="text"
@@ -249,50 +254,54 @@ export default function Index() {
             </Box> */}
           </Box>
           {/* Area ---------------------------------------------------------------------------------------------------------- */}
-          <Box sx={styles.inputWrapper}>
-            <InputLabel sx={styles.label}>
-              {/* {t.form_labels.governorate} */}
-              Area
-            </InputLabel>
-            <TextField
-              // value={values.governorate || "default"}
-              value={areaId || "default"}
-              onChange={(e) => {
-                console.log(`${e.target.value}`);
-                setAreaId(`${e.target.value}`);
-              }}
-              name="governorate"
-              type="text"
-              // onBlur={handleBlur}
-              // error={touched.governorate && errors.governorate}
-              sx={styles.input}
-              select
-              style={{ height: "45px" }}
-              InputProps={{
-                sx: {
-                  height: "45px",
-                  color: "grey",
-                  // fontWeight: "bold",
-                  lineHeight: "2",
-                },
-              }}
-            >
-              {/* <Box sx={{ height: "100px" }}> */}
-              <MenuItem disabled value="default">
-                {t.form_labels.g_placeholder}
-              </MenuItem>
-              {areas &&
-                areas.map((option) => (
-                  <MenuItem key={option.id} value={option.id}>
-                    {option.name}
-                  </MenuItem>
-                ))}
-              {/* </Box> */}
-            </TextField>
-            {/* <Box sx={styles.helperText}>
+
+          {areas.length > 0 && (
+            <Box sx={styles.inputWrapper}>
+              <InputLabel sx={styles.label}>
+                {/* {t.form_labels.governorate} */}
+                Area
+              </InputLabel>
+              <TextField
+                // value={values.governorate || "default"}
+                value={areaId || "default"}
+                onChange={(e) => {
+                  console.log(`${e.target.value}`);
+                  setAreaId(`${e.target.value}`);
+                  setLoading(true);
+                }}
+                name="governorate"
+                type="text"
+                // onBlur={handleBlur}
+                // error={touched.governorate && errors.governorate}
+                sx={styles.input}
+                select
+                style={{ height: "45px" }}
+                InputProps={{
+                  sx: {
+                    height: "45px",
+                    color: "grey",
+                    // fontWeight: "bold",
+                    lineHeight: "2",
+                  },
+                }}
+              >
+                {/* <Box sx={{ height: "100px" }}> */}
+                <MenuItem disabled value="default">
+                  {t.form_labels.g_placeholder}
+                </MenuItem>
+                {areas &&
+                  areas.map((option) => (
+                    <MenuItem key={option.id} value={option.id}>
+                      {option.name}
+                    </MenuItem>
+                  ))}
+                {/* </Box> */}
+              </TextField>
+              {/* <Box sx={styles.helperText}>
               {touched.governorate && errors.governorate}
             </Box> */}
-          </Box>
+            </Box>
+          )}
         </Box>
 
         {/* =============================================================== */}
@@ -304,11 +313,16 @@ export default function Index() {
             Component={PlaceCard}
             slidesPerView={4.3}
           ></VerticalCarousel>
+        ) : loading == true && areaId ? (
+          <Box sx={{ width: "85%", m: "auto", my: 5 }}>
+            <LinearProgress />
+          </Box>
         ) : (
           <Box sx={{ textAlign: "center", my: 5 }}>
             Please Choose at least a Category and a City
           </Box>
         )}
+
         {/* =============================================================== */}
         <Calculator products_packages={t.calc_packages.consumer_finance} />
       </Box>

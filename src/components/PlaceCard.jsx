@@ -35,6 +35,7 @@ export default function PlaceCard({ img, title, id, branches }) {
     >
       <Box
         component="img"
+        loading="lazy"
         src={img}
         sx={{
           mt: 2,

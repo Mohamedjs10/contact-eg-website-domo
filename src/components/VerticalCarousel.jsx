@@ -10,13 +10,17 @@ import ar from "../../locales/ar";
 import { Swiper, SwiperSlide } from "swiper/react";
 import MemberCard from "@/components/MemberCard";
 import PlaceCard from "@/components/PlaceCard";
+
 // Import Swiper styles
 import "swiper/css";
+// import "swiper/css/lazy";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 // import required modules
 import { Pagination, Navigation } from "swiper";
+// import { Lazy, Pagination, Navigation } from 'swiper/modules';
+
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
 
