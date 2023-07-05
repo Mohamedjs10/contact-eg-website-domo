@@ -3,12 +3,7 @@ import { Box, Typography } from "@mui/material";
 import TextField from "@mui/material/TextField";
 import { Autocomplete as AutocompleteInput } from "@mui/material";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
 import { useRouter } from "next/router";
-import { colors } from "../../utils/const";
 import en from "../../../locales/en";
 import ar from "../../../locales/ar";
 import { ToastContainer, toast } from "react-toastify";
@@ -17,15 +12,9 @@ import "react-toastify/dist/ReactToastify.css";
 import {
   GoogleMap,
   LoadScript,
-  ScriptLoaded,
   Marker,
   InfoWindow,
 } from "@react-google-maps/api";
-const governates = [
-  { label: "القاهرة", id: 1 },
-  { label: "الجيزة", id: 2 },
-  { label: "الاسكندرية", id: 3 },
-];
 
 const mapContainerStyle = {
   height: "500px",
@@ -40,9 +29,11 @@ export default function MapBox() {
   const t = locale === "en" ? en : ar;
 
   const [mapInstance, setMapInstance] = useState(false);
-  const [branch, setBranch] = useState("");
   const [markers, setMarkers] = useState([]);
+  const [branches, setBranches] = useState([]);
   const [selected, setSelected] = useState([]);
+  const [center, setCenter] = useState({ lat: 30.04048, lng: 31.20948 });
+  const [zoom, setZoom] = useState(10);
 
   useEffect(() => {
     setMapInstance(false);
@@ -57,21 +48,40 @@ export default function MapBox() {
         const branches = value?.map((item, index) => {
           return {
             id: index + 1,
+            label: item.address,
             name: item.address,
             position: { lat: item.latitude, lng: item.longitude },
           };
         });
-        // console.log(branches);
+
         setMarkers(branches);
+        setBranches(branches);
+        setCenter({ lat: 30.04048, lng: 31.20948 });
+        setZoom(10);
         setMapInstance(true);
       });
-    // .catch((err) => console.log(err));
+    // .catch((err) => {
+    //   setMapInstance(false);
+    // });
   }, []);
 
   const onLoad = (marker) => {};
 
-  const handleBranchChange = (event) => {
-    setBranch(event.target.value);
+  const handleBranchChange = (event, newVal, reason) => {
+    if (reason === "clear") {
+      setMarkers(branches);
+      setZoom(10);
+      setCenter({ lat: 30.04048, lng: 31.20948 });
+      return;
+    } else {
+      let branch = branches.find(
+        (marker, index) =>
+          index == event?.target?.getAttribute("data-option-index")
+      );
+      setZoom(14);
+      setMarkers([branch]);
+      setCenter(branch?.position);
+    }
   };
   return (
     <Box>
@@ -113,43 +123,34 @@ export default function MapBox() {
             alignItems: "center",
           }}
         >
-          <Box>
-            <AutocompleteInput
-              noOptionsText={t.map.noOption}
-              size="small"
-              disablePortal
-              id="search-box"
-              options={governates}
-              onChange={(e) => {
-                // console.log(e.target.innerHTML);
-                setMarkers([
-                  {
-                    id: 1,
-                    name: "name",
-                    position: { lat: 30.04048, lng: 31.20948 },
-                  },
-                ]);
-              }}
-              sx={{
-                width: 250,
-                mx: 1,
-                mt: {
-                  xs: 3,
-                  md: 1,
-                },
-              }}
-              classes={{
-                "& span": {
-                  "& svg": {
-                    "& path": {
-                      d: "path('M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z')",
-                    },
+          <AutocompleteInput
+            noOptionsText={t.map.noOption}
+            size="small"
+            disablePortal
+            id="search-box"
+            options={branches}
+            onChange={handleBranchChange}
+            sx={{
+              width: 350,
+              mx: 1,
+              mt: {
+                xs: 3,
+                md: 1,
+              },
+            }}
+            classes={{
+              "& span": {
+                "& svg": {
+                  "& path": {
+                    d: "path('M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z')",
                   },
                 },
-              }}
-              renderInput={(params) => (
+              },
+            }}
+            renderInput={(params) => {
+              return (
                 <TextField
-                  placeholder={t.map.placeholderGovernate}
+                  placeholder={t.map.placeholderBranch}
                   sx={{
                     borderRadius: 1,
                     bgcolor: "white",
@@ -168,52 +169,9 @@ export default function MapBox() {
                   }}
                   {...params}
                 />
-              )}
-            />
-          </Box>
-
-          <Select
-            IconComponent={() => (
-              <Box
-                component="img"
-                src="/images/Icon.png"
-                sx={{
-                  width: 15,
-                  display: "inline-block",
-                  mx: 1,
-                }}
-              />
-            )}
-            sx={{
-              borderRadius: 1,
-              bgcolor: "white",
-              width: 250,
-              mx: 1,
-              mt: 1,
-              ".MuiOutlinedInput-notchedOutline": {
-                borderColor: "rgba(228, 219, 233, 0.25)",
-              },
-              "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-                borderColor: "rgba(228, 219, 233, 0.25)",
-              },
-              "&:hover .MuiOutlinedInput-notchedOutline": {
-                borderColor: "rgba(228, 219, 233, 0.25)",
-              },
-              ".MuiSvgIcon-root ": {
-                fill: "white !important",
-              },
+              );
             }}
-            size="small"
-            defaultValue="none"
-            onChange={handleBranchChange}
-          >
-            <MenuItem sx={{ color: "#bcbcbc" }} value="none" disabled>
-              {t.map.placeholderBranch}
-            </MenuItem>
-            <MenuItem value={1}>1</MenuItem>
-            <MenuItem value={2}>2</MenuItem>
-            <MenuItem value={3}>3</MenuItem>
-          </Select>
+          />
         </Box>
       </Box>
       <Box sx={{ background: "white" }}>
@@ -221,8 +179,8 @@ export default function MapBox() {
           <GoogleMap
             id="map"
             mapContainerStyle={mapContainerStyle}
-            center={{ lat: 30.04048, lng: 31.20948 }}
-            zoom={10}
+            center={center}
+            zoom={zoom}
             // onLoad={(map) => setTimeout(() => setMapInstance(map))}
           >
             {mapInstance &&
