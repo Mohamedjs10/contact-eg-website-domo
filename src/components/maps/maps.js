@@ -3,12 +3,7 @@ import { Box, Typography } from "@mui/material";
 import TextField from "@mui/material/TextField";
 import { Autocomplete as AutocompleteInput } from "@mui/material";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
 import { useRouter } from "next/router";
-import { colors } from "../../utils/const";
 import en from "../../../locales/en";
 import ar from "../../../locales/ar";
 import { ToastContainer, toast } from "react-toastify";
@@ -17,15 +12,9 @@ import "react-toastify/dist/ReactToastify.css";
 import {
   GoogleMap,
   LoadScript,
-  ScriptLoaded,
   Marker,
   InfoWindow,
 } from "@react-google-maps/api";
-const governates = [
-  { label: "القاهرة", id: 1 },
-  { label: "الجيزة", id: 2 },
-  { label: "الاسكندرية", id: 3 },
-];
 
 const mapContainerStyle = {
   height: "500px",
@@ -40,7 +29,6 @@ export default function MapBox() {
   const t = locale === "en" ? en : ar;
 
   const [mapInstance, setMapInstance] = useState(false);
-  const [branch, setBranch] = useState("");
   const [markers, setMarkers] = useState([]);
   const [branches, setBranches] = useState([]);
   const [selected, setSelected] = useState([]);
@@ -71,8 +59,10 @@ export default function MapBox() {
         setCenter({ lat: 30.04048, lng: 31.20948 });
         setZoom(10);
         setMapInstance(true);
+      })
+      .catch((err) => {
+        setMapInstance(false);
       });
-    // .catch((err) => console.log(err));
   }, []);
 
   const onLoad = (marker) => {};
