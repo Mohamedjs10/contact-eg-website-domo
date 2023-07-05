@@ -18,6 +18,7 @@ import { useFormik } from "formik";
 // import { ArSchema } from "../utils/ar_schema";
 import { Box, TextField, InputLabel, MenuItem, Button } from "@mui/material";
 import Calculator from "../../../components/Calculator.jsx";
+import Head from "next/head";
 
 // ================================================================
 export default function Index() {
@@ -52,123 +53,130 @@ export default function Index() {
     onSubmit,
   });
   return (
-    <Box sx={styles.container}>
-      <PageCover
-        color={t.products_insurance_page.cover.color}
-        img={t.products_insurance_page.cover.img}
-        title1={t.products_insurance_page.cover.title1}
-        title2={t.products_insurance_page.cover.title2}
-        description={t.products_shopiing_page.cover.description}
-        formType="b"
-      />
-      <Box
-        className="horizontal-safe-padding vertical-safe-padding"
-        sx={{
-          display: "flex",
-          flexWrap: "wrap",
-          gap: 2,
-          bgcolor: colors.white,
-          justifyContent: { xs: "center", md: "space-between" },
-        }}
-      >
-        <Box>
-          <Box
-            sx={{
-              pb: 2,
-              color: colors.orange,
-              fontSize: "30px",
-            }}
-          >
-            {t.products_insurance_page.section_a[0].title}
+    <>
+      <Head>
+        <title>Products-Insurance Brokerage</title>
+        <meta name="" content="" />
+      </Head>
+      <Box sx={styles.container}>
+        <PageCover
+          color={t.products_insurance_page.cover.color}
+          img={t.products_insurance_page.cover.img}
+          title1={t.products_insurance_page.cover.title1}
+          title2={t.products_insurance_page.cover.title2}
+          description={t.products_shopiing_page.cover.description}
+          formType="b"
+          product="brokerage"
+        />
+        <Box
+          className="horizontal-safe-padding vertical-safe-padding"
+          sx={{
+            display: "flex",
+            flexWrap: "wrap",
+            gap: 2,
+            bgcolor: colors.white,
+            justifyContent: { xs: "center", md: "space-between" },
+          }}
+        >
+          <Box>
+            <Box
+              sx={{
+                pb: 2,
+                color: colors.orange,
+                fontSize: "30px",
+              }}
+            >
+              {t.products_insurance_page.section_a[0].title}
+            </Box>
+            <Box
+              component="ul"
+              sx={{
+                listStylePosition: "inside",
+                px: 2,
+                color: colors.navy_blue,
+                fontSize: "20px",
+              }}
+            >
+              {t.products_insurance_page.section_a[0].points.map((item) => (
+                <li>{item}</li>
+              ))}
+            </Box>
           </Box>
-          <Box
-            component="ul"
-            sx={{
-              listStylePosition: "inside",
-              px: 2,
-              color: colors.navy_blue,
-              fontSize: "20px",
-            }}
-          >
-            {t.products_insurance_page.section_a[0].points.map((item) => (
-              <li>{item}</li>
-            ))}
+          <Box>
+            <Box
+              sx={{
+                pb: 2,
+                color: colors.orange,
+                fontSize: "30px",
+              }}
+            >
+              {t.products_insurance_page.section_a[0].title}
+            </Box>
+            <Box
+              component="ul"
+              sx={{
+                listStylePosition: "inside",
+                px: 2,
+                color: colors.navy_blue,
+                fontSize: "20px",
+              }}
+            >
+              {t.products_insurance_page.section_a[0].points.map((item) => (
+                <li>{item}</li>
+              ))}
+            </Box>
+          </Box>
+          <Box>
+            <Box
+              sx={{
+                pb: 2,
+                color: colors.orange,
+                fontSize: "30px",
+              }}
+            >
+              {t.products_insurance_page.section_a[0].title}
+            </Box>
+            <Box
+              component="ul"
+              sx={{
+                listStylePosition: "inside",
+                px: 2,
+                color: colors.navy_blue,
+                fontSize: "20px",
+              }}
+            >
+              {t.products_insurance_page.section_a[0].points.map((item) => (
+                <li>{item}</li>
+              ))}
+            </Box>
+          </Box>
+          <Box>
+            <Box
+              sx={{
+                pb: 2,
+                color: colors.orange,
+                fontSize: "30px",
+              }}
+            >
+              {t.products_insurance_page.section_a[0].title}
+            </Box>
+            <Box
+              component="ul"
+              sx={{
+                listStylePosition: "inside",
+                px: 2,
+                color: colors.navy_blue,
+                fontSize: "20px",
+              }}
+            >
+              {t.products_insurance_page.section_a[0].points.map((item) => (
+                <li>{item}</li>
+              ))}
+            </Box>
           </Box>
         </Box>
-        <Box>
-          <Box
-            sx={{
-              pb: 2,
-              color: colors.orange,
-              fontSize: "30px",
-            }}
-          >
-            {t.products_insurance_page.section_a[0].title}
-          </Box>
-          <Box
-            component="ul"
-            sx={{
-              listStylePosition: "inside",
-              px: 2,
-              color: colors.navy_blue,
-              fontSize: "20px",
-            }}
-          >
-            {t.products_insurance_page.section_a[0].points.map((item) => (
-              <li>{item}</li>
-            ))}
-          </Box>
-        </Box>
-        <Box>
-          <Box
-            sx={{
-              pb: 2,
-              color: colors.orange,
-              fontSize: "30px",
-            }}
-          >
-            {t.products_insurance_page.section_a[0].title}
-          </Box>
-          <Box
-            component="ul"
-            sx={{
-              listStylePosition: "inside",
-              px: 2,
-              color: colors.navy_blue,
-              fontSize: "20px",
-            }}
-          >
-            {t.products_insurance_page.section_a[0].points.map((item) => (
-              <li>{item}</li>
-            ))}
-          </Box>
-        </Box>
-        <Box>
-          <Box
-            sx={{
-              pb: 2,
-              color: colors.orange,
-              fontSize: "30px",
-            }}
-          >
-            {t.products_insurance_page.section_a[0].title}
-          </Box>
-          <Box
-            component="ul"
-            sx={{
-              listStylePosition: "inside",
-              px: 2,
-              color: colors.navy_blue,
-              fontSize: "20px",
-            }}
-          >
-            {t.products_insurance_page.section_a[0].points.map((item) => (
-              <li>{item}</li>
-            ))}
-          </Box>
-        </Box>
+        <Calculator products_packages={t.calc_packages.clubs} />
       </Box>
-      <Calculator products_packages={t.calc_packages.clubs} />
-    </Box>
+    </>
   );
 }

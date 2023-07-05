@@ -1,14 +1,10 @@
 import React, { useState } from "react";
 import { Box } from "@mui/material";
-import Link from "next/link";
-import Image from "next/image";
 import { colors } from "../../utils/const";
 import { styles } from "./contact-pay-section";
-import ImageCard from "../../components/ImageCard.jsx";
 import { useRouter } from "next/router";
 import en from "../../../locales/en";
 import ar from "../../../locales/ar";
-import Title from "../../components/mini-components/Title.jsx";
 export default function IconsSection({}) {
   const router = useRouter();
   const { locale } = router;
@@ -21,7 +17,11 @@ export default function IconsSection({}) {
       sx={styles.container}
       className="horizontal-safe-padding vertical-safe-padding my-5"
     >
-      <Box sx={styles.text}>
+      <Box
+        data-aos={locale == "en" ? "fade-right" : "fade-left"}
+        // data-aos-delay="100"
+        sx={styles.text}
+      >
         <Box sx={{ display: "flex", gap: 1 }}>
           <Box
             sx={{
@@ -75,11 +75,11 @@ export default function IconsSection({}) {
       </Box>
       <Box
         sx={styles.img}
-        data-aos={locale == "en" ? "fade-right" : "fade-left"}
-        data-aos-delay="200"
+        data-aos={locale == "en" ? "fade-left" : "fade-right"}
+        // data-aos-delay="200"
       >
         <img
-          src="bos.png"
+          src="/bos.png"
           width="100%"
           style={{
             transform: locale === "en" ? "scaleX(-1)" : "scaleX(1)",

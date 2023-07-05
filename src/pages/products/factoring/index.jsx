@@ -18,6 +18,7 @@ import { useFormik } from "formik";
 // import { ArSchema } from "../utils/ar_schema";
 import { Box, TextField, InputLabel, MenuItem, Button } from "@mui/material";
 import Calculator from "../../../components/Calculator.jsx";
+import Head from "next/head";
 
 // ================================================================
 export default function Index() {
@@ -52,19 +53,27 @@ export default function Index() {
     onSubmit,
   });
   return (
-    <Box sx={styles.container}>
-      <PageCover
-        color={t.products_factoring.cover.color}
-        img={t.products_factoring.cover.img}
-        title1={t.products_factoring.cover.title1}
-        title2={t.products_factoring.cover.title2}
-        description={t.products_factoring.cover.description}
-        formType="a"
-      />
-      <IconTileSection page="factoring"></IconTileSection>
+    <>
+      <Head>
+        <title>Products-Factoring</title>
+        <meta name="" content="" />
+      </Head>
 
-      {/* =============================================================== */}
-      <Calculator></Calculator>
-    </Box>
+      <Box sx={styles.container}>
+        <PageCover
+          color={t.products_factoring.cover.color}
+          img={t.products_factoring.cover.img}
+          title1={t.products_factoring.cover.title1}
+          title2={t.products_factoring.cover.title2}
+          description={t.products_factoring.cover.description}
+          formType="a"
+          product="factoring"
+        />
+        <IconTileSection page="factoring"></IconTileSection>
+
+        {/* =============================================================== */}
+        <Calculator></Calculator>
+      </Box>
+    </>
   );
 }

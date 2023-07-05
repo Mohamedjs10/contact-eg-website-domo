@@ -18,6 +18,7 @@ import { useFormik } from "formik";
 // import { ArSchema } from "../utils/ar_schema";
 import { Box, TextField, InputLabel, MenuItem, Button } from "@mui/material";
 import Calculator from "../../../components/Calculator.jsx";
+import Head from "next/head";
 
 // ================================================================
 export default function Index() {
@@ -52,19 +53,26 @@ export default function Index() {
     onSubmit,
   });
   return (
-    <Box sx={styles.container}>
-      <PageCover
-        color={t.products_events.cover.color}
-        img={t.products_events.cover.img}
-        title1={t.products_events.cover.title1}
-        title2={t.products_events.cover.title2}
-        description={t.products_events.cover.description}
-        formType="a"
-      />
-      <IconTileSection page="shopping"></IconTileSection>
+    <>
+      <Head>
+        <title>Products-Wedding & Events</title>
+        <meta name="" content="" />
+      </Head>
+      <Box sx={styles.container}>
+        <PageCover
+          color={t.products_events.cover.color}
+          img={t.products_events.cover.img}
+          title1={t.products_events.cover.title1}
+          title2={t.products_events.cover.title2}
+          description={t.products_events.cover.description}
+          formType="a"
+          product="wedding"
+        />
+        <IconTileSection page="shopping"></IconTileSection>
 
-      {/* =============================================================== */}
-      <Calculator products_packages={t.calc_packages.wedding} />
-    </Box>
+        {/* =============================================================== */}
+        <Calculator products_packages={t.calc_packages.wedding} />
+      </Box>
+    </>
   );
 }

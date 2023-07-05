@@ -5,68 +5,70 @@ const nationaId =
   /^([1-9]{1})([0-9]{2})([0-9]{2})([0-9]{2})([0-9]{2})[0-9]{3}([0-9]{1})[0-9]{1}$/;
 
 export const ArSchema = yup.object().shape({
-  username: yup
+  name: yup
     .string()
     .min(3, "الاسم يجب ان يكون على الأقل 3 حروف")
     .required("اجباري"),
-  lastname: yup
-    .string()
-    .min(3, "الاسم يجب ان يكون على الأقل 3 حروف")
-    .required("اجباري"),
+  // lastname: yup
+  //   .string()
+  //   .min(3, "الاسم يجب ان يكون على الأقل 3 حروف")
+  //   .required("اجباري"),
   email: yup.string().email("برجاء ادخال ايميل صحيح").required("اجباري"),
   national_id: yup
     .string()
     .matches(nationaId, "رقم البطاقة غير صحيح")
     .required("اجباري"),
-  phoneNumber: yup
+  mobilePhone: yup
     .string()
-    .matches(phoneRegExp, "الرقم غير صحيح")
+    // .matches(phoneRegExp, "الرقم غير صحيح")
     .required("اجباري"),
-  governorate: yup.string().required("اجباري"),
-  area: yup.string().required("اجباري"),
+  governance: yup.string().required("اجباري"),
+  // area: yup.string().required("اجباري"),
 });
 export const ArSchemaA = yup.object().shape({
-  username: yup
+  name: yup
     .string()
     .min(3, "الاسم يجب ان يكون على الأقل 3 حروف")
     .required("اجباري"),
-  lastname: yup
-    .string()
-    .min(3, "الاسم يجب ان يكون على الأقل 3 حروف")
-    .required("اجباري"),
+  // lastname: yup
+  //   .string()
+  //   .min(3, "الاسم يجب ان يكون على الأقل 3 حروف")
+  //   .required("اجباري"),
   email: yup.string().email("برجاء ادخال ايميل صحيح").required("اجباري"),
   national_id: yup
     .string()
     .matches(nationaId, "رقم البطاقة غير صحيح")
     .required("اجباري"),
-  phoneNumber: yup
+  mobilePhone: yup
     .string()
-    .matches(phoneRegExp, "الرقم غير صحيح")
+    // .matches(phoneRegExp, "الرقم غير صحيح")
     .required("اجباري"),
-  governorate: yup.string().required("اجباري"),
-  area: yup.string().required("اجباري"),
-  car_type: yup.string().required("اجباري"),
-  car_price: yup.number().positive().required("اجباري"),
+  governance: yup.string().required("اجباري"),
+  // area: yup.string().required("اجباري"),
+  // car_type: yup.string().required("اجباري"),
+  category: yup.string().required("اجباري"),
+  // car_price: yup.number().positive().required("اجباري"),
+  amount: yup.string().required("اجباري"),
 });
 export const ArSchemaB = yup.object().shape({
-  username: yup
+  name: yup
     .string()
     .min(3, "الاسم يجب ان يكون على الأقل 3 حروف")
     .required("اجباري"),
-  lastname: yup
-    .string()
-    .min(3, "الاسم يجب ان يكون على الأقل 3 حروف")
-    .required("اجباري"),
+  // lastname: yup
+  //   .string()
+  //   .min(3, "الاسم يجب ان يكون على الأقل 3 حروف")
+  //   .required("اجباري"),
   email: yup.string().email("برجاء ادخال ايميل صحيح").required("اجباري"),
   national_id: yup
     .string()
     .matches(nationaId, "رقم البطاقة غير صحيح")
     .required("اجباري"),
-  phoneNumber: yup
+  mobilePhone: yup
     .string()
-    .matches(phoneRegExp, "الرقم غير صحيح")
+    // .matches(phoneRegExp, "الرقم غير صحيح")
     .required("اجباري"),
-  governorate: yup.string().required("اجباري"),
-  area: yup.string().required("اجباري"),
+  governance: yup.string().required("اجباري"),
+  // area: yup.string().required("اجباري"),
   products: yup.string().required("اجباري"),
 });

@@ -18,6 +18,7 @@ import { useFormik } from "formik";
 // import { ArSchema } from "../utils/ar_schema";
 import { Box, TextField, InputLabel, MenuItem, Button } from "@mui/material";
 import Calculator from "../../../components/Calculator.jsx";
+import Head from "next/head";
 
 // ================================================================
 export default function Index() {
@@ -26,52 +27,60 @@ export default function Index() {
   const t = locale === "en" ? en : ar;
 
   return (
-    <Box sx={styles.container}>
-      <PageCover
-        color={t.products_clubs.cover.color}
-        img={t.products_clubs.cover.img}
-        title1={t.products_clubs.cover.title1}
-        title2={t.products_clubs.cover.title2}
-        description={t.products_clubs.cover.description}
-        formType="b"
-      />
-      <IconTileSection page="clubs"></IconTileSection>
+    <>
+      <Head>
+        <title>Products-Clubs</title>
+        <meta name="" content="" />
+      </Head>
 
-      {/* =============================================================== */}
-      <Box sx={{ px: { xs: 0, md: 45 } }} className="vertical-safe-padding">
-        <Box
-          sx={{
-            textAlign: "center",
-            fontSize: "56px",
-            fontWeight: "bold",
-            color: colors.orange,
-            py: 2,
-          }}
-        >
-          {t.products_clubs.clubs_title}
+      <Box sx={styles.container}>
+        <PageCover
+          color={t.products_clubs.cover.color}
+          img={t.products_clubs.cover.img}
+          title1={t.products_clubs.cover.title1}
+          title2={t.products_clubs.cover.title2}
+          description={t.products_clubs.cover.description}
+          formType="b"
+          product="clubs"
+        />
+        <IconTileSection page="clubs"></IconTileSection>
+
+        {/* =============================================================== */}
+        <Box sx={{ px: { xs: 0, md: 45 } }} className="vertical-safe-padding">
+          <Box
+            sx={{
+              textAlign: "center",
+              fontSize: "56px",
+              fontWeight: "bold",
+              color: colors.orange,
+              py: 2,
+            }}
+          >
+            {t.products_clubs.clubs_title}
+          </Box>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              gap: 10,
+              flexWrap: "wrap",
+            }}
+          >
+            {t.products_clubs.clubs.map((item) => (
+              <Box>
+                <Box
+                  component="img"
+                  src={item[1]}
+                  sx={{ width: "200px", height: "200px", mb: 2 }}
+                />
+                <Box sx={{ textAlign: "center" }}>{item[0]}</Box>
+              </Box>
+            ))}
+          </Box>
         </Box>
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            gap: 10,
-            flexWrap: "wrap",
-          }}
-        >
-          {t.products_clubs.clubs.map((item) => (
-            <Box>
-              <Box
-                component="img"
-                src={item[1]}
-                sx={{ width: "200px", height: "200px", mb: 2 }}
-              />
-              <Box sx={{ textAlign: "center" }}>{item[0]}</Box>
-            </Box>
-          ))}
-        </Box>
+        {/* =============================================================== */}
+        <Calculator products_packages={t.calc_packages.clubs} />
       </Box>
-      {/* =============================================================== */}
-      <Calculator products_packages={t.calc_packages.clubs} />
-    </Box>
+    </>
   );
 }

@@ -9,6 +9,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import en from "../../../locales/en";
 import ar from "../../../locales/ar";
+import Head from "next/head";
 
 export default function MediaPage() {
   const router = useRouter();
@@ -31,102 +32,108 @@ export default function MediaPage() {
     },
   ];
   return (
-    <Box
-      sx={{
-        color: colors.petroli,
-        display: "flex",
-        flexDirection: "column",
-        gap: 3,
-      }}
-      className="horizontal-safe-margin vertical-safe-margin"
-    >
-      <Box
-        className="vertical-safe-margin"
-        sx={{
-          display: "flex",
-          flexWrap: "wrap",
-          justifyContent: { xs: "center", lg: "space-between" },
-          gap: 2,
-        }}
-      >
-        <Box>
-          <Box
-            sx={{
-              fontWeight: "bold",
-              fontSize: "30px",
-
-              mb: 3,
-            }}
-          >
-            كونتكت تطلق منتج رقمي لتأمين السيارات
-          </Box>
-          <Box>كتب: حابي</Box>
-          <Box sx={{ mb: 3 }}>5 دقائق قرائة</Box>
-          <Box sx={{ mb: 1, fontWeight: "bold" }}>شارك</Box>
-          <Box sx={{ display: "flex", gap: 1 }}>
-            <a href="https://www.facebook.com/" target="_blank">
-              <Box component="img" src="/f-b.png" sx={styles.img} />
-            </a>
-            <a href="https://www.facebook.com/" target="_blank">
-              <Box component="img" src="/t-b.png" sx={styles.img} />
-            </a>
-            <a href="https://www.facebook.com/" target="_blank">
-              <Box component="img" src="/l-b.png" sx={styles.img} />
-            </a>
-            <a href="https://www.facebook.com/" target="_blank">
-              <Box component="img" src="/pin-b.png" sx={styles.img} />
-            </a>
-          </Box>
-        </Box>
-        <Box
-          component="img"
-          src="/image.png"
-          sx={{
-            width: "100%",
-            maxWidth: "520px",
-          }}
-        ></Box>
-      </Box>
+    <>
+      <Head>
+        <title>Media</title>
+        <meta name="" content="" />
+      </Head>
       <Box
         sx={{
-          maxWidth: "1000px",
+          color: colors.petroli,
           display: "flex",
           flexDirection: "column",
-          alignSelf: "center",
-
-          gap: 2,
+          gap: 3,
         }}
+        className="horizontal-safe-margin vertical-safe-margin"
       >
-        <Box sx={{ whiteSpace: "pre-wrap" }}> {news[0].body1}</Box>
-        <Box component="img" src="/image.png" width="100%"></Box>
-        <Box sx={{ display: "flex", gap: 1, alignSelf: "flex-start" }}>
-          <Box
-            component="span"
-            sx={{ border: `1px solid ${colors.petroli}` }}
-          ></Box>
-          <Box component="span" sx={{}}>
-            سعيد زعتر الرئيس التنفيذي لشركة كونتكت المالية القابضة
+        <Box
+          className="vertical-safe-margin"
+          sx={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: { xs: "center", lg: "space-between" },
+            gap: 2,
+          }}
+        >
+          <Box>
+            <Box
+              sx={{
+                fontWeight: "bold",
+                fontSize: "30px",
+
+                mb: 3,
+              }}
+            >
+              كونتكت تطلق منتج رقمي لتأمين السيارات
+            </Box>
+            <Box>كتب: حابي</Box>
+            <Box sx={{ mb: 3 }}>5 دقائق قرائة</Box>
+            <Box sx={{ mb: 1, fontWeight: "bold" }}>شارك</Box>
+            <Box sx={{ display: "flex", gap: 1 }}>
+              <a href="https://www.facebook.com/" target="_blank">
+                <Box component="img" src="/f-b.png" sx={styles.img} />
+              </a>
+              <a href="https://www.facebook.com/" target="_blank">
+                <Box component="img" src="/t-b.png" sx={styles.img} />
+              </a>
+              <a href="https://www.facebook.com/" target="_blank">
+                <Box component="img" src="/l-b.png" sx={styles.img} />
+              </a>
+              <a href="https://www.facebook.com/" target="_blank">
+                <Box component="img" src="/pin-b.png" sx={styles.img} />
+              </a>
+            </Box>
           </Box>
+          <Box
+            component="img"
+            src="/image.png"
+            sx={{
+              width: "100%",
+              maxWidth: "520px",
+            }}
+          ></Box>
         </Box>
-        <Box sx={{ whiteSpace: "pre-wrap" }}>{news[0].body1}</Box>
-        <Box>
-          <Box sx={{ mb: 1, fontWeight: "bold" }}>شارك</Box>
-          <Box sx={{ display: "flex", gap: 1 }}>
-            <a href="https://www.facebook.com/" target="_blank">
-              <Box component="img" src="/f-b.png" sx={styles.img} />
-            </a>
-            <a href="https://www.facebook.com/" target="_blank">
-              <Box component="img" src="/t-b.png" sx={styles.img} />
-            </a>
-            <a href="https://www.facebook.com/" target="_blank">
-              <Box component="img" src="/l-b.png" sx={styles.img} />
-            </a>
-            <a href="https://www.facebook.com/" target="_blank">
-              <Box component="img" src="/pin-b.png" sx={styles.img} />
-            </a>
+        <Box
+          sx={{
+            maxWidth: "1000px",
+            display: "flex",
+            flexDirection: "column",
+            alignSelf: "center",
+
+            gap: 2,
+          }}
+        >
+          <Box sx={{ whiteSpace: "pre-wrap" }}> {news[0].body1}</Box>
+          <Box component="img" src="/image.png" width="100%"></Box>
+          <Box sx={{ display: "flex", gap: 1, alignSelf: "flex-start" }}>
+            <Box
+              component="span"
+              sx={{ border: `1px solid ${colors.petroli}` }}
+            ></Box>
+            <Box component="span" sx={{}}>
+              سعيد زعتر الرئيس التنفيذي لشركة كونتكت المالية القابضة
+            </Box>
+          </Box>
+          <Box sx={{ whiteSpace: "pre-wrap" }}>{news[0].body1}</Box>
+          <Box>
+            <Box sx={{ mb: 1, fontWeight: "bold" }}>شارك</Box>
+            <Box sx={{ display: "flex", gap: 1 }}>
+              <a href="https://www.facebook.com/" target="_blank">
+                <Box component="img" src="/f-b.png" sx={styles.img} />
+              </a>
+              <a href="https://www.facebook.com/" target="_blank">
+                <Box component="img" src="/t-b.png" sx={styles.img} />
+              </a>
+              <a href="https://www.facebook.com/" target="_blank">
+                <Box component="img" src="/l-b.png" sx={styles.img} />
+              </a>
+              <a href="https://www.facebook.com/" target="_blank">
+                <Box component="img" src="/pin-b.png" sx={styles.img} />
+              </a>
+            </Box>
           </Box>
         </Box>
       </Box>
-    </Box>
+    </>
   );
 }

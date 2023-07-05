@@ -99,6 +99,8 @@ export default function Calcuation({ products_packages }) {
       }}
     >
       <Box
+        data-aos={locale == "en" ? "fade-right" : "fade-left"}
+        // data-aos-delay="100"
         sx={{
           flex: "1 1 0",
           mx: 5,
@@ -281,6 +283,8 @@ export default function Calcuation({ products_packages }) {
         </Box>
       </Box>
       <Box
+        data-aos={locale == "en" ? "fade-left" : "fade-right"}
+        // data-aos-delay="100"
         sx={{
           margin: "auto",
           width: {

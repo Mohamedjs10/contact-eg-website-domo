@@ -19,6 +19,7 @@ import { useFormik } from "formik";
 import { Box, TextField, InputLabel, MenuItem, Button } from "@mui/material";
 import CardSlider from "../../../components/CardSlider.jsx";
 import Calculator from "../../../components/Calculator.jsx";
+import Head from "next/head";
 
 // ================================================================
 export default function Index() {
@@ -32,21 +33,28 @@ export default function Index() {
   };
 
   return (
-    <Box sx={styles.container}>
-      <PageCover
-        color={t.products_trucks.cover.color}
-        img={t.products_trucks.cover.img}
-        title1={t.products_trucks.cover.title1}
-        title2={t.products_trucks.cover.title2}
-        description={t.products_trucks.cover.description}
-        formType="a"
-      />
-      {/* =============================================================== */}
-      <IconTileSection page="trucks"></IconTileSection>
-      {/* =============================================================== */}
-      <CardSlider page="trucks"></CardSlider>
-      {/* =============================================================== */}
-      <Calculator products_packages={t.calc_packages.trucks} />
-    </Box>
+    <>
+      <Head>
+        <title>Products-Trucks</title>
+        <meta name="" content="" />
+      </Head>
+      <Box sx={styles.container}>
+        <PageCover
+          color={t.products_trucks.cover.color}
+          img={t.products_trucks.cover.img}
+          title1={t.products_trucks.cover.title1}
+          title2={t.products_trucks.cover.title2}
+          description={t.products_trucks.cover.description}
+          formType="a"
+          product="trucks"
+        />
+        {/* =============================================================== */}
+        <IconTileSection page="trucks"></IconTileSection>
+        {/* =============================================================== */}
+        <CardSlider page="trucks"></CardSlider>
+        {/* =============================================================== */}
+        <Calculator products_packages={t.calc_packages.trucks} />
+      </Box>
+    </>
   );
 }

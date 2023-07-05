@@ -28,14 +28,18 @@ import Popover from "@mui/material/Popover";
 import AOS from "aos";
 import "aos/dist/aos.css";
 // import "../scss/style.scss";
+import Head from "next/head";
+
 const App = ({ Component, pageProps }) => {
   // ==========
   const router = useRouter();
   const { locale } = router;
   const [arrDirA, setArrDirA] = useState("down");
   const [arrDirB, setArrDirB] = useState("down");
+  const [arrDirC, setArrDirC] = useState("down");
   const [isOpenA, setIsOPenA] = useState(false);
   const [isOpenB, setIsOPenB] = useState(false);
+  const [isOpenC, setIsOPenC] = useState(false);
   const [type, setType] = useState("a");
   const [state, setState] = React.useState(false);
   const [leftOrRightValue, setLeftOrRightValue] = useState(-500);
@@ -58,17 +62,24 @@ const App = ({ Component, pageProps }) => {
 
   return (
     <Provider store={store}>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.png" />
+      </Head>
       <Box dir={locale === "en" ? "ltr" : "rtl"} sx={{}}>
         {/* large screens ---------------------------------------------------------------------- */}
         <Navbar
           arrDirA={arrDirA}
           arrDirB={arrDirB}
+          arrDirC={arrDirC}
           setArrDirA={setArrDirA}
           setArrDirB={setArrDirB}
+          setArrDirC={setArrDirC}
           leftOrRightValue={leftOrRightValue}
           setLeftOrRightValue={setLeftOrRightValue}
           setIsOPenA={setIsOPenA}
           setIsOPenB={setIsOPenB}
+          setIsOPenC={setIsOPenC}
           state={state}
           setState={setState}
           setType={setType}
@@ -96,15 +107,21 @@ const App = ({ Component, pageProps }) => {
                 horizontal: locale === "en" ? "left" : "right",
               }}
             >
-              <FlyingCard setState={setState} setAnchorEl={setAnchorEl} />
+              <FlyingCard
+                setState={setState}
+                setAnchorEl={setAnchorEl}
+                type="a"
+              />
             </Popover>
 
             <HomeDropdown
-              isOpen={isOpenA || isOpenB}
+              isOpen={isOpenA || isOpenB || isOpenC}
               setIsOPenA={setIsOPenA}
               setIsOPenB={setIsOPenB}
+              setIsOPenC={setIsOPenC}
               setArrDirA={setArrDirA}
               setArrDirB={setArrDirB}
+              setArrDirC={setArrDirC}
               type={type}
             />
           </>

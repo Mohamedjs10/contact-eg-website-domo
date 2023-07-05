@@ -44,20 +44,24 @@ export default function HorizontalNonLinearStepper() {
       }}
     >
       <Box
+        data-aos={locale == "en" ? "fade-right" : "fade-left"}
+        data-aos-delay="100"
         sx={{
           width: {
-            xs: "100%",
-            md: "50%",
+            // xs: "100%",
+            xs: "450px",
+            // md: "50%",
+            md: "900px",
           },
         }}
       >
-        <Typography variant="subtitle2" sx={{ mt: 2, py: 1 }}>
+        {/* <Typography variant="subtitle2" sx={{ mt: 2, py: 1 }}>
           {title}
-        </Typography>
+        </Typography> */}
         <Typography sx={{ mb: 3 }} variant="h4">
           {heading}{" "}
         </Typography>
-        <Typography variant="subtitle1">{text}</Typography>
+        {/* <Typography variant="subtitle1">{text}</Typography> */}
         <Box
           sx={{
             display: "flex",
@@ -138,6 +142,8 @@ export default function HorizontalNonLinearStepper() {
       </Box>
       <Box
         component="img"
+        data-aos={locale == "en" ? "fade-left" : "fade-right"}
+        // data-aos-delay="100"
         sx={{
           margin: {
             md: "inherit",
@@ -209,6 +215,7 @@ export default function HorizontalNonLinearStepper() {
             </Step>
           ))}
         </Stepper>
+
         {extractContent(activeStep)}
       </Box>
       <Box

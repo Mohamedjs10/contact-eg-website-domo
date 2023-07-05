@@ -60,7 +60,8 @@ export default function Statistics() {
         {t.about.aboutTitle}
       </Typography>
       <Box
-        src="/images/logo contact.png"
+        // src="/images/logo contact.png"
+        src={t.logo}
         component="img"
         sx={{ width: "120px" }}
       />
