@@ -24,7 +24,8 @@ import LinearProgress from "@mui/material/LinearProgress";
 
 // ================================================================
 export default function Index() {
-  const [data, setData] = useState([]);
+  // const [initialRender, setInitialRender] = useState(true);
+  const [data, setData] = useState(["initial"]);
   console.log("====data====>", data);
   const [categories, setCategories] = useState([]);
   console.log("====categories====>", categories);
@@ -49,23 +50,26 @@ export default function Index() {
 
   useEffect(() => {
     // get categories
-    axios
-      .get(`https://api-mobile.contact.eg/products/6/getMainCategories`)
-      .then(function (response) {
-        setCategories(response.data);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+    !categories.length &&
+      axios
+        .get(`https://api-mobile.contact.eg/products/6/getMainCategories`)
+        .then(function (response) {
+          response.data.shift(); // remove All from categories list
+          setCategories(response.data);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
     // get cities
-    axios
-      .get(`https://api-mobile.contact.eg/products/6/cities`)
-      .then(function (response) {
-        setCities(response.data);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+    !cities.length &&
+      axios
+        .get(`https://api-mobile.contact.eg/products/6/cities`)
+        .then(function (response) {
+          setCities(response.data);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
     // get areas
     if (cityId) {
       axios
@@ -90,13 +94,18 @@ export default function Index() {
           {
             productId: "6",
             categoryId: `${categoryId}`,
-            areaId: `${areaId || "0"}`,
             cityId: `${cityId}`,
+            areaId: `${areaId || "0"}`,
             query: "",
           }
         )
         .then(function (response) {
-          setData(response.data);
+          if (response.data.length) {
+            setData(response.data);
+          } else {
+            setData(["not-initial"]);
+          }
+          setLoading(false);
         })
         .catch(function (error) {
           console.log(error);
@@ -166,18 +175,19 @@ export default function Index() {
         >
           {/* Category ---------------------------------------------------------------------------------------------------------- */}
           <Box sx={styles.inputWrapper}>
-            <InputLabel sx={styles.label}>
-              {/* {t.form_labels.governorate} */}
-              Category
-            </InputLabel>
+            <InputLabel sx={styles.label}>{t.form_labels.category}</InputLabel>
             <TextField
               // value={values.governorate || "default"}
               value={categoryId || "default"}
               onChange={(e) => {
-                console.log(`${e.target.value}`);
                 setCategoryId(`${e.target.value}`);
+                if (data[0] !== "initial") {
+                  // not show loader on 1st category change as nor request on 1st category change
+                  setLoading(true);
+                  setData([]);
+                }
               }}
-              name="governorate"
+              name="category"
               type="text"
               sx={styles.input}
               select
@@ -193,7 +203,7 @@ export default function Index() {
             >
               {/* <Box sx={{ height: "100px" }}> */}
               <MenuItem disabled value="default">
-                {t.form_labels.g_placeholder}
+                {t.form_labels.cat_placeholder}
               </MenuItem>
               {categories &&
                 categories.map((option) => (
@@ -209,16 +219,15 @@ export default function Index() {
           </Box>
           {/* City ---------------------------------------------------------------------------------------------------------- */}
           <Box sx={styles.inputWrapper}>
-            <InputLabel sx={styles.label}>
-              {/* {t.form_labels.governorate} */}
-              City
-            </InputLabel>
+            <InputLabel sx={styles.label}>{t.form_labels.city}</InputLabel>
             <TextField
               // value={values.governorate || "default"}
               value={cityId || "default"}
               onChange={(e) => {
                 console.log(`${e.target.value}`);
                 setCityId(`${e.target.value}`);
+                setLoading(true);
+                setData([]);
                 setAreaId("");
               }}
               name="governorate"
@@ -239,7 +248,7 @@ export default function Index() {
             >
               {/* <Box sx={{ height: "100px" }}> */}
               <MenuItem disabled value="default">
-                {t.form_labels.g_placeholder}
+                {t.form_labels.city_placeholder}
               </MenuItem>
               {cities &&
                 cities.map((option) => (
@@ -257,10 +266,7 @@ export default function Index() {
 
           {areas.length > 0 && (
             <Box sx={styles.inputWrapper}>
-              <InputLabel sx={styles.label}>
-                {/* {t.form_labels.governorate} */}
-                Area
-              </InputLabel>
+              <InputLabel sx={styles.label}>{t.form_labels.area}</InputLabel>
               <TextField
                 // value={values.governorate || "default"}
                 value={areaId || "default"}
@@ -268,6 +274,7 @@ export default function Index() {
                   console.log(`${e.target.value}`);
                   setAreaId(`${e.target.value}`);
                   setLoading(true);
+                  setData([]);
                 }}
                 name="governorate"
                 type="text"
@@ -287,7 +294,7 @@ export default function Index() {
               >
                 {/* <Box sx={{ height: "100px" }}> */}
                 <MenuItem disabled value="default">
-                  {t.form_labels.g_placeholder}
+                  {t.form_labels.area_placeholder}
                 </MenuItem>
                 {areas &&
                   areas.map((option) => (
@@ -305,7 +312,7 @@ export default function Index() {
         </Box>
 
         {/* =============================================================== */}
-        {data.length ? (
+        {data.length && data[0] !== "initial" && data[0] !== "not-initial" ? (
           <VerticalCarousel
             // itemsArray={t.general.places}
             hideDots={true}
@@ -313,14 +320,14 @@ export default function Index() {
             Component={PlaceCard}
             slidesPerView={4.3}
           ></VerticalCarousel>
-        ) : loading == true && areaId ? (
+        ) : loading == true ? (
           <Box sx={{ width: "85%", m: "auto", my: 5 }}>
             <LinearProgress />
           </Box>
+        ) : data[0] == "not-initial" ? (
+          <Box sx={{ textAlign: "center", my: 5 }}>{t.form_labels.case2}</Box>
         ) : (
-          <Box sx={{ textAlign: "center", my: 5 }}>
-            Please Choose at least a Category and a City
-          </Box>
+          <Box sx={{ textAlign: "center", my: 5 }}>{t.form_labels.case1} </Box>
         )}
 
         {/* =============================================================== */}

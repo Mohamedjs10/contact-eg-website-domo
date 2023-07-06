@@ -30,6 +30,7 @@ export default function MapBox() {
 
   const [mapInstance, setMapInstance] = useState(false);
   const [markers, setMarkers] = useState([]);
+  console.log("================>", markers);
   const [branches, setBranches] = useState([]);
   const [selected, setSelected] = useState([]);
   const [center, setCenter] = useState({ lat: 30.04048, lng: 31.20948 });
@@ -68,6 +69,7 @@ export default function MapBox() {
   const onLoad = (marker) => {};
 
   const handleBranchChange = (event, newVal, reason) => {
+    console.log(branches, event.target);
     if (reason === "clear") {
       setMarkers(branches);
       setZoom(10);
@@ -78,6 +80,7 @@ export default function MapBox() {
         (marker, index) =>
           index == event?.target?.getAttribute("data-option-index")
       );
+      console.log(branch);
       setZoom(14);
       setMarkers([branch]);
       setCenter(branch?.position);
