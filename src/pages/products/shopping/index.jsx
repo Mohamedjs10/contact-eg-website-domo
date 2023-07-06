@@ -26,23 +26,13 @@ import LinearProgress from "@mui/material/LinearProgress";
 export default function Index() {
   // const [initialRender, setInitialRender] = useState(true);
   const [data, setData] = useState(["initial"]);
-  console.log("====data====>", data);
   const [categories, setCategories] = useState([]);
-  console.log("====categories====>", categories);
-  // const [categoryId, setCategoryId] = useState("0");
   const [categoryId, setCategoryId] = useState("");
-  console.log("====categoryId====>", categoryId);
   const [cities, setCities] = useState([]);
-  console.log("====cities====>", cities);
-  // const [cityId, setCityId] = useState("1");
   const [cityId, setCityId] = useState("");
-  console.log("====cityId====>", cityId);
   const [areas, setAreas] = useState([]);
-  console.log("====areas====>", areas);
   const [areaId, setAreaId] = useState("");
-  console.log("====areaId====>", areaId);
   const [loading, setLoading] = useState(false);
-  console.log("====loading====>", loading);
 
   const router = useRouter();
   const { locale } = router;
@@ -181,7 +171,7 @@ export default function Index() {
               value={categoryId || "default"}
               onChange={(e) => {
                 setCategoryId(`${e.target.value}`);
-                if (data[0] !== "initial") {
+                if (data[0] !== "initial" || cityId) {
                   // not show loader on 1st category change as nor request on 1st category change
                   setLoading(true);
                   setData([]);
@@ -224,10 +214,12 @@ export default function Index() {
               // value={values.governorate || "default"}
               value={cityId || "default"}
               onChange={(e) => {
-                console.log(`${e.target.value}`);
                 setCityId(`${e.target.value}`);
-                setLoading(true);
-                setData([]);
+
+                if (categoryId) {
+                  setLoading(true);
+                  setData([]);
+                }
                 setAreaId("");
               }}
               name="governorate"
@@ -271,10 +263,11 @@ export default function Index() {
                 // value={values.governorate || "default"}
                 value={areaId || "default"}
                 onChange={(e) => {
-                  console.log(`${e.target.value}`);
+                  if (categoryId && cityId) {
+                    setLoading(true);
+                    setData([]);
+                  }
                   setAreaId(`${e.target.value}`);
-                  setLoading(true);
-                  setData([]);
                 }}
                 name="governorate"
                 type="text"

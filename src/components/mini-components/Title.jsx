@@ -10,7 +10,8 @@ export default function Text({ title, lineWidth }) {
   return (
     <Box
       sx={styles.container}
-      data-aos={locale == "en" ? "fade-right" : "fade-left"}
+      // data-aos={locale == "en" ? "fade-right" : "fade-left"}
+      data-aos="fade-up"
     >
       <Box sx={styles.title}>{title}</Box>
       <img
