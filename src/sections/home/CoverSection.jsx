@@ -30,7 +30,7 @@ export default function Cover() {
               alignItems: "center",
               gap: 6,
               position: "relative",
-              py: { xs: 32, sm: 20 },
+              py: { xs: 35, sm: 20 },
             }}
             // className="d-block w-100"
           >
@@ -42,7 +42,7 @@ export default function Cover() {
                 // height: "100%",
                 display: "flex",
                 flexDirection: "column",
-                gap: 2,
+                gap: 1,
                 // justifyContent: "space-around",
                 alignItems: { xs: "center", sm: "flex-start" },
               }}
@@ -63,7 +63,7 @@ export default function Cover() {
               </Box>
               <Box
                 sx={{
-                  width: { xs: "150px", sm: "200px", md: "300px", lg: "400px" },
+                  // width: { xs: "150px", sm: "200px", md: "300px", lg: "400px" },
                   mb: { xs: 1 },
                   fontSize: { xs: "15px", sm: "15px", md: "20px", lg: "25px" },
                   // display: { xs: "none", md: "block" },
@@ -78,14 +78,7 @@ export default function Cover() {
             </Box>
             <Box
               sx={{
-                // height: "100%",
-                // width: "400px",
                 height: { xs: "200px", sm: "300px", md: "400px" },
-                // width: { xs: "200px", sm: "300px", md: "400px" },
-                // transform: locale === "en" ? "scaleX(-1)" : "scaleX(1)",
-                // display: "flex",
-                // justifyContent: "center",
-                // alignItems: "center",
                 order: { xs: 1, sm: 2 },
               }}
             >

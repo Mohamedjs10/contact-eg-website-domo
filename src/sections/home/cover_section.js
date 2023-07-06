@@ -3,15 +3,18 @@ import { colors } from "../../utils/const";
 export const styles = {
   btn: (theme) => ({
     p: 0,
-    fontSize: { xs: "8px", sm: "8px", md: "12px", lg: "12px" },
+    fontSize: { xs: 13, sm: "8px", md: "12px", lg: "12px" },
     fontWeight: "bold",
-    width: { xs: "90px", sm: "100px", md: "150px", lg: "200px" },
-    minHeight: { xs: "25px", sm: "30px", md: "40px", lg: "40px" },
+    width: { xs: "100px", md: "150px", lg: "200px" },
+    // minHeight: { xs: "25px", sm: "30px", md: "40px", lg: "40px" },
+    height: "50px",
     // mb: "60px",
     color: colors.white,
     border: `1px solid ${colors.orange}`,
     backgroundColor: colors.orange,
-    borderRadius: { xs: "4px", md: "8px" },
+    // borderRadius: { xs: "4px", md: "8px" },
+    borderRadius: 2,
+
     "&:hover": {
       border: `1px solid ${colors.orange}`,
 

@@ -1,21 +1,14 @@
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
 import { styles } from "../../../utils/styles/products-shopping-styles";
 import { colors } from "../../../utils/const";
-import Link from "next/link";
-
 import { useRouter } from "next/router";
 import en from "../../../../locales/en";
 import ar from "../../../../locales/ar";
-import ContentCard from "../../../components/our-brands/ContentCard";
 import VerticalCarousel from "@/components/VerticalCarousel";
 import PageCover from "@/components/PageCover";
 import PlaceCard from "@/components/PlaceCard";
 import IconTileSection from "../../../components/mini-components/IconTileSection.jsx";
 import ImgListSection from "../../../components/mini-components/ImgListSection.jsx";
-import { useFormik } from "formik";
-// import { EnSchema } from "../utils/en_schema";
-// import { ArSchema } from "../utils/ar_schema";
 import { Box, TextField, InputLabel, MenuItem, Button } from "@mui/material";
 import Calculator from "../../../components/Calculator.jsx";
 import Head from "next/head";
@@ -24,7 +17,6 @@ import LinearProgress from "@mui/material/LinearProgress";
 
 // ================================================================
 export default function Index() {
-  // const [initialRender, setInitialRender] = useState(true);
   const [data, setData] = useState(["initial"]);
   const [categories, setCategories] = useState([]);
   const [categoryId, setCategoryId] = useState("");
@@ -42,7 +34,11 @@ export default function Index() {
     // get categories
     !categories.length &&
       axios
-        .get(`https://api-mobile.contact.eg/products/6/getMainCategories`)
+        .get(
+          `https://api-mobile.contact.eg/products/6/getMainCategories?lang=${
+            locale === "en" ? "en" : "ar"
+          }`
+        )
         .then(function (response) {
           response.data.shift(); // remove All from categories list
           setCategories(response.data);
@@ -53,7 +49,11 @@ export default function Index() {
     // get cities
     !cities.length &&
       axios
-        .get(`https://api-mobile.contact.eg/products/6/cities`)
+        .get(
+          `https://api-mobile.contact.eg/products/6/cities?lang=${
+            locale === "en" ? "en" : "ar"
+          }`
+        )
         .then(function (response) {
           setCities(response.data);
         })
@@ -64,7 +64,9 @@ export default function Index() {
     if (cityId) {
       axios
         .get(
-          `https://api-mobile.contact.eg/products/cities/${cityId}/areas?lang=en`
+          `https://api-mobile.contact.eg/products/cities/${cityId}/areas?lang=${
+            locale === "en" ? "en" : "ar"
+          }`
         )
         .then(function (response) {
           setAreas(response.data);
@@ -74,7 +76,6 @@ export default function Index() {
         });
     }
     // get merchants
-    // if (categoryId && cityId && areaId) {
     if (categoryId && cityId) {
       axios
         .post(
@@ -159,7 +160,6 @@ export default function Index() {
             flexWrap: "wrap",
             justifyContent: { xs: "center", md: "flex-start" },
           }}
-          // onSubmit={handleSubmit}
           autoComplete="off"
           noValidate
         >
@@ -167,12 +167,10 @@ export default function Index() {
           <Box sx={styles.inputWrapper}>
             <InputLabel sx={styles.label}>{t.form_labels.category}</InputLabel>
             <TextField
-              // value={values.governorate || "default"}
               value={categoryId || "default"}
               onChange={(e) => {
                 setCategoryId(`${e.target.value}`);
                 if (data[0] !== "initial" || cityId) {
-                  // not show loader on 1st category change as nor request on 1st category change
                   setLoading(true);
                   setData([]);
                 }
@@ -186,12 +184,10 @@ export default function Index() {
                 sx: {
                   height: "45px",
                   color: "grey",
-                  // fontWeight: "bold",
                   lineHeight: "2",
                 },
               }}
             >
-              {/* <Box sx={{ height: "100px" }}> */}
               <MenuItem disabled value="default">
                 {t.form_labels.cat_placeholder}
               </MenuItem>
@@ -201,17 +197,12 @@ export default function Index() {
                     {option.title}
                   </MenuItem>
                 ))}
-              {/* </Box> */}
             </TextField>
-            {/* <Box sx={styles.helperText}>
-              {touched.governorate && errors.governorate}
-            </Box> */}
           </Box>
           {/* City ---------------------------------------------------------------------------------------------------------- */}
           <Box sx={styles.inputWrapper}>
             <InputLabel sx={styles.label}>{t.form_labels.city}</InputLabel>
             <TextField
-              // value={values.governorate || "default"}
               value={cityId || "default"}
               onChange={(e) => {
                 setCityId(`${e.target.value}`);
@@ -224,8 +215,6 @@ export default function Index() {
               }}
               name="governorate"
               type="text"
-              // onBlur={handleBlur}
-              // error={touched.governorate && errors.governorate}
               sx={styles.input}
               select
               style={{ height: "45px" }}
@@ -233,12 +222,10 @@ export default function Index() {
                 sx: {
                   height: "45px",
                   color: "grey",
-                  // fontWeight: "bold",
                   lineHeight: "2",
                 },
               }}
             >
-              {/* <Box sx={{ height: "100px" }}> */}
               <MenuItem disabled value="default">
                 {t.form_labels.city_placeholder}
               </MenuItem>
@@ -250,9 +237,6 @@ export default function Index() {
                 ))}
               {/* </Box> */}
             </TextField>
-            {/* <Box sx={styles.helperText}>
-              {touched.governorate && errors.governorate}
-            </Box> */}
           </Box>
           {/* Area ---------------------------------------------------------------------------------------------------------- */}
 
@@ -260,7 +244,6 @@ export default function Index() {
             <Box sx={styles.inputWrapper}>
               <InputLabel sx={styles.label}>{t.form_labels.area}</InputLabel>
               <TextField
-                // value={values.governorate || "default"}
                 value={areaId || "default"}
                 onChange={(e) => {
                   if (categoryId && cityId) {
@@ -271,8 +254,6 @@ export default function Index() {
                 }}
                 name="governorate"
                 type="text"
-                // onBlur={handleBlur}
-                // error={touched.governorate && errors.governorate}
                 sx={styles.input}
                 select
                 style={{ height: "45px" }}
@@ -280,12 +261,10 @@ export default function Index() {
                   sx: {
                     height: "45px",
                     color: "grey",
-                    // fontWeight: "bold",
                     lineHeight: "2",
                   },
                 }}
               >
-                {/* <Box sx={{ height: "100px" }}> */}
                 <MenuItem disabled value="default">
                   {t.form_labels.area_placeholder}
                 </MenuItem>
@@ -295,11 +274,7 @@ export default function Index() {
                       {option.name}
                     </MenuItem>
                   ))}
-                {/* </Box> */}
               </TextField>
-              {/* <Box sx={styles.helperText}>
-              {touched.governorate && errors.governorate}
-            </Box> */}
             </Box>
           )}
         </Box>
@@ -307,7 +282,6 @@ export default function Index() {
         {/* =============================================================== */}
         {data.length && data[0] !== "initial" && data[0] !== "not-initial" ? (
           <VerticalCarousel
-            // itemsArray={t.general.places}
             hideDots={true}
             itemsArray={data}
             Component={PlaceCard}

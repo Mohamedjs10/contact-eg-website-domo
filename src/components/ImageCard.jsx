@@ -22,8 +22,10 @@ export default function ImageCard({ img, title1, title2, url, delay }) {
         component={Link}
         href={url}
         sx={{
-          width: "282px",
-          height: "154px",
+          // width: "282px",
+          width: { xs: "140px", sm: "282px" },
+          // height: "154px",
+          height: { xs: "75px", sm: "154px" },
           color: colors.white,
           background: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url(${img})`,
           backgroundSize: "282px 154px",
@@ -43,8 +45,14 @@ export default function ImageCard({ img, title1, title2, url, delay }) {
         }}
       >
         <Box sx={{ p: 2 }}>
-          <Box sx={{ fontSize: "25px" }}>{title1}</Box>
-          <Box sx={{ fontWeight: "bold", fontSize: "32px" }}>{title2}</Box>
+          {/* <Box sx={{ fontSize: "25px" }}>{title1}</Box> */}
+          <Box sx={{ fontSize: { xs: "12.5", sm: "25px" } }}>{title1}</Box>
+          {/* <Box sx={{ fontWeight: "bold", fontSize: "32px" }}>{title2}</Box> */}
+          <Box
+            sx={{ fontWeight: "bold", fontSize: { xs: "16px", sm: "32px" } }}
+          >
+            {title2}
+          </Box>
         </Box>
       </Box>
     </Box>
