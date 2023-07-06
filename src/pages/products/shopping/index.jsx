@@ -43,9 +43,7 @@ export default function Index() {
           response.data.shift(); // remove All from categories list
           setCategories(response.data);
         })
-        .catch(function (error) {
-          console.log(error);
-        });
+        .catch(function (error) {});
     // get cities
     !cities.length &&
       axios
@@ -57,9 +55,7 @@ export default function Index() {
         .then(function (response) {
           setCities(response.data);
         })
-        .catch(function (error) {
-          console.log(error);
-        });
+        .catch(function (error) {});
     // get areas
     if (cityId) {
       axios
@@ -71,9 +67,7 @@ export default function Index() {
         .then(function (response) {
           setAreas(response.data);
         })
-        .catch(function (error) {
-          console.log(error);
-        });
+        .catch(function (error) {});
     }
     // get merchants
     if (categoryId && cityId) {
@@ -98,9 +92,7 @@ export default function Index() {
           }
           setLoading(false);
         })
-        .catch(function (error) {
-          console.log(error);
-        });
+        .catch(function (error) {});
     }
   }, [categoryId, cityId, areaId]);
   return (
