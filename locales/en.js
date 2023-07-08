@@ -4,6 +4,7 @@ export default {
   direction: "ltr",
   textAlign: "left",
   formMsg: "Form Submitted Successfully",
+  formMsgFail: "Form submission Failed",
   clipboardMsg: "Link copied successfully",
   subscribeMsg: "Subscription done successfully",
   subscribeFailMsg: "Subscription failed",
