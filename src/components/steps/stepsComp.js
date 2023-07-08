@@ -57,9 +57,7 @@ export default function HorizontalNonLinearStepper() {
         data-aos-delay="100"
         sx={{
           width: {
-            // xs: "100%",
             xs: "100%",
-            // md: "50%",
             lg: "90%",
             md: "80%",
             sm: "100%",
