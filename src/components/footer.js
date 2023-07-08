@@ -69,7 +69,7 @@ export const styles = {
   }),
   input: (theme) => ({
     bgcolor: "white",
-    width: "300px",
+    width: "250px",
     "& .MuiInputBase-root": {
       height: "40px",
     },

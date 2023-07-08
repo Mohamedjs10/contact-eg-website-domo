@@ -131,7 +131,10 @@ export default function MapBox() {
             options={branches}
             onChange={handleBranchChange}
             sx={{
-              width: 350,
+              width: {
+                xs: "250px",
+                md: 350,
+              },
               mx: 1,
               mt: {
                 xs: 3,
