@@ -50,7 +50,7 @@ export default function Form({ type, color, product }) {
   // formik ==========================================================
   const onSubmit = async (values, actions) => {
     // ----------------------------------------------------------------
-
+    // values.mobilePhone;
     await fetch(
       `https://api-mobile.contact.eg/programs/${product}/info-request`,
       {
@@ -61,6 +61,7 @@ export default function Form({ type, color, product }) {
         body: JSON.stringify({
           ...defaultValues,
           ...values,
+          mobilePhone: `+2${values.mobilePhone}`,
         }),
       }
     )
@@ -78,8 +79,20 @@ export default function Form({ type, color, product }) {
             theme: "colored",
           });
           actions.resetForm();
+        } else {
+          toast.error(t.formMsgFail, {
+            position: "top-center",
+            autoClose: 2000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+          });
         }
       });
+    // .catch((err) => {});
   };
   let ArSchemaTest;
   let EnSchemaTest;
@@ -425,7 +438,7 @@ export default function Form({ type, color, product }) {
       >
         {t.form_labels.submit}
       </Button>
-      <ToastContainer style={{ width: "300px", textAlign: "center" }} />
+      {/* <ToastContainer style={{ width: "300px", textAlign: "center" }} /> */}
     </Box>
   );
 }

@@ -1,6 +1,7 @@
 import * as yup from "yup";
-const phoneRegExp =
-  /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
+// const phoneRegExp =
+const phoneRegExp = /^01/;
+const emailRegExp = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
 const nationaId =
   /^([1-9]{1})([0-9]{2})([0-9]{2})([0-9]{2})([0-9]{2})[0-9]{3}([0-9]{1})[0-9]{1}$/;
 export const EnSchema = yup.object().shape({
@@ -12,10 +13,20 @@ export const EnSchema = yup.object().shape({
   //   .string()
   //   .min(3, "Username must be at least 3 characters long")
   //   .required("Required"),
-  email: yup.string().email("Please enter a valid email").required("Required"),
+  // email: yup.string().email("Please enter a valid email").required("Required"),
+  email: yup
+    .string()
+    .email()
+    .matches(emailRegExp, "Please enter a valid email")
+    .required("Required"),
   mobilePhone: yup
     .string()
-    // .matches(phoneRegExp, "Phone number is not valid")
+    .matches(
+      phoneRegExp,
+      "Phone number must start with (010/011/012/015) directly"
+    )
+    .min(11, "Must be exactly 11 digits")
+    .max(11, "Must be exactly 11 digits")
     .required("Required"),
   national_id: yup
     .string()
@@ -33,10 +44,19 @@ export const EnSchemaA = yup.object().shape({
   //   .string()
   //   .min(3, "Username must be at least 3 characters long")
   //   .required("Required"),
-  email: yup.string().email("Please enter a valid email").required("Required"),
+  email: yup
+    .string()
+    // .email("Please enter a valid email")
+    .matches(emailRegExp, "Please enter a valid email")
+    .required("Required"),
   mobilePhone: yup
     .string()
-    // .matches(phoneRegExp, "Phone number is not valid")
+    .matches(
+      phoneRegExp,
+      "Phone number must start with (010/011/012/015) directly"
+    )
+    .min(11, "Must be exactly 11 digits")
+    .max(11, "Must be exactly 11 digits")
     .required("Required"),
   national_id: yup
     .string()
@@ -58,10 +78,19 @@ export const EnSchemaB = yup.object().shape({
   //   .string()
   //   .min(3, "Username must be at least 3 characters long")
   //   .required("Required"),
-  email: yup.string().email("Please enter a valid email").required("Required"),
+  email: yup
+    .string()
+    // .email("Please enter a valid email")
+    .matches(emailRegExp, "Please enter a valid email")
+    .required("Required"),
   mobilePhone: yup
     .string()
-    // .matches(phoneRegExp, "Phone number is not valid")
+    .matches(
+      phoneRegExp,
+      "Phone number must start with (010/011/012/015) directly"
+    )
+    .min(11, "Must be exactly 11 digits")
+    .max(11, "Must be exactly 11 digits")
     .required("Required"),
   national_id: yup
     .string()

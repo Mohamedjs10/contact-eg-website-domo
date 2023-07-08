@@ -4,6 +4,7 @@ export default {
   direction: "rtl",
   textAlign: "right",
   formMsg: "تم ارسال الطلب بنجاح",
+  formMsgFail: "فشل ارسال الطلب",
   clipboardMsg: "تم نسخ الرابط بنجاح",
   subscribeMsg: "تم الاشتراك بنجاح",
   subscribeFailMsg: "فشل الاشتراك",
