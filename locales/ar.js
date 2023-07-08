@@ -1902,7 +1902,7 @@ export default {
     title: "شبكة فروعنا",
     subTitle: "شوف اقرب فرع ليك من خلال الخريطة",
     placeholderGovernate: "المحافظة",
-    placeholderBranch: "الفروع بداخل المحافظة",
+    placeholderBranch: "الفروع بداخل المحافظات",
     noOption: "لا توجد محافظات",
   },
 };

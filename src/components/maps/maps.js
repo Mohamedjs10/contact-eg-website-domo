@@ -59,10 +59,10 @@ export default function MapBox() {
         setCenter({ lat: 30.04048, lng: 31.20948 });
         setZoom(10);
         setMapInstance(true);
+      })
+      .catch((err) => {
+        setMapInstance(false);
       });
-    // .catch((err) => {
-    //   setMapInstance(false);
-    // });
   }, []);
 
   const onLoad = (marker) => {};
@@ -131,7 +131,10 @@ export default function MapBox() {
             options={branches}
             onChange={handleBranchChange}
             sx={{
-              width: 350,
+              width: {
+                xs: "250px",
+                md: 350,
+              },
               mx: 1,
               mt: {
                 xs: 3,

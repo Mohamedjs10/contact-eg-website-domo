@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Box from "@mui/material/Box";
 import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
@@ -18,15 +18,23 @@ export default function HorizontalNonLinearStepper() {
   const t = locale === "en" ? en : ar;
 
   const [activeStep, setActiveStep] = useState(0);
+  const [qrFlag, setQrFlag] = useState(false);
 
   const handleStep = (step) => () => {
     setActiveStep(step);
   };
 
+  useEffect(() => {
+    if (window.innerWidth >= 1200) {
+      setQrFlag(true);
+    }
+  }, []);
+
   const contentGen = ({ title, heading, text, img }) => (
     <Box
       sx={{
         display: "flex",
+        width: "100%",
         flexDirection: {
           xs: "column",
           md: "row",
@@ -49,10 +57,10 @@ export default function HorizontalNonLinearStepper() {
         data-aos-delay="100"
         sx={{
           width: {
-            // xs: "100%",
-            xs: "450px",
-            // md: "50%",
-            md: "900px",
+            xs: "100%",
+            lg: "90%",
+            md: "80%",
+            sm: "100%",
           },
         }}
       >
@@ -80,41 +88,52 @@ export default function HorizontalNonLinearStepper() {
               mb: 2,
             }}
           >
-            <Box
-              component="img"
-              sx={{
-                width: "140px",
-                cursor: "pointer",
-                mx: {
-                  xs: 1,
-                  md: 2,
-                },
-                mt: {
-                  xs: 1,
-                  md: 1,
-                },
-              }}
-              src="/images/home-google-play.png"
-              alt="app-store"
-            />
-            <Box
-              component="img"
-              sx={{
-                width: "140px",
-                mx: {
-                  xs: 1,
-                  md: 2,
-                },
-                mt: {
-                  xs: 1,
-                  md: 1,
-                },
-                cursor: "pointer",
-              }}
-              src="/images/home-app-store.png"
-              alt="app-store"
-            />
+            <a
+              href="https://play.google.com/store/apps/details?id=eg.contact"
+              target="_blank"
+            >
+              <Box
+                component="img"
+                sx={{
+                  width: "140px",
+                  cursor: "pointer",
+                  mx: {
+                    xs: 1,
+                    md: 2,
+                  },
+                  mt: {
+                    xs: 1,
+                    md: 1,
+                  },
+                }}
+                src="/images/home-google-play.png"
+                alt="app-store"
+              />
+            </a>
+            <a
+              href="https://apps.apple.com/us/app/contactnow-%D9%83%D9%88%D9%86%D8%AA%D9%83%D8%AA/id1544159088"
+              target="_blank"
+            >
+              <Box
+                component="img"
+                sx={{
+                  width: "140px",
+                  mx: {
+                    xs: 1,
+                    md: 2,
+                  },
+                  mt: {
+                    xs: 1,
+                    md: 1,
+                  },
+                  cursor: "pointer",
+                }}
+                src="/images/home-app-store.png"
+                alt="app-store"
+              />
+            </a>
           </Box>
+
           <Box
             sx={{
               mx: {
@@ -125,7 +144,14 @@ export default function HorizontalNonLinearStepper() {
           >
             <Box
               component="img"
-              sx={{ width: "120px" }}
+              sx={{
+                width: "120px",
+                display: {
+                  lg: "block",
+                  md: "none",
+                  xs: "none",
+                },
+              }}
               src="/images/qr-code.png"
             />
           </Box>
@@ -146,6 +172,11 @@ export default function HorizontalNonLinearStepper() {
             sm: "250px",
             md: "275px",
             xl: "300px",
+            // xs: "100%",
+            // // md: "50%",
+            // lg: "10%",
+            // md: "20%",
+            // sm: "100%",
           },
         }}
         src={img}

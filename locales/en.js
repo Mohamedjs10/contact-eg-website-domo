@@ -1860,7 +1860,7 @@ export default {
     title: "Our branch",
     subTitle: "See the nearest branch to you through the map",
     placeholderGovernate: "Governorate",
-    placeholderBranch: "Branches within the governorate",
+    placeholderBranch: "Branches within the governorates",
     noOption: "There are no governorates",
   },
 };
