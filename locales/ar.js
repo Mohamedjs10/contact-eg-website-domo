@@ -792,7 +792,7 @@ export default {
         logo: "/home-cover/contact-brokerage-ar.png",
         text: "نافذة واحدة وشاملة لكل الخدمات التأمينية",
         textColor: colors.ratty,
-        button: "Request service",
+        button: "أطلب الخدمة",
         img: "/home-cover/cover_img_3_ar.png",
       },
       {
@@ -801,7 +801,7 @@ export default {
         logo: "/home-cover/contact-now-ar.png",
         text: "حمل التطبيق واستمتع بخدمات تمويلية غير محدودة",
         textColor: colors.white,
-        button: "Request service",
+        button: "أطلب الخدمة",
         img: "/home-cover/cover_img_4_ar.png",
       },
       {
@@ -810,7 +810,7 @@ export default {
         logo: "/home-cover/contact-blue-ar.png",
         text: "اسهل تقسيط واكبر تمويل",
         textColor: colors.ratty,
-        button: "Request service",
+        button: "أطلب الخدمة",
         img: "/home-cover/cover_img_5_ar.png",
       },
     ],
