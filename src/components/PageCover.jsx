@@ -44,8 +44,11 @@ export default function PageCover({
         sx={{
           display: "flex",
           flexDirection: "column",
-          alignItems: { xs: "center", lg: "flex-start" },
-          textAlign: { xs: "center", lg: locale === "en" ? "left" : "right" },
+          alignItems: { xs: "flex-start", lg: "flex-start" },
+          textAlign: {
+            xs: locale === "en" ? "left" : "right",
+            lg: locale === "en" ? "left" : "right",
+          },
           m: 3,
         }}
       >

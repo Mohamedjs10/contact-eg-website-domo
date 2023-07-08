@@ -7,6 +7,7 @@ export default {
   clipboardMsg: "Link copied successfully",
   subscribeMsg: "Subscription done successfully",
   subscribeFailMsg: "Subscription failed",
+  calcTitle: "Calculate your installments in a second",
   calc: {
     monthlyAmount: "The monthly amount",
     priceCar: "Price ",

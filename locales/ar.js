@@ -7,6 +7,7 @@ export default {
   clipboardMsg: "تم نسخ الرابط بنجاح",
   subscribeMsg: "تم الاشتراك بنجاح",
   subscribeFailMsg: "فشل الاشتراك",
+  calcTitle: "احسب قسطك في ثواني",
   calc: {
     monthlyAmount: " قيمة القسط الشهري",
     priceCar: "السعر ",
