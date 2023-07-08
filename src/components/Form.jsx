@@ -143,7 +143,8 @@ export default function Form({ type, color, product }) {
   // ================================================================
   return (
     <Box
-      data-aos={locale == "en" ? "fade-right" : "fade-left"}
+      // data-aos={locale == "en" ? "fade-right" : "fade-left"}
+      data-aos="fade-up"
       component="form"
       sx={styles.container}
       onSubmit={handleSubmit}

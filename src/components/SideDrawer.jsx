@@ -45,7 +45,7 @@ export default function SideDrawer({ state, setState }) {
       >
         <Box
           sx={{
-            width: { xs: 220, sm: 300 },
+            width: { xs: 300, sm: 300 },
             "& span": { textAlign: locale === "en" ? "left" : "right" },
           }}
           role="presentation"

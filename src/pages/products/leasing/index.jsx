@@ -86,7 +86,7 @@ export default function Index() {
               sx={{
                 fontSize: "42px",
                 color: colors.orange,
-                fontWeight: "bold",
+                // fontWeight: "bold",
               }}
             >
               {t.products_leasing.section_b.title}

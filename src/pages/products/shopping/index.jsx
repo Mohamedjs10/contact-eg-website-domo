@@ -1,21 +1,14 @@
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
 import { styles } from "../../../utils/styles/products-shopping-styles";
 import { colors } from "../../../utils/const";
-import Link from "next/link";
-
 import { useRouter } from "next/router";
 import en from "../../../../locales/en";
 import ar from "../../../../locales/ar";
-import ContentCard from "../../../components/our-brands/ContentCard";
 import VerticalCarousel from "@/components/VerticalCarousel";
 import PageCover from "@/components/PageCover";
 import PlaceCard from "@/components/PlaceCard";
 import IconTileSection from "../../../components/mini-components/IconTileSection.jsx";
 import ImgListSection from "../../../components/mini-components/ImgListSection.jsx";
-import { useFormik } from "formik";
-// import { EnSchema } from "../utils/en_schema";
-// import { ArSchema } from "../utils/ar_schema";
 import { Box, TextField, InputLabel, MenuItem, Button } from "@mui/material";
 import Calculator from "../../../components/Calculator.jsx";
 import Head from "next/head";
@@ -24,24 +17,14 @@ import LinearProgress from "@mui/material/LinearProgress";
 
 // ================================================================
 export default function Index() {
-  const [data, setData] = useState([]);
-  console.log("====data====>", data);
+  const [data, setData] = useState(["initial"]);
   const [categories, setCategories] = useState([]);
-  console.log("====categories====>", categories);
-  // const [categoryId, setCategoryId] = useState("0");
   const [categoryId, setCategoryId] = useState("");
-  console.log("====categoryId====>", categoryId);
   const [cities, setCities] = useState([]);
-  console.log("====cities====>", cities);
-  // const [cityId, setCityId] = useState("1");
   const [cityId, setCityId] = useState("");
-  console.log("====cityId====>", cityId);
   const [areas, setAreas] = useState([]);
-  console.log("====areas====>", areas);
   const [areaId, setAreaId] = useState("");
-  console.log("====areaId====>", areaId);
   const [loading, setLoading] = useState(false);
-  console.log("====loading====>", loading);
 
   const router = useRouter();
   const { locale } = router;
@@ -49,38 +32,44 @@ export default function Index() {
 
   useEffect(() => {
     // get categories
-    axios
-      .get(`https://api-mobile.contact.eg/products/6/getMainCategories`)
-      .then(function (response) {
-        setCategories(response.data);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+    !categories.length &&
+      axios
+        .get(
+          `https://api-mobile.contact.eg/products/6/getMainCategories?lang=${
+            locale === "en" ? "en" : "ar"
+          }`
+        )
+        .then(function (response) {
+          response.data.shift(); // remove All from categories list
+          setCategories(response.data);
+        })
+        .catch(function (error) {});
     // get cities
-    axios
-      .get(`https://api-mobile.contact.eg/products/6/cities`)
-      .then(function (response) {
-        setCities(response.data);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+    !cities.length &&
+      axios
+        .get(
+          `https://api-mobile.contact.eg/products/6/cities?lang=${
+            locale === "en" ? "en" : "ar"
+          }`
+        )
+        .then(function (response) {
+          setCities(response.data);
+        })
+        .catch(function (error) {});
     // get areas
     if (cityId) {
       axios
         .get(
-          `https://api-mobile.contact.eg/products/cities/${cityId}/areas?lang=en`
+          `https://api-mobile.contact.eg/products/cities/${cityId}/areas?lang=${
+            locale === "en" ? "en" : "ar"
+          }`
         )
         .then(function (response) {
           setAreas(response.data);
         })
-        .catch(function (error) {
-          console.log(error);
-        });
+        .catch(function (error) {});
     }
     // get merchants
-    // if (categoryId && cityId && areaId) {
     if (categoryId && cityId) {
       axios
         .post(
@@ -90,17 +79,20 @@ export default function Index() {
           {
             productId: "6",
             categoryId: `${categoryId}`,
-            areaId: `${areaId || "0"}`,
             cityId: `${cityId}`,
+            areaId: `${areaId || "0"}`,
             query: "",
           }
         )
         .then(function (response) {
-          setData(response.data);
+          if (response.data.length) {
+            setData(response.data);
+          } else {
+            setData(["not-initial"]);
+          }
+          setLoading(false);
         })
-        .catch(function (error) {
-          console.log(error);
-        });
+        .catch(function (error) {});
     }
   }, [categoryId, cityId, areaId]);
   return (
@@ -160,24 +152,22 @@ export default function Index() {
             flexWrap: "wrap",
             justifyContent: { xs: "center", md: "flex-start" },
           }}
-          // onSubmit={handleSubmit}
           autoComplete="off"
           noValidate
         >
           {/* Category ---------------------------------------------------------------------------------------------------------- */}
           <Box sx={styles.inputWrapper}>
-            <InputLabel sx={styles.label}>
-              {/* {t.form_labels.governorate} */}
-              Category
-            </InputLabel>
+            <InputLabel sx={styles.label}>{t.form_labels.category}</InputLabel>
             <TextField
-              // value={values.governorate || "default"}
               value={categoryId || "default"}
               onChange={(e) => {
-                console.log(`${e.target.value}`);
                 setCategoryId(`${e.target.value}`);
+                if (data[0] !== "initial" || cityId) {
+                  setLoading(true);
+                  setData([]);
+                }
               }}
-              name="governorate"
+              name="category"
               type="text"
               sx={styles.input}
               select
@@ -186,14 +176,12 @@ export default function Index() {
                 sx: {
                   height: "45px",
                   color: "grey",
-                  // fontWeight: "bold",
                   lineHeight: "2",
                 },
               }}
             >
-              {/* <Box sx={{ height: "100px" }}> */}
               <MenuItem disabled value="default">
-                {t.form_labels.g_placeholder}
+                {t.form_labels.cat_placeholder}
               </MenuItem>
               {categories &&
                 categories.map((option) => (
@@ -201,30 +189,24 @@ export default function Index() {
                     {option.title}
                   </MenuItem>
                 ))}
-              {/* </Box> */}
             </TextField>
-            {/* <Box sx={styles.helperText}>
-              {touched.governorate && errors.governorate}
-            </Box> */}
           </Box>
           {/* City ---------------------------------------------------------------------------------------------------------- */}
           <Box sx={styles.inputWrapper}>
-            <InputLabel sx={styles.label}>
-              {/* {t.form_labels.governorate} */}
-              City
-            </InputLabel>
+            <InputLabel sx={styles.label}>{t.form_labels.city}</InputLabel>
             <TextField
-              // value={values.governorate || "default"}
               value={cityId || "default"}
               onChange={(e) => {
-                console.log(`${e.target.value}`);
                 setCityId(`${e.target.value}`);
+
+                if (categoryId) {
+                  setLoading(true);
+                  setData([]);
+                }
                 setAreaId("");
               }}
               name="governorate"
               type="text"
-              // onBlur={handleBlur}
-              // error={touched.governorate && errors.governorate}
               sx={styles.input}
               select
               style={{ height: "45px" }}
@@ -232,14 +214,12 @@ export default function Index() {
                 sx: {
                   height: "45px",
                   color: "grey",
-                  // fontWeight: "bold",
                   lineHeight: "2",
                 },
               }}
             >
-              {/* <Box sx={{ height: "100px" }}> */}
               <MenuItem disabled value="default">
-                {t.form_labels.g_placeholder}
+                {t.form_labels.city_placeholder}
               </MenuItem>
               {cities &&
                 cities.map((option) => (
@@ -249,30 +229,23 @@ export default function Index() {
                 ))}
               {/* </Box> */}
             </TextField>
-            {/* <Box sx={styles.helperText}>
-              {touched.governorate && errors.governorate}
-            </Box> */}
           </Box>
           {/* Area ---------------------------------------------------------------------------------------------------------- */}
 
           {areas.length > 0 && (
             <Box sx={styles.inputWrapper}>
-              <InputLabel sx={styles.label}>
-                {/* {t.form_labels.governorate} */}
-                Area
-              </InputLabel>
+              <InputLabel sx={styles.label}>{t.form_labels.area}</InputLabel>
               <TextField
-                // value={values.governorate || "default"}
                 value={areaId || "default"}
                 onChange={(e) => {
-                  console.log(`${e.target.value}`);
+                  if (categoryId && cityId) {
+                    setLoading(true);
+                    setData([]);
+                  }
                   setAreaId(`${e.target.value}`);
-                  setLoading(true);
                 }}
                 name="governorate"
                 type="text"
-                // onBlur={handleBlur}
-                // error={touched.governorate && errors.governorate}
                 sx={styles.input}
                 select
                 style={{ height: "45px" }}
@@ -280,14 +253,12 @@ export default function Index() {
                   sx: {
                     height: "45px",
                     color: "grey",
-                    // fontWeight: "bold",
                     lineHeight: "2",
                   },
                 }}
               >
-                {/* <Box sx={{ height: "100px" }}> */}
                 <MenuItem disabled value="default">
-                  {t.form_labels.g_placeholder}
+                  {t.form_labels.area_placeholder}
                 </MenuItem>
                 {areas &&
                   areas.map((option) => (
@@ -295,32 +266,27 @@ export default function Index() {
                       {option.name}
                     </MenuItem>
                   ))}
-                {/* </Box> */}
               </TextField>
-              {/* <Box sx={styles.helperText}>
-              {touched.governorate && errors.governorate}
-            </Box> */}
             </Box>
           )}
         </Box>
 
         {/* =============================================================== */}
-        {data.length ? (
+        {data.length && data[0] !== "initial" && data[0] !== "not-initial" ? (
           <VerticalCarousel
-            // itemsArray={t.general.places}
             hideDots={true}
             itemsArray={data}
             Component={PlaceCard}
             slidesPerView={4.3}
           ></VerticalCarousel>
-        ) : loading == true && areaId ? (
+        ) : loading == true ? (
           <Box sx={{ width: "85%", m: "auto", my: 5 }}>
             <LinearProgress />
           </Box>
+        ) : data[0] == "not-initial" ? (
+          <Box sx={{ textAlign: "center", my: 5 }}>{t.form_labels.case2}</Box>
         ) : (
-          <Box sx={{ textAlign: "center", my: 5 }}>
-            Please Choose at least a Category and a City
-          </Box>
+          <Box sx={{ textAlign: "center", my: 5 }}>{t.form_labels.case1} </Box>
         )}
 
         {/* =============================================================== */}

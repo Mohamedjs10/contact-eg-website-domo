@@ -12,6 +12,7 @@ import { useRouter } from "next/router";
 import en from "../../locales/en";
 import ar from "../../locales/ar";
 import { useSelector, useDispatch } from "react-redux";
+import Link from "next/link";
 
 export default function Navbar({
   leftOrRightValue,
@@ -92,7 +93,9 @@ export default function Navbar({
             >
               <MenuIcon sx={{}} />
             </IconButton>
-            <img src={t.logo} width="50px" height="20px" />
+            <Box component={Link} href="/">
+              <img src={t.logo} width="50px" height="20px" />
+            </Box>
             <Box
               onClick={locale === "en" ? toAr : toEn}
               component={Button}

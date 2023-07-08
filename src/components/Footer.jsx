@@ -13,7 +13,16 @@ import TextField from "@mui/material/TextField";
 import { useRouter } from "next/router";
 import en from "../../locales/en";
 import ar from "../../locales/ar";
+import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 export default function Secondary_Navbar({ setIsOPen }) {
+  const [email, setEmail] = useState("");
+  const [error, setError] = useState(true);
+  function isValidEmail(email) {
+    return /\S+@\S+\.\S+/.test(email);
+  }
+  const [disabled, setDisabled] = useState(false);
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : ar;
@@ -43,23 +52,83 @@ export default function Secondary_Navbar({ setIsOPen }) {
               justifyContent: { xs: "center", sm: "space-between", gap: 15 },
             }}
           >
-            <TextField
-              placeholder={t.footer.section_a.enter_email}
-              inputProps={{
-                sx: {
-                  fontSize: 13,
-                  fontWeight: "bold",
-                  lineHeight: "2",
-                },
+            <Box>
+              <TextField
+                placeholder={t.footer.section_a.enter_email}
+                inputProps={{
+                  sx: {
+                    fontSize: 13,
+                    fontWeight: "bold",
+                    lineHeight: "2",
+                  },
+                }}
+                sx={styles.input}
+                // defaultValue={""}
+                value={email}
+                onBlur={(e) => {
+                  if (!isValidEmail(e.target.value)) {
+                    setError("email is invalid");
+                  } else {
+                    setError(null);
+                  }
+                }}
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                }}
+                hiddenLabel
+                id="car-price"
+                size="small"
+              />
+              {error && (
+                <Box sx={{ color: "red", fontSize: "15px", m: 1 }}>{error}</Box>
+              )}
+            </Box>
+
+            <Button
+              variant="outlined"
+              type="email"
+              disabled={disabled}
+              sx={styles.btn}
+              onClick={() => {
+                if (!error) {
+                  setDisabled(true);
+                  axios
+                    .post(
+                      "https://api-mobile.contact.eg/subscriptions/subscribe",
+                      {
+                        email,
+                      }
+                    )
+                    .then((res) => {
+                      setDisabled(false);
+                      setEmail("");
+                      setError(true);
+                      toast.success(t.subscribeMsg, {
+                        position: "top-center",
+                        autoClose: 5000,
+                        hideProgressBar: true,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "colored",
+                      });
+                    })
+                    .catch((err) => {
+                      toast.error(t.subscribeFailMsg, {
+                        position: "top-center",
+                        autoClose: 5000,
+                        hideProgressBar: true,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "colored",
+                      });
+                    });
+                }
               }}
-              sx={styles.input}
-              defaultValue={""}
-              onChange={() => {}}
-              hiddenLabel
-              id="car-price"
-              size="small"
-            />
-            <Button variant="outlined" sx={styles.btn}>
+            >
               {t.footer.section_a.button}
             </Button>
           </Box>
@@ -455,6 +524,18 @@ export default function Secondary_Navbar({ setIsOPen }) {
           <img src="/award.svg" width="100px" />
         </Box>
       </Box>
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={locale === "en" ? false : true}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
     </Box>
   );
 }
