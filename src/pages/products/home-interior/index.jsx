@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { styles } from "../../../utils/styles/products-home-interior-styles";
 import { colors } from "../../../utils/const";
-import Link from "next/link";
+// import Link from "next/link";
 
 import { useRouter } from "next/router";
 import en from "../../../../locales/en";
