@@ -117,7 +117,37 @@ export default function SideDrawer({ state, setState }) {
                     setState((prev) => !prev);
                   }}
                 >
+                  {t.secondary_nav.insurance_services_dropdown.home}
+                </Box>
+                <Box
+                  component="a"
+                  target="_blank"
+                  href="https://sarwa.insurance/sarwa-insurance/product/motorInsurance/"
+                  sx={{
+                    textDecoration: "none",
+                    m: "auto",
+                    color: "#233266",
+                  }}
+                  onClick={() => {
+                    setState((prev) => !prev);
+                  }}
+                >
                   {t.secondary_nav.insurance_services_dropdown.motor}
+                </Box>
+                <Box
+                  component="a"
+                  target="_blank"
+                  href="https://sarwa.insurance/sarwa-insurance/product/personalAccidents/"
+                  sx={{
+                    textDecoration: "none",
+                    m: "auto",
+                    color: "#233266",
+                  }}
+                  onClick={() => {
+                    setState((prev) => !prev);
+                  }}
+                >
+                  {t.secondary_nav.insurance_services_dropdown.personal}
                 </Box>
                 <Box
                   component="a"

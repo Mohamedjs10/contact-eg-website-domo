@@ -30,7 +30,8 @@ export default function Secondary_Navbar({ setIsOPen }) {
   let margin = locale === "en" ? "ml" : "mr";
   return (
     <Box
-      className="horizontal-safe-padding vertical-safe-padding mt-5"
+      // className="horizontal-safe-padding vertical-safe-padding mt-5"
+      className="horizontal-safe-padding vertical-safe-padding"
       sx={{ bgcolor: colors.bg_grey, border: `1px solid ${colors.dark_grey}` }}
     >
       {/* section A ------------------------------------------------------------------------------------ */}
@@ -67,7 +68,9 @@ export default function Secondary_Navbar({ setIsOPen }) {
                 value={email}
                 onBlur={(e) => {
                   if (!isValidEmail(e.target.value)) {
-                    setError("email is invalid");
+                    locale === "en"
+                      ? setError("email is invalid")
+                      : setError("برجاء ادخال بريد الكتروني صحيح");
                   } else {
                     setError(null);
                   }

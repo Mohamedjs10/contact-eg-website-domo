@@ -542,7 +542,7 @@ export default {
     financial_services: "خدمات تمويلية",
     insurance_services: "خدمات تأمينية",
     insurance_services_dropdown: {
-      motor: "تأمين المنزل",
+      motor: "تأمين السيارات",
       home: "تأمين المنزل",
       personal: "تأمين الحوادث الشخصية ونمط الحياة",
       property: "تأمين الممتلكات",
@@ -553,7 +553,7 @@ export default {
       medical: "تأمين طبي",
     },
     e_payments: "مدفوعات الكترونية",
-    clients_program: "برنامج العملاء",
+    clients_program: "برامج كونتكت",
     investment_and_savings: "استثمار وادخار",
     branches_location: "اماكن الفروع",
     login: "تسجيل الدخول",
@@ -975,8 +975,7 @@ export default {
             "نفسك تُنمى مهارات أولادك وتساعدهم يمارسوا الرياضة اللي بيحبوها، كونتكت هتقسطلك اشتراك ",
         },
         {
-          url: "/products/home",
-
+          url: "/products/home-interior",
           color: colors.dark_brown,
           img: "/services/design.svg",
           title: "تمويل تصميم و تشطيب",
@@ -1004,7 +1003,7 @@ export default {
             "افرح وريح بالك، كونتكت حلتهالك وهتغطي تكاليف فرحك بأكبر قيمة تمويل وبتقسيط سهل ومريح",
         },
         {
-          url: "/products/home",
+          url: "/products/home-interior",
 
           color: colors.dark_petroli,
           img: "/services/house.svg",
@@ -1049,7 +1048,7 @@ export default {
             "لو محتاج تُنمي استثمارك الزراعي، كونتكت بتقدملك التمويل اللازم اللي هيساعدك في تحقيق التنمية ",
         },
         {
-          url: "/products/green-finance",
+          url: "/products/finishing",
 
           color: colors.light_green,
           img: "/services/green-finance.svg",
@@ -1105,7 +1104,7 @@ export default {
             "نفسك تُنمى مهارات أولادك وتساعدهم يمارسوا الرياضة اللي بيحبوها، كونتكت هتقسطلك اشتراك ",
         },
         {
-          url: "/products/home",
+          url: "/products/home-interior",
 
           color: colors.dark_brown,
           img: "/services/design.svg",
@@ -1132,7 +1131,7 @@ export default {
             "افرح وريح بالك، كونتكت حلتهالك وهتغطي تكاليف فرحك بأكبر قيمة تمويل وبتقسيط سهل ومريح",
         },
         {
-          url: "/products/home",
+          url: "/products/mortgage",
 
           color: colors.dark_petroli,
           img: "/services/house.svg",
@@ -1177,7 +1176,7 @@ export default {
             "لو محتاج تُنمي استثمارك الزراعي، كونتكت بتقدملك التمويل اللازم اللي هيساعدك في تحقيق التنمية ",
         },
         {
-          url: "/products/green-finance",
+          url: "/products/finishing",
 
           color: colors.light_green,
           img: "/services/green-finance.svg",
@@ -1200,7 +1199,7 @@ export default {
       ],
       D: [
         {
-          url: "/products/leasing",
+          url: "/rewards",
 
           color: colors.blue,
           img: "/services/clients.svg",

@@ -147,13 +147,13 @@ export default function FlyingCard({ setAnchorEl, setArrDirC, type }) {
               sx={styles.tab}
               style={{}}
             >
-              {t.secondary_nav.insurance_services_dropdown.motor}
+              {t.secondary_nav.insurance_services_dropdown.home}
             </Box>
             <Box sx={styles.line}></Box>
             <Box
               component="a"
               target="_blank"
-              href="https://sarwa.insurance/sarwa-insurance/product/homeInsurance/"
+              href="https://sarwa.insurance/sarwa-insurance/product/motorInsurance/"
               onClick={() => {
                 setAnchorEl(null);
                 setArrDirC((prev) => (prev == "up" ? "down" : "up"));
@@ -161,10 +161,10 @@ export default function FlyingCard({ setAnchorEl, setArrDirC, type }) {
               sx={styles.tab}
               style={{}}
             >
-              {t.secondary_nav.insurance_services_dropdown.home}
+              {t.secondary_nav.insurance_services_dropdown.motor}
             </Box>
             <Box sx={styles.line}></Box>
-            {/* <Box
+            <Box
               component="a"
               target="_blank"
               href="https://sarwa.insurance/sarwa-insurance/product/personalAccidents/"
@@ -177,7 +177,7 @@ export default function FlyingCard({ setAnchorEl, setArrDirC, type }) {
             >
               {t.secondary_nav.insurance_services_dropdown.personal}
             </Box>
-            <Box sx={styles.line}></Box> */}
+            <Box sx={styles.line}></Box>
             <Box
               component="a"
               target="_blank"

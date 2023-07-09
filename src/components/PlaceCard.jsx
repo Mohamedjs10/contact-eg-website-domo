@@ -13,9 +13,9 @@ export default function PlaceCard({ img, title, id, branches }) {
   const t = locale === "en" ? en : ar;
   return (
     <Box
-      component="a"
+      // component="a"
       href=""
-      target="_blank"
+      // target="_blank"
       sx={{
         textDecoration: "none",
         "&:hover": { cursor: "grab", textDecoration: "none" },

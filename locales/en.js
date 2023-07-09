@@ -669,7 +669,7 @@ export default {
       medical: "Medical",
     },
     e_payments: "E-Payment",
-    clients_program: "Referral Program",
+    clients_program: "Contact Programs",
     investment_and_savings: "Investment & Savings",
     branches_location: "Branches Locations",
     login: "Login",
@@ -694,7 +694,7 @@ export default {
       ],
       financial_services_list2: [
         { name: "Wedding & Events", url: "/products/events" },
-        { name: "Mortage", url: "/products/home" },
+        { name: "Mortage", url: "/products/mortgage" },
         { name: "Insurance Brokerage", url: "/products/insurance" },
         { name: "Factoring", url: "/products/factoring" },
         { name: "Leasing", url: "/products/leasing" },
@@ -1068,7 +1068,7 @@ export default {
             "If you need to develop your agricultural investment, Contact believes that agriculture development is the main pillar for economic growth, food security, and a cornerstone for a bright future. Contact will finance your agriculture investments to achieve environmental sustainability.",
         },
         {
-          url: "/products/trucks",
+          url: "/products/shopping",
           color: colors.dark_violet,
           img: "/services/cart.svg",
           title: "Consumer Finance",
@@ -1132,7 +1132,7 @@ export default {
             "If you need to develop your agricultural investment, Contact believes that agriculture development is the main pillar for economic growth, food security, and a cornerstone for a bright future. Contact will finance your agriculture investments to achieve environmental sustainability.",
         },
         {
-          url: "/products/home",
+          url: "/products/mortgage",
 
           color: colors.dark_petroli,
           img: "/services/house.svg",
@@ -1187,7 +1187,7 @@ export default {
             "If you need to develop your agricultural investment, Contact believes that agriculture development is the main pillar for economic growth, food security, and a cornerstone for a bright future. Contact will finance your agriculture investments to achieve environmental sustainability.",
         },
         {
-          url: "/products/green-finance",
+          url: "/products/finishing",
 
           color: colors.light_green,
           img: "/services/green-finance.svg",
@@ -1289,7 +1289,7 @@ export default {
             "If you need to develop your agricultural investment, Contact believes that agriculture development is the main pillar for economic growth, food security, and a cornerstone for a bright future. Contact will finance your agriculture investments to achieve environmental sustainability.",
         },
         {
-          url: "/products/home",
+          url: "/products/mortgage",
 
           color: colors.dark_petroli,
           img: "/services/house.svg",
@@ -1344,7 +1344,7 @@ export default {
             "If you need to develop your agricultural investment, Contact believes that agriculture development is the main pillar for economic growth, food security, and a cornerstone for a bright future. Contact will finance your agriculture investments to achieve environmental sustainability.",
         },
         {
-          url: "/products/green-finance",
+          url: "/products/finishing",
 
           color: colors.light_green,
           img: "/services/green-finance.svg",
@@ -1369,10 +1369,10 @@ export default {
       ],
       D: [
         {
-          url: "/products/leasing",
+          url: "/rewards",
           color: colors.blue,
           img: "/services/clients.svg",
-          title: "Client Filtering",
+          title: "Referral Program",
           description: "If you need to develop your agricultural investment.",
           full_description:
             "If you need to develop your agricultural investment, Contact believes that agriculture development is the main pillar for economic growth, food security, and a cornerstone for a bright future. Contact will finance your agriculture investments to achieve environmental sustainability.",
