@@ -20,6 +20,7 @@ import ar from "../../locales/ar";
 export default function SideDrawer({ state, setState }) {
   const [open1, setOpen1] = React.useState(false);
   const [open2, setOpen2] = React.useState(false);
+  const [open3, setOpen3] = React.useState(false);
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : ar;
@@ -31,6 +32,9 @@ export default function SideDrawer({ state, setState }) {
   };
   const handleClick2 = () => {
     setOpen2(!open2);
+  };
+  const handleClick3 = () => {
+    setOpen3(!open3);
   };
 
   return (
@@ -82,6 +86,123 @@ export default function SideDrawer({ state, setState }) {
             </Collapse>
             {/* B ---------------------------------------------------------*/}
             <ListItem disablePadding>
+              <ListItemButton onClick={handleClick3}>
+                <ListItemIcon>
+                  <InboxIcon />
+                </ListItemIcon>
+                <ListItemText primary={t.secondary_nav.insurance_services} />
+
+                {open3 ? <ExpandLess /> : <ExpandMore />}
+              </ListItemButton>
+            </ListItem>
+            <Collapse in={open3} timeout="auto" unmountOnExit>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 1,
+                  m: "7px",
+                }}
+              >
+                <Box
+                  component="a"
+                  target="_blank"
+                  href="https://sarwa.insurance/sarwa-insurance/product/homeInsurance/"
+                  sx={{
+                    textDecoration: "none",
+                    m: "auto",
+                    color: "#233266",
+                  }}
+                  onClick={() => {
+                    setState((prev) => !prev);
+                  }}
+                >
+                  {t.secondary_nav.insurance_services_dropdown.motor}
+                </Box>
+                <Box
+                  component="a"
+                  target="_blank"
+                  href="https://sarwa.insurance/sarwa-insurance/product/propertyInsurance/"
+                  sx={{ textDecoration: "none", m: "auto", color: "#233266" }}
+                  onClick={() => {
+                    setState((prev) => !prev);
+                  }}
+                >
+                  {t.secondary_nav.insurance_services_dropdown.property}
+                </Box>
+                <Box
+                  component="a"
+                  target="_blank"
+                  href="https://sarwa.insurance/sarwa-insurance/product/engineeringInsurance/"
+                  sx={{ textDecoration: "none", m: "auto", color: "#233266" }}
+                  onClick={() => {
+                    setState((prev) => !prev);
+                  }}
+                >
+                  {t.secondary_nav.insurance_services_dropdown.engineering}
+                </Box>
+                <Box
+                  component="a"
+                  target="_blank"
+                  href="https://sarwa.insurance/sarwa-insurance/product/motorFleetInsurance/"
+                  sx={{ textDecoration: "none", m: "auto", color: "#233266" }}
+                  onClick={() => {
+                    setState((prev) => !prev);
+                  }}
+                >
+                  {t.secondary_nav.insurance_services_dropdown.motor_fleet}
+                </Box>
+                <Box
+                  component="a"
+                  target="_blank"
+                  href="https://sarwa.insurance/sarwa-insurance/product/marineInsurance/"
+                  sx={{ textDecoration: "none", m: "auto", color: "#233266" }}
+                  onClick={() => {
+                    setState((prev) => !prev);
+                  }}
+                >
+                  {t.secondary_nav.insurance_services_dropdown.marine}
+                </Box>
+                <Box
+                  component="a"
+                  target="_blank"
+                  href="https://sarwa.insurance/sarwa-insurance/product/publicLiabilityInsurance/"
+                  sx={{ textDecoration: "none", m: "auto", color: "#233266" }}
+                  onClick={() => {
+                    setState((prev) => !prev);
+                  }}
+                >
+                  {t.secondary_nav.insurance_services_dropdown.liability}
+                </Box>
+                <Box
+                  component="a"
+                  target="_blank"
+                  href="https://sarwa.insurance/sarwa-insurance/product/medicalInsurance/"
+                  sx={{ textDecoration: "none", m: "auto", color: "#233266" }}
+                  onClick={() => {
+                    setState((prev) => !prev);
+                  }}
+                >
+                  {t.secondary_nav.insurance_services_dropdown.medical}
+                </Box>
+              </Box>
+            </Collapse>
+            {/* C ---------------------------------------------------------*/}
+            <ListItem disablePadding>
+              <ListItemButton
+                onClick={() => {
+                  router.push("/e-payment");
+                  setState((prev) => !prev);
+                }}
+              >
+                <ListItemIcon>
+                  <MailIcon />
+                </ListItemIcon>
+                <ListItemText primary={t.secondary_nav.e_payments} />
+              </ListItemButton>
+            </ListItem>
+            {/* D ---------------------------------------------------------*/}
+            <ListItem disablePadding>
               <ListItemButton onClick={handleClick2}>
                 <ListItemIcon>
                   <InboxIcon />
@@ -124,24 +245,7 @@ export default function SideDrawer({ state, setState }) {
                 )}
               </Box>
             </Collapse>
-            {/* C ---------------------------------------------------------*/}
-            <ListItem disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  <MailIcon />
-                </ListItemIcon>
-                <ListItemText primary={t.secondary_nav.insurance_services} />
-              </ListItemButton>
-            </ListItem>
-            {/* D ---------------------------------------------------------*/}
-            <ListItem disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  <MailIcon />
-                </ListItemIcon>
-                <ListItemText primary={t.secondary_nav.e_payments} />
-              </ListItemButton>
-            </ListItem>
+
             {/* E ---------------------------------------------------------*/}
             <ListItem disablePadding>
               <ListItemButton>
@@ -155,7 +259,12 @@ export default function SideDrawer({ state, setState }) {
             </ListItem>
             {/* F ---------------------------------------------------------*/}
             <ListItem disablePadding>
-              <ListItemButton>
+              <ListItemButton
+                onClick={() => {
+                  router.push("#map");
+                  setState((prev) => !prev);
+                }}
+              >
                 <ListItemIcon>
                   <MailIcon />
                 </ListItemIcon>
