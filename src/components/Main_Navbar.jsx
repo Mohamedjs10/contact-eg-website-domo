@@ -98,7 +98,7 @@ export default function Main_Navbar({ anchorEl, setAnchorEl }) {
       >
         {t.main_nav.individuals}
       </Box>
-      <Box
+      {/* <Box
         component={Link}
         sx={styles.tab}
         style={{
@@ -126,7 +126,7 @@ export default function Main_Navbar({ anchorEl, setAnchorEl }) {
         }}
       >
         {t.main_nav.investors}
-      </Box>
+      </Box> */}
       <Box
         onClick={locale === "en" ? toAr : toEn}
         component={Button}
