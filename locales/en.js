@@ -893,6 +893,7 @@ export default {
         textColor: colors.ratty,
         button: "Request service",
         img: "/home-cover/cover_img_1_en.png",
+        link: "#contact-pay",
       },
       {
         bgColor: "#2D317F",
@@ -902,6 +903,7 @@ export default {
         textColor: colors.white,
         button: "Request service",
         img: "/home-cover/cover_img_2_en.png",
+        link: "/about",
       },
       {
         bgColor: "#EAEAEA",
@@ -911,6 +913,7 @@ export default {
         textColor: colors.ratty,
         button: "Request service",
         img: "/home-cover/cover_img_3_en.png",
+        link: "/products/insurance",
       },
       {
         bgColor: "#2D317F",
@@ -920,6 +923,7 @@ export default {
         textColor: colors.white,
         button: "Request service",
         img: "/home-cover/cover_img_4_en.png",
+        link: "/about",
       },
       {
         bgColor: "#EAEAEA",
@@ -929,6 +933,7 @@ export default {
         textColor: colors.ratty,
         button: "Request service",
         img: "/home-cover/cover_img_5_en.png",
+        link: "/about",
       },
     ],
     products_title: "Our Products",

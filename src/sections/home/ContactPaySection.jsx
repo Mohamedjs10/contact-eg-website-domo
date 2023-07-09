@@ -16,6 +16,7 @@ export default function IconsSection({}) {
     <Box
       sx={styles.container}
       className="horizontal-safe-padding vertical-safe-padding my-5"
+      id="contact-pay"
     >
       <Box
         // data-aos={locale == "en" ? "fade-right" : "fade-left"}

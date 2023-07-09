@@ -3,6 +3,7 @@ import { styles } from "./cover_section";
 import Button from "@mui/material/Button";
 import { Box } from "@mui/material";
 import { colors } from "../../utils/const";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import en from "../../../locales/en";
 import ar from "../../../locales/ar";
@@ -67,14 +68,28 @@ export default function Cover() {
                   mb: { xs: 1 },
                   fontSize: { xs: "15px", sm: "15px", md: "20px", lg: "25px" },
                   // display: { xs: "none", md: "block" },
-                  color: item.textColor,
+                  textAlign: "center",
+                  color: {
+                    xs: index == 2 ? colors.white : item.textColor,
+                    sm: item.textColor,
+                  },
                 }}
               >
                 {item.text}
               </Box>
-              <Button variant="outlined" sx={styles.btn}>
-                {item.button}
-              </Button>
+              <Link
+                href={item.link}
+                sx={{ "&:hover": { color: colors.white } }}
+              >
+                <Button
+                  href={item.link}
+                  variant="outlined"
+                  sx={styles.btn}
+                  // sx={{ "&:hover": { color: colors.white } }}
+                >
+                  {item.button}
+                </Button>
+              </Link>
             </Box>
             <Box
               sx={{

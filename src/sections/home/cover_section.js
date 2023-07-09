@@ -5,9 +5,8 @@ export const styles = {
     p: 0,
     fontSize: { xs: 13, sm: "8px", md: "12px", lg: "12px" },
     fontWeight: "bold",
-    width: { xs: "100px", md: "150px", lg: "200px" },
-    // minHeight: { xs: "25px", sm: "30px", md: "40px", lg: "40px" },
-    height: "50px",
+    width: { xs: "150px", md: "150px", lg: "200px" },
+    height: "40px",
     // mb: "60px",
     color: colors.white,
     border: `1px solid ${colors.orange}`,
@@ -17,9 +16,9 @@ export const styles = {
 
     "&:hover": {
       border: `1px solid ${colors.orange}`,
-
       backgroundColor: colors.orange,
-      boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+      color: colors.white,
+      // boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
     },
     "&:active": {
       boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",

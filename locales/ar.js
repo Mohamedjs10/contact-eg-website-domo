@@ -769,22 +769,24 @@ export default {
   home_page: {
     slides: [
       {
-        bgColor: "#EAEAEA",
-        bgImage: "/bgs/01-ar.svg",
-        logo: "/home-cover/contact-pay-ar.png",
-        text: "كونتكت اقرب ليك!",
-        textColor: colors.ratty,
-        button: "أطلب الخدمة",
-        img: "/home-cover/cover_img_2_ar.png",
-      },
-      {
         bgColor: "#2D317F",
-        bgImage: "/bgs/02-ar.svg",
-        logo: "/home-cover/contact-ar.png",
+        bgImage: "/bgs/01-ar.svg",
         text: "ادفع فواتيرك وأنت في مكانك",
-        textColor: colors.white,
+        textColor: colors.ratty,
+        logo: "/home-cover/contact-pay-ar.png",
         button: "أطلب الخدمة",
         img: "/home-cover/cover_img_1_ar.png",
+        link: "#contact-pay",
+      },
+      {
+        bgColor: "#EAEAEA",
+        bgImage: "/bgs/02-ar.svg",
+        textColor: colors.white,
+        logo: "/home-cover/contact-ar.png",
+        text: "كونتكت اقرب ليك!",
+        button: "أطلب الخدمة",
+        img: "/home-cover/cover_img_2_ar.png",
+        link: "/about",
       },
       {
         bgColor: "#EAEAEA",
@@ -794,6 +796,7 @@ export default {
         textColor: colors.ratty,
         button: "أطلب الخدمة",
         img: "/home-cover/cover_img_3_ar.png",
+        link: "/products/insurance",
       },
       {
         bgColor: "#2D317F",
@@ -803,6 +806,7 @@ export default {
         textColor: colors.white,
         button: "أطلب الخدمة",
         img: "/home-cover/cover_img_4_ar.png",
+        link: "/about",
       },
       {
         bgColor: "#EAEAEA",
@@ -812,6 +816,7 @@ export default {
         textColor: colors.ratty,
         button: "أطلب الخدمة",
         img: "/home-cover/cover_img_5_ar.png",
+        link: "/about",
       },
     ],
     products_title: "منتجاتنا التمويلية",
