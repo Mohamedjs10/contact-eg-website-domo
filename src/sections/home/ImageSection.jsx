@@ -18,6 +18,7 @@ export default function ImageSection({}) {
   // let delay;
   return (
     <Box
+      id="all-products"
       sx={styles.container}
       className="horizontal-safe-padding vertical-safe-padding"
     >

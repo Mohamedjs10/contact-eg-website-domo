@@ -68,7 +68,7 @@ export default function Cover() {
                   mb: { xs: 1 },
                   fontSize: { xs: "15px", sm: "15px", md: "20px", lg: "25px" },
                   // display: { xs: "none", md: "block" },
-                  textAlign: "center",
+                  textAlign: { xs: "center", sm: "initial" },
                   color: {
                     xs: index == 2 ? colors.white : item.textColor,
                     sm: item.textColor,

@@ -50,6 +50,7 @@ export default function HorizontalNonLinearStepper() {
         },
         zIndex: 999999,
       }}
+      id="instant-approval"
     >
       <Box
         // data-aos={locale == "en" ? "fade-right" : "fade-left"}

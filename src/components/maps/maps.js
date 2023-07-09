@@ -84,7 +84,7 @@ export default function MapBox() {
     }
   };
   return (
-    <Box>
+    <Box id="map">
       <Box
         sx={{
           background: "#2D317F",
