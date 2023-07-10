@@ -5,7 +5,7 @@ import { colors } from "../../utils/const";
 import en from "../../../locales/en";
 import ar from "../../../locales/ar";
 
-export default function Statistics() {
+export default function AboutSection(props) {
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : ar;
@@ -57,7 +57,11 @@ export default function Statistics() {
         variant="subtitle2"
         sx={{ color: colors.blue, display: "block", mb: 2, fontWeight: "bold" }}
       >
-        {t.about.aboutTitle}
+        {props.type === "about"
+          ? t.about.aboutTitle
+          : props.type === "sustainability"
+          ? t.sustainability.sustainabilityTitle
+          : null}
       </Typography>
       <Box
         // src="/images/logo contact.png"
@@ -80,7 +84,11 @@ export default function Statistics() {
           lineHeight: 2,
         }}
       >
-        {t.about.aboutText}
+        {props.type === "about"
+          ? t.about.aboutText
+          : props.type === "sustainability"
+          ? t.sustainability.sustainabilityText
+          : null}
       </Typography>
       <Box
         sx={{
@@ -94,34 +102,82 @@ export default function Statistics() {
       >
         <Box>
           {contentGeneration({
-            heading: t.about.aboutCard.heading1,
-            text: t.about.aboutCard.text1,
+            heading:
+              props.type === "about"
+                ? t.about.aboutCard.heading1
+                : props.type === "sustainability"
+                ? t.sustainability.sustainabilityCard.heading1
+                : null,
+            text:
+              props.type === "about"
+                ? t.about.aboutCard.text1
+                : props.type === "sustainability"
+                ? t.sustainability.sustainabilityCard.text1
+                : null,
           })}
           {contentGeneration({
-            heading: t.about.aboutCard.heading2,
-            text: t.about.aboutCard.text2,
+            heading:
+              props.type === "about"
+                ? t.about.aboutCard.heading2
+                : props.type === "sustainability"
+                ? t.sustainability.sustainabilityCard.heading2
+                : null,
+            text:
+              props.type === "about"
+                ? t.about.aboutCard.text2
+                : props.type === "sustainability"
+                ? t.sustainability.sustainabilityCard.text2
+                : null,
           })}
           {contentGeneration({
-            heading: t.about.aboutCard.heading3,
-            text: t.about.aboutCard.text3,
+            heading:
+              props.type === "about"
+                ? t.about.aboutCard.heading3
+                : props.type === "sustainability"
+                ? t.sustainability.sustainabilityCard.heading3
+                : null,
+            text:
+              props.type === "about"
+                ? t.about.aboutCard.text3
+                : props.type === "sustainability"
+                ? t.sustainability.sustainabilityCard.text3
+                : null,
           })}
         </Box>
-        <Box
-          component="img"
-          src="/images/about-member.png"
-          sx={{
-            width: {
-              lg: "700px",
-              md: "500px",
-              sm: "500px",
-            },
-            margin: {
-              sm: "auto",
-            },
-            zIndex: 9999,
-            borderRadius: "40% 0% 40% 0%",
-          }}
-        />
+        {props.type === "about" ? (
+          <Box
+            component="img"
+            src="/images/about-member.png"
+            sx={{
+              width: {
+                lg: "700px",
+                md: "500px",
+                sm: "500px",
+              },
+              margin: {
+                sm: "auto",
+              },
+              zIndex: 9999,
+              borderRadius: "40% 0% 40% 0%",
+            }}
+          />
+        ) : props.type === "sustainability" ? (
+          <Box
+            component="img"
+            src="/images/sustainability.svg"
+            sx={{
+              width: {
+                lg: "700px",
+                md: "500px",
+                sm: "500px",
+              },
+              margin: {
+                sm: "auto",
+              },
+              zIndex: 9999,
+            }}
+          />
+        ) : null}
       </Box>
     </Box>
   );
