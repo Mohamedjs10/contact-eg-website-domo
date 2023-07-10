@@ -239,7 +239,9 @@ export default function Secondary_Navbar({ setIsOPen }) {
             {t.footer.section_b.policy_list.map((item, index) => (
               <Box
                 data-aos="fade-up"
-                component={Link}
+                // component={Link}
+                component="a"
+                target="_blank"
                 href={item.url}
                 sx={styles.link}
                 key={index}
@@ -384,7 +386,9 @@ export default function Secondary_Navbar({ setIsOPen }) {
             <AccordionDetails sx={styles.sub_container}>
               {t.footer.section_b.policy_list.map((item, index) => (
                 <Box
-                  component={Link}
+                  // component={Link}
+                  component="a"
+                  target="_blank"
                   href={item.url}
                   sx={styles.link}
                   key={index}

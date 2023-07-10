@@ -798,10 +798,10 @@ export default {
       ],
       policy: "Policy",
       policy_list: [
-        { name: "Privacy Policy", url: "/privacy-policy" },
+        { name: "Privacy Policy", url: "/privacy-policy.pdf" },
         {
           name: "Customer Protection Guide",
-          url: "/customer-protection-guide",
+          url: "https://fra.gov.eg/",
         },
       ],
     },

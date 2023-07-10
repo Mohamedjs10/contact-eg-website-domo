@@ -614,8 +614,8 @@ export default {
       ],
       policy: "السياسات",
       policy_list: [
-        { name: "سياسة الخصوصة", url: "/" },
-        { name: "دليل حماية العملاء ", url: "/" },
+        { name: "سياسة الخصوصة", url: "/privacy-policy.pdf" },
+        { name: "دليل حماية العملاء ", url: "https://fra.gov.eg/" },
       ],
     },
     section_c: {
