@@ -74,8 +74,9 @@ export default function MapBox() {
       setCenter({ lat: 30.04048, lng: 31.20948 });
       return;
     } else {
+      console.log(event);
       let branch = branches.find(
-        (marker) => marker.label == event?.target.innerHTML
+        (marker) => marker.label == event?.target.innerText
       );
       setZoom(14);
       setMarkers([branch]);
