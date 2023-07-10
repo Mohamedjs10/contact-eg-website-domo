@@ -782,7 +782,7 @@ export default {
         { name: "Contact News", url: "/media" },
         { name: "Contact Offers", url: "/" },
         { name: "Blog", url: "/" },
-        { name: "Sustainability", url: "/" },
+        { name: "Sustainability", url: "/sustainability" },
       ],
       company: "Company",
       company_list: [
