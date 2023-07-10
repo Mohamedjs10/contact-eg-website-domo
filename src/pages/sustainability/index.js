@@ -126,6 +126,60 @@ export default function About() {
             />
           ))}
         </Box>
+        {t.sustainability.feature.length &&
+          t.sustainability.feature.map((item) => (
+            <Box
+              key={item.id}
+              className="horizontal-safe-padding section-safe-padding-top"
+              sx={{
+                background:
+                  Number(item.id) % 2 == 0 ? "#F9FAFB" : "transparent",
+                mb: 4,
+                mt: 3,
+                display: "flex",
+                flexWrap: "wrap",
+                justifyContent: { xs: "center", lg: "space-between" },
+                alignItems: "center",
+                textAlign: { xs: "center" },
+              }}
+            >
+              <Box
+                component="img"
+                src={item.img}
+                sx={{
+                  order: {
+                    xs: 2,
+                    lg: Number(item.id) % 2 == 0 ? 1 : 2,
+                  },
+                  // width: { xs: "200px", sm: "220px", md: "270px", lg: "320px" },
+                  width: {
+                    xs: "50%",
+                    lg: "300px",
+                  },
+                  m: "auto",
+                  mt: 3,
+                }}
+              />
+              <Box
+                sx={{
+                  order: {
+                    xs: 1,
+                    lg: Number(item.id) % 2 == 0 ? 2 : 1,
+                  },
+                  width: {
+                    xs: "100%",
+                    lg: "50%",
+                  },
+                  m: "auto",
+                }}
+              >
+                <Box sx={{ fontSize: "32px", mb: 2, color: colors.orange }}>
+                  {item.title}
+                </Box>
+                <Box>{item.text}</Box>
+              </Box>
+            </Box>
+          ))}
       </Box>
     </>
   );
