@@ -48,7 +48,7 @@ export default function MapBox() {
         const branches = value?.map((item, index) => {
           return {
             id: index + 1,
-            label: item.address,
+            label: item.title,
             name: item.address,
             position: { lat: item.latitude, lng: item.longitude },
           };
@@ -74,9 +74,9 @@ export default function MapBox() {
       setCenter({ lat: 30.04048, lng: 31.20948 });
       return;
     } else {
+      console.log(event);
       let branch = branches.find(
-        (marker, index) =>
-          index == event?.target?.getAttribute("data-option-index")
+        (marker) => marker.label == event?.target.innerText
       );
       setZoom(14);
       setMarkers([branch]);
@@ -194,6 +194,7 @@ export default function MapBox() {
                     position={position}
                     onLoad={onLoad}
                     onClick={(marker) => {
+                      console.log(marker, id);
                       setSelected([id]);
                     }}
                     icon={"/images/marker.png"}
