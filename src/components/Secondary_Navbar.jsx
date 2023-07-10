@@ -185,7 +185,7 @@ export default function Secondary_Navbar({
             {t.secondary_nav.clients_program}
             <KeyboardArrowDownIcon />
           </Box>
-          <Box component={Link} href="/" onClick={() => {}} sx={styles.tab}>
+          <Box component={Link} href="/investment" onClick={() => {}} sx={styles.tab}>
             {t.secondary_nav.investment_and_savings}
           </Box>
           <Box component={Link} href="/#map" onClick={() => {}} sx={styles.tab}>
@@ -199,25 +199,6 @@ export default function Secondary_Navbar({
               ml: { xs: 0, md: locale === "en" ? "auto" : 0 },
             }}
           >
-            {/* <Button
-              variant="outlined"
-              sx={styles.loginBtn}
-              style={{
-                marginRight: locale === "en" ? 20 : 0,
-                marginLeft: locale === "en" ? 0 : 20,
-              }}
-            >
-              {t.secondary_nav.login}
-            </Button> */}
-            {/* <Button
-              variant="contained"
-              sx={styles.downloadBtn}
-              component="a"
-              target="_blank"
-              href="https://onelink.to/contactnow"
-            >
-              {t.secondary_nav.download_app}
-            </Button> */}
           </Box>
         </Box>
       </Box>

@@ -747,33 +747,39 @@ export default {
       ],
       other_services: "Other Services",
       other_services_list: [
-        { name: "Insurance Services", url: "/" },
-        { name: "E-Payments", url: "/" },
-        { name: "Referral Program", url: "/" },
-        { name: "Investment & Saving", url: "/" },
+        {
+          name: "Insurance Services",
+          url: "https://sarwa.insurance/sarwa-insurance/product/retail/",
+        },
+        { name: "E-Payments", url: "/e-payment" },
+        { name: "Referral Program", url: "/rewards" },
+        { name: "Investment & Saving", url: "/investment" },
       ],
       contact: "Contact",
       contact_list: [
         { name: "About Contact", url: "/about" },
-        { name: "Our Company", url: "/" },
+        { name: "Our Company", url: "/our-brands" },
         { name: "Contact News", url: "/media" },
-        { name: "Contact Offers", url: "/" },
-        { name: "Blog", url: "/" },
-        { name: "Sustainability", url: "/" },
+        { name: "Contact Offers", url: "/contact-offers" },
+        { name: "Blog", url: "/blog" },
+        { name: "Sustainability", url: "/sustainability" },
       ],
       company: "Company",
       company_list: [
-        { name: "Our Jobs", url: "/" },
+        { name: "Our Jobs", url: "/careers" },
         {
           name: "Our Brochure",
           url: "https://contact-app-prod.s3.us-east-2.amazonaws.com/contact.eg/Contact-Brochure.pdf",
         },
-        { name: "Contact Us", url: "/" },
+        { name: "Contact Us", url: "/contact-us" },
       ],
       policy: "Policy",
       policy_list: [
-        { name: "Privacy Policy", url: "/" },
-        { name: "Customer Protection Guide", url: "/" },
+        { name: "Privacy Policy", url: "/privacy-policy" },
+        {
+          name: "Customer Protection Guide",
+          url: "/customer-protection-guide",
+        },
       ],
     },
     section_c: {
@@ -948,7 +954,7 @@ export default {
         textColor: colors.white,
         button: "Pick Your Branch",
         img: "/home-cover/cover_img_2_en.png",
-        link: "#map",
+        link: "/#map",
       },
       {
         bgColor: "#EAEAEA",
@@ -1402,8 +1408,7 @@ export default {
       ],
       C: [
         {
-          url: "/products/leasing",
-
+          url: "/contact-homes",
           color: colors.blue,
           img: "/services/homes.svg",
           title: "Contact Homes",
