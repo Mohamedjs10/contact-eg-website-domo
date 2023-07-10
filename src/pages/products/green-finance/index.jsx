@@ -34,7 +34,7 @@ export default function Index() {
           title1={t.products_green_finance.cover.title1}
           title2={t.products_green_finance.cover.title2}
           description={t.products_green_finance.cover.description}
-          formType="a"
+          formType="b"
         />
         {/* ============================ Section A ============================= */}
         <Box

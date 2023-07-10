@@ -65,7 +65,7 @@ export default function Index() {
           title1={t.products_events.cover.title1}
           title2={t.products_events.cover.title2}
           description={t.products_events.cover.description}
-          formType="a"
+          formType="b"
           product="wedding"
         />
         <IconTileSection page="shopping"></IconTileSection>

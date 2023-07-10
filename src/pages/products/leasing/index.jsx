@@ -34,7 +34,7 @@ export default function Index() {
           title1={t.products_leasing.cover.title1}
           title2={t.products_leasing.cover.title2}
           description={t.products_leasing.cover.description}
-          formType="a"
+          formType="b"
           product="leasing"
         />
         {/* ============================ Section A ============================= */}
