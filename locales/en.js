@@ -1941,4 +1941,45 @@ export default {
     placeholderBranch: "Branches within the governorates",
     noOption: "There are no governorates",
   },
+
+  contact_homes: {
+    cover: {
+      img: "/contact-homes.svg",
+      color: "#2D9A8F",
+      title1: "Contact Homes",
+      title2: "A new beginning for a perfect life",
+      description: `Through the partnership between Contact and Coldwell Banker, you can take advantage of an endless world of benefits and offers. Providing you plenty of discounts and special prices`,
+    },
+    section_a: {
+      title: "Program eligibility",
+      body: `Coldwell Banker existing customer`,
+    },
+    section_b: {
+      img: "/pages/without-advance.png",
+      title: "Exclusive benefits for Contact clients from Coldwell Banker",
+      body: [
+        "1 Year Home Insurance",
+        "Door Key Insurance",
+        "Mobile, ipad & TV insurance",
+        "50% discount on 2nd home insurance (North cost or Sokhna)",
+      ],
+    },
+    section_c: {
+      img: "/pages/without-advance.png",
+      title:
+        "Enjoy a world of unlimited benefits when you join Coldwell Banker Star club:",
+      body: [
+        "Free 3D home design sample on either the living room, bedroom, or one partition of the reception",
+        "50% discount on 2D & 3D  modelling upon contractual agreement provided by RD design",
+        "Up to 5 million EGP Contact Mortgage Loan",
+        "Up to 500,000 EGP Contact Shopping loan",
+        "Exclusive offers and discounts from Jotun, Ikea, and Carrier",
+      ],
+    },
+    section_d: {
+      img: "/pages/without-advance.png",
+      title: "",
+      body: ["", "", "", ""],
+    },
+  },
 };
