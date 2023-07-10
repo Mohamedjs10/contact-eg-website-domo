@@ -26,8 +26,15 @@ export default function Statistics({ num, suffix, text, type, key }) {
         <CountUp start={0} end={num} duration={4} />
       </Typography>
     </Box>
-  ) : type === "about" ? (
-    <Box sx={{ p: 5, textAlign: "center", flex: "1 1 0" }}>
+  ) : type === "about" || type === "sustainability" ? (
+    <Box
+      sx={{
+        p: 5,
+        textAlign: "center",
+        flex: "1 1 0",
+        border: "2px solid white",
+      }}
+    >
       <Typography sx={{ color: colors.orange }} variant="h3" gutterBottom>
         <CountUp suffix={` ${suffix} `} start={0} end={num} duration={4} />
       </Typography>

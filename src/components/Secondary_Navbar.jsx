@@ -188,7 +188,7 @@ export default function Secondary_Navbar({
           <Box component={Link} href="/" onClick={() => {}} sx={styles.tab}>
             {t.secondary_nav.investment_and_savings}
           </Box>
-          <Box component={Link} href="#map" onClick={() => {}} sx={styles.tab}>
+          <Box component={Link} href="/#map" onClick={() => {}} sx={styles.tab}>
             {t.secondary_nav.branches_location}
           </Box>
           <Box

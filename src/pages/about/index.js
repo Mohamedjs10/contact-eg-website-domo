@@ -35,7 +35,7 @@ export default function About() {
       </Head>
 
       <Box>
-        <AboutSection />
+        <AboutSection type="about" />
         <Box
           sx={{
             mx: {
@@ -101,6 +101,7 @@ export default function About() {
           >
             {t.about.card.vision_mission.map((item) => (
               <AboutCardVal
+                type="about"
                 key={item.id}
                 icon={item.img}
                 heading={item.title}
