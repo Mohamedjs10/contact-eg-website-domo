@@ -151,7 +151,6 @@ export default function MapBox() {
               },
             }}
             renderInput={(params) => {
-              console.log(params);
               return (
                 <TextField
                   placeholder={t.map.placeholderBranch}
