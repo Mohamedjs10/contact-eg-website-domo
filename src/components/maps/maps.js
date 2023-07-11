@@ -68,13 +68,13 @@ export default function MapBox() {
   const onLoad = (marker) => {};
 
   const handleBranchChange = (event, newVal, reason) => {
+    console.log(event);
     if (reason === "clear") {
       setMarkers(branches);
       setZoom(10);
       setCenter({ lat: 30.04048, lng: 31.20948 });
       return;
     } else {
-      console.log(event);
       let branch = branches.find(
         (marker) => marker.label == event?.target.innerText
       );
@@ -130,6 +130,9 @@ export default function MapBox() {
             id="search-box"
             options={branches}
             onChange={handleBranchChange}
+            onInputChange={(event, newInputValue) => {
+              // branches.map(item => )
+            }}
             sx={{
               width: {
                 xs: "250px",
