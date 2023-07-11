@@ -37,6 +37,7 @@ export default function Main_Navbar({ anchorEl, setAnchorEl }) {
       <Box
         component="img"
         src={gif == "hi" ? t.general.gifs.hi : t.general.gifs.calculationg}
+        loading="lazy"
         sx={{
           zIndex: "100000000000",
           height: "150px",
@@ -49,6 +50,7 @@ export default function Main_Navbar({ anchorEl, setAnchorEl }) {
         <Box
           component="img"
           src="/whatsapp.png"
+          loading="lazy"
           sx={{
             zIndex: "100000000000",
             height: "65px",

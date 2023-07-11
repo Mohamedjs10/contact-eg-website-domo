@@ -36,6 +36,7 @@ export default function Index() {
           sx={styles.img}
           component="img"
           src="/our-brands/cover.png"
+          loading="lazy"
           alt="Picture of the author"
         />
         <Box sx={styles.body} className="section-safe-padding-bottom">

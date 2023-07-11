@@ -94,7 +94,7 @@ export default function Navbar({
               <MenuIcon sx={{}} />
             </IconButton>
             <Box component={Link} href="/">
-              <img src={t.logo} width="50px" height="20px" />
+              <img src={t.logo} width="50px" height="20px" loading="lazy" />
             </Box>
             <Box
               onClick={locale === "en" ? toAr : toEn}

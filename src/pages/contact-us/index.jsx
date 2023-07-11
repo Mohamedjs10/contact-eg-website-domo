@@ -64,6 +64,7 @@ export default function Index() {
           <Box
             component="img"
             src="/contact-us/cover.png"
+            loading="lazy"
             sx={{
               width: { xs: "200px", sm: "300px", sm: "400px" },
               mt: { xs: 3, md: "auto" },

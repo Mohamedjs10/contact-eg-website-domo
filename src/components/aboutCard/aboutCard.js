@@ -20,7 +20,9 @@ export default function Card({ icon, heading, textArr, key, type }) {
         textAlign: "center",
       }}
     >
-      {type === "about" && <img width="32px" src={icon} alt={heading} />}
+      {type === "about" && (
+        <img width="32px" src={icon} alt={heading} loading="lazy" />
+      )}
       <Typography
         sx={{ color: colors.orange, mt: 2 }}
         variant="h5"

@@ -30,7 +30,7 @@ export default function BottomCard({}) {
       className="horizontal-safe-margin"
     >
       <Box>
-        <img src="./subscribe-now.png" width="200px"></img>
+        <img src="./subscribe-now.png" width="200px" loading="lazy"></img>
       </Box>
       <Box
         sx={{
@@ -79,6 +79,7 @@ export default function BottomCard({}) {
       <Box
         component="img"
         src="/bottom-decorator.png"
+        loading="lazy"
         sx={{
           position: "absolute",
           left: "0",

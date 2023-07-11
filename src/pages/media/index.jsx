@@ -81,7 +81,7 @@ export default function Index() {
               flex: "1 1 50%",
             }}
           >
-            <img src="/image.png" width="100%" />
+            <img src="/image.png" width="100%" loading="lazy" />
             <Box sx={{ my: 2, fontWeight: "bold" }}>
               كونتكت تطلق منتج رقمي لتأمين السيارات
             </Box>
@@ -117,7 +117,12 @@ export default function Index() {
                 height: "160px",
               }}
             >
-              <img src="/image.png" width="150px" height="100%" />
+              <img
+                src="/image.png"
+                width="150px"
+                height="100%"
+                loading="lazy"
+              />
               <Box
                 sx={{
                   display: "flex",
@@ -158,7 +163,12 @@ export default function Index() {
                 my: 2,
               }}
             >
-              <img src="/image.png" width="150px" height="100%" />
+              <img
+                src="/image.png"
+                width="150px"
+                height="100%"
+                loading="lazy"
+              />
               <Box
                 sx={{
                   display: "flex",
@@ -198,7 +208,12 @@ export default function Index() {
                 height: "160px",
               }}
             >
-              <img src="/image.png" width="150px" height="100%" />
+              <img
+                src="/image.png"
+                width="150px"
+                height="100%"
+                loading="lazy"
+              />
               <Box
                 sx={{
                   display: "flex",
@@ -242,7 +257,7 @@ export default function Index() {
           }}
         >
           <Box sx={{ width: "410px" }}>
-            <Box component="img" src="/image.png" width="100%" />
+            <Box component="img" src="/image.png" width="100%" loading="lazy" />
             <Typography sx={{ fontWeight: "bold", my: 2, color: colors.blue }}>
               كونتكت توقع برنامج تمويل فريد من نوعه في مصر مع كابيتر
             </Typography>
@@ -252,7 +267,7 @@ export default function Index() {
             </Box>
           </Box>
           <Box sx={{ width: "410px" }}>
-            <Box component="img" src="/image.png" width="100%" />
+            <Box component="img" src="/image.png" width="100%" loading="lazy" />
             <Typography sx={{ fontWeight: "bold", my: 2, color: colors.blue }}>
               كونتكت توقع برنامج تمويل فريد من نوعه في مصر مع كابيتر
             </Typography>
@@ -262,7 +277,7 @@ export default function Index() {
             </Box>
           </Box>
           <Box sx={{ width: "410px" }}>
-            <Box component="img" src="/image.png" width="100%" />
+            <Box component="img" src="/image.png" width="100%" loading="lazy" />
             <Typography sx={{ fontWeight: "bold", my: 2, color: colors.blue }}>
               كونتكت توقع برنامج تمويل فريد من نوعه في مصر مع كابيتر
             </Typography>
@@ -272,7 +287,7 @@ export default function Index() {
             </Box>
           </Box>
           <Box sx={{ width: "410px" }}>
-            <Box component="img" src="/image.png" width="100%" />
+            <Box component="img" src="/image.png" width="100%" loading="lazy" />
             <Typography sx={{ fontWeight: "bold", my: 2, color: colors.blue }}>
               كونتكت توقع برنامج تمويل فريد من نوعه في مصر مع كابيتر
             </Typography>
@@ -282,7 +297,7 @@ export default function Index() {
             </Box>
           </Box>
           <Box sx={{ width: "410px" }}>
-            <Box component="img" src="/image.png" width="100%" />
+            <Box component="img" src="/image.png" width="100%" loading="lazy" />
             <Typography sx={{ fontWeight: "bold", my: 2, color: colors.blue }}>
               كونتكت توقع برنامج تمويل فريد من نوعه في مصر مع كابيتر
             </Typography>
@@ -292,7 +307,7 @@ export default function Index() {
             </Box>
           </Box>
           <Box sx={{ width: "410px" }}>
-            <Box component="img" src="/image.png" width="100%" />
+            <Box component="img" src="/image.png" width="100%" loading="lazy" />
             <Typography sx={{ fontWeight: "bold", my: 2, color: colors.blue }}>
               كونتكت توقع برنامج تمويل فريد من نوعه في مصر مع كابيتر
             </Typography>

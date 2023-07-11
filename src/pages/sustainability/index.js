@@ -146,6 +146,7 @@ export default function About() {
               <Box
                 component="img"
                 src={item.img}
+                loading="lazy"
                 sx={{
                   order: {
                     xs: 2,

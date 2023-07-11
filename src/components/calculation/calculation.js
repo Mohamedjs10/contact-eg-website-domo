@@ -235,6 +235,7 @@ export default function Calcuation() {
             maxWidth: "520px",
           }}
           src="/images/payment_5.png"
+          loading="lazy"
           alt="إحسب قسطك في ثواني"
         />
       </Box>

@@ -410,19 +410,34 @@ export default function Secondary_Navbar({ setIsOPen }) {
               href="https://play.google.com/store/apps/details?id=eg.contact"
               target="_blank"
             >
-              <img src={t.footer.section_c.img1} width="140px" height="45px" />
+              <img
+                src={t.footer.section_c.img1}
+                width="140px"
+                height="45px"
+                loading="lazy"
+              />
             </a>
             <a
               href="https://apps.apple.com/us/app/contactnow-%D9%83%D9%88%D9%86%D8%AA%D9%83%D8%AA/id1544159088"
               target="_blank"
             >
-              <img src={t.footer.section_c.img2} width="140px" height="45px" />
+              <img
+                src={t.footer.section_c.img2}
+                width="140px"
+                height="45px"
+                loading="lazy"
+              />
             </a>
             <a
               href="https://appgallery.huawei.com/app/C108100655"
               target="_blank"
             >
-              <img src={t.footer.section_c.img3} width="140px" height="45px" />
+              <img
+                src={t.footer.section_c.img3}
+                width="140px"
+                height="45px"
+                loading="lazy"
+              />
             </a>
           </Box>
         </Box>
@@ -432,13 +447,14 @@ export default function Secondary_Navbar({ setIsOPen }) {
         src="/footer-line.png"
         width="100%"
         className="section-safe-margin-top"
+        loading="lazy"
       />
       {/* section D ------------------------------------------------------------------------------------ */}
       <Box className="section-safe-padding-top " sx={styles.copyright_section}>
         <Box
           sx={{ width: "280px", textAlign: { xs: "center", md: "initial" } }}
         >
-          <img src={t.logo} width="120px"></img>
+          <img src={t.logo} width="120px" loading="lazy"></img>
         </Box>
         <Box
           sx={{
@@ -461,7 +477,7 @@ export default function Secondary_Navbar({ setIsOPen }) {
               },
             }}
           >
-            <img src="/l.svg" />
+            <img src="/l.svg" loading="lazy" />
           </Box>
           <Box
             component="a"
@@ -474,7 +490,7 @@ export default function Secondary_Navbar({ setIsOPen }) {
               },
             }}
           >
-            <img src="/t.svg" />
+            <img src="/t.svg" loading="lazy" />
           </Box>
           <Box
             component="a"
@@ -487,7 +503,7 @@ export default function Secondary_Navbar({ setIsOPen }) {
               },
             }}
           >
-            <img src="/y.svg" />
+            <img src="/y.svg" loading="lazy" />
           </Box>
           <Box
             component="a"
@@ -500,7 +516,7 @@ export default function Secondary_Navbar({ setIsOPen }) {
               },
             }}
           >
-            <img src="/i.svg" />
+            <img src="/i.svg" loading="lazy" />
           </Box>
           <Box
             component="a"
@@ -513,7 +529,7 @@ export default function Secondary_Navbar({ setIsOPen }) {
               },
             }}
           >
-            <img src="/f.svg" />
+            <img src="/f.svg" loading="lazy" />
           </Box>
         </Box>
         <Box
@@ -528,7 +544,7 @@ export default function Secondary_Navbar({ setIsOPen }) {
           }}
         >
           {t.footer.section_d.copy_right}
-          <img src="/award.svg" width="100px" />
+          <img src="/award.svg" width="100px" loading="lazy" />
         </Box>
       </Box>
       <ToastContainer

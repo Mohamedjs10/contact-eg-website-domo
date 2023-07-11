@@ -109,6 +109,7 @@ export default function HorizontalNonLinearStepper() {
                 }}
                 src="/images/home-google-play.png"
                 alt="app-store"
+                loading="lazy"
               />
             </a>
             <a
@@ -131,6 +132,7 @@ export default function HorizontalNonLinearStepper() {
                 }}
                 src="/images/home-app-store.png"
                 alt="app-store"
+                loading="lazy"
               />
             </a>
           </Box>
@@ -154,6 +156,7 @@ export default function HorizontalNonLinearStepper() {
                 },
               }}
               src="/images/qr-code.png"
+              loading="lazy"
             />
           </Box>
         </Box>
@@ -182,6 +185,7 @@ export default function HorizontalNonLinearStepper() {
         }}
         src={img}
         alt="home-line"
+        loading="lazy"
       />
     </Box>
   );
@@ -254,6 +258,7 @@ export default function HorizontalNonLinearStepper() {
         }}
         src="/images/home-line.png"
         alt="home-line"
+        loading="lazy"
       />
     </Box>
   );

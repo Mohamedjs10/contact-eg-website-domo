@@ -70,6 +70,7 @@ export default function Index() {
           <Box
             component="img"
             src={t.products_finishing.section_b.img}
+            loading="lazy"
             sx={{
               width: { xs: "200px", sm: "250px", md: "300px", lg: "400px" },
             }}
@@ -90,6 +91,7 @@ export default function Index() {
           <Box
             component="img"
             src={t.products_finishing.section_b.img}
+            loading="lazy"
             sx={{
               width: { xs: "200px", sm: "250px", md: "300px", lg: "400px" },
             }}

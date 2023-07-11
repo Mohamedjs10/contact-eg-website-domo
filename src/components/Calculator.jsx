@@ -327,6 +327,7 @@ export default function Calcuation({ products_packages }) {
               maxWidth: "520px",
             }}
             src="/calculator.png"
+            loading="lazy"
             alt="إحسب قسطك في ثواني"
           />
         </Box>

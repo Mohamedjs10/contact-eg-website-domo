@@ -91,6 +91,7 @@ export default function Index() {
           <Box
             component="img"
             src={t.products_finishing.section_b.img}
+            loading="lazy"
             sx={{
               width: { xs: "200px", sm: "250px", md: "300px", lg: "400px" },
               display: { xs: "none", sm: "block" },
@@ -114,6 +115,7 @@ export default function Index() {
           <Box
             component="img"
             src={t.products_finishing.section_b.img}
+            loading="lazy"
             sx={{
               width: { xs: "200px", sm: "250px", md: "300px", lg: "400px" },
               display: { xs: "none", sm: "block" },
@@ -181,6 +183,7 @@ export default function Index() {
           <Box
             component="img"
             src={t.products_finishing.section_b.img}
+            loading="lazy"
             sx={{
               width: { xs: "200px", sm: "250px", md: "300px", lg: "400px" },
               display: { xs: "none", sm: "block" },
@@ -205,6 +208,7 @@ export default function Index() {
           <Box
             component="img"
             src={t.contact_homes.section_d.img}
+            loading="lazy"
             sx={{
               width: { xs: "200px", sm: "250px", md: "300px", lg: "400px" },
               display: { xs: "none", sm: "block" },

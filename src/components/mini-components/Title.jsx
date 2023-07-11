@@ -16,6 +16,7 @@ export default function Text({ title, lineWidth }) {
       <Box sx={styles.title}>{title}</Box>
       <img
         src="line.png"
+        loading="lazy"
         style={{
           width: lineWidth,
           height: "8px",

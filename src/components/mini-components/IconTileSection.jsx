@@ -46,6 +46,7 @@ export default function Text({ title, img, page }) {
               width="30px"
               height="30px"
               alt="img"
+              loading="lazy"
             />
           </Box>
           <Box sx={{}}>

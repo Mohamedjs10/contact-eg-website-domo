@@ -77,6 +77,7 @@ export default function Secondary_Navbar({
               alt="Picture of the author"
               width={80}
               height={30}
+              loading="lazy"
             />
           </Link>
 
@@ -185,7 +186,12 @@ export default function Secondary_Navbar({
             {t.secondary_nav.clients_program}
             <KeyboardArrowDownIcon />
           </Box>
-          <Box component={Link} href="/investment" onClick={() => {}} sx={styles.tab}>
+          <Box
+            component={Link}
+            href="/investment"
+            onClick={() => {}}
+            sx={styles.tab}
+          >
             {t.secondary_nav.investment_and_savings}
           </Box>
           <Box component={Link} href="/#map" onClick={() => {}} sx={styles.tab}>
@@ -198,8 +204,7 @@ export default function Secondary_Navbar({
               mr: { xs: 0, md: locale === "en" ? 0 : "auto" },
               ml: { xs: 0, md: locale === "en" ? "auto" : 0 },
             }}
-          >
-          </Box>
+          ></Box>
         </Box>
       </Box>
     </>

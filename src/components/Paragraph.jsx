@@ -38,13 +38,13 @@ export default function Paragraph({
             textStyle={{ ...textStyle, textAlign: enArAlignment }}
           />
           <Box sx={{ width: "300px", display: img ? "block" : "none" }}>
-            <img src={img} width="100%" />
+            <img src={img} width="100%" loading="lazy" />
           </Box>
         </>
       ) : (
         <>
           <Box sx={{ width: "300px", display: img ? "block" : "none" }}>
-            <img src={img} width="100%" />
+            <img src={img} width="100%" loading="lazy" />
           </Box>
           <Text
             title={title}

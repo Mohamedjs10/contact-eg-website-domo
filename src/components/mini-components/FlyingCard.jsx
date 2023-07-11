@@ -35,7 +35,12 @@ export default function FlyingCard({ setAnchorEl, setArrDirC, type }) {
             overflow: "hidden",
           }}
         >
-          <img src="/line.png" alt="Picture of the author" width="100%" />
+          <img
+            src="/line.png"
+            alt="Picture of the author"
+            width="100%"
+            loading="lazy"
+          />
           <Box
             sx={{
               p: 2,
@@ -126,7 +131,12 @@ export default function FlyingCard({ setAnchorEl, setArrDirC, type }) {
             overflow: "hidden",
           }}
         >
-          <img src="/line.png" alt="Picture of the author" width="100%" />
+          <img
+            src="/line.png"
+            alt="Picture of the author"
+            width="100%"
+            loading="lazy"
+          />
           <Box
             sx={{
               p: 2,

@@ -20,6 +20,7 @@ export default function ImgListSection({ title, img }) {
       <Box
         component="img"
         src="/img-list.png"
+        loading="lazy"
         sx={{ width: { xs: "200px", sm: "350px", md: "600px" } }}
       />
       <Box

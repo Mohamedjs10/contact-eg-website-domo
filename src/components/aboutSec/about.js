@@ -39,6 +39,7 @@ export default function AboutSection(props) {
       <Box
         component="img"
         src="/images/about-line.png"
+        loading="lazy"
         sx={{
           position: "absolute",
           top: 0,
@@ -68,6 +69,7 @@ export default function AboutSection(props) {
         src={t.logo}
         component="img"
         sx={{ width: "120px" }}
+        loading="lazy"
       />
       <Typography
         variant="subtitle2"
@@ -148,6 +150,7 @@ export default function AboutSection(props) {
           <Box
             component="img"
             src="/images/about-member.png"
+            loading="lazy"
             sx={{
               width: {
                 lg: "700px",
@@ -165,6 +168,7 @@ export default function AboutSection(props) {
           <Box
             component="img"
             src="/images/sustainability.svg"
+            loading="lazy"
             sx={{
               width: {
                 lg: "700px",

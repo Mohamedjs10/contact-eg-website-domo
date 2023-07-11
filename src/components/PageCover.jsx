@@ -37,7 +37,7 @@ export default function PageCover({
           transform: locale === "en" ? "scaleX(-1)" : "scaleX(1)",
         }}
       >
-        <img src="/decorator.png" width="100%" />
+        <img src="/decorator.png" width="100%" loading="lazy" />
       </Box>
       {/* container ================================================================================ */}
       <Box
@@ -65,7 +65,7 @@ export default function PageCover({
         </Box>
         {/* line ================================================================================ */}
         <Box sx={{ width: "300px" }}>
-          <img src="/title.png" width="100%" />
+          <img src="/title.png" width="100%" loading="lazy" />
         </Box>
         {/* title2 ================================================================================ */}
         <Box
@@ -109,7 +109,7 @@ export default function PageCover({
             transform: locale === "en" ? "scaleX(-1)" : "scaleX(1)",
           }}
         >
-          <img src={img} width="100%" />
+          <img src={img} width="100%" loading="lazy" />
         </Box>
       </Box>
       {/* form ================================================================================ */}

@@ -60,7 +60,7 @@ export default function Cover() {
                   // alignItems: "center",
                 }}
               >
-                <img src={item.logo} height="100%" />
+                <img src={item.logo} height="100%" loading="lazy" />
               </Box>
               <Box
                 sx={{
@@ -97,7 +97,7 @@ export default function Cover() {
                 order: { xs: 1, sm: 2 },
               }}
             >
-              <img src={item.img} height="100%" />
+              <img src={item.img} height="100%" loading="lazy" />
             </Box>
           </Box>
         </Carousel.Item>

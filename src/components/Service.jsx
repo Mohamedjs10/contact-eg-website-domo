@@ -68,7 +68,7 @@ export default function Service({
           },
         }}
       >
-        <img src={img} />
+        <img src={img} loading="lazy" />
         <Box sx={{ color, fontWeight: "bold" }}>{title}</Box>
         <Box
           sx={{

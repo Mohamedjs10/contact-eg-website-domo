@@ -14,7 +14,7 @@ export default function Secondary_Navbar({ img, title, description }) {
   return (
     <Box>
       <Box sx={styles.container}>
-        <img src={img} height="120px" width="120px" />
+        <img src={img} height="120px" width="120px" loading="lazy" />
         <Box sx={styles.text_container}>
           <Box sx={{ color: colors.blue, fontWeight: "bold" }}>{title}</Box>
           <Box

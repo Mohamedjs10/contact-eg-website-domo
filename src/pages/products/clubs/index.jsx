@@ -71,6 +71,7 @@ export default function Index() {
                 <Box
                   component="img"
                   src={item[1]}
+                  loading="lazy"
                   sx={{ width: "200px", height: "200px", mb: 2 }}
                 />
                 <Box sx={{ textAlign: "center" }}>{item[0]}</Box>

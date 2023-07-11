@@ -36,7 +36,7 @@ export default function MemberCard({ avatar, name, role, rating, review }) {
         {review}
       </Box>
       <Box sx={{ m: 1, fontSize: "18px", display: "flex", gap: 1 }}>
-        <Avatar alt="Remy Sharp" src={avatar} />
+        <Avatar alt="Remy Sharp" src={avatar} loading="lazy" />
         <Box sx={{ fontSize: "15px" }}>
           <Box sx={{ fontWeight: "bold" }}>{name}</Box>
           <Box sx={{}}>{role}</Box>

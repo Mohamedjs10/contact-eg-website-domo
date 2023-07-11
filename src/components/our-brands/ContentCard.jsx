@@ -49,7 +49,7 @@ export default function BottomCard({ img, content, link }) {
           justifyContent: "space-between",
         }}
       >
-        <img src={img} width="100px"></img>
+        <img src={img} width="100px" loading="lazy"></img>
         <Box sx={{ fontSize: "15px" }}>{content}</Box>
         <Box component={Link} target="_blank" href={link} sx={styles.link}>
           {t.our_brand_page.link}

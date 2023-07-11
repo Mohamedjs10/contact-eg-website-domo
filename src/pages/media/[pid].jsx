@@ -71,22 +71,43 @@ export default function MediaPage() {
             <Box sx={{ mb: 1, fontWeight: "bold" }}>شارك</Box>
             <Box sx={{ display: "flex", gap: 1 }}>
               <a href="https://www.facebook.com/" target="_blank">
-                <Box component="img" src="/f-b.png" sx={styles.img} />
+                <Box
+                  component="img"
+                  src="/f-b.png"
+                  loading="lazy"
+                  sx={styles.img}
+                />
               </a>
               <a href="https://www.facebook.com/" target="_blank">
-                <Box component="img" src="/t-b.png" sx={styles.img} />
+                <Box
+                  component="img"
+                  src="/t-b.png"
+                  loading="lazy"
+                  sx={styles.img}
+                />
               </a>
               <a href="https://www.facebook.com/" target="_blank">
-                <Box component="img" src="/l-b.png" sx={styles.img} />
+                <Box
+                  component="img"
+                  src="/l-b.png"
+                  loading="lazy"
+                  sx={styles.img}
+                />
               </a>
               <a href="https://www.facebook.com/" target="_blank">
-                <Box component="img" src="/pin-b.png" sx={styles.img} />
+                <Box
+                  component="img"
+                  src="/pin-b.png"
+                  loading="lazy"
+                  sx={styles.img}
+                />
               </a>
             </Box>
           </Box>
           <Box
             component="img"
             src="/image.png"
+            loading="lazy"
             sx={{
               width: "100%",
               maxWidth: "520px",
@@ -104,7 +125,12 @@ export default function MediaPage() {
           }}
         >
           <Box sx={{ whiteSpace: "pre-wrap" }}> {news[0].body1}</Box>
-          <Box component="img" src="/image.png" width="100%"></Box>
+          <Box
+            component="img"
+            src="/image.png"
+            loading="lazy"
+            width="100%"
+          ></Box>
           <Box sx={{ display: "flex", gap: 1, alignSelf: "flex-start" }}>
             <Box
               component="span"
@@ -119,16 +145,36 @@ export default function MediaPage() {
             <Box sx={{ mb: 1, fontWeight: "bold" }}>شارك</Box>
             <Box sx={{ display: "flex", gap: 1 }}>
               <a href="https://www.facebook.com/" target="_blank">
-                <Box component="img" src="/f-b.png" sx={styles.img} />
+                <Box
+                  component="img"
+                  src="/f-b.png"
+                  loading="lazy"
+                  sx={styles.img}
+                />
               </a>
               <a href="https://www.facebook.com/" target="_blank">
-                <Box component="img" src="/t-b.png" sx={styles.img} />
+                <Box
+                  component="img"
+                  src="/t-b.png"
+                  loading="lazy"
+                  sx={styles.img}
+                />
               </a>
               <a href="https://www.facebook.com/" target="_blank">
-                <Box component="img" src="/l-b.png" sx={styles.img} />
+                <Box
+                  component="img"
+                  src="/l-b.png"
+                  loading="lazy"
+                  sx={styles.img}
+                />
               </a>
               <a href="https://www.facebook.com/" target="_blank">
-                <Box component="img" src="/pin-b.png" sx={styles.img} />
+                <Box
+                  component="img"
+                  src="/pin-b.png"
+                  loading="lazy"
+                  sx={styles.img}
+                />
               </a>
             </Box>
           </Box>

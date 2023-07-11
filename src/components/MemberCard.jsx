@@ -25,6 +25,7 @@ export default function MemberCard({ img, name, role }) {
       <Box
         component="img"
         src={img}
+        loading="lazy"
         sx={{
           height: "100%",
           width: "100%",

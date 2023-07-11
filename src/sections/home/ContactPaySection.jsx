@@ -84,6 +84,7 @@ export default function IconsSection({}) {
       >
         <img
           src="/bos.png"
+          loading="lazy"
           width="100%"
           style={{
             transform: locale === "en" ? "scaleX(-1)" : "scaleX(1)",
