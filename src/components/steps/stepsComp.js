@@ -62,12 +62,13 @@ export default function HorizontalNonLinearStepper() {
         </Typography> */}
         <Typography
           sx={{
-            mb: idx == 0 ? 27 : idx == 1 ? 15 : idx == 2 ? 5 : 0,
+            // mb: idx == 0 ? 27 : idx == 1 ? 15 : idx == 2 ? 6 : 0,
+            mb: idx == 0 ? 30 : idx == 1 ? 18 : idx == 2 ? 8 : 0,
             mt: idx == 0 ? 0 : idx == 1 ? 12 : idx == 2 ? 22 : 0,
           }}
           variant="h4"
         >
-          {heading}{" "}
+          {heading}
         </Typography>
         {/* <Typography variant="subtitle1">{text}</Typography> */}
         <Box
