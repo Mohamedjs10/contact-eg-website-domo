@@ -977,7 +977,7 @@ export default {
         textColor: colors.white,
         button: "Pick Your Branch",
         img: "/home-cover/cover_img_2_en.png",
-        link: "/#map",
+        link: "/#our-branches",
       },
       {
         bgColor: "#EAEAEA",

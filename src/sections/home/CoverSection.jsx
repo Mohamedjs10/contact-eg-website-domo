@@ -82,7 +82,7 @@ export default function Cover() {
                 sx={{ "&:hover": { color: colors.white } }}
               >
                 <Button
-                  href={item.link}
+                  // href={item.link}
                   variant="outlined"
                   sx={styles.btn}
                   // sx={{ "&:hover": { color: colors.white } }}

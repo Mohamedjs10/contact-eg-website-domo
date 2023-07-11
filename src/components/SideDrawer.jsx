@@ -291,7 +291,7 @@ export default function SideDrawer({ state, setState }) {
             <ListItem disablePadding>
               <ListItemButton
                 onClick={() => {
-                  router.push("#map");
+                  router.push("#our-branches");
                   setState((prev) => !prev);
                 }}
               >

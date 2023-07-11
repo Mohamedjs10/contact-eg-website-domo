@@ -84,7 +84,7 @@ export default function MapBox() {
     }
   };
   return (
-    <Box id="map">
+    <Box id="our-branches">
       <Box
         sx={{
           background: "#2D317F",
@@ -180,7 +180,7 @@ export default function MapBox() {
       <Box sx={{ background: "white" }}>
         <LoadScript googleMapsApiKey="AIzaSyBUQUZh1KHcrl2R-tbouYTowdRxjZcLODE">
           <GoogleMap
-            id="map"
+            id="our-branches"
             mapContainerStyle={mapContainerStyle}
             center={center}
             zoom={zoom}

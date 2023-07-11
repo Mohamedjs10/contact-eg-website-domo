@@ -789,7 +789,7 @@ export default {
         text: "كونتكت اقرب ليك!",
         button: "اختر فرعك",
         img: "/home-cover/cover_img_2_ar.png",
-        link: "/#map",
+        link: "/#our-branches",
       },
       {
         bgColor: "#EAEAEA",

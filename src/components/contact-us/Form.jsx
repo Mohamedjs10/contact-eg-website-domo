@@ -49,7 +49,7 @@ export default function Form({ color }) {
     >
       {/* First Name ---------------------------------------------------------------------------------------------------------- */}
       <Box sx={styles.inputWrapper} style={{ width: "100%" }}>
-        <InputLabel sx={styles.label}>{t.form_labels.first_name}</InputLabel>
+        <InputLabel sx={styles.label}>{t.form_labels.full_name}</InputLabel>
         <TextField
           value={values.username}
           onChange={handleChange}
