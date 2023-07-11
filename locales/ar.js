@@ -3,6 +3,7 @@ import { colors } from "../src/utils/const";
 export default {
   direction: "rtl",
   textAlign: "right",
+  contact_us_title: "نود أن نستمع إليك",
   formMsg: "تم ارسال الطلب بنجاح",
   formMsgFail: "فشل ارسال الطلب",
   clipboardMsg: "تم نسخ الرابط بنجاح",
@@ -625,7 +626,7 @@ export default {
       img1: "/google-play-ar.png",
       img3: "/huawei-store-ar.png",
     },
-    section_d: { copy_right: "جميع الحقوق محفوظة  2021  لكونتكت" },
+    section_d: { copy_right: "جميع الحقوق محفوظة  2023  لكونتكت" },
   },
   bottom_card: {
     placeholder: "ادخل البريد الالكتروني",
@@ -1939,14 +1940,14 @@ export default {
     {
       id: "2",
       delay: "200",
-      img: "/shopping.png",
+      img: "/payment.png",
       title: "تقسيط",
       text: "اختر طريقة الدفع في المتاجر الشريكة ، عبر تطبيقنا أو بطاقة  أو امتداد المتصفح.",
     },
     {
       id: "3",
       delay: "400",
-      img: "/shopping.png",
+      img: "/wallet.png",
       title: "تدفع",
       text: "قم بتقسيم مدفوعاتك وإدارة المشتريات ، من خلال نظرة عامة على الإنفاق الذكي والمزيد.",
     },

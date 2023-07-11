@@ -34,7 +34,9 @@ export default function About() {
         <meta name="" content="" />
       </Head>
 
-      <Box>Dummy Contact Offers Content</Box>
+      <Box sx={{ textAlign: "center", fontWeight: "bold", my: 15 }}>
+        Dummy Contact Offers Content
+      </Box>
     </>
   );
 }

@@ -189,6 +189,7 @@ export default function Secondary_Navbar({ setIsOPen }) {
               <Box
                 data-aos="fade-up"
                 component={Link}
+                target={index == 0 ? "_blank" : "_self"}
                 href={item.url}
                 sx={styles.link}
                 key={index}
@@ -223,6 +224,7 @@ export default function Secondary_Navbar({ setIsOPen }) {
               <Box
                 data-aos="fade-up"
                 component={Link}
+                target={index == 1 ? "_blank" : "_self"}
                 href={item.url}
                 sx={styles.link}
                 key={index}

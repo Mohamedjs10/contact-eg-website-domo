@@ -178,7 +178,7 @@ export default function About() {
             <Carousal
               bg="transparent"
               Component={MemberItem}
-              slidesPerView={5.5}
+              slidesPerView={5}
               itemsArray={
                 active === "1" ? t.general.directors : t.general.mangers
               }

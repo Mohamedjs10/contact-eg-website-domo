@@ -32,6 +32,7 @@ export const styles = {
     backgroundColor: colors.white,
     borderRadius: "8px",
     ml: 2,
+    textTransform: "initial",
 
     "&:hover": {
       border: `1px solid ${colors.blue}`,
@@ -49,6 +50,7 @@ export const styles = {
     border: `1px solid ${colors.blue}`,
     backgroundColor: colors.blue,
     borderRadius: "8px",
+    textTransform: "initial",
     "&:hover": {
       backgroundColor: colors.blue,
       color: colors.white,

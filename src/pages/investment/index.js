@@ -30,14 +30,12 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>Blog</title>
+        <title>Investment</title>
         <meta name="" content="" />
       </Head>
 
-      <Box>
-        <Box sx={{ textAlign: "center", fontWeight: "bold", my: 15 }}>
-          Dummy Blog Content
-        </Box>
+      <Box sx={{ textAlign: "center", fontWeight: "bold", my: 15 }}>
+        Investment Dummy Page
       </Box>
     </>
   );

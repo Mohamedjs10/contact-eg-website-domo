@@ -3,6 +3,7 @@ import { colors } from "../src/utils/const";
 export default {
   direction: "ltr",
   textAlign: "left",
+  contact_us_title: "We would like to hear from you",
   formMsg: "Form Submitted Successfully",
   formMsgFail: "Form submission Failed",
   clipboardMsg: "Link copied successfully",
@@ -59,7 +60,7 @@ export default {
   about: {
     members: {
       directors: "Board of Directors",
-      mangers: "Executive management",
+      mangers: "Executive Management",
       title: "Board of directors and staff",
       subtitle:
         "We are always looking for enthusiastic, dynamic and talented individuals.",
@@ -812,7 +813,7 @@ export default {
       img3: "/huawei-store-en.jpg",
     },
     section_d: {
-      copy_right: "Copyright 2020 © – All rights reserved to Contact",
+      copy_right: "Copyright 2023 © – All rights reserved to Contact",
     },
   },
   bottom_card: {
@@ -1898,14 +1899,14 @@ export default {
     {
       id: "2",
       delay: "200",
-      img: "/shopping.png",
+      img: "/payment.png",
       title: "Installment",
       text: "Choose the payment method in partner stores, via our app, card or browser extension.",
     },
     {
       id: "3",
       delay: "400",
-      img: "/shopping.png",
+      img: "/wallet.png",
       title: "Pay",
       text: "Split your payments and manage purchases, with a smart spend overview and more.",
     },

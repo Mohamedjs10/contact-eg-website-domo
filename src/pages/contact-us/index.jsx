@@ -22,7 +22,7 @@ export default function Index() {
   return (
     <>
       <Head>
-        <title>Products-Contact-Us</title>
+        <title>Contact-Us</title>
         <meta name="" content="" />
       </Head>
 
@@ -47,17 +47,25 @@ export default function Index() {
               pb: 2,
             }}
           >
-            نود أن نستمع إليك
+            {t.contact_us_title}
           </Box>
           <Box sx={{ mb: 2, mx: { xs: "auto", md: 0 } }}>
             <EmailIcon />
-            <Box component="spa" sx={{ mx: 2 }}>
+            <Box
+              component="a"
+              sx={{ mx: 2, textDecoration: "none", color: colors.blue }}
+              href="mailto:Info@contact.eg"
+            >
               Info@contact.eg
             </Box>
           </Box>
           <Box sx={{ mb: 2, mx: { xs: "auto", md: 0 } }}>
             <LocalPhoneIcon />
-            <Box component="spa" sx={{ mx: 2 }}>
+            <Box
+              component="a"
+              sx={{ mx: 2, textDecoration: "none", color: colors.blue }}
+              href="tel:16177"
+            >
               16177
             </Box>
           </Box>
