@@ -81,11 +81,11 @@ export default function BottomCard({ page }) {
             // spaceBetween: 20,
           },
           900: {
-            slidesPerView: 2.7,
+            slidesPerView: 2.5,
             // spaceBetween: 25,
           },
           1200: {
-            slidesPerView: 3.3,
+            slidesPerView: 3.1,
             // spaceBetween: 30,
           },
         }}
