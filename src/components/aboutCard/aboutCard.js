@@ -21,7 +21,13 @@ export default function Card({ icon, heading, textArr, key, type }) {
       }}
     >
       {type === "about" && (
-        <img width="32px" src={icon} alt={heading} loading="lazy" />
+        <img
+          width="32px"
+          height="32px"
+          src={icon}
+          alt={heading}
+          loading="lazy"
+        />
       )}
       <Typography
         sx={{ color: colors.orange, mt: 2 }}
