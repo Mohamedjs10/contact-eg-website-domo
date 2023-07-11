@@ -3,6 +3,7 @@ import { colors } from "../src/utils/const";
 export default {
   direction: "rtl",
   textAlign: "right",
+  contact_us_title: "نود أن نستمع إليك",
   formMsg: "تم ارسال الطلب بنجاح",
   formMsgFail: "فشل ارسال الطلب",
   clipboardMsg: "تم نسخ الرابط بنجاح",

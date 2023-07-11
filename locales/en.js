@@ -3,6 +3,7 @@ import { colors } from "../src/utils/const";
 export default {
   direction: "ltr",
   textAlign: "left",
+  contact_us_title: "We would like to hear from you",
   formMsg: "Form Submitted Successfully",
   formMsgFail: "Form submission Failed",
   clipboardMsg: "Link copied successfully",
