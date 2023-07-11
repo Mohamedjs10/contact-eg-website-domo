@@ -58,7 +58,7 @@ export default function Home() {
           <VerticalCarousel
             itemsArray={t.general.reviews}
             Component={ReviewCard}
-            slidesPerView={4.3}
+            slidesPerView={4}
           ></VerticalCarousel>
           <MapBox />
         </Box>
