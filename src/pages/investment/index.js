@@ -30,7 +30,7 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>Sustainability</title>
+        <title>Investment</title>
         <meta name="" content="" />
       </Head>
 

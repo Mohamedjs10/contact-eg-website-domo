@@ -30,12 +30,14 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>Sustainability</title>
+        <title>Blog</title>
         <meta name="" content="" />
       </Head>
 
       <Box>
-        <Box>Dummy Blog Content</Box>
+        <Box sx={{ textAlign: "center", fontWeight: "bold", my: 15 }}>
+          Dummy Blog Content
+        </Box>
       </Box>
     </>
   );
