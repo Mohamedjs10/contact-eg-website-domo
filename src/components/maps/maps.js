@@ -8,6 +8,7 @@ import en from "../../../locales/en";
 import ar from "../../../locales/ar";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Autocomplete from "@mui/material/Autocomplete";
 
 import {
   GoogleMap,
@@ -15,7 +16,6 @@ import {
   Marker,
   InfoWindow,
 } from "@react-google-maps/api";
-
 const mapContainerStyle = {
   height: "500px",
   width: "80%",
@@ -125,23 +125,13 @@ export default function MapBox() {
             alignItems: "center",
           }}
         >
-          <AutocompleteInput
+          <Autocomplete
             noOptionsText={t.map.noOption}
             size="small"
             disablePortal
             id="search-box"
-            options={branches}
             onChange={handleBranchChange}
-            onKeyPress={(event, newInputValue) => {
-              if (!event.target.value) {
-                setBranches(allBranches);
-              } else {
-                let x = allBranches.filter((item) =>
-                  item.label.includes(event.target.value)
-                );
-                setBranches(x);
-              }
-            }}
+            options={branches}
             sx={{
               width: {
                 xs: "250px",
@@ -162,30 +152,28 @@ export default function MapBox() {
                 },
               },
             }}
-            renderInput={(params) => {
-              return (
-                <TextField
-                  placeholder={t.map.placeholderBranch}
-                  sx={{
-                    borderRadius: 1,
-                    bgcolor: "white",
-                    width: "100%",
-                    "& .MuiOutlinedInput-root": {
-                      "& fieldset": {
-                        borderColor: "lightgrey",
-                      },
-                      "&:hover fieldset": {
-                        borderColor: "transparent",
-                      },
-                      "&.Mui-focused fieldset": {
-                        borderColor: "transparent",
-                      },
+            renderInput={(params) => (
+              <TextField
+                placeholder={t.map.placeholderBranch}
+                sx={{
+                  borderRadius: 1,
+                  bgcolor: "white",
+                  width: "100%",
+                  "& .MuiOutlinedInput-root": {
+                    "& fieldset": {
+                      borderColor: "lightgrey",
                     },
-                  }}
-                  {...params}
-                />
-              );
-            }}
+                    "&:hover fieldset": {
+                      borderColor: "transparent",
+                    },
+                    "&.Mui-focused fieldset": {
+                      borderColor: "transparent",
+                    },
+                  },
+                }}
+                {...params}
+              />
+            )}
           />
         </Box>
       </Box>

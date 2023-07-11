@@ -579,7 +579,7 @@ export default {
       ],
       financial_services_list2: [
         { name: "تمويل أفراح و مناسبات", url: "/products/events" },
-        { name: "تمويل عقاري", url: "/products/home" },
+        { name: "تمويل عقاري", url: "/products/mortgage" },
         { name: "وساطة تأمينية", url: "/products/insurance" },
         { name: "تخصيم", url: "/products/factoring" },
         { name: "تأجير تمويلي", url: "/products/leasing" },
@@ -1827,7 +1827,7 @@ export default {
 
   rewards: {
     heading: "نقاط برنامج ترشيح العملاء",
-    subHeading: "في حالة ترشيح عميل حالي لعميل جديد تحسب النقاط كال",
+    subHeading: "في حالة ترشيح عميل حالي لعميل جديد تحسب النقاط كالاتي",
     title: "كيفية احتساب النقاط",
     note: "ملحوظة: ",
     noteText: "الحد الأدنى لسعر الوثيقة لاحتساب النقاط 5,000 جم",
