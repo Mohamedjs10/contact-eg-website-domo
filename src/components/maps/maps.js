@@ -31,6 +31,7 @@ export default function MapBox() {
   const [mapInstance, setMapInstance] = useState(false);
   const [markers, setMarkers] = useState([]);
   const [branches, setBranches] = useState([]);
+  const [allBranches, setAllBranches] = useState([]);
   const [selected, setSelected] = useState([]);
   const [center, setCenter] = useState({ lat: 30.04048, lng: 31.20948 });
   const [zoom, setZoom] = useState(10);
@@ -56,6 +57,7 @@ export default function MapBox() {
 
         setMarkers(branches);
         setBranches(branches);
+        setAllBranches(branches);
         setCenter({ lat: 30.04048, lng: 31.20948 });
         setZoom(10);
         setMapInstance(true);
@@ -68,7 +70,6 @@ export default function MapBox() {
   const onLoad = (marker) => {};
 
   const handleBranchChange = (event, newVal, reason) => {
-    console.log(event);
     if (reason === "clear") {
       setMarkers(branches);
       setZoom(10);
@@ -83,6 +84,7 @@ export default function MapBox() {
       setCenter(branch?.position);
     }
   };
+
   return (
     <Box id="our-branches">
       <Box
@@ -130,8 +132,15 @@ export default function MapBox() {
             id="search-box"
             options={branches}
             onChange={handleBranchChange}
-            onInputChange={(event, newInputValue) => {
-              // branches.map(item => )
+            onKeyPress={(event, newInputValue) => {
+              if (!event.target.value) {
+                setBranches(allBranches);
+              } else {
+                let x = allBranches.filter((item) =>
+                  item.label.includes(event.target.value)
+                );
+                setBranches(x);
+              }
             }}
             sx={{
               width: {
