@@ -30,7 +30,7 @@ export default function HorizontalNonLinearStepper() {
     }
   }, []);
 
-  const contentGen = ({ title, heading, text, img }) => (
+  const contentGen = ({ title, heading, text, img, idx }) => (
     <Box
       sx={{
         display: "flex",
@@ -68,16 +68,24 @@ export default function HorizontalNonLinearStepper() {
         {/* <Typography variant="subtitle2" sx={{ mt: 2, py: 1 }}>
           {title}
         </Typography> */}
-        <Typography sx={{ mb: 3 }} variant="h4">
+        <Typography
+          sx={{
+            mb: idx == 0 ? 27 : idx == 1 ? 15 : idx == 2 ? 5 : 0,
+            mt: idx == 0 ? 0 : idx == 1 ? 12 : idx == 2 ? 22 : 0,
+          }}
+          variant="h4"
+        >
           {heading}{" "}
         </Typography>
         {/* <Typography variant="subtitle1">{text}</Typography> */}
         <Box
           sx={{
-            display: "flex",
+            display: {
+              xs: "none",
+              lg: "flex",
+            },
             flexDirection: "column",
-
-            marginTop: "15%",
+            marginTop: "5%",
           }}
         >
           <Box
@@ -196,6 +204,7 @@ export default function HorizontalNonLinearStepper() {
       heading: t.stepsFeature[idx].title,
       text: t.stepsFeature[idx].text,
       img: t.stepsFeature[idx].img,
+      idx,
     });
   };
 
