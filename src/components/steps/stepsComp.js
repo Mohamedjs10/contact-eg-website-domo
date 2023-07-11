@@ -3,7 +3,6 @@ import Box from "@mui/material/Box";
 import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
 import StepButton from "@mui/material/StepButton";
-import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { colors } from "../../utils/const";
 import { useRouter } from "next/router";
@@ -18,17 +17,10 @@ export default function HorizontalNonLinearStepper() {
   const t = locale === "en" ? en : ar;
 
   const [activeStep, setActiveStep] = useState(0);
-  const [qrFlag, setQrFlag] = useState(false);
 
   const handleStep = (step) => () => {
     setActiveStep(step);
   };
-
-  useEffect(() => {
-    if (window.innerWidth >= 1200) {
-      setQrFlag(true);
-    }
-  }, []);
 
   const contentGen = ({ title, heading, text, img, idx }) => (
     <Box
@@ -171,9 +163,7 @@ export default function HorizontalNonLinearStepper() {
       </Box>
       <Box
         component="img"
-        // data-aos={locale == "en" ? "fade-left" : "fade-right"}
         data-aos="fade-up"
-        // data-aos-delay="100"
         sx={{
           margin: {
             md: "inherit",
@@ -184,11 +174,6 @@ export default function HorizontalNonLinearStepper() {
             sm: "250px",
             md: "275px",
             xl: "300px",
-            // xs: "100%",
-            // // md: "50%",
-            // lg: "10%",
-            // md: "20%",
-            // sm: "100%",
           },
         }}
         src={img}
