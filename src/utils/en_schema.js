@@ -61,6 +61,8 @@ export const EnSchemaA = yup.object().shape({
   national_id: yup
     .string()
     // .matches(nationaId, "National Id is not valid")
+    .matches(nationaId, "National Id is not valid")
+
     .required("Required"),
   governance: yup.string().required("Required"),
   // area: yup.string().required("Required"),

@@ -50,10 +50,7 @@ export default function Home() {
             <Typography className="mt-4" variant="h3">
               {t.general.reviewTitle}
             </Typography>
-            <Typography className="mt-3">
-              {" "}
-              {t.general.reviewSubTitle}
-            </Typography>
+            {/* <Typography className="mt-3">{t.general.reviewSubTitle}</Typography> */}
           </Box>
           <VerticalCarousel
             itemsArray={t.general.reviews}
