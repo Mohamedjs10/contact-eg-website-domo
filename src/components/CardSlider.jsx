@@ -85,7 +85,7 @@ export default function BottomCard({ page }) {
             // spaceBetween: 25,
           },
           1200: {
-            slidesPerView: 3.7,
+            slidesPerView: 3.3,
             // spaceBetween: 30,
           },
         }}
