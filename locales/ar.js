@@ -579,7 +579,7 @@ export default {
       ],
       financial_services_list2: [
         { name: "تمويل أفراح و مناسبات", url: "/products/events" },
-        { name: "تمويل عقاري", url: "/products/home" },
+        { name: "تمويل عقاري", url: "/products/mortgage" },
         { name: "وساطة تأمينية", url: "/products/insurance" },
         { name: "تخصيم", url: "/products/factoring" },
         { name: "تأجير تمويلي", url: "/products/leasing" },
