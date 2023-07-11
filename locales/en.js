@@ -60,7 +60,7 @@ export default {
   about: {
     members: {
       directors: "Board of Directors",
-      mangers: "Executive management",
+      mangers: "Executive Management",
       title: "Board of directors and staff",
       subtitle:
         "We are always looking for enthusiastic, dynamic and talented individuals.",
@@ -813,7 +813,7 @@ export default {
       img3: "/huawei-store-en.jpg",
     },
     section_d: {
-      copy_right: "Copyright 2020 © – All rights reserved to Contact",
+      copy_right: "Copyright 2023 © – All rights reserved to Contact",
     },
   },
   bottom_card: {

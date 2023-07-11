@@ -626,7 +626,7 @@ export default {
       img1: "/google-play-ar.png",
       img3: "/huawei-store-ar.png",
     },
-    section_d: { copy_right: "جميع الحقوق محفوظة  2021  لكونتكت" },
+    section_d: { copy_right: "جميع الحقوق محفوظة  2023  لكونتكت" },
   },
   bottom_card: {
     placeholder: "ادخل البريد الالكتروني",
