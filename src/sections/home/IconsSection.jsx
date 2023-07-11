@@ -28,7 +28,13 @@ export default function IconsSection({}) {
             data-aos="fade-up"
             data-aos-delay={item.delay}
           >
-            <img src={item.img} alt={item.title} width="80px" loading="lazy" />
+            <img
+              src={item.img}
+              alt={item.title}
+              width="80px"
+              height="80px"
+              loading="lazy"
+            />
             <Box
               sx={{ fontSize: "40px", fontWeight: "bold", color: colors.blue }}
             >

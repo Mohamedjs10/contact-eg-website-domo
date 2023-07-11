@@ -1898,14 +1898,14 @@ export default {
     {
       id: "2",
       delay: "200",
-      img: "/shopping.png",
+      img: "/payment.png",
       title: "Installment",
       text: "Choose the payment method in partner stores, via our app, card or browser extension.",
     },
     {
       id: "3",
       delay: "400",
-      img: "/shopping.png",
+      img: "/wallet.png",
       title: "Pay",
       text: "Split your payments and manage purchases, with a smart spend overview and more.",
     },
