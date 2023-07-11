@@ -189,9 +189,10 @@ body {
 
 .carousel-indicators button {
   height: 6px !important;
+  background-color: #fcb72e !important;
 }
 .carousel-indicators .active {
-  background-color: #fcb72e;
+  background-color: #fcb72e !important;
 }
 
 ::-webkit-scrollbar {
