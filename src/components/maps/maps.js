@@ -46,18 +46,23 @@ export default function MapBox() {
     })
       .then((res) => res.json())
       .then((value) => {
-        const branches = value?.map((item, index) => {
-          return {
-            id: index + 1,
-            label: item.title,
-            name: item.address,
-            position: { lat: item.latitude, lng: item.longitude },
-          };
-        });
-
+        const branches = value
+          ?.map((item, index) => {
+            return {
+              id: index + 1,
+              label: item.title,
+              name: item.address,
+              position: { lat: item.latitude, lng: item.longitude },
+            };
+          })
+          .filter((item, index) => {
+            return (
+              (index !== 40 && item.label !== "") ||
+              (item.label !== "" && index !== 40)
+            );
+          });
         setMarkers(branches);
         setBranches(branches);
-        setAllBranches(branches);
         setCenter({ lat: 30.04048, lng: 31.20948 });
         setZoom(10);
         setMapInstance(true);
@@ -128,7 +133,7 @@ export default function MapBox() {
           <Autocomplete
             noOptionsText={t.map.noOption}
             size="small"
-            disablePortal
+            // disablePortal
             id="search-box"
             onChange={handleBranchChange}
             options={branches}
