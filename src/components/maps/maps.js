@@ -54,8 +54,16 @@ export default function MapBox() {
           };
         });
 
+        // .filter((item, index) => {
+        //   return (
+        //     (index !== 40 && item.label !== "") ||
+        //     (item.label !== "" && index !== 40)
+        //   );
+        // });
+
         setMarkers(branches);
         setBranches(branches);
+
         setCenter({ lat: 30.04048, lng: 31.20948 });
         setZoom(10);
         setMapInstance(true);
@@ -68,7 +76,6 @@ export default function MapBox() {
   const onLoad = (marker) => {};
 
   const handleBranchChange = (event, newVal, reason) => {
-    console.log(event);
     if (reason === "clear") {
       setMarkers(branches);
       setZoom(10);
@@ -126,7 +133,7 @@ export default function MapBox() {
           <Autocomplete
             noOptionsText={t.map.noOption}
             size="small"
-            disablePortal
+            // disablePortal
             id="search-box"
             onChange={handleBranchChange}
             options={branches}
@@ -192,7 +199,6 @@ export default function MapBox() {
                     position={position}
                     onLoad={onLoad}
                     onClick={(marker) => {
-                      console.log(marker, id);
                       setSelected([id]);
                     }}
                     icon={"/images/marker.png"}
