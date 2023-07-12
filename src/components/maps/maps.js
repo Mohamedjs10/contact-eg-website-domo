@@ -45,21 +45,21 @@ export default function MapBox() {
     })
       .then((res) => res.json())
       .then((value) => {
-        const branches = value?.map((item, index) => {
-          return {
-            id: index + 1,
-            label: item.title,
-            name: item.address,
-            position: { lat: item.latitude, lng: item.longitude },
-          };
-        });
-
-        // .filter((item, index) => {
-        //   return (
-        //     (index !== 40 && item.label !== "") ||
-        //     (item.label !== "" && index !== 40)
-        //   );
-        // });
+        const branches = value
+          ?.map((item, index) => {
+            return {
+              id: index + 1,
+              label: item.title,
+              name: item.address,
+              position: { lat: item.latitude, lng: item.longitude },
+            };
+          })
+          .filter((item, index) => {
+            return (
+              (index !== 40 && item.label !== "") ||
+              (item.label !== "" && index !== 40)
+            );
+          });
 
         setMarkers(branches);
         setBranches(branches);
