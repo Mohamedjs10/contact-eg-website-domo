@@ -194,7 +194,6 @@ export default function MapBox() {
                     position={position}
                     onLoad={onLoad}
                     onClick={(marker) => {
-                      console.log(marker, id);
                       setSelected([id]);
                     }}
                     icon={"/images/marker.png"}
